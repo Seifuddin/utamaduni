@@ -33,7 +33,7 @@ export default function AboutUs() {
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-maroon mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-900 font-serif mb-4">
             About Utamaduni
           </h2>
           <p className="text-gray-700 mb-6 leading-relaxed">
@@ -47,14 +47,14 @@ export default function AboutUs() {
 
           <div className="grid grid-cols-2 gap-6">
             <div className="bg-blue-50 p-4 rounded-xl shadow">
-              <h3 className="text-xl font-semibold text-blue-700">Our Mission</h3>
+              <h3 className="text-lg font-semibold text-red-700 font-serif">Our Mission</h3>
               <p className="text-sm text-gray-600 mt-2">
                 To support vulnerable children and families through holistic care,
                 education, and empowerment.
               </p>
             </div>
-            <div className="bg-maroon/10 p-4 rounded-xl shadow">
-              <h3 className="text-xl font-semibold text-maroon">Our Vision</h3>
+            <div className="bg-blue-50 p-4 rounded-xl shadow">
+              <h3 className="text-lg font-semibold text-red-700 font-serif">Our Vision</h3>
               <p className="text-sm text-gray-600 mt-2">
                 A united community where culture inspires compassion and
                 sustainable growth for all.

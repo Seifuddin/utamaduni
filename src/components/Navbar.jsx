@@ -60,7 +60,7 @@ export default function Navbar() {
             height={40}
             className="rounded-full"
           />
-          <span className="text-xl font-bold text-maroon-700 font-serif">
+          <span className="text-xl font-bold text-blue-800 text-maroon-700 font-serif">
             Utamaduni
           </span>
         </Link>

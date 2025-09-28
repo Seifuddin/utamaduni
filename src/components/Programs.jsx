@@ -50,7 +50,7 @@ export default function Programs() {
       <div className="container mx-auto px-6 lg:px-12 text-center">
         {/* Heading */}
         <motion.h2
-          className="text-3xl md:text-4xl font-bold text-maroon-700 mb-4"
+          className="text-3xl md:text-4xl font-bold text-blue-900 font-serif mb-4"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -67,7 +67,7 @@ export default function Programs() {
           {programs.map((program, i) => (
             <motion.div
               key={i}
-              className="bg-white rounded-2xl shadow-md hover:shadow-xl overflow-hidden flex flex-col transition-transform hover:-translate-y-2"
+              className="bg-white rounded-md shadow-md hover:shadow-xl overflow-hidden flex flex-col transition-transform hover:-translate-y-2"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.15 }}
@@ -85,7 +85,7 @@ export default function Programs() {
 
               {/* Content */}
               <div className="p-6 flex flex-col flex-1">
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                <h3 className="text-lg font-semibold text-blue-900 font-serif mb-2">
                   {program.title}
                 </h3>
                 <p className="text-gray-600 text-sm flex-1">
@@ -105,7 +105,7 @@ export default function Programs() {
         >
           <Link
             href="/get-involved"
-            className="px-6 py-3 rounded-xl text-white font-semibold bg-maroon-700 hover:bg-blue-700 transition-colors shadow-lg"
+            className="px-6 py-3 rounded-xl text-white font-semibold bg-blue-900 hover:bg-blue-700 transition-colors shadow-lg"
           >
             Support Our Programs
           </Link>

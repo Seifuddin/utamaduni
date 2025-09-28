@@ -37,7 +37,7 @@ export default function GetInvolvedPage() {
       <div className="container mx-auto px-6 lg:px-12 text-center">
         {/* Page Heading */}
         <motion.h1
-          className="text-3xl md:text-4xl font-bold text-maroon-700 mb-4"
+          className="text-3xl md:text-4xl font-bold text-red-700 mb-4 font-serif"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -55,7 +55,7 @@ export default function GetInvolvedPage() {
           {involvementOptions.map((option, i) => (
             <motion.div
               key={i}
-              className="bg-white rounded-2xl shadow-md hover:shadow-xl p-6 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2"
+              className="bg-white rounded-md shadow-md hover:shadow-xl p-6 flex flex-col items-center text-center transition-transform transform hover:-translate-y-2"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.2 }}
@@ -64,13 +64,13 @@ export default function GetInvolvedPage() {
               <div className="mb-4 flex items-center justify-center w-16 h-16 bg-blue-50 rounded-full">
                 {option.icon}
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              <h3 className="text-lg font-bold text-red-700 font-serif mb-2">
                 {option.title}
               </h3>
               <p className="text-gray-600 text-sm mb-6">{option.description}</p>
               <Link
                 href={option.href}
-                className="px-5 py-2 rounded-lg text-white font-semibold bg-maroon-700 hover:bg-blue-700 transition-colors shadow-md"
+                className="px-5 py-2 rounded-md text-white font-semibold bg-red-700 hover:bg-blue-700 transition-colors shadow-md"
               >
                 {option.cta}
               </Link>

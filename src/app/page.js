@@ -12,8 +12,9 @@ export default function Home() {
     <main className="relative">
       <Hero />
       <AboutUs />
-      <PastEvents />
+      <ImpactsStats />
       <Programs />
+      <PastEvents />
       <GetInvolvedPage />
     </main>
   );

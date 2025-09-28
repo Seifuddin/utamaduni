@@ -121,7 +121,7 @@ export default function ImpactsStats() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-4xl font-bold text-maroon-700"
+            className="text-4xl font-bold text-red-700"
           >
             Our Impact in Numbers
           </motion.h2>
@@ -144,7 +144,7 @@ export default function ImpactsStats() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="bg-white shadow-lg rounded-2xl p-8 text-center border border-gray-100 hover:shadow-xl transition"
+                className="bg-white shadow-lg rounded-md p-8 text-center border border-gray-200 hover:shadow-xl transition"
                 ref={ref}
               >
                 {/* Animated Icon */}
@@ -159,7 +159,7 @@ export default function ImpactsStats() {
                 </motion.div>
 
                 {/* Number */}
-                <h3 className="text-3xl font-extrabold text-blue-700">
+                <h3 className="text-xl font-extrabold text-blue-700">
                   {count}
                   {stat.suffix}
                 </h3>
@@ -169,7 +169,7 @@ export default function ImpactsStats() {
                 <div className="mt-5">
                   <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
                     <motion.div
-                      className="h-3 bg-gradient-to-r from-maroon-700 to-blue-600 rounded-full"
+                      className="h-3 bg-gradient-to-r from-red-700 to-blue-600 rounded-full"
                       initial={{ width: "0%" }}
                       whileInView={{ width: `${stat.progress}%` }}
                       viewport={{ once: true }}

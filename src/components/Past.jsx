@@ -29,10 +29,10 @@ export default function PastEvents() {
   return (
     <section className="bg-blue-50 py-16 px-6 md:px-12 lg:px-20">
       <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-maroon-700">
+        <h2 className="text-3xl md:text-4xl font-bold text-b-700">
           Past Events & Highlights
         </h2>
-        <p className="mt-3 text-blue-700 max-w-2xl mx-auto">
+        <p className="mt-3 text-gray-800 max-w-2xl mx-auto">
           A look back at the moments that inspired hope and strengthened our
           communities.
         </p>
@@ -46,7 +46,7 @@ export default function PastEvents() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
             viewport={{ once: true }}
-            className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition"
+            className="bg-white rounded-md shadow-md overflow-hidden hover:shadow-xl transition"
           >
             <div className="h-56 overflow-hidden">
               <img
@@ -56,7 +56,7 @@ export default function PastEvents() {
               />
             </div>
             <div className="p-6">
-              <h3 className="text-xl font-semibold text-maroon-700 mb-1">
+              <h3 className="text-xl font-bold text-blue-900 font-serif mb-1">
                 {event.title}
               </h3>
               <p className="text-sm text-blue-700 mb-3">{event.date}</p>
