@@ -13,7 +13,7 @@ import ImpactStats from "@/components/Impacts";
 
 export default function Home() {
   return (
-    <main className="relative">
+    <main className="overflow-x-hidden">
       <Hero />
       <AboutUs />
       <ImpactStats />

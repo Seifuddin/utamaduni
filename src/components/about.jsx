@@ -96,7 +96,7 @@ export default function AboutUs() {
         >
           <Link
             href="/about"
-            className="px-6 py-3 mt-5 rounded-xl text-white font-semibold bg-pink-600 hover:bg-red-700 transition-colors shadow-lg"
+            className="px-6 py-3 mt-5 rounded-xl text-white font-semibold bg-blue-900 hover:bg-blue-700 transition-colors shadow-lg"
           >
             About Us
           </Link>

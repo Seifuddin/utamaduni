@@ -99,7 +99,7 @@ export default function Programs() {
 
               {/* Content */}
               <div className="p-6 flex flex-col flex-1">
-                <h3 className="text-lg font-semibold text-blue-900 font-serif mb-2">
+                <h3 className="text-lg font-semibold text-pink-600 font-serif mb-2">
                   {program.title}
                 </h3>
                 <p className="text-gray-600 text-sm flex-1">

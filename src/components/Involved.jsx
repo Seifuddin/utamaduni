@@ -63,7 +63,7 @@ export default function GetInvolvedSection() {
               <div className="mb-3 flex items-center justify-center w-12 h-12 bg-gray-100 rounded-full">
                 {option.icon}
               </div>
-              <h3 className="text-md font-semibold text-gray-800 mb-2">
+              <h3 className="text-md font-semibold text-pink-600 mb-2">
                 {option.title}
               </h3>
               <p className="text-gray-600 text-xs mb-4">
@@ -71,7 +71,7 @@ export default function GetInvolvedSection() {
               </p>
               <Link
                 href={option.href}
-                className="px-4 py-1.5 text-sm rounded-full bg-pink-600 text-white font-medium hover:bg-red-700 transition"
+                className="py-2 px-10 text-sm rounded-md bg-blue-900 text-white font-medium font-serif hover:bg-red-700 transition"
               >
                 {option.cta}
               </Link>
