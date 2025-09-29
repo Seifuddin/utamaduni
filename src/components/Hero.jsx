@@ -68,12 +68,12 @@ export default function Hero() {
               priority
             />
             {/* Overlay */}
-            <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center text-center text-white px-4">
-              <h1 className="text-4xl md:text-6xl font-bold mb-4">
+            <div className="absolute inset-0 bg-black/80 flex flex-col items-center justify-center text-center text-white px-4">
+              <h1 className="text-4xl font-serif md:text-6xl font-bold mb-4">
                 {slide.title}
               </h1>
               <p className="text-lg md:text-2xl mb-6">{slide.subtitle}</p>
-              <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-2xl font-medium shadow-lg transition">
+              <button className="px-6 py-3 font-serif font-bold bg-pink-600 hover:bg-red-700 rounded-2xl shadow-lg transition">
                 {slide.button}
               </button>
             </div>
@@ -88,7 +88,7 @@ export default function Hero() {
             key={index}
             onClick={() => setCurrent(index)}
             className={`w-3 h-3 rounded-full transition ${
-              current === index ? "bg-blue-600" : "bg-gray-400"
+              current === index ? "bg-pink-600" : "bg-gray-400"
             }`}
           />
         ))}

@@ -6,16 +6,22 @@ import VolunteerWithUs from "@/components/Volunteer";
 import Programs from "@/components/Programs";
 import GetInvolvedPage from "@/components/Involved";
 import AboutUs from "@/components/about";
+import SponsorProgram from "@/components/Sponsor";
+import WhyWeExist from "@/components/Why";
+import DidYouKnow from "@/components/Know";
+import ImpactStats from "@/components/Impacts";
 
 export default function Home() {
   return (
     <main className="relative">
       <Hero />
       <AboutUs />
-      <ImpactsStats />
+      <ImpactStats />
+      <DidYouKnow />
       <Programs />
-      <PastEvents />
+      <SponsorProgram />
       <GetInvolvedPage />
+      <PastEvents />
     </main>
   );
 }
