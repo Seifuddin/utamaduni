@@ -10,17 +10,21 @@ import SponsorProgram from "@/components/Sponsor";
 import WhyWeExist from "@/components/Why";
 import DidYouKnow from "@/components/Know";
 import ImpactStats from "@/components/Impacts";
+import ChildSleepSection from "@/components/Ask";
+import FAQ from "@/components/Faq";
 
 export default function Home() {
   return (
     <main className="overflow-x-hidden">
       <Hero />
-      <AboutUs />
+      <ChildSleepSection />
       <ImpactStats />
+      <AboutUs />
       <DidYouKnow />
       <Programs />
       <SponsorProgram />
       <GetInvolvedPage />
+      <FAQ />
       <PastEvents />
     </main>
   );

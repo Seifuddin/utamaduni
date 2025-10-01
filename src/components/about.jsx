@@ -51,7 +51,7 @@ export default function AboutUs() {
   const schoolsCount = useCounter(50, inView);
 
   return (
-    <section className="relative bg-amber-50 pt-32 md:pt-40 pb-16 px-6 md:px-12 lg:px-20">
+    <section className="relative bg-amber-50 pt-16 md:pt-20 pb-16 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         {/* Left: Image */}
         <motion.div
@@ -79,7 +79,7 @@ export default function AboutUs() {
           ref={ref}
         >
           <h2 className="text-2xl md:text-3xl font-bold text-pink-600 font-serif mb-2">
-            About Us
+            Who We Are
           </h2>
           <p className="text-gray-700 mb-6 leading-relaxed">
             Utamaduni Organization is a community-based, non-profit organizationdedicated to preserving cultural heritage while uplifting vulnerable families and children. Inspired by the richness of african culture, Utamaduni integrates values of unity, compassion, and heritage intoits charitable initiatives.

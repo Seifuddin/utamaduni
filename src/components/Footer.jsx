@@ -48,7 +48,7 @@ export default function Footer() {
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
+          <h3 className="text-lg font-semibold text-white mb-4 font-serif">Quick Links</h3>
           <ul className="space-y-2 text-sm">
             {[
               { href: "/", label: "Home" },
@@ -71,7 +71,7 @@ export default function Footer() {
 
         {/* Contact Info */}
         <div>
-          <h3 className="text-lg font-semibold text-white mb-4">Contact Us</h3>
+          <h3 className="text-lg font-semibold text-white mb-4 font-serif">Contact Us</h3>
           <p className="text-sm">📍 Nairobi, Kenya</p>
           <p className="text-sm">📞 +254 700 123 456</p>
           <p className="text-sm">✉️ info@utamaduni.org</p>
@@ -92,7 +92,7 @@ export default function Footer() {
 
         {/* Newsletter */}
         <div>
-          <h3 className="text-lg font-semibold text-white mb-4">Newsletter</h3>
+          <h3 className="text-lg font-semibold text-white mb-4 font-serif">Newsletter</h3>
           <p className="text-sm mb-3 text-gray-300">
             Stay updated with our latest events and community initiatives.
           </p>

@@ -65,7 +65,7 @@ export default function PastEvents() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="bg-white rounded-md shadow-md hover:shadow-xl overflow-hidden flex flex-col transition-transform hover:-translate-y-2"
+              className="bg-white border border-gray-100 rounded-md shadow-md hover:shadow-xl overflow-hidden flex flex-col transition-transform hover:-translate-y-2"
             >
               <div className="h-56 overflow-hidden">
                 <img

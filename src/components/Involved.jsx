@@ -63,7 +63,7 @@ export default function GetInvolvedSection() {
               <div className="mb-3 flex items-center justify-center w-12 h-12 bg-gray-100 rounded-full">
                 {option.icon}
               </div>
-              <h3 className="text-md font-semibold text-pink-600 mb-2">
+              <h3 className="text-md font-semibold font-serif text-pink-600 mb-2">
                 {option.title}
               </h3>
               <p className="text-gray-600 text-xs mb-4">
