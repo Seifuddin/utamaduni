@@ -54,7 +54,7 @@ export default function FAQ() {
                 onClick={() => toggleFAQ(index)}
                 className="w-full flex justify-between items-center p-4 text-left"
               >
-                <span className="font-serif font-semibold">
+                <span className="text-black font-serif font-semibold">
                   {faq.question}
                 </span>
                 {openIndex === index ? (

@@ -18,8 +18,8 @@ export default function Home() {
     <main className="overflow-x-hidden">
       <Hero />
       <ChildSleepSection />
-      <ImpactStats />
       <AboutUs />
+      <ImpactStats />
       <DidYouKnow />
       <Programs />
       <SponsorProgram />

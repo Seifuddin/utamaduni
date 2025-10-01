@@ -7,7 +7,7 @@ import { useState } from "react";
 // Updated programs with extra details
 const programs = [
   {
-    image: "/images/WhatsApp Image 2025-09-28 at 02.00.50.jpeg",
+    image: "/images/childsupport.webp",
     title: "Child Support",
     description:
       "Caring for orphans and vulnerable children by providing education, protection, and hope.",
@@ -15,7 +15,7 @@ const programs = [
       "Through Child Support, we ensure vulnerable children access quality education, healthcare, and a safe environment to grow and thrive.",
   },
   {
-    image: "/images/WhatsApp Image 2025-09-28 at 02.00.50.jpeg",
+    image: "/images/feeding.jpeg",
     title: "Basic Needs",
     description:
       "Offering food, clothing, and shelter to families in need to restore dignity and hope.",
@@ -23,7 +23,7 @@ const programs = [
       "We provide urgent supplies like meals, clean water, and shelter to restore hope and dignity for struggling families.",
   },
   {
-    image: "/images/WhatsApp Image 2025-09-28 at 02.00.50.jpeg",
+    image: "/images/community.jpeg",
     title: "Community Engagement",
     description:
       "Hosting cultural-driven charity events that unite communities through compassion.",
@@ -31,7 +31,7 @@ const programs = [
       "Our cultural and charity events bring people together to support causes, celebrate unity, and spread compassion across communities.",
   },
   {
-    image: "/images/WhatsApp Image 2025-09-28 at 02.00.50.jpeg",
+    image: "/images/skills.webp",
     title: "Skills & Empowerment",
     description:
       "Training and equipping people with sustainable skills for long-term development.",
@@ -39,7 +39,7 @@ const programs = [
       "We train youth and adults in practical skills like tailoring, IT, and entrepreneurship, preparing them for sustainable futures.",
   },
   {
-    image: "/images/WhatsApp Image 2025-09-28 at 02.00.50.jpeg",
+    image: "/images/health.jpeg",
     title: "Health & Wellbeing",
     description:
       "Providing access to medical care, mental health support, and clean environments for vulnerable families.",
@@ -47,7 +47,7 @@ const programs = [
       "Our Health & Wellbeing initiative ensures that communities receive essential healthcare services, hygiene programs, and mental health support, creating healthier and stronger futures.",
   },
   {
-    image: "/images/WhatsApp Image 2025-09-28 at 02.00.50.jpeg",
+    image: "/images/culture.jpeg",
     title: "Cultural Identity",
     description:
       "Strengthening cultural values as a foundation for unity, compassion, and resilience.",
