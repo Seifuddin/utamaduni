@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function ChildSleepSection() {
   return (
     <section className="relative bg-amber-50">
-      <div className="max-w-6xl mx-auto px-6 py-12 md:py-16 text-center">
+      <div className="px-6 md:px-12 lg:px-20 mx-auto pt-24 md:pt-24 text-center">
         
         {/* Animated Question */}
         <motion.h2
@@ -53,7 +53,7 @@ export default function ChildSleepSection() {
         >
           <Link
             href="/donate"
-            className="inline-block bg-blue-900 hover:bg-blue-700 text-white font-medium text-base px-6 py-2 rounded-lg shadow-md transition"
+            className="inline-block font-serif bg-blue-900 hover:bg-blue-700 text-white font-medium text-base px-6 py-2 rounded-lg shadow-md transition"
           >
             Give a Child a Safe Place Tonight
           </Link>

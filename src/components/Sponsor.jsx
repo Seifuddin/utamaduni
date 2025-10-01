@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function SponsorProgram() {
   return (
     <section className="relative bg-gradient-to-br from-blue-900 via-blue-600 to-blue-800 text-white py-16 px-6 md:px-12 lg:px-20">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+      <div className="mx-auto grid md:grid-cols-2 gap-10 items-center">
         {/* Left Side - Text */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -23,7 +23,7 @@ export default function SponsorProgram() {
           </p>
           <Link
             href="/donate"
-            className="inline-block w-full text-center font-serif bg-yellow-400 text-black font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-blue-100 transition"
+            className="inline-block w-full text-center font-serif bg-yellow-400 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-blue-100 transition"
           >
             Sponsor Now
           </Link>
@@ -38,7 +38,7 @@ export default function SponsorProgram() {
           className="relative"
         >
           <img
-            src="/images/childrenwelfare.webp" // replace with your own
+            src="/images/childsupport.webp" // replace with your own
             alt="Child Sponsorship"
             className="rounded-2xl shadow-lg object-cover w-full h-80"
           />

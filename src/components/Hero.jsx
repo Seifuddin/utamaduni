@@ -59,7 +59,7 @@ export default function Hero() {
         style={{ transform: `translateX(-${current * 100}%)` }}
       >
         {slides.map((slide) => (
-          <div key={slide.id} className="w-full flex-shrink-0 relative h-[90vh]">
+          <div key={slide.id} className="w-full flex-shrink-0 relative h-[80vh]">
             <Image
               src={slide.image}
               alt={slide.title}
@@ -68,7 +68,7 @@ export default function Hero() {
               priority
             />
             {/* Overlay */}
-            <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-center text-white px-4">
+            <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center text-white px-4">
               <h1 className="text-4xl font-serif md:text-6xl font-bold mb-4">
                 {slide.title}
               </h1>

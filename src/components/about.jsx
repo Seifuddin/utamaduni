@@ -51,8 +51,8 @@ export default function AboutUs() {
   const schoolsCount = useCounter(50, inView);
 
   return (
-    <section className="relative bg-amber-50 pt-16 md:pt-20 pb-16 px-6 md:px-12 lg:px-20">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <section className="relative bg-amber-50 pt-13 md:pt-20 pb-13 px-6 md:px-12 lg:px-20">
+      <div className="border-y-2 border-pink-600 py-5 mx-auto grid md:grid-cols-2 gap-12 items-center">
         {/* Left: Image */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -66,7 +66,7 @@ export default function AboutUs() {
             alt="Utamaduni Community"
             width={600}
             height={500}
-            className="rounded-2xl shadow-lg object-cover"
+            className="rounded-lg shadow-lg object-cover"
           />
         </motion.div>
 
@@ -78,7 +78,7 @@ export default function AboutUs() {
           viewport={{ once: true }}
           ref={ref}
         >
-          <h2 className="text-2xl md:text-3xl font-bold text-pink-600 font-serif mb-2">
+          <h2 className="text-xl md:text-3xl font-bold text-pink-600 font-serif mb-2">
             Who We Are
           </h2>
           <p className="text-gray-700 mb-6 leading-relaxed">
@@ -96,7 +96,7 @@ export default function AboutUs() {
         >
           <Link
             href="/about"
-            className="px-6 py-3 mt-5 rounded-xl text-white font-semibold bg-blue-900 hover:bg-blue-700 transition-colors shadow-lg"
+            className="px-6 font-serif py-3 mt-5 rounded-xl text-white font-semibold bg-blue-900 hover:bg-blue-700 transition-colors shadow-lg"
           >
             About Us
           </Link>

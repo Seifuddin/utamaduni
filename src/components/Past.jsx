@@ -75,7 +75,7 @@ export default function PastEvents() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-blue-900 font-serif mb-1">
+                <h3 className="font-bold text-blue-900 font-serif mb-1">
                   {event.title}
                 </h3>
                 <p className="text-sm text-pink-600 mb-3">{event.date}</p>

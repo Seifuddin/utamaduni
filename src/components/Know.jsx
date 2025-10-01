@@ -44,14 +44,14 @@ export default function DidYouKnowHybrid() {
       />
       <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
 
-      <div className="relative max-w-6xl mx-auto text-center">
+      <div className="relative mx-auto text-center">
         {/* Title */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-2xl md:text-3xl font-bold mb-4"
+          className="text-2xl md:text-3xl font-bold mb-4 font-serif"
         >
           Did You Know?
         </motion.h2>
@@ -89,7 +89,7 @@ export default function DidYouKnowHybrid() {
                              rounded-xl p-5 shadow-lg"
                 >
                   <div className="flex justify-center mb-3">{slide.icon}</div>
-                  <h3 className="text-xl font-bold">{slide.stat}</h3>
+                  <h3 className="text-xl font-bold font-serif">{slide.stat}</h3>
                   <p className="mt-2 text-sm text-gray-200">{slide.text}</p>
                 </motion.div>
               </SwiperSlide>
@@ -110,7 +110,7 @@ export default function DidYouKnowHybrid() {
                          rounded-xl p-5 shadow-lg hover:scale-105 transition"
             >
               <div className="flex justify-center mb-3">{slide.icon}</div>
-              <h3 className="text-lg font-bold">{slide.stat}</h3>
+              <h3 className="text font-bold font-serif">{slide.stat}</h3>
               <p className="mt-2 text-sm text-gray-200">{slide.text}</p>
             </motion.div>
           ))}
@@ -126,7 +126,7 @@ export default function DidYouKnowHybrid() {
         >
           <Link
             href="/donate"
-            className="bg-yellow-300 text-blue-900 font-semibold px-5 py-2 
+            className="bg-yellow-300 text-blue-900 font-semibold px-5 py-2 font-serif 
                        rounded-full shadow-lg hover:bg-yellow-200 transition text-sm md:text-base"
           >
             Donate & Save a Life

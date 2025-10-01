@@ -15,7 +15,7 @@ const programs = [
       "Through Child Support, we ensure vulnerable children access quality education, healthcare, and a safe environment to grow and thrive.",
   },
   {
-    image: "/images/feeding.jpeg",
+    image: "/images/feeding.jpg",
     title: "Basic Needs",
     description:
       "Offering food, clothing, and shelter to families in need to restore dignity and hope.",
@@ -39,7 +39,7 @@ const programs = [
       "We train youth and adults in practical skills like tailoring, IT, and entrepreneurship, preparing them for sustainable futures.",
   },
   {
-    image: "/images/health.jpeg",
+    image: "/images/health.jpg",
     title: "Health & Wellbeing",
     description:
       "Providing access to medical care, mental health support, and clean environments for vulnerable families.",
@@ -47,7 +47,7 @@ const programs = [
       "Our Health & Wellbeing initiative ensures that communities receive essential healthcare services, hygiene programs, and mental health support, creating healthier and stronger futures.",
   },
   {
-    image: "/images/culture.jpeg",
+    image: "/images/culture.jpg",
     title: "Cultural Identity",
     description:
       "Strengthening cultural values as a foundation for unity, compassion, and resilience.",
@@ -61,7 +61,7 @@ export default function Programs() {
 
   return (
     <section className="py-20 bg-amber-50 relative" id="programs">
-      <div className="container mx-auto px-6 lg:px-12 text-center">
+      <div className="mx-auto px-6 lg:px-12 text-center">
         {/* Heading */}
         <motion.h2
           className="text-3xl md:text-4xl font-bold text-pink-600 font-serif mb-4"
@@ -81,7 +81,7 @@ export default function Programs() {
           {programs.map((program, i) => (
             <motion.div
               key={i}
-              className="bg-white rounded-md shadow-md hover:shadow-xl overflow-hidden flex flex-col transition-transform hover:-translate-y-2"
+              className="bg-white border border-gray-100 rounded-md shadow-md hover:shadow-xl overflow-hidden flex flex-col transition-transform hover:-translate-y-2"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.15 }}
@@ -99,7 +99,7 @@ export default function Programs() {
 
               {/* Content */}
               <div className="p-6 flex flex-col flex-1">
-                <h3 className="text-lg font-semibold text-pink-600 font-serif mb-2">
+                <h3 className="font-bold text-pink-600 font-serif mb-2">
                   {program.title}
                 </h3>
                 <p className="text-gray-600 text-sm flex-1">
@@ -107,7 +107,7 @@ export default function Programs() {
                 </p>
                 <button
                   onClick={() => setSelectedProgram(program)}
-                  className="mt-4 bg-blue-900 text-white text-sm px-4 py-2 rounded-md hover:bg-blue-700 transition"
+                  className="font-serif mt-4 bg-blue-900 text-white text-sm px-4 py-2 rounded-md hover:bg-blue-700 transition"
                 >
                   Learn More
                 </button>
