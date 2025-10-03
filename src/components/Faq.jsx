@@ -1,28 +1,29 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
     question: "What does this organization do?",
     answer:
-      "We are dedicated to improving lives by providing support in healthcare, education, and community development. Our goal is to create lasting change through sustainable programs.",
+      "We provide support in healthcare, education, and community development, creating lasting change through sustainable programs.",
   },
   {
     question: "How can I make a donation?",
     answer:
-      "You can donate directly through our website using our secure donation portal. We also accept bank transfers and in-kind contributions.",
+      "You can donate securely through our website. We also accept bank transfers and in-kind contributions.",
   },
   {
     question: "Can I volunteer with you?",
     answer:
-      "Yes! We welcome volunteers who want to give their time, skills, or expertise to support our programs. Visit our Volunteer page to learn how you can get involved.",
+      "Yes! We welcome volunteers who want to give their time, skills, or expertise. Visit our Volunteer page to learn more.",
   },
   {
     question: "Where does my donation go?",
     answer:
-      "Every donation goes directly into funding our projects, such as providing educational materials, healthcare supplies, and community outreach programs. Transparency is key—we publish annual impact reports.",
+      "Every donation funds projects like educational materials, healthcare supplies, and outreach programs. We ensure transparency with annual impact reports.",
   },
   {
     question: "Do you partner with other organizations?",
@@ -41,31 +42,50 @@ export default function FAQ() {
   return (
     <section className="py-16 bg-amber-50">
       <div className="max-w-4xl mx-auto px-6">
-        <h2 className="text-2xl md:text-3xl font-bold text-pink-600 font-serif text-center mb-10">
-          Frequently Asked Questions
-        </h2>
+        {/* Section Heading */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold font-serif text-pink-600">
+            Frequently Asked Questions
+          </h2>
+          <p className="mt-2 text-gray-700 max-w-2xl mx-auto text-sm md:text-base">
+            Have questions? We’ve got answers. Learn more about how we work and how you can get involved.
+          </p>
+        </div>
+
+        {/* FAQ List */}
         <div className="space-y-4">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border border-gray-200 rounded-lg shadow-sm bg-white"
+              className="border border-gray-200 rounded-xl shadow-sm bg-white overflow-hidden"
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full flex justify-between items-center p-4 text-left"
+                className="w-full flex justify-between items-center px-5 py-4 text-left hover:bg-amber-100 transition"
               >
-                <span className="text-blue-900 font-serif font-semibold">
+                <span className="text-blue-900 font-serif font-medium text-base md:text-lg">
                   {faq.question}
                 </span>
-                {openIndex === index ? (
-                  <ChevronUp className="w-5 h-5 text-blue-800" />
-                ) : (
-                  <ChevronDown className="w-5 h-5 text-blue-800" />
-                )}
+                <ChevronDown
+                  className={`w-5 h-5 text-pink-600 transform transition-transform duration-300 ${
+                    openIndex === index ? "rotate-180" : ""
+                  }`}
+                />
               </button>
-              {openIndex === index && (
-                <div className="p-4 pt-0 text-gray-600">{faq.answer}</div>
-              )}
+
+              <AnimatePresence>
+                {openIndex === index && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="px-5 pb-4 text-gray-600 text-sm md:text-base leading-relaxed"
+                  >
+                    {faq.answer}
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           ))}
         </div>

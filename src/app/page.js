@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <main className="overflow-x-hidden">
       <Hero />
-      <ImpactStats />
+      <ChildSleepSection />
       <AboutUs />
       <DidYouKnow />
       <Programs />

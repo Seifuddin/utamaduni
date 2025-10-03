@@ -34,20 +34,22 @@ const highlights = [
 
 export default function PastEvents() {
   return (
-    <section className="bg-amber-50 py-16 px-6 md:px-12 lg:px-20">
-      <div className="text-center mb-12">
-        <h2 className="text-2xl md:text-3xl font-bold font-serif text-pink-600">
+    <section className="bg-amber-50 py-10 px-4 md:px-8 lg:px-12">
+      {/* Title */}
+      <div className="text-center mb-8">
+        <h2 className="text-xl md:text-2xl font-bold font-serif text-pink-600">
           Past Events & Highlights
         </h2>
-        <p className="mt-3 text-gray-800 max-w-2xl mx-auto">
+        <p className="mt-2 text-gray-700 max-w-xl mx-auto text-sm md:text-base">
           A look back at the moments that inspired hope and strengthened our
           communities.
         </p>
       </div>
 
+      {/* Swiper */}
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
-        spaceBetween={30}
+        spaceBetween={20}
         slidesPerView={1}
         navigation
         pagination={{ clickable: true }}
@@ -65,21 +67,24 @@ export default function PastEvents() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="bg-white border border-gray-100 rounded shadow-md hover:shadow-xl overflow-hidden flex flex-col transition-transform hover:-translate-y-2"
+              className="bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-md overflow-hidden flex flex-col transition-transform hover:-translate-y-1"
             >
-              <div className="h-44 overflow-hidden">
+              {/* Smaller image height */}
+              <div className="h-32 overflow-hidden">
                 <img
                   src={event.img}
                   alt={event.title}
                   className="w-full h-full object-cover hover:scale-105 transition duration-500"
                 />
               </div>
-              <div className="p-6">
-                <h3 className="font-bold text-blue-900 font-serif mb-1">
+
+              {/* Content */}
+              <div className="p-4">
+                <h3 className="font-semibold text-blue-900 text-sm md:text-base mb-1">
                   {event.title}
                 </h3>
-                <p className="text-sm text-pink-600 mb-3">{event.date}</p>
-                <p className="text-gray-600">{event.description}</p>
+                <p className="text-xs text-pink-600 mb-2">{event.date}</p>
+                <p className="text-gray-600 text-sm">{event.description}</p>
               </div>
             </motion.div>
           </SwiperSlide>
@@ -91,12 +96,14 @@ export default function PastEvents() {
         /* Navigation arrows */
         .swiper-button-next,
         .swiper-button-prev {
-          color: #1d4ed8; /* Tailwind blue-700 */
+          color: #1d4ed8;
           background: rgba(255, 255, 255, 0.9);
           border-radius: 9999px;
-          padding: 10px;
-          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+          padding: 6px;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
           transition: all 0.3s ease;
+          width: 28px;
+          height: 28px;
         }
         .swiper-button-next:hover,
         .swiper-button-prev:hover {
@@ -106,11 +113,11 @@ export default function PastEvents() {
 
         /* Pagination dots */
         .swiper-pagination-bullet {
-          background: #93c5fd; /* Tailwind blue-300 */
+          background: #93c5fd;
           opacity: 1;
         }
         .swiper-pagination-bullet-active {
-          background: #1d4ed8; /* Tailwind blue-700 */
+          background: #1d4ed8;
         }
       `}</style>
     </section>

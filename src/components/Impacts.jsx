@@ -1,8 +1,13 @@
 "use client";
+
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Heart, Users, UtensilsCrossed, GraduationCap } from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 // Count-up hook
 function useCountUp(target, inView, duration = 2000) {
@@ -29,10 +34,34 @@ function useCountUp(target, inView, duration = 2000) {
 
 export default function ImpactStats() {
   const stats = [
-    { icon: <Users className="w-6 h-6 text-indigo-600" />, value: 5000, suffix: "+", label: "Children Helped", progress: 85 },
-    { icon: <UtensilsCrossed className="w-6 h-6 text-green-600" />, value: 20000, suffix: "+", label: "Meals Provided", progress: 90 },
-    { icon: <GraduationCap className="w-6 h-6 text-yellow-600" />, value: 1200, suffix: "+", label: "Volunteers", progress: 70 },
-    { icon: <Heart className="w-6 h-6 text-red-600" />, value: 15, suffix: "+ Years", label: "Of Service", progress: 100 },
+    {
+      icon: <Users className="w-6 h-6 text-indigo-600" />,
+      value: 5000,
+      suffix: "+",
+      label: "Children Helped",
+      progress: 85,
+    },
+    {
+      icon: <UtensilsCrossed className="w-6 h-6 text-green-600" />,
+      value: 20000,
+      suffix: "+",
+      label: "Meals Provided",
+      progress: 90,
+    },
+    {
+      icon: <GraduationCap className="w-6 h-6 text-yellow-600" />,
+      value: 1200,
+      suffix: "+",
+      label: "Volunteers",
+      progress: 70,
+    },
+    {
+      icon: <Heart className="w-6 h-6 text-red-600" />,
+      value: 15,
+      suffix: "+ Years",
+      label: "Of Service",
+      progress: 100,
+    },
   ];
 
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
@@ -44,44 +73,59 @@ export default function ImpactStats() {
           Our Achievement in Numbers
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <Swiper
+          modules={[Pagination, Autoplay]}
+          spaceBetween={20}
+          slidesPerView={1}
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 3500, disableOnInteraction: false }}
+          breakpoints={{
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+            1280: { slidesPerView: 4 },
+          }}
+          className="pb-10"
+        >
           {stats.map((stat, index) => {
             const count = useCountUp(stat.value, inView);
             return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: index * 0.15 }}
-                className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition"
-              >
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="p-2 bg-gray-100 rounded-full">{stat.icon}</div>
-                  <h3 className="font-serif font-bold text-blue-900">{stat.label}</h3>
-                </div>
+              <SwiperSlide key={index}>
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={inView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.5, delay: index * 0.15 }}
+                  className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition"
+                >
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="p-2 bg-gray-100 rounded-full">{stat.icon}</div>
+                    <h3 className="font-serif font-bold text-blue-900">
+                      {stat.label}
+                    </h3>
+                  </div>
 
-                <p className="font-serif text-lg font-bold text-pink-500 mb-2">
-                  {count}
-                  {stat.suffix}
-                </p>
+                  <p className="font-serif text-lg font-bold text-pink-500 mb-2">
+                    {count}
+                    {stat.suffix}
+                  </p>
 
-                {/* Progress bar */}
-                <div className="w-full bg-gray-200 rounded-full h-2">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    animate={inView ? { width: `${stat.progress}%` } : {}}
-                    transition={{ duration: 1.2, delay: 0.3 }}
-                    className="h-2 rounded-full bg-gradient-to-r from-indigo-500 to-pink-500"
-                  />
-                </div>
+                  {/* Progress bar */}
+                  <div className="w-full bg-gray-200 rounded-full h-2">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      animate={inView ? { width: `${stat.progress}%` } : {}}
+                      transition={{ duration: 1.2, delay: 0.3 }}
+                      className="h-2 rounded-full bg-gradient-to-r from-indigo-500 to-pink-500"
+                    />
+                  </div>
 
-                <p className="text-sm text-gray-500 mt-2">
-                  {stat.progress}% Goal Reached
-                </p>
-              </motion.div>
+                  <p className="text-sm text-gray-500 mt-2">
+                    {stat.progress}% Goal Reached
+                  </p>
+                </motion.div>
+              </SwiperSlide>
             );
           })}
-        </div>
+        </Swiper>
       </div>
     </section>
   );

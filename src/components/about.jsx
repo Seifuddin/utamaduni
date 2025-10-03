@@ -2,71 +2,27 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
 import { UtensilsCrossed, Home, GraduationCap } from "lucide-react";
 import Link from "next/link";
 
-
-// Custom hook for counting animation
-function useCounter(target, inView, duration = 2000) {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    if (!inView) return;
-    let start = 0;
-    const increment = target / (duration / 16);
-
-    const counter = setInterval(() => {
-      start += increment;
-      if (start >= target) {
-        clearInterval(counter);
-        setCount(target);
-      } else {
-        setCount(Math.floor(start));
-      }
-    }, 16);
-
-    return () => clearInterval(counter);
-  }, [target, duration, inView]);
-
-  return count;
-}
-
+// Compact About Us Section
 export default function AboutUs() {
-  const ref = useRef(null);
-  const [inView, setInView] = useState(false);
-
-  // Check if in view
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => setInView(entry.isIntersecting),
-      { threshold: 0.3 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
-
-  const childrenCount = useCounter(1200, inView);
-  const familiesCount = useCounter(350, inView);
-  const schoolsCount = useCounter(50, inView);
-
   return (
-    <section className="relative bg-amber-50  md:pt-10 pb-20 px-6 md:px-12 lg:px-20">
-      <div className="py-10 mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <section className="relative bg-gradient-to-br from-amber-50 via-white to-amber-100 md:pt-8 pb-12 px-4 md:px-8 lg:px-12">
+      <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         {/* Left: Image */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
-          className="relative"
+          transition={{ duration: 0.6 }}
+          className="flex justify-center"
         >
           <Image
             src="/images/WhatsApp Image 2025-09-28 at 02.00.51 (1).jpeg"
-            alt="Utamaduni Community"
-            width={600}
-            height={500}
-            className="rounded shadow-lg object-cover"
+            alt="About Utamaduni"
+            width={650}
+            height={550}
+            className="rounded shadow-md object-cover"
           />
         </motion.div>
 
@@ -74,61 +30,56 @@ export default function AboutUs() {
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
-          ref={ref}
-            className="border-y-2 py-5 border-gray-300"
-
+          transition={{ duration: 0.6 }}
+          className="space-y-4"
         >
-          <h2 className="text-lg md:text-xl font-bold text-pink-700 font-serif mb-2">
-            Who We Are
+          <h2 className="text-2xl md:text-3xl font-bold text-blue-900 font-serif leading-snug">
+            About <span className="text-pink-600">Utamaduni</span>
           </h2>
-          <p className="text-gray-700 mb-6 leading-relaxed">
-            Utamaduni Organization is a community-based, non-profit organizationdedicated to preserving cultural heritage while uplifting vulnerable families and children.
+          <p className="text-gray-700 text-base leading-relaxed">
+            Utamaduni is a charitable organization dedicated to helping street
+            children by providing food, shelter, and education. Our mission is
+            to give every child hope for a brighter future through compassion
+            and community support.
           </p>
-          <p className="text-gray-700 mb-6 leading-relaxed">
-            The name "Utamaduni" means "culture" in Swahili, reflecting our belief that culture is the foundation of identity and a bridge for building stronger, caring communities.
-          </p>
-          {/* CTA Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.5 }}
-        >
+
+          {/* Compact Counters */}
+          <div className="grid grid-cols-3 gap-4">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="bg-white rounded-lg shadow-md p-3 text-center"
+            >
+              <UtensilsCrossed className="w-8 h-8 text-red-600 mx-auto mb-1" />
+              <h3 className="text-lg font-bold text-blue-800">5,000+</h3>
+              <p className="text-sm text-gray-600">Meals Served</p>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="bg-white rounded-lg shadow-md p-3 text-center"
+            >
+              <Home className="w-8 h-8 text-green-600 mx-auto mb-1" />
+              <h3 className="text-lg font-bold text-blue-800">200+</h3>
+              <p className="text-sm text-gray-600">Children Sheltered</p>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="bg-white rounded-lg shadow-md p-3 text-center"
+            >
+              <GraduationCap className="w-8 h-8 text-pink-600 mx-auto mb-1" />
+              <h3 className="text-lg font-bold text-blue-800">150+</h3>
+              <p className="text-sm text-gray-600">Educated</p>
+            </motion.div>
+          </div>
+
+          {/* Slim Button */}
           <Link
             href="/about"
-            className="px-6 font-serif py-2 mt-5 rounded-xl text-white font-semibold bg-blue-900 hover:bg-blue-700 transition-colors shadow-lg"
+            className="inline-block px-5 py-2 rounded-lg text-white font-medium font-serif text-base bg-gradient-to-r from-pink-600 to-orange-500 hover:from-pink-800 hover:to-blue-600 transition"
           >
-            About Us
+            Learn More
           </Link>
-        </motion.div>
-
-          {/* Impacts section with icons 
-          <div className="grid grid-cols-3 gap-6 mt-6 text-center">
-            <div className="flex flex-col items-center">
-              <UtensilsCrossed className="w-8 h-8 text-red-600 mb-2" />
-              <h3 className="text-xl font-bold text-blue-800">
-                {childrenCount.toLocaleString()}+
-              </h3>
-              <p className="text-xs text-gray-600">Children Fed</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <Home className="w-8 h-8 text-green-600 mb-2" />
-              <h3 className="text-xl font-bold text-blue-800">
-                {familiesCount.toLocaleString()}+
-              </h3>
-              <p className="text-xs text-gray-600">Families Supported</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <GraduationCap className="w-8 h-8 text-yellow-600 mb-2" />
-              <h3 className="text-xl font-bold text-blue-800">
-                {schoolsCount.toLocaleString()}+
-              </h3>
-              <p className="text-xs text-gray-600">Schools Reached</p>
-            </div>
-          </div>
-          */}
         </motion.div>
       </div>
     </section>
