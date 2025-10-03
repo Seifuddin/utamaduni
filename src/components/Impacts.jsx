@@ -38,10 +38,10 @@ export default function ImpactStats() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
-    <section ref={ref} className="bg-amber-50 pb-8">
+    <section ref={ref} className="bg-amber-50 pb-8 pt-16">
       <div className="px-6 md:px-12 lg:px-20 mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold text-center mb10 text-gray-800">
-          
+        <h2 className="text-2xl md:text-3xl font-bold font-serif text-center mb-10 text-pink-600">
+          Our Achievement in Numbers
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -53,11 +53,11 @@ export default function ImpactStats() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.15 }}
-                className="bgwhite roundedxl p6 shadowmd hover:shadowlg transition"
+                className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition"
               >
                 <div className="flex items-center gap-3 mb-3">
                   <div className="p-2 bg-gray-100 rounded-full">{stat.icon}</div>
-                  <h3 className="font-serif font-bold text-blue-950">{stat.label}</h3>
+                  <h3 className="font-serif font-bold text-blue-900">{stat.label}</h3>
                 </div>
 
                 <p className="font-serif text-lg font-bold text-pink-500 mb-2">

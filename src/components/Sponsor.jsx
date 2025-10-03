@@ -21,6 +21,9 @@ export default function SponsorProgram() {
             for children in need. With your support, we can build brighter futures 
             together.
           </p>
+          <p className="text-blue-100 mb-6">
+          Give, and it will be given to you. A good measure, pressed down, shaken together and running over, will be poured into your lap.   - Luke 6:38
+          </p>
           <Link
             href="/donate"
             className="inline-block w-full text-center font-serif bg-yellow-400 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-blue-100 transition"

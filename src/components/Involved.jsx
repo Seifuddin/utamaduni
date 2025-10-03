@@ -54,7 +54,7 @@ export default function GetInvolvedSection() {
           {involvementOptions.map((option, i) => (
             <motion.div
               key={i}
-              className="bg-whie roundedlg bordr border-gray100 shadowsm hover:shadowmd p5 flex flex-col items-center text-center transition"
+              className="bg-white rounded bordr border-gray-100 shadow-md hover:shadow-md p-5 flex flex-col items-center text-center transition"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.15 }}

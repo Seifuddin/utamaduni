@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function ChildSleepSection() {
   return (
     <section className="relative bg-amber-50">
-      <div className="px-6 md:px-12 lg:px-20 mx-auto pt-24 md:pt-24 text-center">
+      <div className="px-6 containe py5 md:px-12 lg:px-20 mx-auto pt-24 md:pt-24 text-center bg-white/50 shadowlg">
         
         {/* Animated Question */}
         <motion.h2
@@ -16,7 +16,7 @@ export default function ChildSleepSection() {
           viewport={{ once: true }}
           className="text-2xl md:text-3xl font-bold text-pink-600 leading-snug mb-4 font-serif"
         >
-          Do you know where a child sleeps tonight?
+          Inspired by Scripture
         </motion.h2>
 
         {/* Answer */}
@@ -27,24 +27,19 @@ export default function ChildSleepSection() {
           viewport={{ once: true }}
           className="text-base md:text-lg text-gray-700 leading-relaxed mb-4"
         >
-          For thousands of street children, the answer is heartbreaking. Some curl up on
-          cold pavements, others hide under broken bridges, and many lie awake in fear—hungry,
-          cold, and unsafe.
+          Give, and it will be given to you. A good measure, pressed down, shaken together and running over, will be poured into your lap.
         </motion.p>
-
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.9 }}
           viewport={{ once: true }}
-          className="text-base md:text-lg text-gray-700 leading-relaxed mb-6"
+          className="text-center italic text-black font-semibold leading-relaxed"
         >
-          While the world sleeps peacefully, countless little ones are crying silently into
-          the night. Your support can give them more than just a bed—it can give them safety,
-          warmth, hope, and a future.
+          - Luke 6:38
         </motion.p>
-
-        {/* CTA Button */}
+        
+        {/* CTA Button 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -53,11 +48,12 @@ export default function ChildSleepSection() {
         >
           <Link
             href="/donate"
-            className="inline-block font-serif bg-blue-900 hover:bg-blue-700 text-white font-medium text-base px-6 py-2 rounded-lg shadow-md transition"
+            className="inline-block font-serif bg-blue-900 hover:bg-blue-700 text-white font-medium textbase px-6 py-2 rounded-lg shadow-md transition"
           >
-            Give a Child a Safe Place Tonight
+            Donate
           </Link>
         </motion.div>
+        */}
       </div>
     </section>
   );

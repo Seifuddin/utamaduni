@@ -51,8 +51,8 @@ export default function AboutUs() {
   const schoolsCount = useCounter(50, inView);
 
   return (
-    <section className="relative bg-amber-50 pt-13 md:pt-20 pb-13 px-6 md:px-12 lg:px-20">
-      <div className="border-y-2 border-pink-600 py-5 mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <section className="relative bg-amber-50  md:pt-10 pb-20 px-6 md:px-12 lg:px-20">
+      <div className="py-10 mx-auto grid md:grid-cols-2 gap-12 items-center">
         {/* Left: Image */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -62,11 +62,11 @@ export default function AboutUs() {
           className="relative"
         >
           <Image
-            src="/images/communityoutreach.jpg"
+            src="/images/WhatsApp Image 2025-09-28 at 02.00.51 (1).jpeg"
             alt="Utamaduni Community"
             width={600}
             height={500}
-            className="rounded-lg shadow-lg object-cover"
+            className="rounded shadow-lg object-cover"
           />
         </motion.div>
 
@@ -77,12 +77,14 @@ export default function AboutUs() {
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
           ref={ref}
+            className="border-y-2 py-5 border-gray-300"
+
         >
-          <h2 className="text-xl md:text-3xl font-bold text-pink-600 font-serif mb-2">
+          <h2 className="text-lg md:text-xl font-bold text-pink-700 font-serif mb-2">
             Who We Are
           </h2>
           <p className="text-gray-700 mb-6 leading-relaxed">
-            Utamaduni Organization is a community-based, non-profit organizationdedicated to preserving cultural heritage while uplifting vulnerable families and children. Inspired by the richness of african culture, Utamaduni integrates values of unity, compassion, and heritage intoits charitable initiatives.
+            Utamaduni Organization is a community-based, non-profit organizationdedicated to preserving cultural heritage while uplifting vulnerable families and children.
           </p>
           <p className="text-gray-700 mb-6 leading-relaxed">
             The name "Utamaduni" means "culture" in Swahili, reflecting our belief that culture is the foundation of identity and a bridge for building stronger, caring communities.
@@ -96,7 +98,7 @@ export default function AboutUs() {
         >
           <Link
             href="/about"
-            className="px-6 font-serif py-3 mt-5 rounded-xl text-white font-semibold bg-blue-900 hover:bg-blue-700 transition-colors shadow-lg"
+            className="px-6 font-serif py-2 mt-5 rounded-xl text-white font-semibold bg-blue-900 hover:bg-blue-700 transition-colors shadow-lg"
           >
             About Us
           </Link>

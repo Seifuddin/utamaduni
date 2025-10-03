@@ -88,7 +88,7 @@ export default function Programs() {
               viewport={{ once: true }}
             >
               {/* Program Image */}
-              <div className="relative w-full h-48">
+              <div className="relative w-full h-44">
                 <Image
                   src={program.image}
                   alt={program.title}
