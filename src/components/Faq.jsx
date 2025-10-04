@@ -44,7 +44,7 @@ export default function FAQ() {
       <div className="max-w-4xl mx-auto px-6">
         {/* Section Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold font-serif text-pink-600">
+          <h2 className="text-2xl md:text-3xl font-bold text-pink-700 font-serif mb-3">
             Frequently Asked Questions
           </h2>
           <p className="mt-2 text-gray-700 max-w-2xl mx-auto text-sm md:text-base">
@@ -57,7 +57,7 @@ export default function FAQ() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border border-gray-200 rounded-xl shadow-sm bg-white overflow-hidden"
+              className="border border-gray-200 rounded-lg shadow-sm bg-white overflow-hidden"
             >
               <button
                 onClick={() => toggleFAQ(index)}
@@ -67,7 +67,7 @@ export default function FAQ() {
                   {faq.question}
                 </span>
                 <ChevronDown
-                  className={`w-5 h-5 text-pink-600 transform transition-transform duration-300 ${
+                  className={`w-5 h-5 text-gray-600 transform transition-transform duration-300 ${
                     openIndex === index ? "rotate-180" : ""
                   }`}
                 />

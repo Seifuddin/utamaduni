@@ -19,6 +19,7 @@ export default function Home() {
       <Hero />
       <ChildSleepSection />
       <AboutUs />
+      <ImpactStats />
       <DidYouKnow />
       <Programs />
       <SponsorProgram />

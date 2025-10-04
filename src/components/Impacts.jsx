@@ -35,28 +35,28 @@ function useCountUp(target, inView, duration = 2000) {
 export default function ImpactStats() {
   const stats = [
     {
-      icon: <Users className="w-6 h-6 text-indigo-600" />,
+      icon: <Users className="w-6 h-6 text-blue-300" />,
       value: 5000,
       suffix: "+",
       label: "Children Helped",
       progress: 85,
     },
     {
-      icon: <UtensilsCrossed className="w-6 h-6 text-green-600" />,
+      icon: <UtensilsCrossed className="w-6 h-6 text-blue-300" />,
       value: 20000,
       suffix: "+",
       label: "Meals Provided",
       progress: 90,
     },
     {
-      icon: <GraduationCap className="w-6 h-6 text-yellow-600" />,
+      icon: <GraduationCap className="w-6 h-6 text-blue-300" />,
       value: 1200,
       suffix: "+",
       label: "Volunteers",
       progress: 70,
     },
     {
-      icon: <Heart className="w-6 h-6 text-red-600" />,
+      icon: <Heart className="w-6 h-6 text-blue-300" />,
       value: 15,
       suffix: "+ Years",
       label: "Of Service",
@@ -98,12 +98,12 @@ export default function ImpactStats() {
                 >
                   <div className="flex items-center gap-3 mb-3">
                     <div className="p-2 bg-gray-100 rounded-full">{stat.icon}</div>
-                    <h3 className="font-serif font-bold text-blue-900">
+                    <h3 className="font-serif font-bold italic text-gray-700">
                       {stat.label}
                     </h3>
                   </div>
 
-                  <p className="font-serif text-lg font-bold text-pink-500 mb-2">
+                  <p className="font-serif font-bold text-blue-900 mb-2">
                     {count}
                     {stat.suffix}
                   </p>
@@ -114,7 +114,7 @@ export default function ImpactStats() {
                       initial={{ width: 0 }}
                       animate={inView ? { width: `${stat.progress}%` } : {}}
                       transition={{ duration: 1.2, delay: 0.3 }}
-                      className="h-2 rounded-full bg-gradient-to-r from-indigo-500 to-pink-500"
+                      className="h-2 rounded-full bg-blue-400"
                     />
                   </div>
 

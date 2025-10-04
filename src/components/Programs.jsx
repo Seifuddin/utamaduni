@@ -60,7 +60,7 @@ export default function Programs() {
   const [selectedProgram, setSelectedProgram] = useState(null);
 
   return (
-    <section className="py-12 relative overflow-hidden" id="programs">
+    <section className="py-12 bg-amber-50 relative overflow-hidden" id="programs">
       {/* 🔹 Background Decorations */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-10 left-10 w-40 h-40 bg-pink-400 rounded-full blur-3xl opacity-20 animate-pulse"></div>
@@ -93,7 +93,7 @@ export default function Programs() {
           {programs.map((program, i) => (
             <motion.div
               key={i}
-              className="group bg-white border border-gray-100 rounded-lg shadow-md hover:shadow-xl overflow-hidden flex flex-col transition-transform hover:-translate-y-1"
+              className="group bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-xl overflow-hidden flex flex-col transition-transform hover:-translate-y-1"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
@@ -111,7 +111,7 @@ export default function Programs() {
 
               {/* Content */}
               <div className="p-4 flex flex-col flex-1">
-                <h3 className="font-bold text-blue-900 font-serif text-lg mb-1">
+                <h3 className="font-bold text-gray-700 font-serif text-lg mb-1">
                   {program.title}
                 </h3>
                 <p className="text-gray-600 text-sm flex-1">{program.description}</p>

@@ -34,7 +34,7 @@ export default function AboutUs() {
           className="space-y-4"
         >
           <h2 className="text-2xl md:text-3xl font-bold text-blue-950 font-serif leading-snug">
-            <span className="text-pink-600">About Us</span>
+            <span className="text-gray-700">About Us</span>
           </h2>
           <p className="text-gray-700 text-base leading-relaxed">
             Utamaduni is a charitable organization dedicated to helping street
@@ -43,7 +43,7 @@ export default function AboutUs() {
             and community support.
           </p>
 
-          {/* Compact Counters */}
+          {/* Compact Counters 
           <div className="grid grid-cols-3 gap-4">
             <motion.div
               whileHover={{ scale: 1.05 }}
@@ -72,11 +72,12 @@ export default function AboutUs() {
               <p className="text-sm text-gray-600">Educated</p>
             </motion.div>
           </div>
+          */}
 
           {/* Slim Button */}
           <Link
             href="/about"
-            className="inline-block px-5 py-2 rounded-lg text-white font-medium font-serif text-base bg-blue-950 hover:from-pink-800 hover:to-blue-600 transition"
+            className="inline-block px-10 py-2 border border-blue-900 rounded-lg text-gray-700 font-medium font-serif text-base bg-blue950 hover:from-pink-800 hover:to-blue-600 transition"
           >
             Learn More
           </Link>
