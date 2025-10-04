@@ -117,7 +117,7 @@ export default function Programs() {
                 <p className="text-gray-600 text-sm flex-1">{program.description}</p>
                 <button
                   onClick={() => setSelectedProgram(program)}
-                  className="font-serif mt-3 bg-gradient-to-r from-pink-600 to-blue-900 text-white text-xs px-3 py-1.5 rounded-md shadow hover:shadow-md transition"
+                  className="font-serif mt-3 bg-blue-950 text-white text-xs px-3 py-2.5 rounded-md shadow hover:shadow-md transition"
                 >
                   Learn More
                 </button>

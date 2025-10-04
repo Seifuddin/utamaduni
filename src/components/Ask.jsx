@@ -76,7 +76,7 @@ export default function ChildSleepSection() {
         >
           <Link
             href="/donate"
-            className="inline-block font-serif bg-gradient-to-r from-pink-600 to-indigo-600 hover:from-pink-700 hover:to-indigo-700 text-white font-medium text-base px-6 py-2.5 rounded-full shadow-md transition-all hover:shadow-lg"
+            className="inline-block font-serif bg-blue-900 hover:from-pink-700 hover:to-indigo-700 text-white font-medium text-base px-6 py-2.5 rounded-full shadow-md transition-all hover:shadow-lg"
           >
             Support Our Mission
           </Link>

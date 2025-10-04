@@ -14,7 +14,7 @@ const involvementOptions = [
     href: "/donate",
   },
   {
-    icon: <Users className="w-6 h-6 text-green-600" />,
+    icon: <Users className="w-6 h-6 text-blue-600" />,
     title: "Volunteer",
     description:
       "Mentor children, support events, or share skills to empower communities.",
@@ -22,7 +22,7 @@ const involvementOptions = [
     href: "/volunteer",
   },
   {
-    icon: <HeartHandshake className="w-6 h-6 text-red-600" />,
+    icon: <HeartHandshake className="w-6 h-6 text-blue-600" />,
     title: "Partner",
     description:
       "Collaborate with us through corporate or cultural partnerships.",
@@ -64,7 +64,7 @@ export default function GetInvolvedSection() {
                 <div className="mb-2 flex items-center justify-center w-10 h-10 bg-gray-100 rounded-full">
                   {option.icon}
                 </div>
-                <h3 className="text-sm font-semibold font-serif text-pink-600 mb-1">
+                <h3 className="text-sm font-semibold font-serif text-blue-800 mb-1">
                   {option.title}
                 </h3>
                 <p className="text-gray-600 text-xs mb-3 leading-snug">
@@ -73,7 +73,7 @@ export default function GetInvolvedSection() {
               </div>
               <Link
                 href={option.href}
-                className="mt-auto py-1.5 px-6 text-xs rounded bg-blue-900 text-white font-medium font-serif hover:bg-red-700 transition"
+                className="mt-auto py-2.5 px-4 text-xs rounded bg-blue-950 text-white font-medium font-serif hover:bg-red-700 transition"
               >
                 {option.cta}
               </Link>
