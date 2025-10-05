@@ -4,55 +4,55 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 
-// Programs Data
+// 🔹 Projects Data (replaces the old programs)
 const programs = [
   {
     image: "/images/childsupport.webp",
-    title: "Child Support",
+    title: "Orphans and Vulnerable Children",
     description:
-      "Caring for orphans and vulnerable children by providing education, protection, and hope.",
+      "Providing shelter, education, and emotional support to children without families, helping them build a hopeful future.",
     details:
-      "Through Child Support, we ensure vulnerable children access quality education, healthcare, and a safe environment to grow and thrive.",
+      "We dedicate this project to supporting children who are orphaned or vulnerable by providing access to education, healthcare, and safe environments where they can grow with dignity and hope.",
   },
   {
-    image: "/images/feeding.jpg",
-    title: "Basic Needs",
+    image: "/images/hiv.webp",
+    title: "Persons Living with HIV/AIDS",
     description:
-      "Offering food, clothing, and shelter to families in need to restore dignity and hope.",
+      "Offering healthcare, counseling, and awareness programs to promote dignity, hope, and healthy living.",
     details:
-      "We provide urgent supplies like meals, clean water, and shelter to restore hope and dignity for struggling families.",
+      "Through this project, we offer medical support, mental health counseling, and awareness campaigns that empower individuals living with HIV/AIDS to live healthy and fulfilling lives free from stigma.",
   },
   {
-    image: "/images/community.jpeg",
-    title: "Community Engagement",
+    image: "/images/Disabilities.jpg",
+    title: "Persons with Disabilities",
     description:
-      "Hosting cultural-driven charity events that unite communities through compassion.",
+      "Supporting inclusion through accessibility programs, education, and skills empowerment for persons with disabilities.",
     details:
-      "Our cultural and charity events bring people together to support causes, celebrate unity, and spread compassion across communities.",
+      "This initiative focuses on providing training, assistive tools, and inclusive community engagement for persons with disabilities, ensuring they are empowered and included in every part of society.",
   },
   {
-    image: "/images/skills.webp",
-    title: "Skills & Empowerment",
+    image: "/images/elderly.png",
+    title: "Elderly Persons",
     description:
-      "Training and equipping people with sustainable skills for long-term development.",
+      "Providing care, companionship, and medical assistance to elderly people who lack family or social support.",
     details:
-      "We train youth and adults in practical skills like tailoring, IT, and entrepreneurship, preparing them for sustainable futures.",
+      "This project supports elderly individuals through companionship programs, home visits, and healthcare services, ensuring they live with dignity and comfort in their later years.",
   },
   {
-    image: "/images/health.jpg",
-    title: "Health & Wellbeing",
+    image: "/images/Street-family.jpg",
+    title: "Street Children",
     description:
-      "Providing access to medical care, mental health support, and clean environments for vulnerable families.",
+      "Rehabilitating and educating street children and youth to help them become productive and confident members of society.",
     details:
-      "Our Health & Wellbeing initiative ensures that communities receive essential healthcare services, hygiene programs, and mental health support, creating healthier and stronger futures.",
+      "We reach out to street children and vulnerable youth by providing education, shelter, and mentorship programs that transform their lives and open pathways to a brighter future.",
   },
   {
-    image: "/images/culture.jpg",
-    title: "Cultural Identity",
+    image: "/images/refugee-families-2.jpeg",
+    title: "Refugees and Displaced Families",
     description:
-      "Strengthening cultural values as a foundation for unity, compassion, and resilience.",
+      "Offering emergency support, education, and empowerment to families affected by displacement and conflict.",
     details:
-      "We preserve and promote cultural traditions that inspire compassion, strengthen unity, and build resilience in communities.",
+      "We provide refugees and displaced families with essential resources, psychosocial support, and education to rebuild their lives and regain a sense of stability and hope.",
   },
 ];
 
@@ -76,7 +76,7 @@ export default function Programs() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          Our Programs
+          Our Projects & Focus Areas
         </motion.h2>
         <motion.p
           className="text-gray-600 max-w-xl mx-auto mb-8 text-base"
@@ -84,11 +84,10 @@ export default function Programs() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
-          At Utamaduni, we restore hope and dignity through programs that
-          uplift children, empower families, and strengthen communities.
+          We dedicate our programs to improving the lives of vulnerable and marginalized groups through compassion, empowerment, and sustainable support.
         </motion.p>
 
-        {/* Programs Grid */}
+        {/* Projects Grid */}
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-10">
           {programs.map((program, i) => (
             <motion.div
@@ -99,7 +98,7 @@ export default function Programs() {
               transition={{ delay: i * 0.1, duration: 0.6 }}
               viewport={{ once: true }}
             >
-              {/* Program Image */}
+              {/* Image */}
               <div className="relative w-full h-36 overflow-hidden">
                 <Image
                   src={program.image}
@@ -109,7 +108,7 @@ export default function Programs() {
                 />
               </div>
 
-              {/* Content */}
+              {/* Text Content */}
               <div className="p-4 flex flex-col flex-1">
                 <h3 className="font-bold text-gray-700 font-serif text-lg mb-1">
                   {program.title}
@@ -130,7 +129,7 @@ export default function Programs() {
       {/* Modal */}
       {selectedProgram && (
         <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 px-4">
-          {/* 🔹 Animated Glow Background */}
+          {/* Glow Background */}
           <div className="absolute inset-0 -z-10">
             <div className="absolute top-20 left-1/3 w-72 h-72 bg-pink-400 rounded-full blur-3xl opacity-20 animate-pulse"></div>
             <div className="absolute bottom-20 right-1/4 w-80 h-80 bg-blue-500 rounded-full blur-3xl opacity-20 animate-pulse"></div>
@@ -142,12 +141,9 @@ export default function Programs() {
             transition={{ duration: 0.3 }}
             className="relative rounded-lg shadow-xl max-w-md w-full overflow-hidden"
           >
-            {/* 🔹 Modal Gradient Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-pink-100 via-white to-blue-100"></div>
-            
-            {/* Content Layer */}
+
             <div className="relative p-5">
-              {/* Image */}
               <div className="relative w-full h-44 mb-3 rounded-md overflow-hidden shadow-md">
                 <Image
                   src={selectedProgram.image}
@@ -157,7 +153,6 @@ export default function Programs() {
                 />
               </div>
 
-              {/* Text */}
               <h3 className="text-lg font-semibold text-blue-900 mb-2">
                 {selectedProgram.title}
               </h3>
@@ -165,7 +160,6 @@ export default function Programs() {
                 {selectedProgram.details}
               </p>
 
-              {/* Close button */}
               <button
                 onClick={() => setSelectedProgram(null)}
                 className="bg-gradient-to-r from-pink-600 to-blue-900 text-white px-4 py-2 text-sm rounded-md shadow hover:from-pink-700 hover:to-blue-800 transition"

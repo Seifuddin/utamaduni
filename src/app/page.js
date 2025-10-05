@@ -12,6 +12,7 @@ import DidYouKnow from "@/components/Know";
 import ImpactStats from "@/components/Impacts";
 import ChildSleepSection from "@/components/Ask";
 import FAQ from "@/components/Faq";
+import Projects from "@/components/Projects";
 
 export default function Home() {
   return (
@@ -19,7 +20,6 @@ export default function Home() {
       <Hero />
       <ChildSleepSection />
       <AboutUs />
-      <ImpactStats />
       <DidYouKnow />
       <Programs />
       <SponsorProgram />
