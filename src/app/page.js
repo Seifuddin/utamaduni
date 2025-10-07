@@ -18,11 +18,11 @@ export default function Home() {
   return (
     <main className="overflow-x-hidden">
       <Hero />
+      <ChildSleepSection />
       <AboutUs />
       <DidYouKnow />
       <Programs />
       <SponsorProgram />
-      <GetInvolvedPage />
       <FAQ />
       <PastEvents />
     </main>
