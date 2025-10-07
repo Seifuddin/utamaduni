@@ -37,7 +37,7 @@ export default function GetInvolvedSection() {
       <div className="container mx-auto px-4 lg:px-8 text-center">
         {/* Heading */}
         <motion.h2
-          className="text-xl md:text-2xl font-bold font-serif text-blue-900"
+          className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight text-blue-900"
           initial={{ opacity: 0, y: -15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -61,7 +61,7 @@ export default function GetInvolvedSection() {
               viewport={{ once: true }}
             >
               <div className="flex flex-col items-center flex-grow">
-                <div className="mb-2 flex items-center justify-center w-10 h-10 bg-amber-50 rounded-full">
+                <div className="mb-2 flex items-center justify-center w-10 h-10 bg-amber-100 rounded-full">
                   {option.icon}
                 </div>
                 <h3 className="text-sm font-semibold font-serif text-gray-800 mb-1">
@@ -73,7 +73,7 @@ export default function GetInvolvedSection() {
               </div>
               <Link
                 href={option.href}
-                className="mt-auto py-2.5 px4 text-xs border border-gray-100 rounded bg-amber-50 text-black font-medium font-serif hover:bg-red-700 transition"
+                className="mt-auto py-2.5 px4 text-xs border border-gray-100 rounded bg-blue-200 text-black font-medium font-serif hover:bg-red-700 transition"
               >
                 {option.cta}
               </Link>

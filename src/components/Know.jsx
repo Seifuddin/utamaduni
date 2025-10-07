@@ -51,7 +51,7 @@ export default function DidYouKnowHybrid() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-2xl md:text-3xl font-bold mb-4 font-serif"
+          className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight text-white"
         >
           Did You Know?
         </motion.h2>

@@ -37,7 +37,7 @@ export default function PastEvents() {
     <section className="bg-amber-50 py-10 px-4 md:px-8 lg:px-12">
       {/* Title */}
       <div className="text-center mb-8">
-        <h2 className="text-xl md:text-2xl font-bold font-serif text-blue-900">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight text-blue-900">
           Past Events & Highlights
         </h2>
         <p className="mt-2 text-gray-700 max-w-xl mx-auto text-sm md:text-base">

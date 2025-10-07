@@ -71,7 +71,7 @@ export default function Programs() {
       <div className="mx-auto px-6 lg:px-12 text-center max-w-7xl">
         {/* Heading */}
         <motion.h2
-          className="text-2xl md:text-3xl font-bold text-blue-900 font-serif mb-3"
+          className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight text-blue-900"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

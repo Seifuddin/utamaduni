@@ -19,7 +19,7 @@ export default function SponsorProgram() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold leading-snug mb-3">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight text-white">
             Sponsor a Child, Transform a Future
           </h2>
 
