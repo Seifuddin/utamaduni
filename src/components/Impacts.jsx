@@ -67,10 +67,10 @@ export default function ImpactStats() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
-    <section ref={ref} className="bg-amber-50 py-6">
+    <section ref={ref} className="bg-gray-50 py-16">
       <div className="px-4 md:px-10 lg:px-16 mx-auto">
-        <h2 className="text-lg md:text-xl font-bold font-serif text-center mb-4 text-pink-700 tracking-wide">
-          Our Impact in Numbers
+        <h2 className="text-center text-3xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight text-blue-900">
+          Our Achievement in Numbers
         </h2>
 
         <Swiper
