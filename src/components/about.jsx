@@ -2,87 +2,102 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { UtensilsCrossed, Home, GraduationCap } from "lucide-react";
-import Link from "next/link";
 
-// Compact About Us Section
+// About Us Section
 export default function AboutUs() {
   return (
-    <section className="relative bg-gradient-to-br from-amber-50 via-white to-amber-100 md:pt-8 pb-12 px-4 md:px-8 lg:px-12">
-      <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-        {/* Left: Image */}
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          className="flex justify-center"
-        >
-          <Image
-            src="/images/WhatsApp Image 2025-09-28 at 02.00.51 (1).jpeg"
-            alt="About Utamaduni"
-            width={650}
-            height={550}
-            className="rounded shadow-md object-cover"
-          />
-        </motion.div>
+    <section className="relative overflow-hidden bg-amber-50 text-gray-900">
+      {/* Decorative Background Elements */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute -left-20 -top-12 w-72 h-72 bg-blue-200/30 rounded-full blur-3xl" />
+        <div className="absolute right-0 bottom-0 w-96 h-96 bg-yellow-200/40 rounded-full blur-3xl" />
+      </div>
 
-        {/* Right: Content */}
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          className="space-y-4"
-        >
-          <h2 className="text-2xl md:text-3xl font-bold text-blue-950 font-serif leading-snug">
-            <span className="text-gray-700">About Us</span>
-          </h2>
-          <p className="text-gray-700 text-base leading-relaxed">
-            Utamaduni is a charitable organization dedicated to helping street
-            children by providing food, shelter, and education. Our mission is
-            to give every child hope for a brighter future through compassion
-            and community support.
-          </p>
-
-          {/* Compact Counters 
-          <div className="grid grid-cols-3 gap-4">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="bg-white rounded-lg shadow-md p-3 text-center"
-            >
-              <UtensilsCrossed className="w-8 h-8 text-blue-700 mx-auto mb-1" />
-              <h3 className="text-lg font-bold text-blue-800">5,000+</h3>
-              <p className="text-sm text-gray-600">Meals Served</p>
-            </motion.div>
-
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="bg-white rounded-lg shadow-md p-3 text-center"
-            >
-              <Home className="w-8 h-8 text-blue-700 mx-auto mb-1" />
-              <h3 className="text-lg font-bold text-blue-800">200+</h3>
-              <p className="text-sm text-gray-600">Children Sheltered</p>
-            </motion.div>
-
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="bg-white rounded-lg shadow-md p-3 text-center"
-            >
-              <GraduationCap className="w-8 h-8 blue-700 mx-auto mb-1" />
-              <h3 className="text-lg font-bold text-blue-800">150+</h3>
-              <p className="text-sm text-gray-600">Educated</p>
-            </motion.div>
-          </div>
-          */}
-
-          {/* Slim Button */}
-          <Link
-            href="/about"
-            className="inline-block px-10 py-2 border border-blue-900 rounded-lg text-gray-700 font-medium font-serif text-base bg-blue950 hover:from-pink-800 hover:to-blue-600 transition"
+      <div className="max-w-6xl mx-auto px-6 py-16 lg:py-24 flex flex-col lg:flex-row items-center gap-10">
+        {/* Left Side - Text */}
+        <div className="w-full lg:w-1/2">
+          <motion.h1
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight text-blue-900"
           >
-            Learn More
-          </Link>
-        </motion.div>
+            Building Hope, Restoring Dignity
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 6 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.12, duration: 0.6 }}
+            className="mt-4 text-gray-700 max-w-xl"
+          >
+            Utamaduni Charitable Organization empowers vulnerable communities through
+            education, healthcare, cultural identity, and sustainable livelihoods —
+            one life at a time.
+          </motion.p>
+
+          {/* Buttons */}
+          <div className="mt-6 flex flex-wrap gap-3">
+            <motion.a
+              href="#programs"
+              whileHover={{ scale: 1.03 }}
+              className="inline-flex items-center gap-3 bg-blue-900 text-amber-50 px-5 py-3 rounded-full shadow-lg font-semibold hover:bg-blue-800 transition"
+            >
+              Get Involved
+            </motion.a>
+
+            <motion.a
+              href="#contact"
+              whileHover={{ scale: 1.03 }}
+              className="inline-flex items-center gap-2 border border-blue-900 text-blue-900 px-5 py-3 rounded-full font-semibold hover:bg-blue-900 hover:text-amber-50 transition"
+            >
+              Contact Us
+            </motion.a>
+          </div>
+
+          {/* Stats */}
+          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
+            <StatCard value="5,000+" label="Children Helped" />
+            <StatCard value="20,000+" label="Meals Provided" />
+            <StatCard value="1,200+" label="Volunteers" />
+            <StatCard value="15+ yrs" label="Service" />
+          </div>
+        </div>
+
+        {/* Right Side - Image */}
+        <div className="w-full lg:w-1/2">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.98 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            className="mx-auto w-full max-w-lg rounded-2xl overflow-hidden shadow-2xl ring-4 ring-blue-900/20"
+          >
+            <Image
+              src="/images/pediatrichospitalist.jpg"
+              alt="Children smiling with volunteers"
+              width={1200}
+              height={800}
+              className="object-cover w-full h-64 sm:h-80 lg:h-96"
+            />
+          </motion.div>
+        </div>
       </div>
     </section>
+  );
+}
+
+// Reusable Stat Card
+function StatCard({ value, label }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+      className="bg-white/80 backdrop-blur-md border border-blue-100 rounded-xl p-4 text-center shadow-md hover:shadow-lg hover:scale-105 transition-transform"
+    >
+      <h3 className="text-2xl font-bold text-blue-900">{value}</h3>
+      <p className="text-sm text-gray-700">{label}</p>
+    </motion.div>
   );
 }
