@@ -67,12 +67,13 @@ export default function ImpactStats() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
-    <section ref={ref} className="bg-gray-50 py-16">
+    <section ref={ref} className="bg-amber-50 py-16">
       <div className="px-4 md:px-10 lg:px-16 mx-auto">
-        <h2 className="text-center text-3xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight text-blue-900">
+        {/* */}
+        <h2 className="text-center text-2xl md:text4xl lg:text-5xl mb-10 font-serif font-bold leading-tight text-blue-900">
           Our Achievement in Numbers
         </h2>
-
+        
         <Swiper
           modules={[Pagination, Autoplay]}
           spaceBetween={15}
@@ -94,7 +95,7 @@ export default function ImpactStats() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-all h-[140px] flex flex-col justify-between"
+                  className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition-all h-[140px] flex flex-col justify-between"
                 >
                   <div className="flex items-center gap-2">
                     <div className="p-1.5 bg-blue-100 rounded-full">{stat.icon}</div>

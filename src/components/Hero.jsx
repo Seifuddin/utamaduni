@@ -8,14 +8,14 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const slides = [
   {
     id: 1,
-    image: "/images/childsupport.webp",
+    image: "/images/WhatsApp Image 2025-10-04 at 23.11.57 (1).jpeg",
     title: "Children's Welfare",
     subtitle: "Donations to children's homes and educational support for orphans",
     button: "Learn More",
   },
   {
     id: 2,
-    image: "/images/communityoutreach.jpg",
+    image: "/images/WhatsApp Image 2025-10-04 at 23.11.07.jpeg",
     title: "Community Outreach",
     subtitle:
       "Food distribution, health awareness to people living with disabilities and HIV, and empowerment projects",
@@ -23,7 +23,7 @@ const slides = [
   },
   {
     id: 3,
-    image: "/images/culturalpreservation.jpg",
+    image: "/images/WhatsApp Image 2025-10-04 at 23.11.07.jpeg",
     title: "Cultural Preservation",
     subtitle:
       "Incorporating traditional values, arts, and practices into charity work",
@@ -31,14 +31,14 @@ const slides = [
   },
   {
     id: 4,
-    image: "/images/housekeepingprogram.jpeg",
+    image: "/images/WhatsApp Image 2025-10-04 at 23.11.57 (2).jpeg",
     title: "Housekeeping Programmes",
     subtitle: "Supporting struggling households with essential items and skills",
     button: "Learn More",
   },
   {
     id: 5,
-    image: "/images/partnershipss.jpg",
+    image: "/images/WhatsApp Image 2025-09-28 at 02.00.51 (1).jpeg",
     title: "Partnerships",
     subtitle:
       "Collaborating with like-minded individuals and organizations to extend our impact",
@@ -65,7 +65,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative w-full h-[70vh] overflow-hidden">
+    <section className="relative w-full h-[60vh] overflow-hidden">
       <AnimatePresence mode="wait">
         <motion.div
           key={slides[current].id}
@@ -83,7 +83,7 @@ export default function Hero() {
             priority
           />
           {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
         </motion.div>
       </AnimatePresence>
 

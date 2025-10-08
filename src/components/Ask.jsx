@@ -36,7 +36,7 @@ export default function ChildSleepSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-2xl md:text-3xl font-bold text-pink-600 leading-snug mb-4 font-serif"
+          className="text-2xl md:text-3xl font-bold text-blue-900 leading-snug mb-4 font-serif"
         >
           Inspired by Scripture
         </motion.h2>
