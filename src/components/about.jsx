@@ -13,7 +13,7 @@ export default function AboutUs() {
         <div className="absolute right-0 bottom-0 w-96 h-96 bg-yellow-200/40 rounded-full blur-3xl" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-16 py-8 border-y-2border-gray-200 lg:py24 flex flex-col lg:flex-row items-center gap-10">
+      <div className="max-w-6xl mx-auto px-6 py-16 lg:py-24 flex flex-col lg:flex-row items-center gap-10">
         {/* Left Side - Text */}
         <div className="w-full lg:w-1/2">
           <motion.h1
