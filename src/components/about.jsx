@@ -6,7 +6,7 @@ import Image from "next/image";
 // About Us Section
 export default function AboutUs() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-amber-50 via-white to-amber-100 text-gray-900">
+    <section className="relative overflow-hidden bg-amber-50 text-gray-900">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute -left-20 -top-12 w-72 h-72 bg-blue-200/30 rounded-full blur-3xl" />

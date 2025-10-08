@@ -16,9 +16,9 @@ import {
 // Usage: Place this file in components/AboutUs.jsx and import into a page.
 // Requirements: Tailwind CSS, Framer Motion, lucide-react, Next.js Image setup.
 
-export default function AboutUs() {
+export default function About() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-white to-amber-50 text-gray-800"> 
+    <main className="minh-screen bg-gradient-to-b from-white to-amber-50 text-gray-800"> 
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10">
@@ -34,7 +34,7 @@ export default function AboutUs() {
               transition={{ duration: 0.6 }}
               className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight text-blue-900"
             >
-              Building Hope, Restoring Dignity
+              Who we are
             </motion.h1>
 
             <motion.p
@@ -43,9 +43,19 @@ export default function AboutUs() {
               transition={{ delay: 0.12, duration: 0.6 }}
               className="mt-4 text-gray-600 max-w-xl"
             >
-              Utamaduni Charitable Organization empowers vulnerable communities through
-              education, healthcare, cultural identity, and sustainable livelihoods —
-              one life at a time.
+              Utamaduni is a community-based, non-profit organization dedicated to
+              preserving cultural heritage while uplifting vulnerable families and children. Inspired by
+              the richness of African culture, Utamaduni integrates values of unity, compassion, and
+              heritage into its charitable initiatives.
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 6 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.12, duration: 0.6 }}
+              className="mt-4 text-gray-600 max-w-xl"
+            >
+              The name "utamaduni" means culture in Swahili, reflecting our belief that culture is the
+              foundation of identity and a bridge for building stronger, caring communities.
             </motion.p>
 
             <div className="mt-6 flex flex-wrap gap-3">
@@ -65,13 +75,14 @@ export default function AboutUs() {
                 Contact Us
               </motion.a>
             </div>
-
+            {/* HERO 
             <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
               <StatCard value="5,000+" label="Children Helped" />
               <StatCard value="20,000+" label="Meals Provided" />
               <StatCard value="1,200+" label="Volunteers" />
               <StatCard value="15+ yrs" label="Service" />
             </div>
+            */}
           </div>
 
           <div className="w-full lg:w-1/2">
@@ -82,13 +93,53 @@ export default function AboutUs() {
               className="mx-auto w-full max-w-lg rounded-2xl overflow-hidden shadow-2xl"
             >
               <Image
-                src="/images/about-hero.jpg"
+                src="/images/WhatsApp Image 2025-10-04 at 23.11.07.jpeg"
                 alt="Children smiling with volunteers"
                 width={1200}
                 height={800}
                 className="object-cover w-full h-64 sm:h-80 lg:h-96"
               />
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+       {/* MISSION / VISION / VALUES */}
+      <section className="bg-gradient-to-b from-white to-blue-50 py-10">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-8">
+            <h3 className="text-xl font-serif font-bold text-blue-900">Our Mission & Values</h3>
+            <p className="text-gray-600 mt-2 max-w-2xl mx-auto">Compassion, inclusion, and sustainable impact guide everything we do.</p>
+          </div>
+
+          <div className="grid sm:grid-cols-3 gap-6">
+            <ValueCard icon={<HeartHandshake className="w-6 h-6 text-pink-500" />} title="Mission">
+              To preserve cultural heritage while providing humanitarian support through education,
+              empowerment, and sustainable charitable initiatives for orphans, needy families, and
+              communities in need.
+            </ValueCard>
+
+            <ValueCard icon={<Globe className="w-6 h-6 text-blue-500" />} title="Vision">
+              To create a culturally inspired, compassionate society where vulnerable children and
+              families can thrive with dignity and hope.
+            </ValueCard>
+
+            <ValueCard icon={<Award className="w-6 h-6 text-yellow-500" />} title="Values">
+              Compassion, Integrity, Culture, Community work, and Sustainability.
+            </ValueCard>
+          </div>
+        </div>
+      </section>
+
+       {/* CALL TO ACTION */}
+      <section className="bg-blue-900 text-white py-12">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h3 className="text-2xl font-serif font-bold">Join Us in Making a Difference</h3>
+          <p className="mt-2 text-gray-200 max-w-2xl mx-auto">Volunteer, donate or partner — your support helps transform lives and communities.</p>
+
+          <div className="mt-6 flex justify-center gap-4">
+            <a href="/donate" className="bg-amber-400 text-blue-900 px-5 py-3 rounded-full font-semibold shadow">Donate</a>
+            <a href="/volunteer" className="border border-white px-5 py-3 rounded-full">Volunteer</a>
           </div>
         </div>
       </section>
@@ -129,7 +180,7 @@ export default function AboutUs() {
             className="rounded-xl overflow-hidden shadow-lg"
           >
             <Image
-              src="/images/our-story.jpg"
+              src="/images/WhatsApp Image 2025-10-04 at 23.11.56.jpeg"
               alt="Community meeting"
               width={800}
               height={600}
@@ -139,31 +190,9 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* MISSION / VISION / VALUES */}
-      <section className="bg-gradient-to-b from-white to-blue-50 py-10">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-8">
-            <h3 className="text-xl font-serif font-bold text-blue-900">Our Mission & Values</h3>
-            <p className="text-gray-600 mt-2 max-w-2xl mx-auto">Compassion, inclusion, and sustainable impact guide everything we do.</p>
-          </div>
+     
 
-          <div className="grid sm:grid-cols-3 gap-6">
-            <ValueCard icon={<HeartHandshake className="w-6 h-6 text-pink-500" />} title="Mission">
-              To empower vulnerable communities through education, healthcare and cultural preservation.
-            </ValueCard>
-
-            <ValueCard icon={<Globe className="w-6 h-6 text-blue-500" />} title="Vision">
-              A world where every child has access to opportunity, safety and dignity.
-            </ValueCard>
-
-            <ValueCard icon={<Award className="w-6 h-6 text-yellow-500" />} title="Values">
-              Integrity, respect, collaboration and lasting solutions.
-            </ValueCard>
-          </div>
-        </div>
-      </section>
-
-      {/* IMPACT HIGHLIGHTS */}
+      {/* IMPACT HIGHLIGHTS 
       <section className="max-w-6xl mx-auto px-6 py-10">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           <div>
@@ -183,24 +212,15 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
+      */}
 
-      {/* CALL TO ACTION */}
-      <section className="bg-blue-900 text-white py-12">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h3 className="text-2xl font-serif font-bold">Join Us in Making a Difference</h3>
-          <p className="mt-2 text-gray-200 max-w-2xl mx-auto">Volunteer, donate or partner — your support helps transform lives and communities.</p>
+     
 
-          <div className="mt-6 flex justify-center gap-4">
-            <a href="/donate" className="bg-amber-400 text-blue-900 px-5 py-3 rounded-full font-semibold shadow">Donate</a>
-            <a href="/volunteer" className="border border-white px-5 py-3 rounded-full">Volunteer</a>
-          </div>
-        </div>
-      </section>
-
-      {/* FOOTER (minimal) */}
+      {/* FOOTER (minimal) 
       <footer className="py-8 text-center text-sm text-gray-600">
         <div className="max-w-6xl mx-auto px-6">© {new Date().getFullYear()} Utamaduni Charitable Organization. All rights reserved.</div>
       </footer>
+      */}
     </main>
   );
 }

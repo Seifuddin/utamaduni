@@ -38,7 +38,7 @@ export default function SponsorProgram() {
           </p>
 
           {/* Icon Highlights */}
-          <div className="flex justify-center md:justify-start gap-6 mb-5">
+          <div className="flex justify-cente md:justify-start gap-6 mb-5">
             <div className="flex flex-col items-center">
               <HeartHandshake className="w-6 h-6 sm:w-7 sm:h-7 text-yellow-400 mb-1" />
               <span className="text-xs text-blue-200">Care</span>
@@ -58,7 +58,7 @@ export default function SponsorProgram() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center md:text-left"
+            className="text-cener md:text-left"
           >
             <Link
               href="/donate"
@@ -77,18 +77,18 @@ export default function SponsorProgram() {
           viewport={{ once: true }}
           className="relative group"
         >
-          <div className="relative w-full h-52 sm:h-64 rounded-xl overflow-hidden shadow-xl">
+          <div className="relative w-full h-52 sm:h-64 md:h-80 rounded-xl overflow-hidden shadow-xl">
             <img
-              src="/images/childsupport.webp" // replace with your own image
+              src="/images/WhatsApp Image 2025-10-04 at 23.11.57 (1).jpeg" // replace with your own image
               alt="Child Sponsorship"
               className="object-cover w-full h-full transform group-hover:scale-105 transition duration-700"
             />
             {/* Overlay Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-blue-900/70 via-transparent to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-blue900/70 via-transparent to-transparent"></div>
           </div>
 
           {/* Floating Decorative Circle */}
-          <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-yellow-400/40 rounded-full blur-xl animate-bounce"></div>
+          <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-yellow400/40 rounded-full blur-xl animate-bounce"></div>
         </motion.div>
       </div>
     </section>

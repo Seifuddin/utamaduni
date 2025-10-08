@@ -10,25 +10,32 @@ import "swiper/css/pagination";
 
 const highlights = [
   {
-    title: "Back-to-School Drive",
+    title: "Cultural Events",
     date: "August 2025",
-    img: "/images/WhatsApp Image 2025-09-28 at 02.00.51 (2).jpeg",
+    img: "/images/WhatsApp Image 2025-10-04 at 23.11.07.jpeg",
     description:
-      "Distributed school supplies and uniforms to over 200 orphans and vulnerable children.",
+      "Hosted cultural events to intergrate heritage with charitable initiatives.",
   },
   {
-    title: "Cultural Charity Gala",
+    title: "Health Awareness",
     date: "July 2025",
-    img: "/images/WhatsApp Image 2025-09-28 at 02.00.51.jpeg",
+    img: "/images/WhatsApp Image 2025-10-04 at 23.11.57 (1).jpeg",
     description:
-      "Raised funds through music, dance, and cultural showcases to support community programs.",
+      "Conducted health awareness programs and housekeeping support for vulnerable households.",
   },
   {
-    title: "Food Relief Program",
+    title: "Food Relief",
     date: "June 2025",
-    img: "/images/WhatsApp Image 2025-09-28 at 02.00.51 (1).jpeg",
+    img: "/images/WhatsApp Image 2025-10-04 at 23.11.57 (2).jpeg",
     description:
-      "Provided food packages to more than 300 families across Nairobi and Kisumu.",
+      "Successfully organized food distribution events in Mathare and other communities.",
+  },
+  {
+    title: "Environmental Care",
+    date: "June 2025",
+    img: "/images/WhatsApp Image 2025-10-04 at 23.11.58.jpeg",
+    description:
+      "Partnered with local institutions for community clean-up and empowerment projects.",
   },
 ];
 
@@ -38,7 +45,7 @@ export default function PastEvents() {
       {/* Title */}
       <div className="text-center mb-8">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight text-blue-900">
-          Past Events & Highlights
+          Past Events & Achievements
         </h2>
         <p className="mt-2 text-gray-700 max-w-xl mx-auto text-sm md:text-base">
           A look back at the moments that inspired hope and strengthened our
@@ -70,7 +77,7 @@ export default function PastEvents() {
               className="bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-md overflow-hidden flex flex-col transition-transform hover:-translate-y-1"
             >
               {/* Smaller image height */}
-              <div className="h-32 overflow-hidden">
+              <div className="h-52 overflow-hidden">
                 <img
                   src={event.img}
                   alt={event.title}

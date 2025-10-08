@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function ChildSleepSection() {
   return (
-    <section className="relative bg-gradient-to-br from-amber-50 via-white to-amber-100 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-amber-100 via-white to-amber-100 overflow-hidden">
       {/* Decorative top wave */}
       <div className="absolute top-0 left-0 right-0">
         <svg
