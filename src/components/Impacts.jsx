@@ -67,10 +67,10 @@ export default function ImpactStats() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
-    <section ref={ref} className="bg-amber-50 pb-24">
+    <section ref={ref} className="bg-amber-50 pb-1">
       <div className="px-4 md:px-10 lg:px-16 mx-auto">
         {/* */}
-        <h2 className="text-center text-2xl md:text4xl lg:text-5xl mb-10 font-serif font-black leading-tight text-gray-800">
+        <h2 className="text-center text-2xl md:text-3xl font-black text-gray-700 leading-snug mb-4">
           Our Achievement in Numbers
         </h2>
         
@@ -100,12 +100,12 @@ export default function ImpactStats() {
                 >
                   <div className="flex items-center gap-2">
                     <div className="p-1.5 bg-gray-100 rounded-full">{stat.icon}</div>
-                    <h3 className="font-serif font-semibold text-sm text-gray-700">
+                    <h3 className="font-serif font-semibold text-sm text-gray-600">
                       {stat.label}
                     </h3>
                   </div>
 
-                  <p className="font-serif text-blue-900 text-base font-bold mt-1">
+                  <p className="font-serif text-gray-700 text-base font-bold mt-1">
                     {count}
                     {stat.suffix}
                   </p>

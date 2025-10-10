@@ -5,8 +5,8 @@ import Link from "next/link";
 
 export default function ChildSleepSection() {
   return (
-    <section className="relative bg-gradient-to-br from-amber-50 via-white to-amber-50 overflow-hidden">
-      {/* Decorative top wave 
+    <section className="relative bg-amber-50 overflow-hidden">
+      {/* Decorative top wave */}
       <div className="absolute top-0 left-0 right-0">
         <svg
           className="w-full h-10 text-amber-200"
@@ -16,7 +16,7 @@ export default function ChildSleepSection() {
           <path d="M0,160L1440,32L1440,0L0,0Z"></path>
         </svg>
       </div>
-      */}
+      
 
       {/* Background icons */}
       <div className="absolute inset-0 pointer-events-none">
@@ -37,7 +37,7 @@ export default function ChildSleepSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-2xl md:text-3xl font-bold text-blue-900 leading-snug mb-4 font-serif"
+          className="text-2xl md:text-3xl font-black text-gray-700 leading-snug mb-4 fontserif"
         >
           Inspired by Scripture
         </motion.h2>
@@ -48,9 +48,9 @@ export default function ChildSleepSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2, duration: 1 }}
           viewport={{ once: true }}
-          className="text-base md:text-lg font-light text-gray-700 leading-relaxed mb-3 max-w-xl mx-auto"
+          className="text-base md:text-lg font-light text-gray-600 leading-relaxed mb-3 max-w-xl mx-auto"
         >
-          <span className="italic text-gray-800">
+          <span className="italic text-gray-600">
             "Give, and it will be given to you. A good measure, pressed down,
             shaken together and running over, will be poured into your lap."
           </span>
@@ -62,7 +62,7 @@ export default function ChildSleepSection() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.9 }}
           viewport={{ once: true }}
-          className="text-center italic text-blue-800 font-semibold text-base"
+          className="text-center italic text-gray-600 font-semibold text-base"
         >
           — Luke 6:38
         </motion.p>
@@ -84,7 +84,7 @@ export default function ChildSleepSection() {
         </motion.div>
       </div>
 
-      {/* Bottom wave 
+      {/* Bottom wave */}
       <div className="absolute bottom-0 left-0 right-0">
         <svg
           className="w-full h-10 text-amber-200"
@@ -94,7 +94,7 @@ export default function ChildSleepSection() {
           <path d="M0,32L1440,160L1440,320L0,320Z"></path>
         </svg>
       </div>
-      */}
+      
     </section>
   );
 }

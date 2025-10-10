@@ -20,7 +20,7 @@ export default function AboutUs() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-serif font-black leading-tight text-gray-800"
+            className="text-3xl md:text-4xl lg:text-5xl fontserif font-black leading-tight text-gray-700"
           >
             Building Hope, Restoring Dignity
           </motion.h1>
@@ -29,7 +29,7 @@ export default function AboutUs() {
             initial={{ opacity: 0, y: 6 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.12, duration: 0.6 }}
-            className="mt-4 text-gray-700 max-w-xl"
+            className="mt-4 text-gray-600 max-w-xl"
           >
             Utamaduni Charitable Organization empowers vulnerable communities through
             education, healthcare, cultural identity, and sustainable livelihoods —

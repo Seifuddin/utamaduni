@@ -6,7 +6,7 @@ import { HeartHandshake, GraduationCap, Stethoscope } from "lucide-react";
 
 export default function SponsorProgram() {
   return (
-    <section className="relative bg-gradient-to-br from-blue-950 via-blue-800 to-blue-900 text-white py-10 sm:py-12 px-4 sm:px-8 md:px-12 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-blue-950 via-blue-800 to-blue-900 text-white py-16 smpy-12 px-4 sm:px-8 md:px-12 overflow-hidden">
       {/* Decorative Background Blobs */}
       <div className="absolute top-0 -left-16 w-40 h-40 bg-blue-600/30 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute bottom-6 -right-16 w-52 h-52 bg-yellow-400/20 rounded-full blur-3xl animate-pulse"></div>
@@ -19,13 +19,13 @@ export default function SponsorProgram() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight text-white">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl fontserif font-black leading-tight text-white mb-5">
             Sponsor a Child, Transform a Future
           </h2>
 
           <p className="text-blue-100 text-sm sm:text-base leading-relaxed mb-2">
             Your sponsorship provides{" "}
-            <span className="font-semibold text-yellow-300">
+            <span className="font-semibold text-gray-100">
               education, healthcare, and daily essentials
             </span>{" "}
             for children in need.
@@ -40,15 +40,15 @@ export default function SponsorProgram() {
           {/* Icon Highlights */}
           <div className="flex justify-cente md:justify-start gap-6 mb-5">
             <div className="flex flex-col items-center">
-              <HeartHandshake className="w-6 h-6 sm:w-7 sm:h-7 text-yellow-400 mb-1" />
+              <HeartHandshake className="w-6 h-6 sm:w-7 sm:h-7 text-gray-100 mb-1" />
               <span className="text-xs text-blue-200">Care</span>
             </div>
             <div className="flex flex-col items-center">
-              <GraduationCap className="w-6 h-6 sm:w-7 sm:h-7 text-yellow-400 mb-1" />
+              <GraduationCap className="w-6 h-6 sm:w-7 sm:h-7 text-gray-100 mb-1" />
               <span className="text-xs text-blue-200">Education</span>
             </div>
             <div className="flex flex-col items-center">
-              <Stethoscope className="w-6 h-6 sm:w-7 sm:h-7 text-yellow-400 mb-1" />
+              <Stethoscope className="w-6 h-6 sm:w-7 sm:h-7 text-gray-100 mb-1" />
               <span className="text-xs text-blue-200">Health</span>
             </div>
           </div>
@@ -62,7 +62,7 @@ export default function SponsorProgram() {
           >
             <Link
               href="/donate"
-              className="inline-block bg-gradient-to-r from-yellow-400 to-yellow-500 text-blue-900 font-bold px-5 py-2 rounded-lg shadow-md hover:from-yellow-300 hover:to-yellow-400 transition transform hover:-translate-y-0.5 hover:shadow-xl text-sm"
+              className="inline-block bg-white text-blue-900 font-bold px-5 py-2 rounded-lg shadow-md hover:from-yellow-300 hover:to-yellow-400 transition transform hover:-translate-y-0.5 hover:shadow-xl text-sm"
             >
               Sponsor Now
             </Link>
