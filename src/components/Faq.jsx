@@ -44,10 +44,10 @@ export default function FAQ() {
       <div className="max-w-4xl mx-auto px-6">
         {/* Section Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl fontserif font-black leading-tight text-gray-700 mb-5">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl fontserif font-black leading-tight text-gray-800 mb-5">
             Frequently Asked Questions
           </h2>
-          <p className="mt-2 text-gray-700 max-w-2xl mx-auto text-sm md:text-base">
+          <p className="mt-2 text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
             Have questions? We’ve got answers. Learn more about how we work and how you can get involved.
           </p>
         </div>

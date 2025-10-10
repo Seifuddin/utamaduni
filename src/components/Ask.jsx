@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function ChildSleepSection() {
   return (
-    <section className="relative bg-amber-50 overflow-hidden">
+    <section className="relative md:hidden bg-amber-50 overflow-hidden pt-16">
       {/* Decorative top wave */}
       <div className="absolute top-0 left-0 right-0">
         <svg
@@ -37,7 +37,7 @@ export default function ChildSleepSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-2xl md:text-3xl font-black text-gray-700 leading-snug mb-4 fontserif"
+          className="text-2xl md:text-3xl font-black text-gray-800 leading-snug mb-4 fontserif"
         >
           Inspired by Scripture
         </motion.h2>
@@ -84,7 +84,7 @@ export default function ChildSleepSection() {
         </motion.div>
       </div>
 
-      {/* Bottom wave */}
+      {/* Bottom wave 
       <div className="absolute bottom-0 left-0 right-0">
         <svg
           className="w-full h-10 text-amber-200"
@@ -94,7 +94,7 @@ export default function ChildSleepSection() {
           <path d="M0,32L1440,160L1440,320L0,320Z"></path>
         </svg>
       </div>
-      
+      */}
     </section>
   );
 }

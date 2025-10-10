@@ -41,10 +41,10 @@ const highlights = [
 
 export default function PastEvents() {
   return (
-    <section className="bg-amber-50 py-16 px-6 md:px-12 lg:px-16">
+    <section className="bg-amber-50 pb-16 px-6 md:px-12 lg:px-16">
       {/* Title */}
       <div className="text-center mb-8">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl fontserif font-black leading-tight text-gray-700 mb-5">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl fontserif font-black leading-tight text-gray-800 mb-5">
           Past Events & Achievements
         </h2>
         <p className="mt-2 text-gray-600 max-w-xl mx-auto text-sm md:text-base">
