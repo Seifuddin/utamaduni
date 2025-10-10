@@ -20,7 +20,7 @@ export default function AboutUs() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight text-blue-900"
+            className="text-3xl md:text-4xl lg:text-5xl font-serif font-black leading-tight text-gray-800"
           >
             Building Hope, Restoring Dignity
           </motion.h1>

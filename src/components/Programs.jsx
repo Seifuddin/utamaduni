@@ -60,7 +60,7 @@ export default function Programs() {
   const [selectedProgram, setSelectedProgram] = useState(null);
 
   return (
-    <section className="py-12 bg-amber-50 relative overflow-hidden" id="programs">
+    <section className="py-24 bg-amber-50 relative overflow-hidden" id="programs">
       {/* 🔹 Background Decorations */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-10 left-10 w-40 h-40 bg-pink-400 rounded-full blur-3xl opacity-20 animate-pulse"></div>
@@ -71,7 +71,7 @@ export default function Programs() {
       <div className="mx-auto px-6 lg:px-12 text-center max-w-7xl">
         {/* Heading */}
         <motion.h2
-          className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight text-blue-900"
+          className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight text-gray-800 mb-5"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -79,7 +79,7 @@ export default function Programs() {
           Our Projects & Focus Areas
         </motion.h2>
         <motion.p
-          className="text-gray-600 max-w-xl mx-auto mb-8 text-base"
+          className="text-gray-600 max-w-xl mx-auto mb-10 text-base"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
@@ -99,7 +99,7 @@ export default function Programs() {
               viewport={{ once: true }}
             >
               {/* Image */}
-              <div className="relative w-full h-36 overflow-hidden">
+              <div className="relative w-full h-40 overflow-hidden">
                 <Image
                   src={program.image}
                   alt={program.title}
@@ -109,8 +109,8 @@ export default function Programs() {
               </div>
 
               {/* Text Content */}
-              <div className="p-4 flex flex-col flex-1">
-                <h3 className="font-bold text-gray-700 font-serif text-lg mb-1">
+              <div className="p-4 flex flex-col flex-1 text-left">
+                <h3 className="font-bold text-gray-800 font-serif text-lg mb-1">
                   {program.title}
                 </h3>
                 <p className="text-gray-600 text-sm flex-1">{program.description}</p>

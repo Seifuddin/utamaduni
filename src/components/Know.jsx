@@ -12,29 +12,29 @@ import Link from "next/link";
 export default function DidYouKnowHybrid() {
   const slides = [
     {
-      icon: <Users className="w-10 h-10 text-yellow-300" />,
+      icon: <Users className="w-7 h-7 text-white" />,
       stat: "150M+",
       text: "children live on the streets worldwide with no care or safety.",
     },
     {
-      icon: <Utensils className="w-10 h-10 text-yellow-300" />,
+      icon: <Utensils className="w-7 h-7 text-white" />,
       stat: "1 in 3",
       text: "go to bed hungry every night, crying themselves to sleep.",
     },
     {
-      icon: <Home className="w-10 h-10 text-yellow-300" />,
+      icon: <Home className="w-7 h-7 text-white" />,
       stat: "Millions",
       text: "sleep without shelter, warmth, or protection from harm.",
     },
     {
-      icon: <Heart className="w-10 h-10 text-yellow-300" />,
+      icon: <Heart className="w-7 h-7 text-white" />,
       stat: "Your Help",
       text: "can bring food, safety, and hope. Even the smallest gift saves lives.",
     },
   ];
 
   return (
-    <section className="relative text-white py-12 px-4 md:px-10">
+    <section className="relative text-white py-20 px-4 md:px-10">
       {/* Background image with overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -90,7 +90,7 @@ export default function DidYouKnowHybrid() {
                 >
                   <div className="flex justify-center mb-3">{slide.icon}</div>
                   <h3 className="text-xl font-bold font-serif">{slide.stat}</h3>
-                  <p className="mt-2 text-sm text-gray-200">{slide.text}</p>
+                  <p className="mt-2 text-sm text-gray-300">{slide.text}</p>
                 </motion.div>
               </SwiperSlide>
             ))}
@@ -116,7 +116,7 @@ export default function DidYouKnowHybrid() {
           ))}
         </div>
 
-        {/* CTA */}
+        {/* CTA 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -132,6 +132,8 @@ export default function DidYouKnowHybrid() {
             Donate & Save a Life
           </Link>
         </motion.div>
+        */}
+
       </div>
     </section>
   );

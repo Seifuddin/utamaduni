@@ -5,8 +5,8 @@ import Link from "next/link";
 
 export default function ChildSleepSection() {
   return (
-    <section className="relative bg-gradient-to-br from-amber-100 via-white to-amber-100 overflow-hidden">
-      {/* Decorative top wave */}
+    <section className="relative bg-gradient-to-br from-amber-50 via-white to-amber-50 overflow-hidden">
+      {/* Decorative top wave 
       <div className="absolute top-0 left-0 right-0">
         <svg
           className="w-full h-10 text-amber-200"
@@ -16,6 +16,7 @@ export default function ChildSleepSection() {
           <path d="M0,160L1440,32L1440,0L0,0Z"></path>
         </svg>
       </div>
+      */}
 
       {/* Background icons */}
       <div className="absolute inset-0 pointer-events-none">
@@ -83,7 +84,7 @@ export default function ChildSleepSection() {
         </motion.div>
       </div>
 
-      {/* Bottom wave */}
+      {/* Bottom wave 
       <div className="absolute bottom-0 left-0 right-0">
         <svg
           className="w-full h-10 text-amber-200"
@@ -93,6 +94,7 @@ export default function ChildSleepSection() {
           <path d="M0,32L1440,160L1440,320L0,320Z"></path>
         </svg>
       </div>
+      */}
     </section>
   );
 }

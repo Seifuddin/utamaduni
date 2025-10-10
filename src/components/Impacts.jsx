@@ -35,28 +35,28 @@ function useCountUp(target, inView, duration = 2000) {
 export default function ImpactStats() {
   const stats = [
     {
-      icon: <Users className="w-5 h-5 text-blue-500" />,
+      icon: <Users className="w-5 h-5 text-blue-900" />,
       value: 5000,
       suffix: "+",
       label: "Children Helped",
       progress: 85,
     },
     {
-      icon: <UtensilsCrossed className="w-5 h-5 text-blue-500" />,
+      icon: <UtensilsCrossed className="w-5 h-5 text-blue-900" />,
       value: 20000,
       suffix: "+",
       label: "Meals Provided",
       progress: 90,
     },
     {
-      icon: <GraduationCap className="w-5 h-5 text-blue-500" />,
+      icon: <GraduationCap className="w-5 h-5 text-blue-900" />,
       value: 1200,
       suffix: "+",
       label: "Volunteers",
       progress: 70,
     },
     {
-      icon: <Heart className="w-5 h-5 text-blue-500" />,
+      icon: <Heart className="w-5 h-5 text-blue-900" />,
       value: 15,
       suffix: "+ Years",
       label: "Of Service",
@@ -67,10 +67,10 @@ export default function ImpactStats() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
-    <section ref={ref} className="bg-amber-50 py-16">
+    <section ref={ref} className="bg-amber-50 pb-24">
       <div className="px-4 md:px-10 lg:px-16 mx-auto">
         {/* */}
-        <h2 className="text-center text-2xl md:text4xl lg:text-5xl mb-10 font-serif font-bold leading-tight text-blue-900">
+        <h2 className="text-center text-2xl md:text4xl lg:text-5xl mb-10 font-serif font-black leading-tight text-gray-800">
           Our Achievement in Numbers
         </h2>
         
@@ -81,6 +81,7 @@ export default function ImpactStats() {
           pagination={{ clickable: true }}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           breakpoints={{
+            320: { slidesPerView: 2 },
             640: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
             1280: { slidesPerView: 4 },
@@ -98,7 +99,7 @@ export default function ImpactStats() {
                   className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition-all h-[140px] flex flex-col justify-between"
                 >
                   <div className="flex items-center gap-2">
-                    <div className="p-1.5 bg-blue-100 rounded-full">{stat.icon}</div>
+                    <div className="p-1.5 bg-gray-100 rounded-full">{stat.icon}</div>
                     <h3 className="font-serif font-semibold text-sm text-gray-700">
                       {stat.label}
                     </h3>
@@ -114,7 +115,7 @@ export default function ImpactStats() {
                       initial={{ width: 0 }}
                       animate={inView ? { width: `${stat.progress}%` } : {}}
                       transition={{ duration: 1, delay: 0.2 }}
-                      className="h-1 rounded-full bg-blue-400"
+                      className="h-1 rounded-full bg-blue-900"
                     />
                   </div>
 
