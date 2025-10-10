@@ -87,7 +87,7 @@ export default function PastEvents() {
 
               {/* Content */}
               <div className="p-4">
-                <h3 className="font-semibold text-gray-700 text-sm md:text-base mb-1 font-serif">
+                <h3 className="font-bold text-gray-800 fontserif text-lg my-2">
                   {event.title}
                 </h3>
                 <p className="text-xs text-gray-700 italic mb-2">{event.date}</p>

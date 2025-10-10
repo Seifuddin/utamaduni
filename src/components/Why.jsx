@@ -4,14 +4,14 @@ import { HeartHandshake, Users, GraduationCap } from "lucide-react"; // icons
 
 export default function WhyWeExist() {
   return (
-    <section className="bg-gray-50 py-16 px-6 md:px-12 lg:px-20">
+    <section className="bg-amber-50 py-16 px-6 md:px-12 lg:px-20">
       <div className="max-w-5xl mx-auto text-center mb-12">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-bold text-blue-900"
+          className="text-3xl md:text-4xl lg:text-5xl fontserif font-black leading-tight text-gray-800"
         >
           Why We Exist
         </motion.h2>
@@ -41,7 +41,7 @@ export default function WhyWeExist() {
           className="bg-white rounded-xl shadow-md p-8 text-center hover:shadow-xl transition"
         >
           <HeartHandshake className="w-12 h-12 mx-auto text-blue-700 mb-4" />
-          <h3 className="text-xl font-semibold text-blue-900 mb-2">
+          <h3 className="font-bold text-gray-800 fontserif text-lg my-2">
             Transforming Lives
           </h3>
           <p className="text-gray-600">
@@ -59,7 +59,7 @@ export default function WhyWeExist() {
           className="bg-white rounded-xl shadow-md p-8 text-center hover:shadow-xl transition"
         >
           <Users className="w-12 h-12 mx-auto text-blue-700 mb-4" />
-          <h3 className="text-xl font-semibold text-blue-900 mb-2">
+          <h3 className="font-bold text-gray-800 fontserif text-lg my-2">
             Building Strong Communities
           </h3>
           <p className="text-gray-600">
@@ -77,7 +77,7 @@ export default function WhyWeExist() {
           className="bg-white rounded-xl shadow-md p-8 text-center hover:shadow-xl transition"
         >
           <GraduationCap className="w-12 h-12 mx-auto text-blue-700 mb-4" />
-          <h3 className="text-xl font-semibold text-blue-900 mb-2">
+          <h3 className="font-bold text-gray-800 fontserif text-lg my-2">
             Education for the Future
           </h3>
           <p className="text-gray-600">

@@ -1,11 +1,12 @@
 import About from "@/components/AboutUs";
 import ChildSleepSection from "@/components/Ask";
+import AboutHero from "@/components/HeroAbout";
 import WhyWeExist from "@/components/Why";
 
 export default function AboutPage() {
   return (
     <main className="overflow-x-hidden">
-      <ChildSleepSection />
+      <AboutHero />
       <About />
       <WhyWeExist />
     </main>
