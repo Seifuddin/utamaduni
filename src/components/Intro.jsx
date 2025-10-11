@@ -5,7 +5,7 @@ import { HeartHandshake } from "lucide-react"; // beautiful charity-related icon
 
 export default function AboutIntro() {
   return (
-    <section className="relative bg-amber-50 text-gray-800 pt-28 px-6 overflow-hidden">
+    <section className="relative bg-amber-50 text-gray-800 pt-16 px-6 overflow-hidden">
       {/* Decorative Background Pattern */}
       <div className="absolute inset-0 bg-[url('/images/african-pattern.png')] bg-cover bg-center opacity-10" />
       <div className="absolute inset-0 bg-gradient-to-b from-blue-950/10 via-amber-50/90 to-amber-50" />
@@ -29,7 +29,7 @@ export default function AboutIntro() {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="text-4xl md:text-5xl font-bold text-blue-900 mb-6 tracking-wide"
+          className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 tracking-wide"
         >
           Who We Are
         </motion.h2>
