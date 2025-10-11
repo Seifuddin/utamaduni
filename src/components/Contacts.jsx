@@ -26,7 +26,7 @@ export default function ContactUs() {
       {/* Background pattern overlay */}
       <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-10 bg-cover"></div>
 
-      {/* Header */}
+      {/* Header 
       <motion.div
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
@@ -41,6 +41,7 @@ export default function ContactUs() {
           learn more about Utamaduni, we’re always happy to connect.
         </p>
       </motion.div>
+      */}
 
       {/* Contact Info & Form */}
       <div className="relative grid md:grid-cols-2 gap-10 items-start">
@@ -52,7 +53,7 @@ export default function ContactUs() {
           className="space-y-8"
         >
           <div>
-            <h3 className="text-2xl font-semibold mb-2 text-blue-800">
+            <h3 className="text-2xl font-semibold mb-2 text-gray-800">
               Get in Touch
             </h3>
             <p className="text-gray-700">
@@ -64,14 +65,14 @@ export default function ContactUs() {
           <div className="space-y-6">
             <div className="flex items-center gap-4">
               <div className="p-3 bg-blue-100 rounded-full">
-                <Phone className="text-blue-700" size={24} />
+                <Phone className="text-blue-900" size={24} />
               </div>
               <p className="text-gray-700 font-medium">+254 712 345 678</p>
             </div>
 
             <div className="flex items-center gap-4">
               <div className="p-3 bg-blue-100 rounded-full">
-                <Mail className="text-blue-700" size={24} />
+                <Mail className="text-blue-900" size={24} />
               </div>
               <p className="text-gray-700 font-medium">
                 info@utamadunicharity.org
@@ -80,7 +81,7 @@ export default function ContactUs() {
 
             <div className="flex items-center gap-4">
               <div className="p-3 bg-blue-100 rounded-full">
-                <MapPin className="text-blue-700" size={24} />
+                <MapPin className="text-blue-900" size={24} />
               </div>
               <p className="text-gray-700 font-medium">
                 Nairobi, Kenya – Community Outreach Center
@@ -107,7 +108,7 @@ export default function ContactUs() {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full bg-amber-50 text-gray-900 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full bg-amber-50 text-gray-900 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 border border-blue-100"
               placeholder="Enter your full name"
             />
           </div>
@@ -122,7 +123,7 @@ export default function ContactUs() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full bg-amber-50 text-gray-900 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full bg-amber-50 text-gray-900 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 border border-blue-100"
               placeholder="example@email.com"
             />
           </div>
@@ -137,14 +138,14 @@ export default function ContactUs() {
               value={formData.message}
               onChange={handleChange}
               required
-              className="w-full bg-amber-50 text-gray-900 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full bg-amber-50 text-gray-900 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 border border-blue-100"
               placeholder="Write your message..."
             ></textarea>
           </div>
 
           <button
             type="submit"
-            className="flex items-center justify-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 px-6 rounded-md w-full transition duration-300"
+            className="flex items-center justify-center gap-2 bg-blue-900 hover:bg-blue-800 text-white font-semibold py-3 px-6 rounded-md w-full transition duration-300"
           >
             <Send size={20} /> Send Message
           </button>
