@@ -22,12 +22,6 @@ const people = [
       "Offering love, medical care, and dignity to the elderly and people with disabilities within our communities.",
     image: "/images/childsupport.webp",
   },
-  {
-    title: "Youth & Education",
-    description:
-      "Helping young people access education, skills training, and cultural mentorship to achieve their dreams.",
-    image: "/images/childsupport.webp",
-  },
 ];
 
 export default function PeopleWeHelp() {

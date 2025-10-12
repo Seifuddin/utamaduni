@@ -15,6 +15,7 @@ export default function WhyWeExist() {
         >
           Why We Exist
         </motion.h2>
+        
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
