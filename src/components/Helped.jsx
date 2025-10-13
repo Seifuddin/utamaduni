@@ -27,7 +27,7 @@ const people = [
 export default function PeopleWeHelp() {
   return (
     <section className="relative bg-amber-50 text-amber-50 py-24 px-6">
-      <div className="absolute inset-0 bg-[url('/images/african-pattern.png')] bg-cover bg-center opacity-5" />
+      <div className="absolute inset-0 bg-[url('/images/pattern.png')] bg-cover bg-center opacity-5" />
       <div className="relative max-w-6xl mx-auto text-center">
         {/* Heading */}
         <motion.h2

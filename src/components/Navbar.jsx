@@ -14,7 +14,7 @@ const Navbar = () => {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About Us" },
-    { href: "/leadership", label: "Our Leadership" },
+    // { href: "/leadership", label: "Our Leadership" },
     { href: "/programs", label: "Our Programs" },
     { href: "/gallery", label: "Gallery" },
     { href: "/contact", label: "Contact Us" },
@@ -80,20 +80,20 @@ const Navbar = () => {
         }`}
       >
         <div className="flex justify-between items-center px-6 py-4 border-b border-gray-100">
-          <h2 className="text-lg font-bold text-amber-700">Menu</h2>
+          <h2 className="text-lg font-bold text-pink-700">Menu</h2>
           <button onClick={() => setIsOpen(false)}>
             <X size={22} className="text-gray-600" />
           </button>
         </div>
 
-        <div className="px-6 py-6 space-y-4">
+        <div className="px-6 py-6 space-y-4 bg-gradient-to-br from-blue-900/60 via-[#0a2540]/90 to-blue-800/70">
           {navLinks.map((item, i) => (
             <Link
               key={i}
               href={item.href}
               onClick={() => setIsOpen(false)}
-              className={`block text-gray-700 text-lg font-medium hover:text-amber-700 transition ${
-                pathname === item.href ? "text-amber-700 underline" : ""
+              className={`block text-gray-200 text-lg font-medium hover:text-amber-700 transition ${
+                pathname === item.href ? "text-pink-700 underline" : ""
               }`}
             >
               {item.label}

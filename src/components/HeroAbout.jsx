@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function AboutHero() {
   return (
-    <section className="relative h-[30vh] flex items-center justify-center overflow-hidden py-10">
+    <section className="relative h-[30vh] flex items-center justify-center overflow-hidden py-16">
       {/* Background Image */}
       <Image
         src="/images/WhatsApp Image 2025-10-04 at 23.11.57 (1).jpeg" // replace with your image path
