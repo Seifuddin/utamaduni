@@ -22,20 +22,20 @@ export default function AboutIntro() {
           className="z-10"
         >
           {/* Icon */}
-          <div className="flex md:justify-start justify-center mb-5">
+          <div className="flex justify-start justifycenter mb-5">
             <div className="bg-blue-900/10 p-3 rounded-full">
               <HeartHandshake className="w-8 h-8 text-blue-900" />
             </div>
           </div>
 
           {/* Heading */}
-          <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4 text-center md:text-left">
+          <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4 text-left">
             Who We Are
           </h2>
           <div className="w-24 h-1 bg-blue-900 mb-8 md:mx-0 mx-auto rounded-full"></div>
 
           {/* Description */}
-          <p className="text-lg md:text-xl leading-relaxed text-gray-700 text-center md:text-left">
+          <p className="text-lg md:text-xl leading-relaxed text-gray-700 text-left">
             <span className="font-semibold text-blue-900">Utamaduni</span> is a
             community-based, non-profit organization dedicated to preserving{" "}
             <span className="font-medium text-blue-900">cultural heritage</span>{" "}

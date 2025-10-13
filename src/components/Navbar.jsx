@@ -33,6 +33,8 @@ export default function Navbar() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
+    { href: "/leadership", label: "Our Leadership" },
+    { href: "/programs", label: "Our Programs" },
     { label: "Branches", dropdown: branches },
     { label: "Programs", dropdown: programs },
     { label: "Resources", dropdown: resources },

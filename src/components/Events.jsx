@@ -28,12 +28,12 @@ const events = [
 
 export default function UpcomingEvents() {
   return (
-    <section className="bg-white py-16 px-6 md:px-12 lg:px-20">
+    <section className="bg-amber-50 py-16 px-6 md:px-12 lg:px-20">
       <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-maroon-700">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
           Upcoming Events
         </h2>
-        <p className="mt-3 text-blue-700 max-w-2xl mx-auto">
+        <p className="mt-3 text-gray-600 max-w-2xl mx-auto">
           Join us in our upcoming charity and cultural events as we spread hope,
           empower families, and strengthen communities.
         </p>
@@ -47,9 +47,9 @@ export default function UpcomingEvents() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
             viewport={{ once: true }}
-            className="bg-blue-50 shadow-md rounded-2xl p-6 border-t-4 border-maroon-700 hover:shadow-lg transition"
+            className="bg-white shadow-md rounded-2xl p-6 border-t-4 border-maroon-700 hover:shadow-lg transition"
           >
-            <h3 className="text-xl font-semibold text-maroon-700 mb-2">
+            <h3 className="text-xl font-semibold text-gray-700 mb-2">
               {event.title}
             </h3>
             <div className="flex items-center text-gray-700 mb-2">
@@ -69,7 +69,7 @@ export default function UpcomingEvents() {
         <motion.a
           whileHover={{ scale: 1.05 }}
           href="#"
-          className="bg-maroon-700 text-white px-6 py-3 rounded-full font-medium shadow-md hover:bg-blue-700 transition"
+          className="bg-maroon-700 text-gray-700 px-6 py-3 rounded-full font-medium shadow-md hover:bg-blue-700 transition"
         >
           View All Events
         </motion.a>

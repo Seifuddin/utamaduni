@@ -52,7 +52,7 @@ export default function PeopleWeHelp() {
         </motion.p>
 
         {/* People Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {people.map((person, index) => (
             <motion.div
               key={index}
@@ -62,7 +62,7 @@ export default function PeopleWeHelp() {
               viewport={{ once: true }}
               className="bg-white text-gray-800 rounded overflow-hidden shadow-lg hover:shadow-2xl transition duration-300"
             >
-              <div className="relative h-56 w-full">
+              <div className="relative h-44 w-full">
                 <Image
                   src={person.image}
                   alt={person.title}
@@ -71,14 +71,14 @@ export default function PeopleWeHelp() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-blue-950 mb-2">
+                <h3 className="text-left text-xl font-semibold text-blue-950 mb-2">
                   {person.title}
                 </h3>
-                {/* People Grid 
-                <p className="text-gray-700 text-sm leading-relaxed">
+                {/* People Grid */}
+                <p className="text-left text-gray-700 text-sm leading-relaxed">
                   {person.description}
                 </p>
-                */}
+                
               </div>
             </motion.div>
           ))}

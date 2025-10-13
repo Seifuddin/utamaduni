@@ -13,8 +13,6 @@ export default function AboutPage() {
       <AboutIntro />
       <About />
       <PeopleWeHelp />
-      <Leadership />
-      <WhyWeExist />
     </main>
   );
 }

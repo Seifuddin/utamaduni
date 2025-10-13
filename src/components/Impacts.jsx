@@ -67,7 +67,7 @@ export default function ImpactStats() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
-    <section ref={ref} className="bg-amber-50 py-16">
+    <section ref={ref} className="bg-amber-50 pb-16">
       <div className="px-4 md:px-10 lg:px-16 mx-auto">
         {/* */}
         <h2 className="text-center text-2xl md:text-3xl font-black text-gray-800 leading-snug mb-6">
