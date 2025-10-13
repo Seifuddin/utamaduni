@@ -11,23 +11,23 @@ const people = [
     image: "/images/childsupport.webp",
   },
   {
-    title: "Vulnerable Families",
+    title: "People Living with HIV/AIDS",
     description:
-      "Supporting struggling families with food, clothing, and empowerment programs to build a brighter future.",
-    image: "/images/childsupport.webp",
+      "Offering healthcare, counceling and awareness programs to promote dignity, hope and healthy living.",
+    image: "/images/hiv.webp",
   },
   {
     title: "Elderly & Disabled",
     description:
       "Offering love, medical care, and dignity to the elderly and people with disabilities within our communities.",
-    image: "/images/childsupport.webp",
+    image: "/images/Disabilities.jpg",
   },
 ];
 
 export default function PeopleWeHelp() {
   return (
     <section className="relative bg-amber-50 text-amber-50 py-24 px-6">
-      <div className="absolute inset-0 bg-[url('/images/african-pattern.png')] bg-cover bg-center opacity-10" />
+      <div className="absolute inset-0 bg-[url('/images/african-pattern.png')] bg-cover bg-center opacity-5" />
       <div className="relative max-w-6xl mx-auto text-center">
         {/* Heading */}
         <motion.h2
@@ -71,7 +71,7 @@ export default function PeopleWeHelp() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-left text-xl font-semibold text-blue-950 mb-2">
+                <h3 className="text-left text-lg font-semibold text-gray-700 mb-2">
                   {person.title}
                 </h3>
                 {/* People Grid */}

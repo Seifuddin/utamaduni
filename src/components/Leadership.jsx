@@ -2,202 +2,160 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Facebook, Linkedin, Twitter } from "lucide-react";
 
 const leaders = [
   {
-    name: "John Mwangi",
+    name: "Mr. Dimore",
+    role: "Founder & CEO",
+    image: "/images/Screenshot_20221028-204325.png",
+    quote:
+      "Inspiring others to dream more, learn more, and become more together.",
+    socials: {
+      facebook: "#",
+      linkedin: "#",
+      twitter: "#",
+    },
+  },
+  {
+    name: "Mrs. Dimore",
     role: "Manager",
     image: "/images/Screenshot_20221028-204325.png",
-    desktopPosition: "md:top-1/2 md:right-[10%] md:-translate-y-1/2", // right side
-    size: "w-32 h-32 md:w-36 md:h-36",
-    delay: 0.2,
+    quote:
+      "Through compassion and dedication, we build bridges of hope for the underprivileged.",
+    socials: {
+      facebook: "#",
+      linkedin: "#",
+      twitter: "#",
+    },
   },
   {
-    name: "Grace Njeri",
+    name: "Miss Prisca",
     role: "Secretary",
     image: "/images/Screenshot_20221028-204325.png",
-    desktopPosition: "md:top-1/2 md:left-[10%] md:-translate-y-1/2", // left side
-    size: "w-28 h-28 md:w-32 md:h-32",
-    delay: 0.3,
-  },
-  {
-    name: "Peter Otieno",
-    role: "Treasurer",
-    image: "/images/Screenshot_20221028-204325.png",
-    desktopPosition: "md:bottom-[8%] md:left-1/2 md:-translate-x-1/2", // slightly lowered bottom
-    size: "w-28 h-28 md:w-32 md:h-32",
-    delay: 0.4,
+    quote:
+      "Every small act of kindness creates ripples that transform communities.",
+    socials: {
+      facebook: "#",
+      linkedin: "#",
+      twitter: "#",
+    },
   },
 ];
 
 export default function Leadership() {
   return (
-    <section className="relative bg-blue-950 text-amber-50 py-24 px-6 overflowhidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('/images/image-removebg-preview (2).png')] bg-cover bg-center opacity-10" />
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/70 via-blue-950/90 to-blue-950" />
+    <section className="relative bg-amber-50 py-24 px-6 md:px-16 overflow-hidden">
+      {/* Decorative Background */}
+      <div className="absolute inset-0 overflow-hidden -z-10">
+        <div className="absolute -top-20 -left-20 w-96 h-96 bg-amber-100 rounded-full mix-blend-multiply blur-3xl opacity-40 animate-pulse" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-amber-200 rounded-full mix-blend-multiply blur-3xl opacity-40 animate-pulse" />
+      </div>
 
-      <div className="relative max-w-6xl mx-auto text-center">
-        {/* Heading */}
-        <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-4xl md:text-5xl font-bold mb-3"
-        >
-          Our Leadership & Management
-        </motion.h2>
+      {/* Header */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-center mb-20"
+      >
+        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+          Visionary Leadership
+        </h2>
+        <div className="mx-auto h-1 w-24 bg-amber-500 rounded-full mb-6"></div>
+        <p className="max-w-3xl mx-auto text-lg text-gray-700">
+          Meet the hearts and minds shaping{" "}
+          <span className="font-semibold text-gray-900">Utamaduni’s</span> mission — 
+          leading with empathy, vision, and unshakeable dedication.
+        </p>
+      </motion.div>
 
-        {/* Subtitle */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-amber-200 text-base md:text-lg mb-8 max-w-2xl mx-auto"
-        >
-          Meet the dedicated team guiding Utamaduni’s mission with vision,
-          integrity, and compassion.
-        </motion.p>
-
-        <div className="w-24 h-1 bg-amber-400 mx-auto mb-16 rounded-full"></div>
-
-        {/* ===== Desktop Layout (Circular) ===== */}
-        <div className="relative hidden md:flex justify-center items-center h-[620px] max-w-4xl mx-auto">
-          {/* CEO (Center) */}
+      {/* Leader Cards */}
+      <div className="grid md:grid-cols-3 gap-14 max-w-7xl mx-auto">
+        {leaders.map((leader, index) => (
           <motion.div
-            initial={{ scale: 0, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="relative z-20"
+            key={index}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.2, duration: 0.7 }}
+            className="group bg-white rounded-3xl shadow-md hover:shadow-xl transition-all duration-300 p-8 text-center relative border border-amber-100 hover:border-amber-300"
           >
-            <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-amber-400 shadow-2xl mx-auto">
-              <Image
-                src="/images/Screenshot_20221028-204325.png"
-                alt="CEO"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="relative mt-8">
-              <h3 className="text-2xl md:text-3xl font-bold text-amber-400">
-                Jane Wambui
-              </h3>
-              <p className="text-amber-100 text-sm tracking-wide">
-                Chief Executive Officer
-              </p>
-            </div>
-          </motion.div>
-
-          {/* Golden Connection Lines */}
-          <svg
-            className="absolute inset-0 w-full h-full pointer-events-none opacity-50"
-            viewBox="0 0 600 600"
-          >
-            {/* Right Line */}
-            <motion.path
-              d="M320 300 C400 300, 480 300, 520 300"
-              stroke="#fbbf24"
-              strokeWidth="3"
-              fill="none"
-              strokeLinecap="round"
-              initial={{ pathLength: 0 }}
-              whileInView={{ pathLength: 1 }}
-              transition={{ duration: 1.5, delay: 0.3 }}
-            />
-            {/* Left Line */}
-            <motion.path
-              d="M280 300 C200 300, 120 300, 80 300"
-              stroke="#fbbf24"
-              strokeWidth="3"
-              fill="none"
-              strokeLinecap="round"
-              initial={{ pathLength: 0 }}
-              whileInView={{ pathLength: 1 }}
-              transition={{ duration: 1.5, delay: 0.5 }}
-            />
-            {/* Bottom Line */}
-            <motion.path
-              d="M300 340 C300 420, 300 480, 300 540"
-              stroke="#fbbf24"
-              strokeWidth="3"
-              fill="none"
-              strokeLinecap="round"
-              initial={{ pathLength: 0 }}
-              whileInView={{ pathLength: 1 }}
-              transition={{ duration: 1.5, delay: 0.7 }}
-            />
-          </svg>
-
-          {/* Other Leaders */}
-          {leaders.map((leader, index) => (
-            <motion.div
-              key={index}
-              initial={{ scale: 0, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ delay: leader.delay, duration: 0.8 }}
-              viewport={{ once: true }}
-              className={`absolute ${leader.desktopPosition} flex flex-col items-center text-center z-10`}
-            >
-              <div
-                className={`relative ${leader.size} rounded-full overflow-hidden border-4 border-amber-300 shadow-xl hover:scale-105 transition-transform duration-500`}
-              >
+            {/* Circular Image */}
+            <div className="relative w-48 h-48 mx-auto mb-6">
+              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-amber-300 via-amber-100 to-white animate-pulse blur-lg opacity-30"></div>
+              <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-amber-200 group-hover:border-amber-400 transition-all duration-300 shadow-md">
                 <Image
                   src={leader.image}
                   alt={leader.name}
                   fill
-                  className="object-cover"
+                  className="object-cover rounded-full group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
-              <h3 className="mt-4 font-semibold text-lg text-amber-300">
-                {leader.name}
-              </h3>
-              <p className="text-sm text-amber-100">{leader.role}</p>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* ===== Mobile Layout (Stacked) ===== */}
-        <div className="flex flex-col items-center space-y-10 md:hidden">
-          {/* CEO First */}
-          <div className="text-center">
-            <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-amber-400 shadow-2xl mx-auto">
-              <Image
-                src="/images/Screenshot_20221028-204325.png"
-                alt="CEO"
-                fill
-                className="object-cover"
-              />
             </div>
-            <h3 className="text-2xl font-bold mt-4 text-amber-400">
-              Jane Wambui
-            </h3>
-            <p className="text-amber-100 text-sm">Chief Executive Officer</p>
-          </div>
 
-          {/* Other Leaders below */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-center">
-            {leaders.map((leader, index) => (
-              <div key={index}>
-                <div
-                  className={`relative ${leader.size} rounded-full overflow-hidden border-4 border-amber-300 shadow-xl mx-auto`}
+            <h3 className="text-2xl font-bold text-gray-900 mb-1">
+              {leader.name}
+            </h3>
+            <p className="text-amber-700 font-medium mb-4">{leader.role}</p>
+
+            {/* Social Icons */}
+            <div className="flex justify-center space-x-4 mb-5">
+              {leader.socials.facebook && (
+                <motion.a
+                  href={leader.socials.facebook}
+                  target="_blank"
+                  whileHover={{ scale: 1.2 }}
+                  className="p-2 rounded-full bg-amber-100 hover:bg-amber-200 transition"
                 >
-                  <Image
-                    src={leader.image}
-                    alt={leader.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <h3 className="mt-3 font-semibold text-lg text-amber-300">
-                  {leader.name}
-                </h3>
-                <p className="text-sm text-amber-100">{leader.role}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+                  <Facebook className="w-5 h-5 text-amber-700" />
+                </motion.a>
+              )}
+              {leader.socials.linkedin && (
+                <motion.a
+                  href={leader.socials.linkedin}
+                  target="_blank"
+                  whileHover={{ scale: 1.2 }}
+                  className="p-2 rounded-full bg-amber-100 hover:bg-amber-200 transition"
+                >
+                  <Linkedin className="w-5 h-5 text-amber-700" />
+                </motion.a>
+              )}
+              {leader.socials.twitter && (
+                <motion.a
+                  href={leader.socials.twitter}
+                  target="_blank"
+                  whileHover={{ scale: 1.2 }}
+                  className="p-2 rounded-full bg-amber-100 hover:bg-amber-200 transition"
+                >
+                  <Twitter className="w-5 h-5 text-amber-700" />
+                </motion.a>
+              )}
+            </div>
+
+            <p className="text-gray-600 italic leading-relaxed">
+              “{leader.quote}”
+            </p>
+          </motion.div>
+        ))}
       </div>
+
+      {/* Closing Statement */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-center mt-24"
+      >
+        <h3 className="text-2xl font-semibold text-gray-800 mb-3">
+          Leadership through Service
+        </h3>
+        <p className="max-w-2xl mx-auto text-gray-700 text-lg">
+          True leadership is not about position — it’s about responsibility.  
+          Together, we guide{" "}
+          <span className="font-semibold text-gray-900">Utamaduni</span> 
+          with purpose and unwavering dedication to humanity.
+        </p>
+      </motion.div>
     </section>
   );
 }

@@ -16,7 +16,7 @@ import Projects from "@/components/Projects";
 
 export default function Home() {
   return (
-    <main className="overflow-x-hidden">
+    <main className="overflow-x-hidden pt-20">
       <Hero />
       <AboutUs />
       <ImpactStats />

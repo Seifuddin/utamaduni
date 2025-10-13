@@ -8,7 +8,7 @@ import Leadership from "@/components/Leadership";
 
 export default function AboutPage() {
   return (
-    <main className="overflow-x-hidden">
+    <main className="overflow-x-hidden pt-20">
       <AboutHero />
       <AboutIntro />
       <About />

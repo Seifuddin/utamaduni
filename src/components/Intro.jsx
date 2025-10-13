@@ -24,15 +24,15 @@ export default function AboutIntro() {
           {/* Icon */}
           <div className="flex justify-start justifycenter mb-5">
             <div className="bg-blue-900/10 p-3 rounded-full">
-              <HeartHandshake className="w-8 h-8 text-blue-900" />
+              <HeartHandshake className="w-4 h-4 text-blue-900" />
             </div>
           </div>
 
           {/* Heading */}
-          <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4 text-left">
+          <h2 className="text-3xl md:text-5xl font-bold text-blue-900 mb-4 text-left">
             Who We Are
           </h2>
-          <div className="w-24 h-1 bg-blue-900 mb-8 md:mx-0 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 text-left bg-blue-900 mb-8 md:mx-0 mx-auto rounded-full"></div>
 
           {/* Description */}
           <p className="text-lg md:text-xl leading-relaxed text-gray-700 text-left">

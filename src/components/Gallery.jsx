@@ -1,26 +1,27 @@
 "use client";
+
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 
-const categories = ["All", "Leaders", "Team", "Events", "Community"];
+const categories = [
+  "All",
+  "Community Work",
+  "Events",
+  "Leadership",
+  "Outreach",
+];
 
 const images = [
-  { src: "/images/WhatsApp Image 2025-10-04 at 23.11.07.jpeg", alt: "Utamaduni ....During.....Event....at...", category: "" },
-  { src: "/images/WhatsApp Image 2025-10-04 at 23.11.11.jpeg", alt: "Utamaduni ....During.....Event....at...", category: "" },
-  { src: "/images/WhatsApp Image 2025-10-04 at 23.11.56.jpeg", alt: "Utamaduni ....During.....Event....at...", category: "" },
-  { src: "/images/WhatsApp Image 2025-10-04 at 23.11.57 (1).jpeg", alt: "Utamaduni ....During.....Event....at...", category: "" },
-  { src: "/images/WhatsApp Image 2025-10-04 at 23.11.57 (2).jpeg", alt: "Utamaduni ....During.....Event....at...", category: "" },
-  { src: "/images/WhatsApp Image 2025-10-04 at 23.11.57.jpeg", alt: "Utamaduni ....During.....Event....at...", category: "" },
-  { src: "/images/WhatsApp Image 2025-10-04 at 23.11.58 (1).jpeg", alt: "Utamaduni ....During.....Event....at...", category: "" },
-  { src: "/images/WhatsApp Image 2025-10-04 at 23.11.58.jpeg", alt: "Utamaduni ....During.....Event....at...", category: "" },
-  { src: "/images/WhatsApp Image 2025-09-28 at 02.00.51.jpeg", alt: "Utamaduni ....During.....Event....at...", category: "" },
-  { src: "/images/WhatsApp Image 2025-09-28 at 02.00.51 (2).jpeg", alt: "Utamaduni ....During.....Event....at...", category: "" },
-  { src: "/images/WhatsApp Image 2025-09-28 at 02.00.51 (1).jpeg", alt: "Utamaduni ....During.....Event....at...", category: "" },
-  { src: "/images/WhatsApp Image 2025-09-28 at 02.00.50.jpeg", alt: "Utamaduni ....During.....Event....at...", category: "" },
-
-  // You can keep adding more images here
+  { src: "/images/WhatsApp Image 2025-10-04 at 23.11.07.jpeg", alt: "Utamaduni volunteers helping children at the community center", category: "Community Work" },
+  { src: "/images/WhatsApp Image 2025-10-04 at 23.11.11.jpeg", alt: "Food distribution event organized by Utamaduni", category: "Events" },
+  { src: "/images/WhatsApp Image 2025-10-04 at 23.11.56.jpeg", alt: "Utamaduni team cleaning up a local park", category: "Community Work" },
+  { src: "/images/WhatsApp Image 2025-10-04 at 23.11.57 (1).jpeg", alt: "Utamaduni leadership meeting with local elders", category: "Leadership" },
+  { src: "/images/WhatsApp Image 2025-10-04 at 23.11.57 (2).jpeg", alt: "Youth empowerment outreach in Kisumu", category: "Outreach" },
+  { src: "/images/WhatsApp Image 2025-10-04 at 23.11.57.jpeg", alt: "Volunteers planting trees for the environment", category: "Community Work" },
+  { src: "/images/WhatsApp Image 2025-10-04 at 23.11.58 (1).jpeg", alt: "Charity event for street children", category: "Events" },
+  { src: "/images/WhatsApp Image 2025-09-28 at 02.00.50.jpeg", alt: "Utamaduni community meeting in Nairobi", category: "Leadership" },
 ];
 
 export default function OurGallery() {
@@ -28,13 +29,11 @@ export default function OurGallery() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [visibleCount, setVisibleCount] = useState(8);
 
-  // Filter images by category
   const filteredImages =
     activeCategory === "All"
       ? images
       : images.filter((img) => img.category === activeCategory);
 
-  // Show only visible images
   const visibleImages = filteredImages.slice(0, visibleCount);
 
   // Infinite scroll effect
@@ -42,45 +41,43 @@ export default function OurGallery() {
     const handleScroll = () => {
       if (
         window.innerHeight + window.scrollY >=
-        document.documentElement.scrollHeight - 100
+        document.documentElement.scrollHeight - 150
       ) {
         loadMore();
       }
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [visibleCount, filteredImages]);
 
   const loadMore = () => {
     if (visibleCount < filteredImages.length) {
-      setVisibleCount((prev) => prev + 4); // load 4 more at a time
+      setVisibleCount((prev) => prev + 4);
     }
   };
 
-  // Reset count when switching filters
   useEffect(() => {
     setVisibleCount(8);
   }, [activeCategory]);
 
   return (
-    <section className="py-16 bg-gradient-to-b from-white to-gray-100">
+    <section className="py-20 bg-gradient-to-b from-amber-50 to-white">
       <div className="max-w-7xl mx-auto px-6 text-center">
         {/* Title */}
         <motion.h2
-          className="text-4xl md:text-5xl font-bold text-blue-900 mb-4"
+          className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          Our Moments
+          Cherished Moments
         </motion.h2>
         <motion.p
-          className="text-lg text-gray-600 mb-8"
+          className="text-lg text-gray-700 mb-10 max-w-2xl mx-auto"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
-          Experience the through our captured
-          memories.
+          Glimpses of compassion, action, and unity — captured from Utamaduni’s
+          heartwarming initiatives and events across Kenya.
         </motion.p>
 
         {/* Filter Buttons */}
@@ -89,10 +86,10 @@ export default function OurGallery() {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition ${
+              className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
                 activeCategory === category
-                  ? "bg-indigo-600 text-white shadow-lg"
-                  : "bg-gray-200 text-gray-700 hover:bg-indigo-100"
+                  ? "bg-amber-600 text-white shadow-lg"
+                  : "bg-white border border-gray-300 text-gray-700 hover:bg-amber-100"
               }`}
             >
               {category}
@@ -100,14 +97,16 @@ export default function OurGallery() {
           ))}
         </div>
 
-        {/* Masonry Grid */}
-        <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+        {/* Masonry Grid with fade-in */}
+        <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-5 space-y-5">
           {visibleImages.map((img, index) => (
             <motion.div
               key={index}
-              className="relative cursor-pointer overflow-hidden rounded-2xl shadow-lg group"
-              whileHover={{ scale: 1.03 }}
-              transition={{ duration: 0.3 }}
+              className="relative overflow-hidden rounded-2xl shadow-md cursor-pointer group"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, delay: index * 0.05 }}
               onClick={() => setSelectedImage(img)}
             >
               <Image
@@ -117,22 +116,24 @@ export default function OurGallery() {
                 height={400}
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center text-white text-lg font-semibold transition">
+              <div className="absolute inset-0 bg-blue-900/40 opacity-0 group-hover:opacity-100 flex items-center justify-center text-white text-sm px-4 text-center transition-all">
                 {img.alt}
               </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Optional Load More Button (backup if scroll doesn’t trigger) */}
+        {/* Load More Button */}
         {visibleCount < filteredImages.length && (
           <div className="mt-10">
-            <button
+            <motion.button
               onClick={loadMore}
-              className="px-6 py-3 bg-indigo-600 text-white rounded-full shadow-lg hover:bg-indigo-700 transition"
+              className="px-6 py-3 bg-blue-800 text-white rounded-full shadow-lg hover:bg-blue-900 transition-all"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               Load More
-            </button>
+            </motion.button>
           </div>
         )}
       </div>
@@ -146,7 +147,7 @@ export default function OurGallery() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <div className="relative max-w-4xl w-full">
+            <div className="relative max-w-5xl w-full">
               <button
                 className="absolute top-4 right-4 text-white text-3xl z-50"
                 onClick={() => setSelectedImage(null)}
@@ -156,12 +157,13 @@ export default function OurGallery() {
               <motion.img
                 src={selectedImage.src}
                 alt={selectedImage.alt}
-                className="w-full h-auto rounded-2xl shadow-xl"
+                className="w-full h-auto rounded-2xl shadow-2xl"
                 initial={{ scale: 0.8 }}
                 animate={{ scale: 1 }}
                 exit={{ scale: 0.8 }}
+                transition={{ duration: 0.3 }}
               />
-              <p className="text-center text-gray-200 mt-4">
+              <p className="text-center text-gray-200 mt-4 text-sm md:text-base">
                 {selectedImage.alt}
               </p>
             </div>
