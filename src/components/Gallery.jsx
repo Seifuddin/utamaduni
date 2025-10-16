@@ -65,7 +65,7 @@ export default function OurGallery() {
       <div className="max-w-7xl mx-auto px-6 text-center">
         {/* Title */}
         <motion.h2
-          className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4"
+          className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
         >

@@ -19,7 +19,7 @@ export default function SponsorProgram() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl fontserif font-black leading-tight text-gray-800 mb-5">
+          <h2 className="text-3xl md:text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-4">
             Sponsor a Child, Transform a Future
           </h2>
 
@@ -38,7 +38,7 @@ export default function SponsorProgram() {
           </p>
 */}
           {/* Icon Highlights */}
-          <div className="flex justify-cente md:justify-start gap-6 mb-5">
+          <div className="flex justify-cente md:justify-start gap-6 mb-7 mt-5">
             <div className="flex flex-col items-center">
               <HeartHandshake className="w-6 h-6 sm:w-7 sm:h-7 text-pink-700 mb-1" />
               <span className="text-xs text-gray-700">Care</span>

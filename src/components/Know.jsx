@@ -17,7 +17,7 @@ export default function DidYouKnowHybrid() {
       text: "children live on the streets worldwide with no care or safety.",
     },
     {
-      icon: <Utensils className="w-7 h-7 text-pink-600" />,
+      icon: <Utensils className="w-6 h-6 text-pink-600" />,
       stat: "1 in 3",
       text: "go to bed hungry every night, crying themselves to sleep.",
     },
@@ -42,7 +42,7 @@ export default function DidYouKnowHybrid() {
           backgroundImage: "url('/images/childrenwelfare.webp')", // replace with your background
         }}
       />
-      <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
+      <div className="absolute inset-0 bg-black/50 backdrop-blursm" />
 
       <div className="relative mx-auto text-center">
         {/* Title */}
@@ -51,7 +51,7 @@ export default function DidYouKnowHybrid() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl lg:text-5xl fontserif font-black leading-tight text-white mb-5"
+          className="text-2xl md:text-3xl font-serif font-bold text-white mb-4"
         >
           Did You Know?
         </motion.h2>

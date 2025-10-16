@@ -29,7 +29,7 @@ export default function AboutIntro() {
           </div>
 */}
           {/* Heading */}
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4 text-left">
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-2 text-left">
             Who We Are
           </h2>
           <div className="w-24 h-1 text-left bg-pink-700 mb-8 md:mx-0 mxauto rounded-full"></div>
@@ -47,6 +47,12 @@ export default function AboutIntro() {
             <span className="italic text-blue-900">heritage</span> into its
             charitable initiatives.
           </p>
+
+          <p className="text-lg md:text-xl leading-relaxed text-gray-700 mt-5">
+          The word "Utamaduni" means culture in Swahili, reflectiong our belief that 
+          culture is the foundation of identity and a bridge for building stronger, 
+          caring communities.
+        </p>
         </motion.div>
 
         {/* Right: Image */}

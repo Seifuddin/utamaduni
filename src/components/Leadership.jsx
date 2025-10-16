@@ -59,7 +59,7 @@ export default function Leadership() {
         transition={{ duration: 0.8 }}
         className="text-center mb-20"
       >
-        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+        <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4">
           Visionary Leadership
         </h2>
         <div className="mx-auto h-1 w-24 bg-pink-700 rounded-full mb-6"></div>
@@ -78,12 +78,12 @@ export default function Leadership() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.2, duration: 0.7 }}
-            className="group bg-white rounded-3xl shadow-md hover:shadow-xl transition-all duration-300 p-8 text-center relative border border-amber-100 hover:border-amber-300"
+            className="group bg-white rounded shadow-md hover:shadow-xl transition-all duration-300 p-4 text-center relative border border-gray-100 hover:border-amber-300"
           >
             {/* Circular Image */}
             <div className="relative w-32 h-32 mx-auto mb-6">
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-amber-300 via-amber-100 to-white animate-pulse blur-lg opacity-30"></div>
-              <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-blue-900 group-hover:border-amber-400 transition-all duration-300 shadow-md">
+              <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-blue-900 group-hover:border-amber-400 transition-all duration-300 shadow-md">
                 <Image
                   src={leader.image}
                   alt={leader.name}

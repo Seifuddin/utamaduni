@@ -53,7 +53,7 @@ export default function ContactUs() {
           className="space-y-8"
         >
           <div>
-            <h3 className="text-2xl font-semibold mb-2 text-gray-800">
+            <h3 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4">
               Get in Touch
             </h3>
             <p className="text-gray-700">

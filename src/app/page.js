@@ -17,7 +17,7 @@ import CTA from "@/components/CTA";
 
 export default function Home() {
   return (
-    <main className="overflow-x-hidden pt-20">
+    <main className="overflow-x-hidden pt-16">
       <Hero />
       <SponsorProgram />
       <ImpactStats />

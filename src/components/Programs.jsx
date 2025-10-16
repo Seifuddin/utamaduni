@@ -71,7 +71,7 @@ export default function Programs() {
       <div className="mx-auto px-6 lg:px-12 text-center max-w-7xl">
         {/* Heading */}
         <motion.h2
-          className="text-3xl md:text-4xl lg:text-5xl fontserif font-black leading-tight text-gray-800 mb-5"
+          className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -79,7 +79,7 @@ export default function Programs() {
           Our Projects & Focus Areas
         </motion.h2>
         <motion.p
-          className="text-gray-600 max-w-xl mx-auto mb-10 text-base"
+          className="text-gray-700 max-w-xl mx-auto mb-10 text-base"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
@@ -110,7 +110,7 @@ export default function Programs() {
 
               {/* Text Content */}
               <div className="p-4 flex flex-col flex-1 text-left">
-                <h3 className="font-bold text-gray-800 fontserif text-lg my-2">
+                <h3 className="font-bold text-gray-800 fontserif tex my-2">
                   {program.title}
                 </h3>
                 <p className="text-gray-600 text-sm flex-1">{program.description}</p>

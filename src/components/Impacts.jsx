@@ -70,7 +70,7 @@ export default function ImpactStats() {
     <section ref={ref} className="bg-amber-50 pb-16">
       <div className="px-4 md:px-10 lg:px-16 mx-auto">
         {/* */}
-        <h2 className="text-center text-2xl md:text-3xl font-black text-gray-800 leading-snug mb-6">
+        <h2 className="text-center text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-6">
           Our Achievement in Numbers
         </h2>
         
@@ -99,8 +99,8 @@ export default function ImpactStats() {
                   className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition-all h-[140px] flex flex-col justify-between"
                 >
                   <div className="flex items-center gap-2">
-                    <div className="p-1.5 bg-gray-100 rounded-full">{stat.icon}</div>
-                    <h3 className="font-serif font-semibold text-sm text-gray-600">
+                    <div className="p-1.5 bg-amber-100 rounded-full">{stat.icon}</div>
+                    <h3 className="font-serif font-semibold text-sm text-gray-800">
                       {stat.label}
                     </h3>
                   </div>
@@ -119,7 +119,7 @@ export default function ImpactStats() {
                     />
                   </div>
 
-                  <p className="text-[11px] text-gray-500">
+                  <p className="text-[11px] text-gray-800">
                     {stat.progress}% Goal Reached
                   </p>
                 </motion.div>

@@ -4,8 +4,7 @@ import React from 'react'
 
 export default function ContactUsPage() {
   return (
-    <div className='overflow-x-hidden pt-20'>
-        <ContactHero />
+    <div className='overflow-x-hidden pt-16'>
         <ContactUs />
     </div>
   )
