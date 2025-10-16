@@ -12,22 +12,22 @@ import Link from "next/link";
 export default function DidYouKnowHybrid() {
   const slides = [
     {
-      icon: <Users className="w-7 h-7 text-white" />,
+      icon: <Users className="w-7 h-7 text-pink-600" />,
       stat: "150M+",
       text: "children live on the streets worldwide with no care or safety.",
     },
     {
-      icon: <Utensils className="w-7 h-7 text-white" />,
+      icon: <Utensils className="w-7 h-7 text-pink-600" />,
       stat: "1 in 3",
       text: "go to bed hungry every night, crying themselves to sleep.",
     },
     {
-      icon: <Home className="w-7 h-7 text-white" />,
+      icon: <Home className="w-7 h-7 text-pink-600" />,
       stat: "Millions",
       text: "sleep without shelter, warmth, or protection from harm.",
     },
     {
-      icon: <Heart className="w-7 h-7 text-white" />,
+      icon: <Heart className="w-7 h-7 text-pink-600" />,
       stat: "Your Help",
       text: "can bring food, safety, and hope. Even the smallest gift saves lives.",
     },

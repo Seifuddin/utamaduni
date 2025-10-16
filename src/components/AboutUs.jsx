@@ -29,18 +29,18 @@ export default function About() {
           </div>
 
           <div className="grid sm:grid-cols-3 gap-6">
-            <ValueCard icon={<HeartHandshake className="w-6 h-6 text-pink-500" />} title="Mission">
+            <ValueCard icon={<HeartHandshake className="w-6 h-6 text-pink-700" />} title="Mission">
               To preserve cultural heritage while providing humanitarian support through education,
               empowerment, and sustainable charitable initiatives for orphans, needy families, and
               communities in need.
             </ValueCard>
 
-            <ValueCard icon={<Globe className="w-6 h-6 text-blue-500" />} title="Vision">
+            <ValueCard icon={<Globe className="w-6 h-6 text-pink-700" />} title="Vision">
               To create a culturally inspired, compassionate society where vulnerable children and
               families can thrive with dignity and hope.
             </ValueCard>
 
-            <ValueCard icon={<Award className="w-6 h-6 text-yellow-500" />} title="Values">
+            <ValueCard icon={<Award className="w-6 h-6 text-pink-700" />} title="Values">
               Compassion, Integrity, Culture, Community work, and Sustainability.
             </ValueCard>
           </div>
@@ -48,7 +48,7 @@ export default function About() {
       </section>
 
       {/* CALL TO ACTION */}
-      <section className="bg-blue-900 text-white py-12">
+      <section className="bg-blue-900 text-white py-16">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h3 className="text-3xl md:text-4xl lg:text-5xl fontserif font-black leading-tight text-gray-200">Join Us in Making a Difference</h3>
           <p className="mt-2 text-gray-300 max-w-2xl mx-auto">Volunteer, donate or partner — your support helps transform lives and communities.</p>
@@ -78,11 +78,11 @@ export default function About() {
             </p>
 
             <div className="mt-4 grid sm:grid-cols-2 gap-4">
-              <FeatureBox icon={<Users className="w-5 h-5 text-blue-800" />} title="Community Driven">
+              <FeatureBox icon={<Users className="w-5 h-5 text-pink-700" />} title="Community Driven">
                 We co-design programs with local leaders to ensure dignity and relevance.
               </FeatureBox>
 
-              <FeatureBox icon={<BookOpen className="w-5 h-5 text-blue-800" />} title="Sustainable Learning">
+              <FeatureBox icon={<BookOpen className="w-5 h-5 text-pink-700" />} title="Sustainable Learning">
                 Education initiatives that equip children and adults for tomorrow's opportunities.
               </FeatureBox>
             </div>

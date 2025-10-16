@@ -62,7 +62,7 @@ export default function Leadership() {
         <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
           Visionary Leadership
         </h2>
-        <div className="mx-auto h-1 w-24 bg-amber-500 rounded-full mb-6"></div>
+        <div className="mx-auto h-1 w-24 bg-pink-700 rounded-full mb-6"></div>
         <p className="max-w-3xl mx-auto text-lg text-gray-700">
           Meet the hearts and minds shaping{" "}
           <span className="font-semibold text-gray-900">Utamaduni’s</span> mission — 
@@ -81,9 +81,9 @@ export default function Leadership() {
             className="group bg-white rounded-3xl shadow-md hover:shadow-xl transition-all duration-300 p-8 text-center relative border border-amber-100 hover:border-amber-300"
           >
             {/* Circular Image */}
-            <div className="relative w-48 h-48 mx-auto mb-6">
+            <div className="relative w-32 h-32 mx-auto mb-6">
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-amber-300 via-amber-100 to-white animate-pulse blur-lg opacity-30"></div>
-              <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-amber-200 group-hover:border-amber-400 transition-all duration-300 shadow-md">
+              <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-blue-900 group-hover:border-amber-400 transition-all duration-300 shadow-md">
                 <Image
                   src={leader.image}
                   alt={leader.name}
@@ -93,10 +93,10 @@ export default function Leadership() {
               </div>
             </div>
 
-            <h3 className="text-2xl font-bold text-gray-900 mb-1">
+            <h3 className="text-lg font-bold text-gray-900 mb-1">
               {leader.name}
             </h3>
-            <p className="text-amber-700 font-medium mb-4">{leader.role}</p>
+            <p className="text-gray-700 font-medium mb-4">{leader.role}</p>
 
             {/* Social Icons */}
             <div className="flex justify-center space-x-4 mb-5">
@@ -107,7 +107,7 @@ export default function Leadership() {
                   whileHover={{ scale: 1.2 }}
                   className="p-2 rounded-full bg-amber-100 hover:bg-amber-200 transition"
                 >
-                  <Facebook className="w-5 h-5 text-amber-700" />
+                  <Facebook className="w-5 h-5 text-pink-700" />
                 </motion.a>
               )}
               {leader.socials.linkedin && (
@@ -115,9 +115,9 @@ export default function Leadership() {
                   href={leader.socials.linkedin}
                   target="_blank"
                   whileHover={{ scale: 1.2 }}
-                  className="p-2 rounded-full bg-amber-100 hover:bg-amber-200 transition"
+                  className="p-2 rounded-full bg-amber-100 hover:bg-pink-200 transition"
                 >
-                  <Linkedin className="w-5 h-5 text-amber-700" />
+                  <Linkedin className="w-5 h-5 text-pink-700" />
                 </motion.a>
               )}
               {leader.socials.twitter && (
@@ -127,7 +127,7 @@ export default function Leadership() {
                   whileHover={{ scale: 1.2 }}
                   className="p-2 rounded-full bg-amber-100 hover:bg-amber-200 transition"
                 >
-                  <Twitter className="w-5 h-5 text-amber-700" />
+                  <Twitter className="w-5 h-5 text-pink-700" />
                 </motion.a>
               )}
             </div>

@@ -77,7 +77,7 @@ export default function PastEvents() {
               className="bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-md overflow-hidden flex flex-col transition-transform hover:-translate-y-1"
             >
               {/* Smaller image height */}
-              <div className="h-52 overflow-hidden">
+              <div className="h-40 overflow-hidden">
                 <img
                   src={event.img}
                   alt={event.title}

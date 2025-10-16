@@ -13,16 +13,17 @@ import ImpactStats from "@/components/Impacts";
 import ChildSleepSection from "@/components/Ask";
 import FAQ from "@/components/Faq";
 import Projects from "@/components/Projects";
+import CTA from "@/components/CTA";
 
 export default function Home() {
   return (
     <main className="overflow-x-hidden pt-20">
       <Hero />
-      <AboutUs />
+      <SponsorProgram />
       <ImpactStats />
       <DidYouKnow />
       <Programs />
-      <SponsorProgram />
+      <CTA />
       <FAQ />
       <PastEvents />
     </main>

@@ -6,7 +6,7 @@ import { HeartHandshake } from "lucide-react";
 
 export default function AboutIntro() {
   return (
-    <section className="relative bg-amber-50 text-gray-800 py-24 px-6 overflow-hidden">
+    <section className="relative bg-amber-50 text-gray-800 py-16 px-6 overflow-hidden">
       {/* Decorative background */}
       <div className="absolute inset-0 bg-[url('/images/african-pattern.png')] bg-cover bg-center opacity-10" />
       <div className="absolute inset-0 bg-gradient-to-br from-blue-950/10 via-amber-50/90 to-amber-50" />
@@ -21,18 +21,18 @@ export default function AboutIntro() {
           viewport={{ once: true }}
           className="z-10"
         >
-          {/* Icon */}
+          {/* Icon 
           <div className="flex justify-start justifycenter mb-5">
             <div className="bg-blue-900/10 p-3 rounded-full">
               <HeartHandshake className="w-6 h-6 text-blue-900" />
             </div>
           </div>
-
+*/}
           {/* Heading */}
-          <h2 className="text-3xl md:text-5xl font-bold text-blue-900 mb-4 text-left">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4 text-left">
             Who We Are
           </h2>
-          <div className="w-24 h-1 text-left bg-blue-900 mb-8 md:mx-0 mxauto rounded-full"></div>
+          <div className="w-24 h-1 text-left bg-pink-700 mb-8 md:mx-0 mxauto rounded-full"></div>
 
           {/* Description */}
           <p className="text-lg md:text-xl leading-relaxed text-gray-700 text-left">
@@ -55,7 +55,7 @@ export default function AboutIntro() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="relative rounded-3xl overflow-hidden shadow-xl"
+          className="relative rounded overflow-hidden shadow-xl"
         >
           <Image
             src="/images/WhatsApp Image 2025-10-04 at 23.11.56.jpeg"

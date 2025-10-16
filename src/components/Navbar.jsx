@@ -23,8 +23,8 @@ const Navbar = () => {
   const linkClasses = (href) =>
     `transition-colors font-semibold ${
       pathname === href
-        ? "text-amber-700 underline underline-offset-4"
-        : "text-gray-700 hover:text-amber-700"
+        ? "text-pink-700 underline underline-offset-4"
+        : "text-gray-700 hover:text-pink-700"
     }`;
 
   return (
@@ -39,7 +39,7 @@ const Navbar = () => {
             height={55}
             className="rounded-full"
           />
-          <span className="hidden md:flex text-xl font-bold text-amber-700 font-serif tracking-wide">
+          <span className="hidden md:flex text-xl font-bold text-pink-700 font-serif tracking-wide">
             Utamaduni
           </span>
         </Link>
@@ -58,7 +58,7 @@ const Navbar = () => {
         {/* Mobile Menu Toggle */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-amber-700"
+          className="md:hidden text-pink-700"
           aria-label="Toggle menu"
         >
           {isOpen ? <X size={26} /> : <Menu size={26} />}
@@ -92,7 +92,7 @@ const Navbar = () => {
               key={i}
               href={item.href}
               onClick={() => setIsOpen(false)}
-              className={`block text-gray-200 text-lg font-medium hover:text-amber-700 transition ${
+              className={`block text-gray-200 text-lg font-medium hover:text-pink-700 transition ${
                 pathname === item.href ? "text-pink-700 underline" : ""
               }`}
             >

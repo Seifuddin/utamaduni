@@ -35,28 +35,28 @@ function useCountUp(target, inView, duration = 2000) {
 export default function ImpactStats() {
   const stats = [
     {
-      icon: <Users className="w-5 h-5 text-blue-900" />,
+      icon: <Users className="w-5 h-5 text-pink-700" />,
       value: 5000,
       suffix: "+",
       label: "Children Helped",
       progress: 85,
     },
     {
-      icon: <UtensilsCrossed className="w-5 h-5 text-blue-900" />,
+      icon: <UtensilsCrossed className="w-5 h-5 text-pink-700" />,
       value: 20000,
       suffix: "+",
       label: "Meals Provided",
       progress: 90,
     },
     {
-      icon: <GraduationCap className="w-5 h-5 text-blue-900" />,
+      icon: <GraduationCap className="w-5 h-5 text-pink-700" />,
       value: 1200,
       suffix: "+",
       label: "Volunteers",
       progress: 70,
     },
     {
-      icon: <Heart className="w-5 h-5 text-blue-900" />,
+      icon: <Heart className="w-5 h-5 text-pink-700" />,
       value: 15,
       suffix: "+ Years",
       label: "Of Service",

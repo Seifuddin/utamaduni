@@ -71,10 +71,10 @@ export default function AboutUs() {
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
-            className="mx-auto w-full max-w-lg rounded-2xl overflow-hidden shadow-2xl ring-4 ring-blue-900/20"
+            className="mx-auto w-full max-w-lg rounded overflow-hidden shadow-2xl ring-4 ring-blue-900/20"
           >
             <Image
-              src="/images/hope.jpeg"
+              src="/images/pediatrichospitalist.jpg"
               alt="Children smiling with volunteers"
               width={1200}
               height={800}
