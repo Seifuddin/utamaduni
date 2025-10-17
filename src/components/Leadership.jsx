@@ -59,6 +59,10 @@ export default function Leadership() {
         transition={{ duration: 0.8 }}
         className="text-center mb-20"
       >
+        {/* Section Tagline */}
+        <p className="text-sm uppercase tracking-wide font-semibold text-blue-700 mb-2">
+          Our Team
+        </p>
         <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4">
           Visionary Leadership
         </h2>

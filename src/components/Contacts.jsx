@@ -54,7 +54,7 @@ export default function ContactUs() {
         >
           <div>
             <h3 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4">
-              Get in Touch
+              Contacts Us
             </h3>
             <p className="text-gray-700">
               You can reach us through any of the contact options below or send
@@ -67,7 +67,7 @@ export default function ContactUs() {
               <div className="p-3 bg-blue-100 rounded-full">
                 <Phone className="text-blue-900" size={24} />
               </div>
-              <p className="text-gray-700 font-medium">+254 712 345 678</p>
+              <p className="text-gray-700 font-medium">+254 704 337 351</p>
             </div>
 
             <div className="flex items-center gap-4">
@@ -75,7 +75,7 @@ export default function ContactUs() {
                 <Mail className="text-blue-900" size={24} />
               </div>
               <p className="text-gray-700 font-medium">
-                info@utamadunicharity.org
+                utamadunicharity@gmail.com
               </p>
             </div>
 

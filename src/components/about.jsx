@@ -1,104 +1,80 @@
 "use client";
-
 import { motion } from "framer-motion";
-import Image from "next/image";
+import Link from "next/link";
 
-// About Us Section
-export default function AboutUs() {
+export default function Abouts() {
   return (
-    <section className="relative overflow-hidden bg-amber-50 text-gray-900">
-      {/* Decorative Background Elements */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute -left-20 -top-12 w-72 h-72 bg-blue-200/30 rounded-full blur-3xl" />
-        <div className="absolute right-0 bottom-0 w-96 h-96 bg-yellow-200/40 rounded-full blur-3xl" />
-      </div>
+    <section
+      className="relative bg-amber-50 text-black overflow-hidden">
+      {/* Background Overlay with Patterns 
+      <div className="absolute inset-0 bg-amber-50 gradient-to-br from-blue-900/60 via-[#0a2540]/90 to-blue-800/70 z-0"></div>
+      <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-10 bg-cover bg-center z-0"></div>
+      */}
+      {/* Background overlay 
+      <div className="absolute inset-0 bg-black/40"></div>
+*/}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 lg:px-14 py-14 flex flex-col md:flex-row gap-10 items-center">
+        
+        {/* Left Content */}
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7 }}
+          className="text-left md:w-1/2"
+        >
+           <p className="inline-block px-1 text-sm border border-gray-700 bg-blue-950 rounded-md leading-relaxed text-gray-300 mb-2">
+          About Us
+        </p>
+          <h1 className="text-2xl md:text-3xl font-serif font-bold text-gray-800 mb-4">
+            Who We Are{" "}
+          </h1>
+          <div className="w-24 h-1 text-left bg-blue-700 mb-8 md:mx-0 mxauto rounded-full"></div>
 
-      <div className="max-w-6xl mx-auto px-6 py-16 lg:py24 flex flex-col lg:flex-row items-center gap-10">
-        {/* Left Side - Text */}
-        <div className="w-full lg:w-1/2">
-          <motion.h1
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl lg:text-5xl fontserif font-black leading-tight text-gray-800"
-          >
-            Building Hope, Restoring Dignity
-          </motion.h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 6 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.12, duration: 0.6 }}
-            className="mt-4 text-gray-600 max-w-xl"
-          >
-            Utamaduni Charitable Organization empowers vulnerable communities through
-            education, healthcare, cultural identity, and sustainable livelihoods —
-            one life at a time.
-          </motion.p>
+          {/* Description */}
+          <p className="text-lg leading-relaxed text-gray-700 text-left">
+            <span className="font-semibold text-blue-900">Utamaduni</span> is a
+            community-based, non-profit organization dedicated to preserving{" "}
+            <span className="font-medium text-blue-900">cultural heritage</span>{" "}
+            while uplifting vulnerable families and children. Inspired by the
+            richness of African culture, Utamaduni integrates the timeless values
+            of{" "}
+            <span className="italic text-blue-900">unity</span>,{" "}
+            <span className="italic text-blue-900">compassion</span>, and{" "}
+            <span className="italic text-blue-900">heritage</span> into its
+            charitable initiatives.
+          </p>
 
-          {/* Buttons */}
-          <div className="mt-6 flex flex-wrap gap-3">
-            <motion.a
-              href="#programs"
-              whileHover={{ scale: 1.03 }}
-              className="inline-flex items-center gap-3 bg-blue-900 text-amber-50 px-5 py-3 rounded-full shadow-lg font-semibold hover:bg-blue-800 transition"
+          <div className="mt-8 flex flex-col sm:flex-row sm:justify-center md:justify-start gap-4">
+            <Link
+              href="donate"
+              className="text-center px-6 py-3 font-serif bg-blue-900 text-white rounded-2xl shadow-md font-semibold hover:bg-yellow-500 transition"
             >
-              Get Involved
-            </motion.a>
-
-            <motion.a
-              href="#contact"
-              whileHover={{ scale: 1.03 }}
-              className="inline-flex items-center gap-2 border border-blue-900 text-blue-900 px-5 py-3 rounded-full font-semibold hover:bg-blue-900 hover:text-amber-50 transition"
+              Donate
+            </Link>
+            <Link
+              href="contact"
+              className="text-center px-6 py-3 font-serif border border-blue-900 text-blue-900 font-semibold rounded-2xl hover:bg-yellow-400 hover:text-gray-900 transition"
             >
               Contact Us
-            </motion.a>
+            </Link>
           </div>
+        </motion.div>
 
-          {/* Stats 
-          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
-            <StatCard value="5,000+" label="Children Helped" />
-            <StatCard value="20,000+" label="Meals Provided" />
-            <StatCard value="1,200+" label="Volunteers" />
-            <StatCard value="15+ yrs" label="Service" />
-          </div>
-          */}
-        </div>
-
-        {/* Right Side - Image */}
-        <div className="w-full lg:w-1/2">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.98 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-            className="mx-auto w-full max-w-lg rounded overflow-hidden shadow-2xl ring-4 ring-blue-900/20"
-          >
-            <Image
-              src="/images/pediatrichospitalist.jpg"
-              alt="Children smiling with volunteers"
-              width={1200}
-              height={800}
-              className="object-cover w-full h-64 sm:h-80 lg:h-96"
-            />
-          </motion.div>
-        </div>
+        {/* Right Side Image */}
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7 }}
+          className="mt-12 md:mt-0 md:w-1/2 flex justify-center"
+        >
+          <img
+            src="/images/WhatsApp Image 2025-10-04 at 23.11.07.jpeg"
+            alt="Hospital illustration"
+            className="w-full border-2 border-gray-400 rounded max-w-md md:max-w-lg lg:max-w-xl drop-shadow-2xl"
+          />
+        </motion.div>
       </div>
     </section>
-  );
-}
-
-// Reusable Stat Card
-function StatCard({ value, label }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      viewport={{ once: true }}
-      className="bg-white/80 backdrop-blur-md border border-blue-100 rounded-xl p-4 text-center shadow-md hover:shadow-lg hover:scale-105 transition-transform"
-    >
-      <h3 className="text-2xl font-bold text-blue-900">{value}</h3>
-      <p className="text-sm text-gray-700">{label}</p>
-    </motion.div>
   );
 }

@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-export default function ContactHero() {
+export default function ProgramsHero() {
   return (
     <section
       className="relative bg-[#0a2540] text-white overflow-hidden">
@@ -22,14 +22,14 @@ export default function ContactHero() {
           className="text-center md:w1/2"
         >
           <h1 className="text-2xl md:text-3xl font-serif font-bold text-white mb-4">
-            Get in Touch{" "}
+            What We Do{" "}
           </h1>
           <div className="w-24 h-1 textleft bg-blue-700 mb-8 md:mx0 mx-auto rounded-full"></div>
 
 
           {/* Description */}
           <p className="text-lg leading-relaxed text-gray-200 mt-5 text-center">
-          We'd love to hear from you, Contact us today.
+          We are dedicated to preserving cultural heritage while uplifting vulnerable families and children.
         </p>
 
           

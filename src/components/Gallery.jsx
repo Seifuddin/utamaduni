@@ -63,7 +63,7 @@ export default function OurGallery() {
   return (
     <section className="py-20 bg-gradient-to-b from-amber-50 to-white">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        {/* Title */}
+        {/* Title
         <motion.h2
           className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4"
           initial={{ opacity: 0, y: -20 }}
@@ -71,14 +71,7 @@ export default function OurGallery() {
         >
           Cherished Moments
         </motion.h2>
-        <motion.p
-          className="text-lg text-gray-700 mb-10 max-w-2xl mx-auto"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-        >
-          Glimpses of compassion, action, and unity — captured from Utamaduni’s
-          heartwarming initiatives and events across Kenya.
-        </motion.p>
+         */}
 
         {/* Filter Buttons */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
@@ -88,8 +81,8 @@ export default function OurGallery() {
               onClick={() => setActiveCategory(category)}
               className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
                 activeCategory === category
-                  ? "bg-amber-600 text-white shadow-lg"
-                  : "bg-white border border-gray-300 text-gray-700 hover:bg-amber-100"
+                  ? "bg-blue-900 text-white shadow-lg"
+                  : "bg-white border border-gray-300 text-gray-700 hover:bg-blue-100"
               }`}
             >
               {category}

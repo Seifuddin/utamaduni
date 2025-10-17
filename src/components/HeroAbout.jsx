@@ -12,45 +12,31 @@ export default function AboutHero() {
       {/* Background overlay 
       <div className="absolute inset-0 bg-black/40"></div>
 */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 lg:px-14 py-14 flex flex-col md:flex-row gap-10 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 lg:px-14 py-14 flexflexcol md:flexrow gap10 items-center">
         
         {/* Left Content */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
-          className="text-left md:w-1/2"
+          className="text-center md:w1/2"
         >
-           <p className="inline-block px-1 text-sm border border-gray-700 bg-blue-950 rounded-md leading-relaxed text-gray-300 mb-2">
-          About Us
-        </p>
           <h1 className="text-2xl md:text-3xl font-serif font-bold text-white mb-4">
-            Who We Are{" "}
+            A Legacy of Culture{" "}
           </h1>
-          <div className="w-24 h-1 text-left bg-blue-700 mb-8 md:mx-0 mxauto rounded-full"></div>
+          <div className="w-24 h-1 textleft bg-blue-700 mb-8 md:mx0 mx-auto rounded-full"></div>
 
 
           {/* Description */}
-          <p className="text-lg leading-relaxed text-gray-200 text-left">
-            <span className="font-semibold text-gray-100">Utamaduni</span> is a
-            community-based, non-profit organization dedicated to preserving{" "}
-            <span className="font-medium text-gray-100">cultural heritage</span>{" "}
-            while uplifting vulnerable families and children. Inspired by the
-            richness of African culture, Utamaduni integrates the timeless values
-            of{" "}
-            <span className="italic text-gray-100">unity</span>,{" "}
-            <span className="italic text-gray-100">compassion</span>, and{" "}
-            <span className="italic text-gray-100">heritage</span> into its
-            charitable initiatives.
-          </p>
-
-          <p className="text-lg leading-relaxed text-gray-200 mt-5 text-left">
-          The word "Utamaduni" means culture in Swahili, reflectiong our belief that 
+          <p className="text-lg leading-relaxed text-gray-200 mt-5 text-center">
+          The word "Utamaduni" means culture in Swahili, reflecting our belief that 
           culture is the foundation of identity and a bridge for building stronger, 
           caring communities.
         </p>
 
-          <div className="mt-8 flex flex-col sm:flex-row sm:justify-center md:justify-start gap-4">
+          
+{/* Description 
+          <div className="mt-8 flex flex-col sm:flex-row sm:justify-center md:justify-center gap-4">
             <Link
               href="donate"
               className="text-center px-6 py-3 font-serif bg-blue-600 text-white rounded-2xl shadow-md font-semibold hover:bg-yellow-500 transition"
@@ -64,9 +50,10 @@ export default function AboutHero() {
               Contact Us
             </Link>
           </div>
+          */}
         </motion.div>
 
-        {/* Right Side Image */}
+        {/* Right Side Image 
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
@@ -79,6 +66,7 @@ export default function AboutHero() {
             className="w-full border-2 border-gray-400 rounded max-w-md md:max-w-lg lg:max-w-xl drop-shadow-2xl"
           />
         </motion.div>
+        */}
       </div>
     </section>
   );
