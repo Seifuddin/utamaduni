@@ -4,47 +4,46 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState(null);
   const pathname = usePathname();
 
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About Us" },
-    // { href: "/leadership", label: "Our Leadership" },
     { href: "/programs", label: "Our Programs" },
     { href: "/gallery", label: "Gallery" },
     { href: "/contact", label: "Contact Us" },
   ];
 
   const linkClasses = (href) =>
-    `transition-colors font-semibold ${
+    `relative font-medium transition-all duration-200 ${
       pathname === href
-        ? "text-pink-700 underline underline-offset-4"
+        ? "text-pink-700 after:absolute after:left-0 after:bottom-[-4px] after:w-full after:h-[2px] after:bg-pink-700"
         : "text-gray-700 hover:text-pink-700"
     }`;
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
-      <div className="container mx-auto flex justify-between items-center px-6 py-5">
-        {/* Logo Section */}
-        <Link href="/" className="flex items-center gap-3">
-          <Image
-            src="/images/image-removebg-preview (2).png"
-            alt="Utamaduni Logo"
-            width={55}
-            height={55}
-            className="rounded-full"
-          />
-          <span className="hidden md:flex text-xl font-bold text-pink-700 font-serif tracking-wide">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md shadow-md">
+      <div className="max-w-7xl mx-auto px-5 md:px-10 py-4 flex justify-between items-center">
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-3 group">
+          <div className="relative w-12 h-12">
+            <Image
+              src="/images/image-removebg-preview (2).png"
+              alt="Utamaduni Logo"
+              fill
+              className="rounded-full object-contain"
+            />
+          </div>
+          <span className="text-xl md:text-2xl font-bold tracking-wide text-pink-700 font-serif group-hover:text-pink-800 transition">
             Utamaduni
           </span>
         </Link>
 
-        {/* Desktop Menu */}
+        {/* Desktop Navigation */}
         <ul className="hidden md:flex space-x-8 items-center">
           {navLinks.map((item, i) => (
             <li key={i}>
@@ -55,13 +54,13 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Mobile Menu Toggle */}
+        {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-pink-700"
+          className="md:hidden text-pink-700 hover:text-pink-800 transition"
           aria-label="Toggle menu"
         >
-          {isOpen ? <X size={26} /> : <Menu size={26} />}
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
@@ -73,27 +72,34 @@ const Navbar = () => {
         }`}
       />
 
-      {/* Mobile Slide-in Menu */}
+      {/* Mobile Slide-in Drawer */}
       <div
-        className={`fixed top-0 right-0 h-full w-72 bg-white shadow-lg transform transition-transform duration-300 ${
+        className={`fixed top-0 right-0 h-full w-72 sm:w-80 bg-white text-gray-800 shadow-2xl transform transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex justify-between items-center px-6 py-4 border-b border-gray-100">
-          <h2 className="text-lg font-bold text-pink-700">Menu</h2>
-          <button onClick={() => setIsOpen(false)}>
-            <X size={22} className="text-gray-600" />
+        <div className="flex justify-between items-center px-6 py-5 border-b border-gray-200">
+          <h2 className="text-lg font-semibold text-pink-700 tracking-wide">
+            Menu
+          </h2>
+          <button
+            onClick={() => setIsOpen(false)}
+            className="text-gray-500 hover:text-pink-700 transition"
+          >
+            <X size={24} />
           </button>
         </div>
 
-        <div className="px-6 py-6 space-y-4 bg-gradient-to-br from-blue-900/60 via-[#0a2540]/90 to-blue-800/70">
+        <div className="px-6 py-8 flex flex-col gap-5">
           {navLinks.map((item, i) => (
             <Link
               key={i}
               href={item.href}
               onClick={() => setIsOpen(false)}
-              className={`block text-gray-200 text-lg font-medium hover:text-pink-700 transition ${
-                pathname === item.href ? "text-pink-700 underline" : ""
+              className={`text-lg font-medium tracking-wide transition-all duration-200 ${
+                pathname === item.href
+                  ? "text-pink-700 underline underline-offset-4"
+                  : "text-gray-700 hover:text-pink-700"
               }`}
             >
               {item.label}
