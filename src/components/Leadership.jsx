@@ -13,7 +13,7 @@ const leaders = [
   {
     name: "Mr. Dimore",
     role: "Founder & CEO",
-    image: "/images/Screenshot_20221028-204325.png",
+    image: "/images/WhatsApp Image 2025-10-04 at 23.04.27.jpeg",
     quote:
       "Inspiring others to dream more, learn more, and become more together.",
     socials: {
@@ -25,7 +25,7 @@ const leaders = [
   {
     name: "Mrs. Dimore",
     role: "Manager",
-    image: "/images/Screenshot_20221028-204325.png",
+    image: "/images/WhatsApp Image 2025-10-04 at 23.04.27.jpeg",
     quote:
       "Through compassion and dedication, we build bridges of hope for the underprivileged.",
     socials: {
@@ -37,7 +37,7 @@ const leaders = [
   {
     name: "Miss Prisca",
     role: "Secretary",
-    image: "/images/Screenshot_20221028-204325.png",
+    image: "/images/WhatsApp Image 2025-10-04 at 23.04.27.jpeg",
     quote:
       "Every small act of kindness creates ripples that transform communities.",
     socials: {
@@ -70,7 +70,7 @@ export default function Leadership() {
         <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">
           Visionary Leadership
         </h2>
-        <div className="mx-auto h-1 w-24 bg-pink-700 rounded-full mb-6"></div>
+        <div className="mx-auto h-1 w-24 bg-blue-700 rounded-full mb-6"></div>
         <p className="max-w-3xl mx-auto text-lg text-gray-700">
           Meet the hearts and minds shaping{" "}
           <span className="font-semibold text-gray-900">Utamaduni’s</span>{" "}

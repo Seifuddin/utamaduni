@@ -79,7 +79,7 @@ export default function SponsorProgram() {
         >
           <div className="relative w-full h52 sm:h-64 md:h-full rounded overflow-hidden shadow-xl">
             <img
-              src="/images/childsupport.webp" // replace with your own image
+              src="/images/utamaduni at mathare/_DSC8782.jpg" // replace with your own image
               alt="Child Sponsorship"
               className="object-cover w-full h-full transform group-hover:scale-105 transition duration-700"
             />

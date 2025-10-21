@@ -22,7 +22,7 @@ export default function Abouts() {
           transition={{ duration: 0.7 }}
           className="text-left md:w-1/2"
         >
-           <p className="inline-block px-1 text-sm border border-gray-700 bg-blue-950 rounded-md leading-relaxed text-gray-300 mb-2">
+           <p className="inline-block px-1 text-sm bordr bordergray-700 bg-blue950 rounded-md leading-relaxed text-blue-700 mb-2">
           About Us
         </p>
           <h1 className="text-2xl md:text-3xl font-serif font-bold text-gray-800 mb-4">
@@ -69,7 +69,7 @@ export default function Abouts() {
           className="mt-12 md:mt-0 md:w-1/2 flex justify-center"
         >
           <img
-            src="/images/WhatsApp Image 2025-10-04 at 23.11.07.jpeg"
+            src="/images/utamaduni at mathare/_DSC8999.jpg"
             alt="Hospital illustration"
             className="w-full border-2 border-gray-400 rounded max-w-md md:max-w-lg lg:max-w-xl drop-shadow-2xl"
           />

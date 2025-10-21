@@ -43,6 +43,7 @@ export default function Steps() {
         <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4">
           Step-by-Step Path to Community Transformation
         </h2>
+        <div className="mx-auto h-1 w-24 bg-blue-700 rounded-full mb-6"></div>
 
         {/* Intro Text */}
         <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-12">

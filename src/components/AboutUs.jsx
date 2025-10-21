@@ -25,6 +25,8 @@ export default function About() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-8">
             <h3 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4">Our Mission & Values</h3>
+        <div className="mx-auto h-1 w-24 bg-blue-700 rounded-full mb-6"></div>
+
             <p className="text-gray-600 mt-2 max-w-2xl mx-auto">Compassion, inclusion, and sustainable impact guide everything we do.</p>
           </div>
 
@@ -71,6 +73,8 @@ export default function About() {
             className="space-y-4"
           >
             <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4">Our Story</h2>
+          <div className="w-24 h-1 text-left bg-blue-700 mb-8 md:mx-0 mxauto rounded-full"></div>
+
             <p className="text-gray-700">
               Founded on the principles of community, culture, and compassion, Utamaduni grew from a small group of volunteers
               into a trusted organization supporting thousands across regions. Our work embraces local cultural identity while
@@ -96,7 +100,7 @@ export default function About() {
             className="rounded overflow-hidden shadow-lg"
           >
             <Image
-              src="/images/WhatsApp Image 2025-10-04 at 23.11.57 (2).jpeg"
+              src="/images/utamaduni at mathare/_DSC8943.jpg"
               alt="Community meeting"
               width={800}
               height={600}

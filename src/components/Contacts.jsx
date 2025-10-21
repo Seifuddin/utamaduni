@@ -84,7 +84,7 @@ export default function ContactUs() {
                 <MapPin className="text-blue-900" size={24} />
               </div>
               <p className="text-gray-700 font-medium">
-                Nairobi, Kenya – Community Outreach Center
+                Nairobi, Kenya
               </p>
             </div>
           </div>

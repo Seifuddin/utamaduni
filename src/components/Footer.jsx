@@ -72,9 +72,9 @@ export default function Footer() {
         {/* Contact Info */}
         <div>
           <h3 className="text-lg font-semibold text-white mb-4 font-serif">Contact Us</h3>
-          <p className="text-sm">📍 Nairobi, Kenya</p>
-          <p className="text-sm">📞 +254 700 123 456</p>
-          <p className="text-sm">✉️ info@utamaduni.org</p>
+          <p className="text-sm">📍 Nairobi, Kenya </p>
+          <p className="text-sm">📞 +254 704 337 351 </p>
+          <p className="text-sm">✉️ utamadunicharity@gmail.com </p>
           <div className="flex mt-4 space-x-3">
             {[FaFacebookF, FaInstagram, FaYoutube, FaTwitter].map(
               (Icon, i) => (

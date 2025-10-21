@@ -19,7 +19,7 @@ const highlights = [
   {
     title: "Health Awareness",
     date: "July 2025",
-    img: "/images/WhatsApp Image 2025-10-04 at 23.11.57 (1).jpeg",
+    img: "/images/utamaduni at mathare/_DSC8974.jpg",
     description:
       "Conducted health awareness programs and housekeeping support for vulnerable households.",
   },
@@ -33,7 +33,7 @@ const highlights = [
   {
     title: "Environmental Care",
     date: "June 2025",
-    img: "/images/WhatsApp Image 2025-10-04 at 23.11.58.jpeg",
+    img: "/images/utamaduni at mathare/_DSC8723.jpg",
     description:
       "Partnered with local institutions for community clean-up and empowerment projects.",
   },

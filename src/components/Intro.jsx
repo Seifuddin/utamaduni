@@ -64,7 +64,7 @@ export default function AboutIntro() {
           className="relative rounded overflow-hidden shadow-xl"
         >
           <Image
-            src="/images/WhatsApp Image 2025-10-04 at 23.11.56.jpeg"
+            src="/images/utamaduni at mathare/_DSC8999.jpg"
             alt="Utamaduni community support"
             width={600}
             height={500}

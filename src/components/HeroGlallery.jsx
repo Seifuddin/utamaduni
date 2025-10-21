@@ -24,7 +24,7 @@ export default function GalleryHero() {
           <h1 className="text-2xl md:text-3xl font-serif font-bold text-white mb-4">
             Cerished Moments{" "}
           </h1>
-          <div className="w-24 h-1 textleft bg-blue-700 mb-8 md:mx0 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 textleft bg-white mb-8 md:mx0 mx-auto rounded-full"></div>
 
 
           {/* Description */}

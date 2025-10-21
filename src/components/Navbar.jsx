@@ -38,8 +38,8 @@ const Navbar = () => {
               className="rounded-full object-contain"
             />
           </div>
-          <span className="text-xl md:text-2xl font-bold tracking-wide text-pink-700 font-serif group-hover:text-pink-800 transition">
-            Utamaduni
+          <span className="hidden md:flex text-lg md:text-xl font-bold tracking-wide text-pink-700 font-serif group-hover:text-pink-800 transition">
+            Utamaduni Organization
           </span>
         </Link>
 
@@ -74,23 +74,23 @@ const Navbar = () => {
 
       {/* Mobile Slide-in Drawer */}
       <div
-        className={`fixed top-0 right-0 h-full w-72 sm:w-80 bg-white text-gray-800 shadow-2xl transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-full w-72 sm:w-80 bg-blue-900 text-gray-300 shadow-2xl transform transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <div className="flex justify-between items-center px-6 py-5 border-b border-gray-200">
-          <h2 className="text-lg font-semibold text-pink-700 tracking-wide">
+          <h2 className="text-lg font-semibold text-white tracking-wide">
             Menu
           </h2>
           <button
             onClick={() => setIsOpen(false)}
-            className="text-gray-500 hover:text-pink-700 transition"
+            className="text-gray-200 hover:text-pink-700 transition"
           >
             <X size={24} />
           </button>
         </div>
 
-        <div className="px-6 py-8 flex flex-col gap-5">
+        <div className="px-6 py-8 flex flex-col gap-5 bg-white">
           {navLinks.map((item, i) => (
             <Link
               key={i}

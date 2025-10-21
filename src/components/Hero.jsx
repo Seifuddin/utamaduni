@@ -8,14 +8,14 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const slides = [
   {
     id: 1,
-    image: "/images/WhatsApp Image 2025-10-04 at 23.11.57 (1).jpeg",
+    image: "/images/utamaduni at mathare/_DSC8782.jpg",
     title: "Children's Welfare",
     subtitle: "Donations to children's homes and educational support for orphans",
     button: "Learn More",
   },
   {
     id: 2,
-    image: "/images/WhatsApp Image 2025-10-04 at 23.11.07.jpeg",
+    image: "/images/how_it_went_down/_DSC7719.jpg",
     title: "Community Outreach",
     subtitle:
       "Food distribution, health awareness to people living with disabilities and HIV, and empowerment projects",
@@ -23,7 +23,7 @@ const slides = [
   },
   {
     id: 3,
-    image: "/images/WhatsApp Image 2025-10-04 at 23.11.07.jpeg",
+    image: "/images/how_it_went_down/_DSC7708.jpg",
     title: "Cultural Preservation",
     subtitle:
       "Incorporating traditional values, arts, and practices into charity work",
@@ -31,14 +31,14 @@ const slides = [
   },
   {
     id: 4,
-    image: "/images/WhatsApp Image 2025-10-04 at 23.11.57 (2).jpeg",
+    image: "/images/how_it_went_down/_DSC7803.jpg",
     title: "Housekeeping Programmes",
     subtitle: "Supporting struggling households with essential items and skills",
     button: "Learn More",
   },
   {
     id: 5,
-    image: "/images/WhatsApp Image 2025-09-28 at 02.00.51 (1).jpeg",
+    image: "/images/WhatsApp Image 2025-10-04 at 23.04.29.jpeg",
     title: "Partnerships",
     subtitle:
       "Collaborating with like-minded individuals and organizations to extend our impact",
