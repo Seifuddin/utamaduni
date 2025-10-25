@@ -125,7 +125,7 @@ function StatCard({ value, label }) {
   return (
     <div className="bg-white rounded p-3 shadow-sm flex flex-col items-start">
       <p className="text-sm font-medium text-gray-600">{label}</p>
-      <p className="mt-1 text-lg font-serif font-bold text-gray-800">{value}</p>
+      <p className="text-lg font-serif font-bold text-gray-800 mb-2 mt-1">{value}</p>
     </div>
   );
 }
@@ -135,7 +135,7 @@ function FeatureBox({ icon, title, children }) {
     <div className="p-4 bg-white rounded shadow-sm flex gap-3 items-start">
       <div className="p-2 rounded-md bg-blue-50 text-gray-800">{icon}</div>
       <div>
-        <h4 className="font-semibold text-gray-800">{title}</h4>
+        <h4 className="font-bold text-gray-800 font-serif">{title}</h4>
         <p className="text-sm text-gray-700 mt-1">{children}</p>
       </div>
     </div>
@@ -147,7 +147,7 @@ function ValueCard({ icon, title, children }) {
     <div className="p-5 bg-white rounded shadow-md">
       <div className="flex items-center gap-3">
         <div className="p-2 rounded-md bg-white/30">{icon}</div>
-        <h4 className="font-semibold text-gray-900">{title}</h4>
+        <h4 className="text-lg font-serif font-bold text-gray-800 mb-1">{title}</h4>
       </div>
       <p className="text-sm text-gray-600 mt-3">{children}</p>
     </div>

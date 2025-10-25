@@ -22,8 +22,8 @@ export default function Abouts() {
           transition={{ duration: 0.7 }}
           className="text-left md:w-1/2"
         >
-           <p className="inline-block px-1 text-sm bordr bordergray-700 bg-blue950 rounded-md leading-relaxed text-blue-700 mb-2">
-          About Us
+           <p className="inline-block text-sm uppercase tracking-wide font-semibold text-blue-700 mb-2">
+          ABOUT US
         </p>
           <h1 className="text-2xl md:text-3xl font-serif font-bold text-gray-800 mb-4">
             Who We Are{" "}
@@ -45,6 +45,7 @@ export default function Abouts() {
             charitable initiatives.
           </p>
 
+          {/*  
           <div className="mt-8 flex flex-col sm:flex-row sm:justify-center md:justify-start gap-4">
             <Link
               href="donate"
@@ -59,6 +60,7 @@ export default function Abouts() {
               Contact Us
             </Link>
           </div>
+          */}
         </motion.div>
 
         {/* Right Side Image */}
@@ -71,7 +73,7 @@ export default function Abouts() {
           <img
             src="/images/utamaduni at mathare/_DSC8999.jpg"
             alt="Hospital illustration"
-            className="w-full border-2 border-gray-400 rounded max-w-md md:max-w-lg lg:max-w-xl drop-shadow-2xl"
+            className="w-full border-2 border-gray-400 rounded max-w-md md:max-w-lg lg:max-w-xl dropshadow-2xl"
           />
         </motion.div>
       </div>

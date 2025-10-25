@@ -23,9 +23,9 @@ const leaders = [
     },
   },
   {
-    name: "Mrs. Dimore",
+    name: "Mr. #####",
     role: "Manager",
-    image: "/images/WhatsApp Image 2025-10-04 at 23.04.27.jpeg",
+    image: "/images/how_it_went_down/_DSC7566.jpg",
     quote:
       "Through compassion and dedication, we build bridges of hope for the underprivileged.",
     socials: {
@@ -35,9 +35,35 @@ const leaders = [
     },
   },
   {
-    name: "Miss Prisca",
+    name: "Miss #####",
     role: "Secretary",
-    image: "/images/WhatsApp Image 2025-10-04 at 23.04.27.jpeg",
+    image: "/images/how_it_went_down/_DSC7883.jpg",
+    quote:
+      "Every small act of kindness creates ripples that transform communities.",
+    socials: {
+      facebook: "#",
+      linkedin: "#",
+      twitter: "#",
+    },
+  },
+
+  {
+    name: "Mr. #####",
+    role: "Treasurer",
+    image: "/images/how_it_went_down/_DSC7899.jpg",
+    quote:
+      "Every small act of kindness creates ripples that transform communities.",
+    socials: {
+      facebook: "#",
+      linkedin: "#",
+      twitter: "#",
+    },
+  },
+
+  {
+    name: "Miss #####",
+    role: "Driver",
+    image: "/images/how_it_went_down/_DSC7951.jpg",
     quote:
       "Every small act of kindness creates ripples that transform communities.",
     socials: {
@@ -115,7 +141,7 @@ export default function Leadership() {
               </div>
 
               {/* Details */}
-              <h3 className="text-lg font-bold text-gray-900 mb-1">
+              <h3 className="text-lg font-bold text-gray-900 mb-1 font-serif">
                 {leader.name}
               </h3>
               <p className="text-gray-700 font-medium mb-4">{leader.role}</p>
@@ -169,10 +195,10 @@ export default function Leadership() {
         transition={{ duration: 0.8 }}
         className="text-center mt-10"
       >
-        <h3 className="text-2xl font-semibold text-gray-800 mb-3">
+        <h3 className="text-xl font-semibold text-gray-800 mb-3 font-serif">
           Leadership through Service
         </h3>
-        <p className="max-w-2xl mx-auto text-gray-700 text-lg">
+        <p className="max-w-2xl mx-auto text-gray-700 textlg">
           True leadership is not about position — it’s about responsibility.{" "}
           Together, we guide{" "}
           <span className="font-semibold text-gray-900">Utamaduni</span> with
