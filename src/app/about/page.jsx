@@ -8,6 +8,7 @@ import Leadership from "@/components/Leadership";
 import CTA from "@/components/CTA";
 import Steps from "@/components/Steps";
 import Abouts from "@/components/about";
+import CEOSection from "@/components/Dimore";
 
 export default function AboutPage() {
   return (
@@ -17,6 +18,7 @@ export default function AboutPage() {
       <About />
       <Steps />
       <CTA />
+      <CEOSection />
       <Leadership />
     </main>
   );
