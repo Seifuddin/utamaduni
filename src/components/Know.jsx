@@ -42,7 +42,7 @@ export default function DidYouKnowHybrid() {
           backgroundImage: "url('/images/childrenwelfare.webp')", // replace with your background
         }}
       />
-      <div className="absolute inset-0 bg-black/50 backdrop-blursm" />
+      <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
 
       <div className="relative mx-auto text-center">
         {/* Title */}
