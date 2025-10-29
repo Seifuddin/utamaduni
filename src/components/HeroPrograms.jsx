@@ -8,7 +8,7 @@ export default function ProgramsHero() {
       className="relative bg-[#0a2540] text-white overflow-hidden">
       {/* Background Overlay with Patterns */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/60 via-[#0a2540]/90 to-blue-800/70 z-0"></div>
-      <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-10 bg-cover bg-center z-0"></div>
+      <div className="absolute inset-0 bg-[url('/images/patterns.png')] opacity-10 bg-cover bg-center z-0"></div>
       {/* Background overlay 
       <div className="absolute inset-0 bg-black/40"></div>
 */}

@@ -31,7 +31,7 @@ const programs = [
       "This initiative focuses on providing training, assistive tools, and inclusive community engagement for persons with disabilities, ensuring they are empowered and included in every part of society.",
   },
   {
-    image: "/images/elderly.png",
+    image: "/images/elders.png",
     title: "Elderly Persons",
     description:
       "Providing care, companionship, and medical assistance to elderly people who lack family or social support.",

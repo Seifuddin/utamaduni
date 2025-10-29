@@ -32,7 +32,7 @@ const Navbar = () => {
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative w-12 h-12">
             <Image
-              src="/images/image-removebg-preview (2).png"
+              src="/images/logo.png"
               alt="Utamaduni Logo"
               fill
               className="rounded-full object-contain"
