@@ -53,9 +53,11 @@ export default function ContactUs() {
           className="space-y-8"
         >
           <div>
+          {/*
             <h3 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4">
               Contacts Us
             </h3>
+            */}
             <p className="text-gray-700">
               You can reach us through any of the contact options below or send
               a message directly via the form.

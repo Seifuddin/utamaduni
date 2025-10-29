@@ -11,28 +11,12 @@ import "swiper/css/pagination";
 
 const leaders = [
   {
-    name: "Mr. Dimore",
-    role: "Founder & CEO",
-    image: "/images/WhatsApp Image 2025-10-04 at 23.04.27.jpeg",
-    quote:
-      "Inspiring others to dream more, learn more, and become more together.",
-    socials: {
-      facebook: "#",
-      linkedin: "#",
-      twitter: "#",
-    },
-  },
-  {
     name: "Mr. #####",
     role: "Manager",
     image: "/images/how_it_went_down/_DSC7566.jpg",
     quote:
       "Through compassion and dedication, we build bridges of hope for the underprivileged.",
-    socials: {
-      facebook: "#",
-      linkedin: "#",
-      twitter: "#",
-    },
+    socials: { facebook: "#", linkedin: "#", twitter: "#" },
   },
   {
     name: "Miss #####",
@@ -40,49 +24,29 @@ const leaders = [
     image: "/images/how_it_went_down/_DSC7883.jpg",
     quote:
       "Every small act of kindness creates ripples that transform communities.",
-    socials: {
-      facebook: "#",
-      linkedin: "#",
-      twitter: "#",
-    },
+    socials: { facebook: "#", linkedin: "#", twitter: "#" },
   },
-
   {
     name: "Mr. #####",
     role: "Treasurer",
     image: "/images/how_it_went_down/_DSC7899.jpg",
     quote:
       "Every small act of kindness creates ripples that transform communities.",
-    socials: {
-      facebook: "#",
-      linkedin: "#",
-      twitter: "#",
-    },
+    socials: { facebook: "#", linkedin: "#", twitter: "#" },
   },
-
   {
     name: "Miss #####",
     role: "Driver",
     image: "/images/how_it_went_down/_DSC7951.jpg",
     quote:
       "Every small act of kindness creates ripples that transform communities.",
-    socials: {
-      facebook: "#",
-      linkedin: "#",
-      twitter: "#",
-    },
+    socials: { facebook: "#", linkedin: "#", twitter: "#" },
   },
 ];
 
 export default function Leadership() {
   return (
-    <section className="relative bg-amber-50 py-24 px-6 md:px-16 overflow-hidden">
-      {/* Background Decoration */}
-      <div className="absolute inset-0 overflow-hidden -z-10">
-        <div className="absolute -top-20 -left-20 w-96 h-96 bg-amber-100 rounded-full mix-blend-multiply blur-3xl opacity-40 animate-pulse" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-amber-200 rounded-full mix-blend-multiply blur-3xl opacity-40 animate-pulse" />
-      </div>
-
+    <section className="relative bg-amber-50 pt-10 pb-24 px-6 md:px-16 overflow-hidden">
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -94,13 +58,13 @@ export default function Leadership() {
           Our Team
         </p>
         <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">
-          Visionary Leadership
+          Our Dedicated Leadership Team
         </h2>
         <div className="mx-auto h-1 w-24 bg-blue-700 rounded-full mb-6"></div>
         <p className="max-w-3xl mx-auto text-lg text-gray-700">
-          Meet the hearts and minds shaping{" "}
+          Working alongside our Founder & CEO, this team ensures that{" "}
           <span className="font-semibold text-gray-900">Utamaduni’s</span>{" "}
-          mission — leading with empathy, vision, and dedication.
+          vision continues to grow through commitment, empathy, and service.
         </p>
       </motion.div>
 
@@ -187,24 +151,6 @@ export default function Leadership() {
           </SwiperSlide>
         ))}
       </Swiper>
-
-      {/* Footer Text */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="text-center mt-10"
-      >
-        <h3 className="text-xl font-semibold text-gray-800 mb-3 font-serif">
-          Leadership through Service
-        </h3>
-        <p className="max-w-2xl mx-auto text-gray-700 textlg">
-          True leadership is not about position — it’s about responsibility.{" "}
-          Together, we guide{" "}
-          <span className="font-semibold text-gray-900">Utamaduni</span> with
-          purpose and unwavering dedication to humanity.
-        </p>
-      </motion.div>
     </section>
   );
 }
