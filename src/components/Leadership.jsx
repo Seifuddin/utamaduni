@@ -11,37 +11,54 @@ import "swiper/css/pagination";
 
 const leaders = [
   {
-    name: "Mr. #####",
+    name: "Brian Otieno",
+    role: "C.O.O",
+    image: "/images/WhatsApp Image 2025-09-22 at 20.01.09 (1).jpeg",
+    quote:
+      "Every small act of kindness creates ripples that transform communities.",
+    socials: { facebook: "#", linkedin: "#", twitter: "#" },
+  },
+  {
+    name: "James Odongo",
     role: "Manager",
-    image: "/images/how_it_went_down/_DSC7566.jpg",
+    image: "/images/JamesManager.jpg",
+    quote:
+      "Every small act of kindness creates ripples that transform communities.",
+    socials: { facebook: "#", linkedin: "#", twitter: "#" },
+  },
+  {
+    name: "Doreen Ingutia",
+    role: "Secretary",
+    image: "/images/DoreenSecretary.jpg",
     quote:
       "Through compassion and dedication, we build bridges of hope for the underprivileged.",
     socials: { facebook: "#", linkedin: "#", twitter: "#" },
   },
   {
-    name: "Miss #####",
-    role: "Secretary",
-    image: "/images/how_it_went_down/_DSC7883.jpg",
+    name: "Eunice Mwihaki",
+    role: "Assistant Secretary",
+    image: "/images/EuniceSecr.jpg",
     quote:
       "Every small act of kindness creates ripples that transform communities.",
     socials: { facebook: "#", linkedin: "#", twitter: "#" },
   },
   {
-    name: "Mr. #####",
+    name: "Sharon Rono",
     role: "Treasurer",
-    image: "/images/how_it_went_down/_DSC7899.jpg",
+    image: "/images/WhatsApp Image 2025-09-22 at 20.01.09 (1).jpeg",
     quote:
       "Every small act of kindness creates ripples that transform communities.",
     socials: { facebook: "#", linkedin: "#", twitter: "#" },
   },
   {
-    name: "Miss #####",
-    role: "Driver",
-    image: "/images/how_it_went_down/_DSC7951.jpg",
+    name: "Jakes Omondi",
+    role: "Coordinator",
+    image: "/images/JakesCoordinator.jpg",
     quote:
       "Every small act of kindness creates ripples that transform communities.",
     socials: { facebook: "#", linkedin: "#", twitter: "#" },
   },
+  
 ];
 
 export default function Leadership() {
@@ -58,7 +75,7 @@ export default function Leadership() {
           Our Team
         </p>
         <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">
-          Our Dedicated Leadership Team
+          Chain of Leadership Utamaduni
         </h2>
         <div className="mx-auto h-1 w-24 bg-blue-700 rounded-full mb-6"></div>
         <p className="max-w-3xl mx-auto text-lg text-gray-700">

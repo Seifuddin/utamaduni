@@ -44,7 +44,7 @@ export default function CEOSection() {
           {/* CEO Info */}
           <div className="text-center md:text-left">
             <h3 className="text-2xl font-semibold text-blue-900 font-serif">
-              Mr. Dimore
+              Brian Omondi
             </h3>
             <p className="text-blue-800 font-medium mb-4">Founder & CEO</p>
             <p className="text-gray-600 max-w-xl mb-6">
