@@ -20,6 +20,7 @@ export default function AboutPage() {
       <CTA />
       <CEOSection />
       <Leadership />
+      <WhyWeExist />
     </main>
   );
 }

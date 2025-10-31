@@ -11,7 +11,7 @@ export default function WhyWeExist() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl lg:text-5xl fontserif font-black leading-tight text-gray-800"
+          className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4"
         >
           Why We Exist
         </motion.h2>
@@ -41,8 +41,8 @@ export default function WhyWeExist() {
           viewport={{ once: true }}
           className="bg-white rounded-xl shadow-md p-8 text-center hover:shadow-xl transition"
         >
-          <HeartHandshake className="w-12 h-12 mx-auto text-blue-700 mb-4" />
-          <h3 className="font-bold text-gray-800 fontserif text-lg my-2">
+          <HeartHandshake className="w-10 h-10 mx-auto text-blue-700 mb-4 bg-amber-100 rounded p-1" />
+          <h3 className="text-lg font-serif font-bold text-gray-800 mb-2">
             Transforming Lives
           </h3>
           <p className="text-gray-600">
@@ -59,8 +59,8 @@ export default function WhyWeExist() {
           viewport={{ once: true }}
           className="bg-white rounded-xl shadow-md p-8 text-center hover:shadow-xl transition"
         >
-          <Users className="w-12 h-12 mx-auto text-blue-700 mb-4" />
-          <h3 className="font-bold text-gray-800 fontserif text-lg my-2">
+          <Users className="w-10 h-10 mx-auto text-blue-700 mb-4 bg-amber-100 rounded p-1" />
+          <h3 className="text-lg font-serif font-bold text-gray-800 mb-2">
             Building Strong Communities
           </h3>
           <p className="text-gray-600">
@@ -77,8 +77,8 @@ export default function WhyWeExist() {
           viewport={{ once: true }}
           className="bg-white rounded-xl shadow-md p-8 text-center hover:shadow-xl transition"
         >
-          <GraduationCap className="w-12 h-12 mx-auto text-blue-700 mb-4" />
-          <h3 className="font-bold text-gray-800 fontserif text-lg my-2">
+          <GraduationCap className="w-10 h-10 mx-auto text-blue-700 mb-4 bg-amber-100 rounded p-1" />
+          <h3 className="text-lg font-serif font-bold text-gray-800 mb-2">
             Education for the Future
           </h3>
           <p className="text-gray-600">

@@ -45,7 +45,7 @@ export default function Abouts() {
             <span className="italic text-blue-900">heritage</span> into its
             charitable initiatives.
           </p>
-
+          {/* LEFT CONTENT 
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
             <Link
               href="/donate"
@@ -61,8 +61,9 @@ export default function Abouts() {
               Contact Us
             </Link>
           </div>
+          */}
         </motion.div>
-
+        
         {/* RIGHT IMAGE */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
