@@ -13,9 +13,9 @@ import {
 
 export default function About() {
   return (
-    <main className="min-h-screen bg-amber-50 to-white text-gray-700">
+    <main className="min--screen bg-amber-50 to-white text-gray-700">
 
-      {/* MISSION / VISION / VALUES */}
+      {/* MISSION / VISION / VALUES 
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <motion.h3
@@ -58,6 +58,7 @@ export default function About() {
           </div>
         </div>
       </section>
+      */}
 
       {/* OUR STORY */}
       <section className="max-w-6xl mx-auto px-6 py-16">

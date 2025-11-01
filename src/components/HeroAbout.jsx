@@ -29,9 +29,7 @@ export default function AboutHero() {
 
           {/* Description */}
           <p className="text-base md:text-lg leading-relaxed text-gray-200 mt-3 text-center">
-          The word "Utamaduni" means culture in Swahili, reflecting our belief that 
-          culture is the foundation of identity and a bridge for building stronger, 
-          caring communities.
+          Know more about Utamaduni.
         </p>
 
           
