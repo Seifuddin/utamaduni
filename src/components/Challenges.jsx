@@ -5,31 +5,31 @@ import { HeartCrack, Users, Droplet, School, Leaf } from "lucide-react";
 export default function Challenges() {
   const challenges = [
     {
-      icon: <HeartCrack className="w-6 h-6 text-red-500" />,
+      icon: <HeartCrack className="w-6 h-6 text-pink-700" />,
       title: "Poverty & Vulnerability",
       description:
         "Many families struggle to afford basic needs such as food, shelter, and healthcare, leaving children especially vulnerable.",
     },
     {
-      icon: <School className="w-6 h-6 text-yellow-500" />,
+      icon: <School className="w-6 h-6 text-pink-700" />,
       title: "Limited Access to Education",
       description:
         "Numerous children lack access to quality education due to financial hardship and limited resources.",
     },
     {
-      icon: <Droplet className="w-6 h-6 text-blue-500" />,
+      icon: <Droplet className="w-6 h-6 text-pink-700" />,
       title: "Clean Water & Sanitation",
       description:
         "Some communities still face water scarcity and sanitation challenges that affect health and well-being.",
     },
     {
-      icon: <Users className="w-6 h-6 text-purple-500" />,
+      icon: <Users className="w-6 h-6 text-pink-700" />,
       title: "Youth Unemployment",
       description:
         "High unemployment rates among youth lead to frustration, hopelessness, and social instability.",
     },
     {
-      icon: <Leaf className="w-6 h-6 text-green-500" />,
+      icon: <Leaf className="w-6 h-6 text-pink-700" />,
       title: "Environmental Degradation",
       description:
         "Deforestation and poor waste management continue to threaten the environment and community sustainability.",
@@ -37,7 +37,7 @@ export default function Challenges() {
   ];
 
   return (
-    <section className="relative bg-gradient-to-b from-blue-50 via-white to-amber-50 text-gray-800 py-16 overflow-hidden">
+    <section className="relative bg-amber-50 gradient-to-b from-blue-50 via-white to-amber-50 text-gray-800 py-16 overflow-hidden">
       {/* Decorative background */}
       <div className="absolute inset-0 bg-[url('/images/pattern-light.png')] opacity-5 bg-cover bg-center"></div>
 
@@ -50,7 +50,7 @@ export default function Challenges() {
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
-          <p className="text-sm uppercase tracking-wide font-semibold text-blue-700 mb-2">
+          <p className="text-sm uppercase tracking-wide font-semibold text-pink-700 mb-2">
             Our Challenges
           </p>
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-3">
@@ -60,7 +60,7 @@ export default function Challenges() {
             initial={{ width: 0 }}
             whileInView={{ width: "5rem" }}
             transition={{ duration: 0.5 }}
-            className="h-1 bg-blue-700 rounded-full mx-auto mb-6"
+            className="h-1 bg-pink-700 rounded-full mx-auto mb-6"
           ></motion.div>
           <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
             At <span className="font-semibold text-blue-900">Utamaduni</span>, we face
@@ -82,7 +82,7 @@ export default function Challenges() {
             >
               <div className="flex-shrink-0 mt-1">{item.icon}</div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-1 font-serif">
+                <h3 className="text-lg font-semibold text-blue-900 mb-1 font-serif">
                   {item.title}
                 </h3>
                 <p className="text-gray-700 text-sm leading-relaxed">
@@ -101,7 +101,7 @@ export default function Challenges() {
           viewport={{ once: true }}
           className="mt-14 bg-gradient-to-r from-blue-700 to-blue-500 text-white rounded-2xl p-8 shadow-2xl max-w3xl mx-auto"
         >
-          <h3 className="text-2xl font-semibold mb-2">
+          <h3 className="text-2xl font-semibold mb-2 font-serif">
             Together, We Can Overcome
           </h3>
           <p className="text-base text-blue-50 mb-5">

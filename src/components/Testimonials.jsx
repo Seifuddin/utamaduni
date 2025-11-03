@@ -51,7 +51,7 @@ export default function StoriesAndTestimonials() {
   ];
 
   return (
-    <section className="relative bg-gradient-to-b from-amber-50 via-white to-blue-50 py-20 text-gray-800 overflow-hidden">
+    <section className="relative bg-amber-50 gradient-to-b from-amber-50  via-white to-blue-50 py-20 text-gray-800 overflow-hidden">
       {/* Decorative pattern */}
       <div className="absolute inset-0 bg-[url('/images/pattern-light.png')] opacity-5 bg-cover bg-center"></div>
 
@@ -64,7 +64,7 @@ export default function StoriesAndTestimonials() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-sm uppercase font-semibold tracking-wider text-blue-700">
+          <p className="text-sm uppercase font-semibold tracking-wider text-pink-700">
             Stories of Change
           </p>
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-3">
@@ -74,7 +74,7 @@ export default function StoriesAndTestimonials() {
             initial={{ width: 0 }}
             whileInView={{ width: "5rem" }}
             transition={{ duration: 0.5 }}
-            className="h-1 bg-blue-700 rounded-full mx-auto mb-6"
+            className="h-1 bg-pink-700 rounded-full mx-auto mb-6"
           ></motion.div>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
             Every story from <span className="font-semibold text-blue-900">Utamaduni</span>{" "}
@@ -102,7 +102,7 @@ export default function StoriesAndTestimonials() {
                 />
               </div>
               <div className="p-4">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                <h3 className="md:text-lg font-bold text-blue-900 mb-2 font-serif">
                   {story.title}
                 </h3>
                 <p className="text-gray-700 text-sm leading-relaxed">
@@ -151,7 +151,7 @@ export default function StoriesAndTestimonials() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
-                  className="bg-white/10 rounded-2xl p-6 backdrop-blur-sm shadow-md hover:shadow-lg transition-all h-full"
+                  className="bg-white/10 rounded-2xl border border-gray-400 p-6 backdrop-blur-sm shadow-md hover:shadow-lg transition-all h-full"
                 >
                   <div className="flex items-center gap-4 mb-4">
                     <Image
@@ -162,7 +162,7 @@ export default function StoriesAndTestimonials() {
                       className="rounded-full border-2 border-yellow-400"
                     />
                     <div>
-                      <h4 className="font-semibold text-white">{t.name}</h4>
+                      <h4 className="font-semibold text-white font-serif">{t.name}</h4>
                       <p className="text-blue-200 text-sm">{t.role}</p>
                     </div>
                   </div>

@@ -13,7 +13,7 @@ const leaders = [
   {
     name: "Brian Otieno",
     role: "C.O.O",
-    image: "/images/WhatsApp Image 2025-09-22 at 20.01.09 (1).jpeg",
+    image: "/images/BrianOtienoCoo.jpg",
     quote: "Every small act of kindness creates ripples that transform communities.",
     socials: { facebook: "#", linkedin: "#", twitter: "#" },
   },
@@ -41,7 +41,7 @@ const leaders = [
   {
     name: "Sharon Rono",
     role: "Treasurer",
-    image: "/images/WhatsApp Image 2025-09-22 at 20.01.09 (1).jpeg",
+    image: "/images/Sharonronotreasurer.jpg",
     quote: "Financial transparency fuels trust and impact.",
     socials: { facebook: "#", linkedin: "#", twitter: "#" },
   },
@@ -64,13 +64,13 @@ export default function Leadership() {
         transition={{ duration: 0.6 }}
         className="text-center mb-10"
       >
-        <p className="text-xs uppercase tracking-widest font-semibold text-blue-700">
+        <p className="text-xs uppercase tracking-widest font-semibold text-pink-700">
           Our Team
         </p>
         <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mt-2 mb-3">
           The Leadership Behind Utamaduni
         </h2>
-        <div className="mx-auto h-1 w-16 bg-blue-700 rounded-full mb-4"></div>
+        <div className="mx-auto h-1 w-16 bg-pink-700 rounded-full mb-4"></div>
         <p className="max-w-2xl mx-auto text-gray-700 text-sm md:text-base leading-relaxed">
           A dedicated team working alongside our Founder & CEO — uniting passion,
           integrity, and service to sustain Utamaduni’s mission of compassion and growth.
@@ -126,7 +126,7 @@ export default function Leadership() {
                     href={leader.socials.facebook}
                     target="_blank"
                     whileHover={{ scale: 1.2 }}
-                    className="p-1.5 rounded-full bg-amber-100 hover:bg-amber-200 transition"
+                    className="p-1.5 rounded-full bg-blue-50 border border-blue-100 shadow-md hover:bg-amber-200 transition"
                   >
                     <Facebook className="w-4 h-4 text-blue-800" />
                   </motion.a>
@@ -136,7 +136,7 @@ export default function Leadership() {
                     href={leader.socials.linkedin}
                     target="_blank"
                     whileHover={{ scale: 1.2 }}
-                    className="p-1.5 rounded-full bg-amber-100 hover:bg-amber-200 transition"
+                    className="p-1.5 rounded-full bg-blue-50 border border-blue-100 shadow-md hover:bg-amber-200 transition"
                   >
                     <Linkedin className="w-4 h-4 text-blue-800" />
                   </motion.a>
@@ -146,7 +146,7 @@ export default function Leadership() {
                     href={leader.socials.twitter}
                     target="_blank"
                     whileHover={{ scale: 1.2 }}
-                    className="p-1.5 rounded-full bg-amber-100 hover:bg-amber-200 transition"
+                    className="p-1.5 rounded-full bg-blue-50 border border-blue-100 shadow-md hover:bg-amber-200 transition"
                   >
                     <Twitter className="w-4 h-4 text-blue-800" />
                   </motion.a>

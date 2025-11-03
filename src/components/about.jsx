@@ -4,7 +4,7 @@ import { Target, Eye, Info } from "lucide-react";
 
 export default function Abouts() {
   return (
-    <section className="relative bg-gradient-to-br from-amber-50 via-white to-blue-50 text-gray-800 overflow-hidden py-20">
+    <section className="relative bg-amber-50 gradient-to-br from-amber-50 via-white to-blue-50 text-gray-800 overflow-hidden py-20">
       {/* Decorative pattern */}
       <div className="absolute inset-0 bg-[url('/images/pattern-light.png')] opacity-5 bg-cover bg-center"></div>
 
@@ -17,11 +17,11 @@ export default function Abouts() {
           transition={{ duration: 0.7 }}
           className="md:w-5/12 text-left"
         >
-          <p className="inline-block text-sm uppercase tracking-wide font-semibold text-blue-700 mb-3">
+          <p className="inline-block text-sm uppercase tracking-wide font-semibold text-pink-700 mb-3">
             About Us
           </p>
 
-          <h1 className="text-3xl md:text-5xl font-serif font-bold text-gray-900 mb-4">
+          <h1 className="text-2xl md:text-4xl font-serif font-bold text-gray-900 mb-4">
             Who We Are
           </h1>
 
@@ -29,7 +29,7 @@ export default function Abouts() {
             initial={{ width: 0 }}
             whileInView={{ width: "6rem" }}
             transition={{ duration: 0.6 }}
-            className="h-1 bg-blue-700 rounded-full mb-8"
+            className="h-1 bg-pink-700 rounded-full mb-8"
           ></motion.div>
 
           <p className="text-lg leading-relaxed text-gray-700 mb-6">
@@ -55,7 +55,7 @@ export default function Abouts() {
             >
               <div className="flex items-center mb-3">
                 <Target className="w-6 h-6 text-pink-700 mr-2" />
-                <h3 className="text-lg font-semibold text-blue-900 font-serif">Our Mission</h3>
+                <h3 className="text-lg font-bold text-blue-900 font-serif">Our Mission</h3>
               </div>
               <p className="text-gray-700 leading-relaxed text-base">
                 To preserve cultural heritage while providing humanitarian support through education,
@@ -73,7 +73,7 @@ export default function Abouts() {
             >
               <div className="flex items-center mb-3">
                 <Eye className="w-6 h-6 text-pink-700 mr-2" />
-                <h3 className="text-lg font-semibold text-blue-900 font-serif">Our Vision</h3>
+                <h3 className="text-lg font-bold text-blue-900 font-serif">Our Vision</h3>
               </div>
               <p className="text-gray-700 leading-relaxed text-base">
                 To create a culturally inspired, compassionate society where vulnerable children and

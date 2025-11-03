@@ -22,7 +22,7 @@ export default function GalleryHero() {
           className="text-center md:w1/2"
         >
           <h1 className="text-2xl md:text-3xl font-serif font-bold text-white mb-4">
-            Cerished Moments{" "}
+            Cherished Moments{" "}
           </h1>
           <div className="w-24 h-1 textleft bg-white mb-8 md:mx0 mx-auto rounded-full"></div>
 

@@ -6,7 +6,7 @@ import { Users, BookOpen } from "lucide-react";
 
 export default function OurStory() {
   return (
-    <section className="bg-gradient-to-b from-amber-50 to-white py-16 text-gray-800">
+    <section className="bg-amber-50 to-white py-16 text-gray-800">
         {/* Header */}
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
@@ -15,17 +15,17 @@ export default function OurStory() {
                   transition={{ duration: 0.6 }}
                   className="mb-12 text-center"
                 >
-                  <p className="text-sm uppercase tracking-wide font-semibold text-blue-700 mb-2">
+                  <p className="text-sm uppercase tracking-wide font-semibold text-pink-700 mb-2">
                     Our Story
                   </p>
-                  <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-3">
+                  <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-800 mb-3">
                     How It All Began
                   </h2>
                   <motion.div
                     initial={{ width: 0 }}
                     whileInView={{ width: "5rem" }}
                     transition={{ duration: 0.5 }}
-                    className="h-1 bg-blue-700 rounded-full mx-auto mb-6"
+                    className="h-1 bg-pink-700 rounded-full mx-auto mb-6"
                   ></motion.div>
                 </motion.div>
       <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
@@ -54,7 +54,7 @@ export default function OurStory() {
           className="space-y-6"
         >
           <p className="text-gray-700 leading-relaxed">
-            Born from a shared vision of hope and unity, <strong>Utamaduni Charity Organization</strong> 
+            Born from a shared vision of hope and unity, <strong>Utamaduni Charity Organization </strong> 
             began as a small circle of compassionate individuals determined to uplift 
             underprivileged families through cultural identity, education, and sustainable action.  
           </p>
@@ -96,9 +96,9 @@ function FeaturePoint({ icon, title, children }) {
       whileHover={{ scale: 1.03 }}
       className="p-5 bg-white rounded-xl shadow-md flex gap-3 items-start hover:shadow-lg transition"
     >
-      <div className="p-3 rounded-lg bg-amber-50">{icon}</div>
+      <div className="p-3 rounded-lg bg-blue-50 shadow-md border border-blue-100">{icon}</div>
       <div>
-        <h4 className="font-semibold text-gray-900 font-serif">{title}</h4>
+        <h4 className="font-bold text-blue-900 font-serif">{title}</h4>
         <p className="text-sm text-gray-700 mt-1">{children}</p>
       </div>
     </motion.div>

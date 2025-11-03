@@ -6,7 +6,7 @@ import { Facebook, Linkedin, Twitter } from "lucide-react";
 
 export default function CEOSection() {
   return (
-    <section className="py-20 bg-gradient-to-b from-amber-50 to-white text-gray-800">
+    <section className="py-20 bg-amber-50 gradient-to-b from-amber-50 to-white text-gray-800">
       <div className="max-w-6xl mx-auto px-6">
         {/* Heading */}
         <motion.div
@@ -15,10 +15,10 @@ export default function CEOSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-blue-900">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-800">
             Our Founder & CEO
           </h2>
-          <div className="w-24 h-1 bg-blue-700 mx-auto mt-3 rounded-full"></div>
+          <div className="w-24 h-1 bg-pink-700 mx-auto mt-3 rounded-full"></div>
           <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
             Meet the visionary behind Utamaduni Charity Organization — 
             a leader driven by compassion, unity, and sustainable impact.
@@ -92,7 +92,7 @@ function SocialIcon({ href, icon }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="p-2 bg-amber-100 text-blue-800 rounded-full hover:bg-blue-700 hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
+      className="p-2 bg-blue-50 border border-blue-100 text-blue-800 rounded-full hover:bg-blue-700 hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
     >
       {icon}
     </a>
