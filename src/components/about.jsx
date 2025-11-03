@@ -95,7 +95,7 @@ export default function Abouts() {
             <img
               src="/images/utamaduni at mathare/_DSC8999.jpg"
               alt="Community work"
-              className="w-full max-w-md md:max-w-lg lg:max-w-xl rounded-3xl shadow-2xl border-4 border-white group-hover:scale-105 transition-transform duration-700 ease-out"
+              className="w-full max-wmd md:max-wlg lg:max-wxl rounded shadow-2xl border4 border-white grouphover:scale-105 transition-transform duration-700 ease-out"
             />
             <div className="absolute inset-0 rounded-3xl ring-2 ring-blue-700/30 group-hover:ring-yellow-400/50 transition-all duration-700"></div>
           </div>

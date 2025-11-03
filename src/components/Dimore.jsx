@@ -30,7 +30,7 @@ export default function CEOSection() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex flex-col md:flex-row items-center gap-10 bg-white shadow-xl rounded-3xl overflow-hidden border border-blue-100 p-8 md:p-12"
+          className="flex flex-col md:flex-row items-center gap-10 bg-white shadow-xl rounded-3xl overflow-hidden border border-blue-100 p-4 md:p-8"
         >
           {/* CEO Image */}
           <div className="relative w-56 h-56 md:w-64 md:h-64 flex-shrink-0 rounded-2xl overflow-hidden shadow-lg group">
@@ -48,13 +48,13 @@ export default function CEOSection() {
           </div>
 
           {/* CEO Details */}
-          <div className="flex-1 text-center md:text-left">
-            <h3 className="text-2xl md:text-3xl font-serif font-semibold text-blue-900">
+          <div className="flex-1 textcenter text-left">
+            <h3 className="text-2xl md:text-3xl font-serif font-semibold text-blue-900 text-left">
               Brian Omondi
             </h3>
-            <p className="text-blue-700 font-medium mb-4">Founder & CEO</p>
+            <p className="text-blue-700 font-medium mb-4 text-left">Founder & CEO</p>
 
-            <p className="text-gray-600 leading-relaxed mb-6 max-w-xl">
+            <p className="text-gray-600 leading-relaxed mb-6 max-w-xl text-left">
               “At Utamaduni Charitable Organization, our mission is to uplift
               communities through compassion, empowerment, and sustainable
               development. Together, we build hope for a brighter and more
@@ -62,7 +62,7 @@ export default function CEOSection() {
             </p>
 
             {/* Social Links */}
-            <div className="flex justify-center md:justify-start gap-4">
+            <div className="flex justifycenter justify-start gap-4">
               <SocialIcon
                 href="https://facebook.com"
                 icon={<Facebook className="w-5 h-5" />}

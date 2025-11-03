@@ -35,7 +35,7 @@ export default function OurStory() {
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
-          className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
+          className="rounded overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
         >
           <Image
             src="/images/utamaduni at mathare/_DSC8943.jpg"
@@ -68,14 +68,14 @@ export default function OurStory() {
 
           <div className="grid sm:grid-cols-2 gap-5 mt-6">
             <FeaturePoint
-              icon={<Users className="w-5 h-5 text-amber-600" />}
+              icon={<Users className="w-5 h-5 text-pink-700" />}
               title="Community Driven"
             >
               We work hand-in-hand with local leaders to ensure every voice is heard and every action counts.
             </FeaturePoint>
 
             <FeaturePoint
-              icon={<BookOpen className="w-5 h-5 text-amber-600" />}
+              icon={<BookOpen className="w-5 h-5 text-pink-700" />}
               title="Empowering Education"
             >
               From children to adults, we build capacity for lifelong learning and self-reliance.

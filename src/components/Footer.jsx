@@ -29,11 +29,11 @@ export default function Footer() {
         <div className="md:col-span-2">
           <div className="flex items-center gap-3 mb-4">
             <Image
-              src="/images/logo.png"
+              src="/images/logo.jpg"
               alt="Utamaduni Logo"
               width={50}
               height={50}
-              className="rounded-full"
+              className="rounded-md"
             />
             <h2 className="text-2xl font-bold text-white font-serif">
               Utamaduni

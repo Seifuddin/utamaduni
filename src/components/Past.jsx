@@ -45,7 +45,7 @@ export default function PastEvents() {
       {/* Title */}
       <div className="text-center mb-8">
         <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4">
-          Past Events & Achievements
+          Past Events
         </h2>
         <p className="mt-2 text-gray-600 max-w-xl mx-auto text-sm md:text-base">
           A look back at the moments that inspired hope and strengthened our
@@ -87,7 +87,7 @@ export default function PastEvents() {
 
               {/* Content */}
               <div className="p-4">
-                <h3 className="font-bold text-gray-800 fontserif text-lg my-2">
+                <h3 className="font-bold text-blue-900 font-serif text-lg my-2">
                   {event.title}
                 </h3>
                 <p className="text-xs text-gray-700 italic mb-2">{event.date}</p>

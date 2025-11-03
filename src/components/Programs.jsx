@@ -31,7 +31,7 @@ const programs = [
       "This initiative focuses on providing training, assistive tools, and inclusive community engagement for persons with disabilities, ensuring they are empowered and included in every part of society.",
   },
   {
-    image: "/images/elders.png",
+    image: "/images/elderly_villagers.jpg",
     title: "Elderly Persons",
     description:
       "Providing care, companionship, and medical assistance to elderly people who lack family or social support.",
@@ -110,7 +110,7 @@ export default function Programs() {
 
               {/* Text Content */}
               <div className="p-4 flex flex-col flex-1 text-left">
-                <h3 className="font-bold text-blue-900 font-serif tex my-2">
+                <h3 className="md:text-lg font-bold text-blue-900 font-serif tex my-2">
                   {program.title}
                 </h3>
                 <p className="text-gray-600 text-sm flex-1">{program.description}</p>

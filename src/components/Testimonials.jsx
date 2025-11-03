@@ -42,11 +42,11 @@ export default function StoriesAndTestimonials() {
       image: "/images/WhatsApp Image 2025-09-22 at 20.01.09 (1).jpeg",
     },
     {
-      name: "Grace W.",
+      name: "Muriithi Nguru.",
       role: "Partner Organization",
       quote:
         "Working with Utamaduni has shown us what true community-driven impact looks like — compassion, dedication, and unity.",
-      image: "/images/WhatsApp Image 2025-09-22 at 20.01.09 (1).jpeg",
+      image: "/images/Commandant.jpg",
     },
   ];
 

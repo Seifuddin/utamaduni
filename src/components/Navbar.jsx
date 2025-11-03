@@ -32,10 +32,10 @@ const Navbar = () => {
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative w-12 h-12">
             <Image
-              src="/images/logo.png"
+              src="/images/logo.jpg"
               alt="Utamaduni Logo"
               fill
-              className="rounded-full object-contain"
+              className="rounded-md object-contain"
             />
           </div>
           <span className="hidden md:flex text-lg md:text-xl font-bold tracking-wide text-pink-700 font-serif group-hover:text-pink-800 transition">
