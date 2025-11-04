@@ -25,7 +25,7 @@ export default function OurStory() {
                     initial={{ width: 0 }}
                     whileInView={{ width: "5rem" }}
                     transition={{ duration: 0.5 }}
-                    className="h-1 bg-pink-700 rounded-full mx-auto mb-6"
+                    className="h-1 bg-pink700 rounded-full mx-auto mb-4"
                   ></motion.div>
                 </motion.div>
       <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
@@ -68,14 +68,14 @@ export default function OurStory() {
 
           <div className="grid sm:grid-cols-2 gap-5 mt-6">
             <FeaturePoint
-              icon={<Users className="w-5 h-5 text-pink-700" />}
+              icon={<Users className="w-4 h-4 text-pink-700" />}
               title="Community Driven"
             >
               We work hand-in-hand with local leaders to ensure every voice is heard and every action counts.
             </FeaturePoint>
 
             <FeaturePoint
-              icon={<BookOpen className="w-5 h-5 text-pink-700" />}
+              icon={<BookOpen className="w-4 h-4 text-pink-700" />}
               title="Empowering Education"
             >
               From children to adults, we build capacity for lifelong learning and self-reliance.
@@ -94,9 +94,9 @@ function FeaturePoint({ icon, title, children }) {
   return (
     <motion.div
       whileHover={{ scale: 1.03 }}
-      className="p-5 bg-white rounded-xl border border-blue-100  shadow-md flex gap-3 items-start hover:shadow-lg transition"
+      className="p-3 bg-white rounded-md border border-blue-100  shadow-md flex gap-3 items-start hover:shadow-lg transition"
     >
-      <div className="p-3 rounded-lg bg-amber-50 shadow-md border border-amber-100">{icon}</div>
+      <div className="p-1 rounded-lg bg-amber-50 shadow-md border border-amber-100">{icon}</div>
       <div>
         <h4 className="font-bold md:text-lg text-blue-900 font-serif">{title}</h4>
         <p className="text-sm text-gray-700 mt-1">{children}</p>

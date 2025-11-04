@@ -1,46 +1,28 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Target, Eye, Info } from "lucide-react";
 
-const images = [
-  "/images/utamaduni at mathare/_DSC8999.jpg",
-  "/images/utamaduni at mathare/_DSC8578.jpg",
-  "/images/utamaduni at mathare/_DSC8515.jpg",
-  "/images/utamaduni at mathare/_DSC8754.jpg",
-  "/images/WhatsApp Image 2025-09-28 at 02.00.51 (1).jpeg",
-];
-
 export default function Abouts() {
-  const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % images.length);
-    }, 4000); // change image every 4 seconds
-    return () => clearInterval(timer);
-  }, []);
-
   return (
-    <section className="relative bg-amber-50 gradient-to-br from-amber-50 via-white to-blue-50 text-gray-800 overflow-hidden py-24">
+    <section className="relative bg-amber-50 gradient-to-br from-amber-50 via-white to-blue-50 text-gray-800 overflow-hidden py-16">
       {/* Subtle background pattern */}
       <div className="absolute inset-0 bg-[url('/images/pattern-light.png')] opacity-10 bg-cover bg-center"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 grid md:grid-cols-2 gap-16 items-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-12 grid md:grid-cols-2 gap-16 items-center">
         {/* LEFT CONTENT */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="space-y-6"
+          className="space-y-3"
         >
           <p className="inline-block text-sm uppercase tracking-wider font-semibold text-pink-700 bg-pink-100/60 px-3 py-1 rounded-full">
             About Us
           </p>
 
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 leading-tight">
+          <h1 className="text-2xl md:text-4xl font-serif font-bold text-gray-900 leading-tight">
             Who We Are
           </h1>
 
@@ -48,7 +30,7 @@ export default function Abouts() {
             initial={{ width: 0 }}
             whileInView={{ width: "6rem" }}
             transition={{ duration: 0.6 }}
-            className="h-1 bg-pink-700 rounded-full mb-6"
+            className="h-1 bg-pink-700 rounded-full mb-3"
           ></motion.div>
 
           <p className="text-lg leading-relaxed text-gray-700">
@@ -63,7 +45,7 @@ export default function Abouts() {
             initiatives.
           </p>
 
-          {/* Mission & Vision Cards */}
+          {/* Mission & Vision Cards 
           <div className="mt-10 grid sm:grid-cols-2 gap-6">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -103,9 +85,11 @@ export default function Abouts() {
               </p>
             </motion.div>
           </div>
+          */}
         </motion.div>
+        
 
-        {/* RIGHT SIDE — IMAGE SLIDER + DID YOU KNOW */}
+        {/* RIGHT SIDE — IMAGE + DID YOU KNOW */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -113,40 +97,17 @@ export default function Abouts() {
           transition={{ duration: 0.7 }}
           className="flex flex-col items-center text-center"
         >
-          {/* Image Slider */}
-          <div className="relative w-full max-w-md mx-auto overflow-hidden rounded-3xl shadow-2xl border border-white/80">
-            <AnimatePresence mode="wait">
-              <motion.img
-                key={images[current]}
-                src={images[current]}
-                alt="Community work"
-                initial={{ opacity: 0, scale: 1.05 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.8, ease: "easeInOut" }}
-                className="w-full h-auto object-cover"
-              />
-            </AnimatePresence>
-
-            {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-
-            {/* Dots indicator */}
-            <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
-              {images.map((_, index) => (
-                <span
-                  key={index}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === current
-                      ? "bg-pink-600"
-                      : "bg-white/70 hover:bg-pink-300"
-                  }`}
-                ></span>
-              ))}
-            </div>
+          {/* Image */}
+          <div className="relative group w-full max-w-md mx-auto overflow-hidden rounded shadow-2xl border border-white/80">
+            <img
+              src="/images/utamaduni at mathare/_DSC8999.jpg"
+              alt="Community work"
+              className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
           </div>
 
-          {/* Did You Know Section */}
+          {/* Did You Know 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -166,6 +127,7 @@ export default function Abouts() {
               and a bridge to building stronger, more compassionate communities.
             </p>
           </motion.div>
+          */}
         </motion.div>
       </div>
     </section>
