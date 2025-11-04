@@ -12,12 +12,14 @@ import CEOSection from "@/components/Dimore";
 import Challenges from "@/components/Challenges";
 import StoriesAndTestimonials from "@/components/Testimonials";
 import OurStory from "@/components/Story";
+import Mission from "@/components/Mission";
 
 export default function AboutPage() {
   return (
     <main className="overflow-x-hidden pt-16">
       <AboutHero />
       <Abouts />
+      <Mission />
       <OurStory />
       <Challenges />
       <StoriesAndTestimonials />

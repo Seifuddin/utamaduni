@@ -12,7 +12,7 @@ export default function AboutHero() {
       {/* Background overlay 
       <div className="absolute inset-0 bg-black/40"></div>
 */}
-      <div className="relative z-10 max-w-7xl mx-auto px-3 md:px-6 lg:px-14 py-14 flexflexcol md:flexrow gap10 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-2 md:px-6 lg:px-14 py-14 flexflexcol md:flexrow gap10 items-center">
         
         {/* Left Content */}
         <motion.div
@@ -21,15 +21,18 @@ export default function AboutHero() {
           transition={{ duration: 0.7 }}
           className="text-center"
         >
-          <h1 className="text-2xl md:text-3xl font-serif font-bold text-white mb-4">
+          <h1 className="text-xl md:text-3xl font-serif font-bold text-white mb-2">
             A Legacy of Culture{" "}
           </h1>
-          <div className="w-24 h-1 textleft bg-white mb-8 md:mx0 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 textleft bg-white mb-4 md:mx0 mx-auto rounded-full"></div>
 
 
           {/* Description */}
-          <p className="text-base md:text-lg leading-relaxed text-gray-200 mt-3 text-center">
-          Know more about Utamaduni.
+          <p className="text-base md:text-lg leading-relaxed text-gray-200 mt-2 text-center">
+          The name <span className="font-medium">“Utamaduni”</span> means{" "}
+              <span className="italic font-bold">“culture”</span> in Swahili
+              — reflecting our belief that culture is the foundation of identity
+              and a bridge to building stronger, more compassionate communities.
         </p>
 
           

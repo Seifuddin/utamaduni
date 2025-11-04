@@ -18,7 +18,7 @@ export default function Abouts() {
           transition={{ duration: 0.7 }}
           className="space-y-3"
         >
-          <p className="inline-block text-sm uppercase tracking-wider font-semibold text-pink-700 bg-pink-100/60 px-3 py-1 rounded-full">
+          <p className="inline-block text-sm uppercase tracking-wider font-semibold text-pink-700 bgpink-100/60 px3 py1 rounded-full">
             About Us
           </p>
 
