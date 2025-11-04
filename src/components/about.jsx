@@ -29,18 +29,18 @@ export default function Abouts() {
             initial={{ width: 0 }}
             whileInView={{ width: "6rem" }}
             transition={{ duration: 0.6 }}
-            className="h-1 bg-pink-700 rounded-full mb-8"
+            className="h-1 bg-pink-700 rounded-full mb-4"
           ></motion.div>
 
           <p className="text-lg leading-relaxed text-gray-700 mb-6">
-            <span className="font-semibold text-blue-900">Utamaduni</span> is a
+            <span className="font-semibold text-gray-800">Utamaduni</span> is a
             community-based, non-profit organization dedicated to preserving{" "}
-            <span className="font-medium text-blue-900">cultural heritage</span>{" "}
+            <span className="font-medium text-gray-800">cultural heritage</span>{" "}
             while uplifting vulnerable families and children. Rooted in the richness
             of African culture, Utamaduni embodies{" "}
-            <span className="italic text-blue-900">unity</span>,{" "}
-            <span className="italic text-blue-900">compassion</span>, and{" "}
-            <span className="italic text-blue-900">heritage</span> in all its
+            <span className="italic text-gray-800">unity</span>,{" "}
+            <span className="italic text-gray-800">compassion</span>, and{" "}
+            <span className="italic text-gray-800">heritage</span> in all its
             charitable initiatives.
           </p>
 
@@ -95,9 +95,9 @@ export default function Abouts() {
             <img
               src="/images/utamaduni at mathare/_DSC8999.jpg"
               alt="Community work"
-              className="w-full max-wmd md:max-wlg lg:max-wxl rounded shadow-2xl border4 border-white grouphover:scale-105 transition-transform duration-700 ease-out"
+              className="w-full max-wmd md:max-wlg lg:max-wxl rounded shadow-2xl border4 borderwhite grouphover:scale-105 transition-transform duration-700 ease-out"
             />
-            <div className="absolute inset-0 rounded-3xl ring-2 ring-blue-700/30 group-hover:ring-yellow-400/50 transition-all duration-700"></div>
+            <div className="absoluteinset0 rounded3xl ring2 ring-blue-700/30 grouphover:ring-yellow-400/50 transitionall duration-700"></div>
           </div>
 
           {/* DID YOU KNOW SECTION */}

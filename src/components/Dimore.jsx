@@ -33,7 +33,7 @@ export default function CEOSection() {
           className="flex flex-col md:flex-row items-center gap-10 bg-white shadow-xl rounded-3xl overflow-hidden border border-blue-100 p-4 md:p-8"
         >
           {/* CEO Image */}
-          <div className="relative w-56 h-56 md:w-64 md:h-64 flex-shrink-0 rounded-2xl overflow-hidden shadow-lg group">
+          <div className="relative w-64 h-64 md:w-64 md:h-64 flex-shrink-0 rounded-2xl overflow-hidden shadow-lg group">
             <Image
               src="/images/WhatsApp Image 2025-10-04 at 23.04.27.jpeg"
               alt="Founder & CEO - Utamaduni"
@@ -48,11 +48,11 @@ export default function CEOSection() {
           </div>
 
           {/* CEO Details */}
-          <div className="flex-1 textcenter text-left">
-            <h3 className="text-2xl md:text-3xl font-serif font-semibold text-blue-900 text-left">
+          <div className="flex-1 text-center md:text-left">
+            <h3 className="text-xl mdtext-2xl font-serif font-semibold text-blue-900 textleft">
               Brian Omondi
             </h3>
-            <p className="text-blue-700 font-medium mb-4 text-left">Founder & CEO</p>
+            <p className="text-gray-700 font-medium mb-4 textleft">Founder & CEO</p>
 
             <p className="text-gray-600 leading-relaxed mb-6 max-w-xl text-left">
               “At Utamaduni Charitable Organization, our mission is to uplift
@@ -62,7 +62,7 @@ export default function CEOSection() {
             </p>
 
             {/* Social Links */}
-            <div className="flex justifycenter justify-start gap-4">
+            <div className="flex justify-center md:justify-start gap-4">
               <SocialIcon
                 href="https://facebook.com"
                 icon={<Facebook className="w-5 h-5" />}
@@ -92,7 +92,7 @@ function SocialIcon({ href, icon }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="p-2 bg-blue-50 border border-blue-100 text-blue-800 rounded-full hover:bg-blue-700 hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
+      className="p-2 bg-amber-50 border border-amber-100 text-pink-700 rounded-full hover:bg-blue-700 hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
     >
       {icon}
     </a>

@@ -94,11 +94,11 @@ function FeaturePoint({ icon, title, children }) {
   return (
     <motion.div
       whileHover={{ scale: 1.03 }}
-      className="p-5 bg-white rounded-xl shadow-md flex gap-3 items-start hover:shadow-lg transition"
+      className="p-5 bg-white rounded-xl border border-blue-100  shadow-md flex gap-3 items-start hover:shadow-lg transition"
     >
-      <div className="p-3 rounded-lg bg-blue-50 shadow-md border border-blue-100">{icon}</div>
+      <div className="p-3 rounded-lg bg-amber-50 shadow-md border border-amber-100">{icon}</div>
       <div>
-        <h4 className="font-bold text-blue-900 font-serif">{title}</h4>
+        <h4 className="font-bold md:text-lg text-blue-900 font-serif">{title}</h4>
         <p className="text-sm text-gray-700 mt-1">{children}</p>
       </div>
     </motion.div>

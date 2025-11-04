@@ -18,7 +18,7 @@ const leaders = [
     socials: { facebook: "#", linkedin: "#", twitter: "#" },
   },
   {
-    name: "James Odongo",
+    name: "Joseph Odongo",
     role: "Manager",
     image: "/images/JamesManager.jpg",
     quote: "Leadership means serving others with empathy, not authority.",
@@ -46,7 +46,7 @@ const leaders = [
     socials: { facebook: "#", linkedin: "#", twitter: "#" },
   },
   {
-    name: "Jakes Omondi",
+    name: "Simon Omondi",
     role: "Coordinator",
     image: "/images/JakesCoordinator.jpg",
     quote: "True coordination is connecting hearts as much as actions.",
@@ -71,7 +71,7 @@ export default function Leadership() {
           The Leadership Behind Utamaduni
         </h2>
         <div className="mx-auto h-1 w-16 bg-pink-700 rounded-full mb-4"></div>
-        <p className="max-w-2xl mx-auto text-gray-700 text-sm md:text-base leading-relaxed">
+        <p className="max-w-2xl mx-auto text-gray-700 text-base mdtext-base leading-relaxed">
           A dedicated team working alongside our Founder & CEO — uniting passion,
           integrity, and service to sustain Utamaduni’s mission of compassion and growth.
         </p>
@@ -98,7 +98,7 @@ export default function Leadership() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-5 text-center border border-gray-100 hover:border-amber-300"
+              className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-5 text-center border border-blue-100 hover:border-amber-300"
             >
               {/* Profile Image */}
               <div className="relative w-28 h-28 mx-auto mb-4">
@@ -126,9 +126,9 @@ export default function Leadership() {
                     href={leader.socials.facebook}
                     target="_blank"
                     whileHover={{ scale: 1.2 }}
-                    className="p-1.5 rounded-full bg-blue-50 border border-blue-100 shadow-md hover:bg-amber-200 transition"
+                    className="p-1.5 rounded-full bg-amber-50 border border-amber-100 shadow-md hover:bg-amber-200 transition"
                   >
-                    <Facebook className="w-4 h-4 text-blue-800" />
+                    <Facebook className="w-5 h-5 text-pink-700" />
                   </motion.a>
                 )}
                 {leader.socials.linkedin && (
@@ -136,9 +136,9 @@ export default function Leadership() {
                     href={leader.socials.linkedin}
                     target="_blank"
                     whileHover={{ scale: 1.2 }}
-                    className="p-1.5 rounded-full bg-blue-50 border border-blue-100 shadow-md hover:bg-amber-200 transition"
+                    className="p-1.5 rounded-full bg-amber-50 border border-amber-100 shadow-md hover:bg-amber-200 transition"
                   >
-                    <Linkedin className="w-4 h-4 text-blue-800" />
+                    <Linkedin className="w-5 h-5 text-pink-700" />
                   </motion.a>
                 )}
                 {leader.socials.twitter && (
@@ -146,15 +146,15 @@ export default function Leadership() {
                     href={leader.socials.twitter}
                     target="_blank"
                     whileHover={{ scale: 1.2 }}
-                    className="p-1.5 rounded-full bg-blue-50 border border-blue-100 shadow-md hover:bg-amber-200 transition"
+                    className="p-1.5 rounded-full bg-amber-50 border border-amber-100 shadow-md hover:bg-amber-200 transition"
                   >
-                    <Twitter className="w-4 h-4 text-blue-800" />
+                    <Twitter className="w-5 h-5 text-pink-700" />
                   </motion.a>
                 )}
               </div>
 
               {/* Quote */}
-              <p className="text-gray-600 text-xs italic leading-relaxed">
+              <p className="text-gray-600 text-base italic leading-relaxed">
                 “{leader.quote}”
               </p>
             </motion.div>
