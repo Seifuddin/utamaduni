@@ -42,7 +42,7 @@ const highlights = [
 export default function PastEvents() {
   return (
     <section className="bg-amber-50 py-16 px-6 md:px-12 lg:px-16">
-      <div className="mx-auto px-6 max-w-6xl">
+      <div className="mx-auto px6 max-w-6xl">
       {/* Title */}
       <div className="text-center mb-8">
         <p className="text-sm uppercase tracking-wide font-semibold text-pink-700 mb-2">

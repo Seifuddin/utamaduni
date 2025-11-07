@@ -55,7 +55,7 @@ export default function StoriesAndTestimonials() {
       {/* Decorative pattern */}
       <div className="absolute inset-0 bg-[url('/images/pattern-light.png')] opacity-5 bg-cover bg-center"></div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6">
+      <div className="relative z-10 max-w-6xl mx-auto px6">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

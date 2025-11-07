@@ -11,7 +11,7 @@ export default function SponsorProgram() {
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/60 via-[#0a2540]/90 to-blue-800/70 z-0"></div>
       <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-10 bg-cover bg-center z-0"></div>
 */}
-      <div className="relative mx-auto max-w-6xl px-6 grid md:grid-cols-2 gap-8 items-center z-10">
+      <div className="relative mx-auto max-w-6xl px6 grid md:grid-cols-2 gap-8 items-center z-10">
         {/* Left Side - Text */}
         <motion.div
           initial={{ opacity: 0, x: -25 }}
