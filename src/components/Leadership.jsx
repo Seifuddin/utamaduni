@@ -57,6 +57,7 @@ const leaders = [
 export default function Leadership() {
   return (
     <section className="relative bg-amber-50 py-12 px-6 md:px-12 overflow-hidden">
+      <div className="mx-auto px-6 max-w-6xl">
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -161,6 +162,7 @@ export default function Leadership() {
           </SwiperSlide>
         ))}
       </Swiper>
+      </div>
     </section>
   );
 }

@@ -13,6 +13,7 @@ import Challenges from "@/components/Challenges";
 import StoriesAndTestimonials from "@/components/Testimonials";
 import OurStory from "@/components/Story";
 import Mission from "@/components/Mission";
+import PastEvents from "@/components/Past";
 
 export default function AboutPage() {
   return (
@@ -22,6 +23,7 @@ export default function AboutPage() {
       <Mission />
       <OurStory />
       <Challenges />
+      <PastEvents />
       <StoriesAndTestimonials />
       <CEOSection />
       <Leadership />

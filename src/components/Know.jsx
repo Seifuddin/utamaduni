@@ -44,7 +44,7 @@ export default function DidYouKnowHybrid() {
       />
       <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
 
-      <div className="relative mx-auto text-center">
+      <div className="relative max-w-6xl mx-auto px-6 text-center">
         {/* Title */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

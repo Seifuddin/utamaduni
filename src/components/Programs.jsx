@@ -68,7 +68,7 @@ export default function Programs() {
         <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-amber-300 rounded-full blur-3xl opacity-10 animate-pulse"></div>
       </div>
 
-      <div className="mx-auto px-6 lg:px-12 text-center max-w-7xl">
+      <div className="mx-auto px-6 text-center max-w-6xl">
         {/* Heading */}
         <motion.h2
           className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4"

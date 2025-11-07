@@ -23,6 +23,7 @@ export default function ContactUs() {
 
   return (
     <section className="relative bg-amber-50 text-gray-900 py-20 px-6 md:px-16 overflow-hidden">
+      <div className="mx-auto px-6 max-w-6xl">
       {/* Background pattern overlay */}
       <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-10 bg-cover"></div>
 
@@ -172,6 +173,7 @@ export default function ContactUs() {
           className="border-0 w-full"
         ></iframe>
       </motion.div>
+      </div>
     </section>
   );
 }

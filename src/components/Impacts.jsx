@@ -68,7 +68,7 @@ export default function ImpactStats() {
 
   return (
     <section ref={ref} className="bg-amber-50 pb-16">
-      <div className="px-4 md:px-10 lg:px-16 mx-auto">
+      <div className="relative max-w-6xl mx-auto px-6">
         {/* */}
         <h2 className="text-center text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-6">
           Our Achievement in Numbers

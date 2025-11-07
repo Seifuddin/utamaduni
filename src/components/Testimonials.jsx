@@ -82,7 +82,7 @@ export default function StoriesAndTestimonials() {
           </p>
         </motion.div>
 
-        {/* Stories Grid */}
+        {/* Stories Grid 
         <div className="grid md:grid-cols-3 gap-8 mb-20">
           {stories.map((story, index) => (
             <motion.div
@@ -112,6 +112,8 @@ export default function StoriesAndTestimonials() {
             </motion.div>
           ))}
         </div>
+        */}
+        
 
         {/* Testimonials Section with Swiper Slider */}
         <motion.div

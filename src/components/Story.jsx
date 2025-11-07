@@ -25,7 +25,7 @@ export default function OurStory() {
                     initial={{ width: 0 }}
                     whileInView={{ width: "5rem" }}
                     transition={{ duration: 0.5 }}
-                    className="h-1 bg-pink700 rounded-full mx-auto mb-4"
+                    className="h-1 bg-pink-700 rounded-full mx-auto mb-4"
                   ></motion.div>
                 </motion.div>
       <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">

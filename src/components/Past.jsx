@@ -41,12 +41,22 @@ const highlights = [
 
 export default function PastEvents() {
   return (
-    <section className="bg-amber-50 pb-16 px-6 md:px-12 lg:px-16">
+    <section className="bg-amber-50 py-16 px-6 md:px-12 lg:px-16">
+      <div className="mx-auto px-6 max-w-6xl">
       {/* Title */}
       <div className="text-center mb-8">
+        <p className="text-sm uppercase tracking-wide font-semibold text-pink-700 mb-2">
+            Our Achievements
+          </p>
         <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4">
-          Past Events
+          Achievements and Past Events
         </h2>
+        <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: "5rem" }}
+                    transition={{ duration: 0.5 }}
+                    className="h-1 bg-pink-700 rounded-full mx-auto mb-6"
+                  ></motion.div>
         <p className="mt-2 text-gray-600 max-w-xl mx-auto text-sm md:text-base">
           A look back at the moments that inspired hope and strengthened our
           communities.
@@ -87,7 +97,7 @@ export default function PastEvents() {
 
               {/* Content */}
               <div className="p-4">
-                <h3 className="font-bold text-blue-900 font-serif text-lg my-2">
+                <h3 className="font-bold text-blue-900 font-serif md:text-lg my-2">
                   {event.title}
                 </h3>
                 <p className="text-xs text-gray-700 italic mb-2">{event.date}</p>
@@ -127,6 +137,7 @@ export default function PastEvents() {
           background: #1d4ed8;
         }
       `}</style>
+      </div>
     </section>
   );
 }

@@ -15,6 +15,7 @@ const Navbar = () => {
     { href: "/about", label: "About Us" },
     { href: "/programs", label: "Our Programs" },
     { href: "/gallery", label: "Gallery" },
+    { href: "/blog", label: "Blog" },
     { href: "/contact", label: "Contact Us" },
   ];
 
@@ -27,7 +28,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md shadow-md">
-      <div className="max-w-7xl mx-auto px-5 md:px-10 py-4 flex justify-between items-center">
+      <div className="max-w-6xl mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative w-12 h-12">

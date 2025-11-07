@@ -11,7 +11,7 @@ export default function SponsorProgram() {
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/60 via-[#0a2540]/90 to-blue-800/70 z-0"></div>
       <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-10 bg-cover bg-center z-0"></div>
 */}
-      <div className="relative mx-auto max-w-6xl grid md:grid-cols-2 gap-8 items-center z-10">
+      <div className="relative mx-auto max-w-6xl px-6 grid md:grid-cols-2 gap-8 items-center z-10">
         {/* Left Side - Text */}
         <motion.div
           initial={{ opacity: 0, x: -25 }}
@@ -19,7 +19,7 @@ export default function SponsorProgram() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl mdtext-4xl md:text-5xl font-serif font-bold text-gray-900 mb-4">
             Sponsor a Child, Transform a Future
           </h2>
 

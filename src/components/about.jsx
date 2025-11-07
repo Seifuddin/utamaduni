@@ -9,14 +9,14 @@ export default function Abouts() {
       {/* Subtle background pattern */}
       <div className="absolute inset-0 bg-[url('/images/pattern-light.png')] opacity-10 bg-cover bg-center"></div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-12 grid md:grid-cols-2 gap-16 items-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px12 grid md:grid-cols-2 gap-16 items-center">
         {/* LEFT CONTENT */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="space-y-3"
+          className="space-y-2"
         >
           <p className="inline-block text-sm uppercase tracking-wider font-semibold text-pink-700 bgpink-100/60 px3 py1 rounded-full">
             About Us
@@ -30,7 +30,7 @@ export default function Abouts() {
             initial={{ width: 0 }}
             whileInView={{ width: "6rem" }}
             transition={{ duration: 0.6 }}
-            className="h-1 bg-pink-700 rounded-full mb-3"
+            className="h-1 bg-pink-700 rounded-full mb-7"
           ></motion.div>
 
           <p className="text-lg leading-relaxed text-gray-700">
