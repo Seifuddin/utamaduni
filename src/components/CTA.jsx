@@ -12,7 +12,7 @@ export default function CTA() {
 
           <div className="relative mt-6 flex justify-center gap-4">
             <a href="/donate" className="bg-blue-600 text-white px-5 py-3 rounded font-semibold shadow">Donate</a>
-            <a href="/volunteer" className="border border-white px-5 py-3 rounded">Volunteer</a>
+            <a href="/volunteer" className="border border-white px-5 py-3 font-semibold rounded">Volunteer</a>
           </div>
         </div>
       </section>

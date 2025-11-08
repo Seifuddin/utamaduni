@@ -67,7 +67,7 @@ export default function StoriesAndTestimonials() {
           <p className="text-sm uppercase font-semibold tracking-wider text-pink-700">
             Stories of Change
           </p>
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-3">
+          <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4">
             Real Lives, Real Impact
           </h2>
           <motion.div
@@ -153,7 +153,7 @@ export default function StoriesAndTestimonials() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
-                  className="bg-white/10 rounded-2xl border border-gray-400 p-6 backdrop-blur-sm shadow-md hover:shadow-lg transition-all h-full"
+                  className="bg-white/10 rounded-2xl border border-blue-500 p-6 backdrop-blur-sm shadow-md hover:shadow-lg transition-all h-full"
                 >
                   <div className="flex items-center gap-4 mb-4">
                     <Image
@@ -161,10 +161,10 @@ export default function StoriesAndTestimonials() {
                       alt={t.name}
                       width={50}
                       height={50}
-                      className="rounded-full border-2 border-yellow-400"
+                      className="rounded-full border-2 border-gray-200"
                     />
                     <div>
-                      <h4 className="font-semibold text-white font-serif">{t.name}</h4>
+                      <h4 className="font-bold text-gray-100 font-serif md:text-lg my-2">{t.name}</h4>
                       <p className="text-blue-200 text-sm">{t.role}</p>
                     </div>
                   </div>

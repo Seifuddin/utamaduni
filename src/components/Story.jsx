@@ -18,7 +18,7 @@ export default function OurStory() {
                   <p className="text-sm uppercase tracking-wide font-semibold text-pink-700 mb-2">
                     Our Story
                   </p>
-                  <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-800 mb-3">
+                  <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4">
                     How It All Began
                   </h2>
                   <motion.div
@@ -98,7 +98,7 @@ function FeaturePoint({ icon, title, children }) {
     >
       <div className="p-1 rounded-lg bg-amber-50 shadow-md border border-amber-100">{icon}</div>
       <div>
-        <h4 className="font-bold md:text-lg text-blue-900 font-serif">{title}</h4>
+        <h4 className="font-bold text-gray-800 font-serif md:text-lg my-2">{title}</h4>
         <p className="text-sm text-gray-700 mt-1">{children}</p>
       </div>
     </motion.div>

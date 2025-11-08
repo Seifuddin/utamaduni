@@ -12,7 +12,7 @@ export default function AboutHero() {
       {/* Background overlay 
       <div className="absolute inset-0 bg-black/40"></div>
 */}
-      <div className="relative z-10 max-w-7xl mx-auto px-2 md:px-6 lg:px-14 py-14 flexflexcol md:flexrow gap10 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-14 py-14 flexflexcol md:flexrow gap10 items-center">
         
         {/* Left Content */}
         <motion.div

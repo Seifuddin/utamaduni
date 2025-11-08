@@ -22,7 +22,7 @@ export default function Abouts() {
             About Us
           </p>
 
-          <h1 className="text-2xl md:text-4xl font-serif font-bold text-gray-900 leading-tight">
+          <h1 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4">
             Who We Are
           </h1>
 

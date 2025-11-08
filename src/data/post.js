@@ -8,11 +8,11 @@ export const posts = [
     title: "Educating the Future: Building Hope Through Community Learning",
     slug: "educating-the-future-building-hope",
     date: "November 8, 2025",
-    image: "/images/prisca.jpeg", // featured hero image
+    image: "/images/how_it_went_down/_DSC7994.jpg", // featured hero image
     images: [
-      "/images/prisca.jpeg",
-      "/images/prisca2.jpeg",
-      "/images/prisca3.jpeg"
+      "/images/how_it_went_down/_DSC7994.jpg",
+      "/images/how_it_went_down/_DSC7992.jpg",
+      "/images/how_it_went_down/_DSC8007.jpg"
     ],
     excerpt:
       "Education is the key to breaking cycles of poverty. At Utamaduni Charity, we’ve built learning spaces that empower children and adults to dream bigger and achieve more.",
@@ -25,9 +25,9 @@ export const posts = [
       where children and adults alike can read, write, and learn new skills such as coding, tailoring, and creative arts.</p>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
-        <img src="/images/prisca.jpeg" class="rounded-xl shadow-md" alt="Utamaduni education program" />
-        <img src="/images/prisca2.jpeg" class="rounded-xl shadow-md" alt="Children learning" />
-        <img src="/images/prisca3.jpeg" class="rounded-xl shadow-md" alt="Volunteer teaching" />
+        <img src="/images/how_it_went_down/_DSC7993.jpg" class="rounded-xl shadow-md" alt="Utamaduni education program" />
+        <img src="/images/how_it_went_down/_DSC7992.jpg" class="rounded-xl shadow-md" alt="Children learning" />
+        <img src="/images/how_it_went_down/_DSC8007.jpg" class="rounded-xl shadow-md" alt="Volunteer teaching" />
       </div>
 
       <p>Through these initiatives, we’ve seen children regain confidence, parents return to learning, 
@@ -39,11 +39,11 @@ export const posts = [
     title: "Water Is Life: How Utamaduni Brought Clean Water to Communities",
     slug: "water-is-life",
     date: "October 28, 2025",
-    image: "/images/prisca.jpeg",
+    image: "/images/utamaduni at mathare/_DSC8626.jpg",
     images: [
-      "/images/prisca.jpeg",
-      "/images/prisca2.jpeg",
-      "/images/prisca3.jpeg"
+      "/images/utamaduni at mathare/_DSC8626.jpg",
+      "/images/utamaduni at mathare/_DSC8674.jpg",
+      "/images/utamaduni at mathare/_DSC8631.jpg"
     ],
     excerpt:
       "Access to clean water transforms lives. Utamaduni Charity’s Clean Water Project has brought safe water to hundreds of families in rural Kenya.",
@@ -56,9 +56,9 @@ export const posts = [
       and provided education on water conservation and hygiene.</p>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
-        <img src="/images/prisca.jpeg" class="rounded-xl shadow-md" alt="Clean water project" />
-        <img src="/images/prisca2.jpeg" class="rounded-xl shadow-md" alt="Volunteers installing water system" />
-        <img src="/images/prisca3.jpeg" class="rounded-xl shadow-md" alt="Community enjoying fresh water" />
+        <img src="/images/utamaduni at mathare/_DSC8626.jpg" class="rounded-xl shadow-md" alt="Clean water project" />
+        <img src="/images/utamaduni at mathare/_DSC8674.jpg" class="rounded-xl shadow-md" alt="Volunteers installing water system" />
+        <img src="/images/utamaduni at mathare/_DSC8631.jpg" class="rounded-xl shadow-md" alt="Community enjoying fresh water" />
       </div>
 
       <p>Today, hundreds of families wake up to safe, clean water. 
@@ -71,11 +71,11 @@ export const posts = [
     title: "Feeding Hearts and Minds: Utamaduni’s Nutrition and Food Drive",
     slug: "feeding-hearts-and-minds",
     date: "October 20, 2025",
-    image: "/images/prisca.jpeg",
+    image: "/images/how_it_went_down/_DSC7928.jpg",
     images: [
-      "/images/prisca.jpeg",
-      "/images/prisca2.jpeg",
-      "/images/prisca3.jpeg"
+      "/images/how_it_went_down/_DSC7928.jpg",
+      "/images/how_it_went_down/_DSC7666.jpg",
+      "/images/how_it_went_down/_DSC7924.jpg"
     ],
     excerpt:
       "No child should go to bed hungry. Utamaduni Charity’s Food Drive ensures that families in need receive nutritious meals and renewed hope.",
@@ -89,9 +89,9 @@ export const posts = [
       Beyond feeding bodies, we aim to nourish minds and hearts.</p>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
-        <img src="/images/prisca.jpeg" class="rounded-xl shadow-md" alt="Food distribution" />
-        <img src="/images/prisca2.jpeg" class="rounded-xl shadow-md" alt="Volunteers serving meals" />
-        <img src="/images/prisca3.jpeg" class="rounded-xl shadow-md" alt="Happy children with meals" />
+        <img src="/images/how_it_went_down/_DSC7928.jpg" class="rounded-xl shadow-md" alt="Food distribution" />
+        <img src="/images/how_it_went_down/_DSC7666.jpg" class="rounded-xl shadow-md" alt="Volunteers serving meals" />
+        <img src="/images/how_it_went_down/_DSC7924.jpg" class="rounded-xl shadow-md" alt="Happy children with meals" />
       </div>
 
       <p>Our work has fed thousands and inspired many to join hands. 

@@ -27,19 +27,19 @@ const Navbar = () => {
     }`;
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md shadow-md">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white /90 backdrop-blur-md shadow-md">
       <div className="max-w-6xl mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative w-12 h-12">
+          <div className="relative w-14 h-14">
             <Image
-              src="/images/logo.png"
+              src="/images/logo.jpg"
               alt="Utamaduni Logo"
               fill
               className="rounded-md object-contain"
             />
           </div>
-          <span className="hidden md:flex text-lg md:text-xl font-bold tracking-wide text-blue-900 font-serif group-hover:text-pink-800 transition">
+          <span className="hidden mdflex text-lg md:text-xl font-bold tracking-wide text-blue-900 font-serif group-hover:text-pink-800 transition">
             Utamaduni
           </span>
         </Link>

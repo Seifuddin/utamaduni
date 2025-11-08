@@ -53,7 +53,7 @@ export default function Challenges() {
           <p className="text-sm uppercase tracking-wide font-semibold text-pink-700 mb-2">
             Our Challenges
           </p>
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-3">
+          <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4">
             The Realities We Face
           </h2>
           <motion.div
@@ -82,7 +82,7 @@ export default function Challenges() {
             >
               <div className="flex-shrink-0 mt-1">{item.icon}</div>
               <div>
-                <h3 className="text-lg font-semibold text-blue-900 mb-1 font-serif">
+                <h3 className="font-bold text-gray-800 font-serif md:text-lg my-2">
                   {item.title}
                 </h3>
                 <p className="text-gray-700 text-sm leading-relaxed">
@@ -101,7 +101,7 @@ export default function Challenges() {
           viewport={{ once: true }}
           className="mt-14 bg-gradient-to-r from-blue-700 to-blue-500 text-white rounded-2xl p-8 shadow-2xl max-w3xl mx-auto"
         >
-          <h3 className="text-2xl font-semibold mb-2 font-serif">
+          <h3 className="text-xl md:text-2xl font-bold mb-2 font-serif">
             Together, We Can Overcome
           </h3>
           <p className="text-base text-blue-50 mb-5">

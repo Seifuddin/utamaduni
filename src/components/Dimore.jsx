@@ -15,8 +15,8 @@ export default function CEOSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-800">
-            Our Founder & CEO
+          <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4">
+            Founder & CEO of Utamaduni
           </h2>
           <div className="w-24 h-1 bg-pink-700 mx-auto mt-3 rounded-full"></div>
           <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
@@ -49,7 +49,7 @@ export default function CEOSection() {
 
           {/* CEO Details */}
           <div className="flex-1 text-center md:text-left">
-            <h3 className="text-xl mdtext-2xl font-serif font-semibold text-blue-900 textleft">
+            <h3 className="font-bold text-gray-800 font-serif md:text-lg my-2">
               Brian Omondi
             </h3>
             <p className="text-gray-700 font-medium mb-4 textleft">Founder & CEO</p>

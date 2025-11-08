@@ -79,7 +79,7 @@ export default function Programs() {
           Our Projects & Focus Areas
         </motion.h2>
         <motion.p
-          className="text-gray-700 max-w-xl mx-auto mb-10 text-base"
+          className="text-gray-700 font-medium text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
@@ -110,13 +110,13 @@ export default function Programs() {
 
               {/* Text Content */}
               <div className="p-4 flex flex-col flex-1 text-left">
-                <h3 className="md:text-lg font-bold text-blue-900 font-serif tex my-2">
+                <h3 className="font-bold text-gray-800 font-serif md:text-lg my-2">
                   {program.title}
                 </h3>
                 <p className="text-gray-600 text-sm flex-1">{program.description}</p>
                 <button
                   onClick={() => setSelectedProgram(program)}
-                  className="font-serif mt-3 bg-blue-900 text-white text-xs px-3 py-2.5 rounded-md shadow hover:shadow-md transition"
+                  className="mt-auto inline-block bg-blue-900 text-white text-center text-sm px-4 py-2 rounded font-semibold hover:bg-pink-800 transition"
                 >
                   Learn More
                 </button>

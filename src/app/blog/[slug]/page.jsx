@@ -1,22 +1,19 @@
 "use client";
 
 import { useParams } from "next/navigation";
-import { posts } from "@/data/post";  // make sure the path is correct
+import { posts } from "@/data/post";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
 // Swiper imports
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation, Pagination } from "swiper";
+import { Navigation, Pagination } from "swiper/modules"; // ✅ import from swiper/modules
 
 // Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
-// Install Swiper modules
-SwiperCore.use([Navigation, Pagination]);
 
 export default function SinglePost() {
   const { slug } = useParams();
@@ -38,7 +35,7 @@ export default function SinglePost() {
 
   return (
     <section className="py-20 bg-white text-gray-800">
-      <div className="max-w-4xl mx-auto px-6">
+      <div className="max-w-4xl mx-auto px-6 py-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -47,6 +44,7 @@ export default function SinglePost() {
           {/* Swiper Slider */}
           {post.images?.length > 0 && (
             <Swiper
+              modules={[Navigation, Pagination]} // ✅ add modules here
               navigation
               pagination={{ clickable: true }}
               loop

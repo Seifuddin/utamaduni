@@ -18,7 +18,7 @@ const events = [
       "Engaged children with fun learning activities, storytelling, and cultural workshops.",
   },
   {
-    title: "Utamaduni at Mathare",
+    title: "Utamaduni Visit at Mathare Slums",
     date: "August 2025",
     img: "/images/utamaduni at mathare/_DSC8647.jpg",
     description:
@@ -90,7 +90,7 @@ export default function EventGallerySlider() {
 
                 {/* Event Content */}
                 <div className="p-4 flex flex-col flex-1">
-                  <h3 className="font-bold text-blue-900 font-serif md:text-lg my-2">
+                  <h3 className="font-bold text-gray-800 font-serif md:text-lg my-2">
                     {event.title}
                   </h3>
                   <p className="text-xs text-gray-700 italic mb-2">{event.date}</p>

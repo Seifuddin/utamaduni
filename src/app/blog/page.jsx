@@ -1,16 +1,23 @@
 "use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { posts } from "@/data/post";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay, Navigation } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 export default function BlogPage() {
   const featuredPost = posts[0]; // latest post
 
   return (
-    <section className="bg-gray-50">
+    <section className="bg-gray-50 overflow-hidden">
       {/* Featured Story Hero */}
-      <div className="relative h-[400px] md:h-[500px] w-full mb-16">
+      <div className="relative h-[400px] md:h-[500px] w-full my-16 px-6">
         <Image
           src={featuredPost.image}
           alt={featuredPost.title}
@@ -34,7 +41,7 @@ export default function BlogPage() {
       </div>
 
       {/* Blog List */}
-      <div className="max-w-6xl mx-auto px-6 pb-20">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 pb-20 overflow-hidden">
         <motion.h3
           initial={{ opacity: 0, y: -10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -50,26 +57,61 @@ export default function BlogPage() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.1 }}
-              className="bg-white rounded-2xl shadow-md p-6"
+              className="bg-white rounded-2xl shadow-md p-6 overflow-hidden"
             >
               <p className="text-sm text-amber-700 mb-2">{post.date}</p>
-              <h3 className="text-2xl font-semibold text-gray-800 mb-4">{post.title}</h3>
-              <p className="text-gray-600 mb-4">{post.excerpt}</p>
+              <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+                {post.title}
+              </h3>
+              <p className="text-gray-600 mb-6">{post.excerpt}</p>
 
-              {/* Mini Gallery */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-                {post.images?.map((img, i) => (
-  <Image
-    key={i}
-    src={img}
-    alt={`${post.title} image ${i + 1}`}
-    width={400}
-    height={250}
-    className="rounded shadow-md object-cover w-full h-48 md:h-40"
-  />
-))}
+              {/* Swiper Image Carousel */}
+              {post.images && post.images.length > 0 && (
+                <div className="relative">
+                  <Swiper
+                    modules={[Pagination, Autoplay, Navigation]}
+                    pagination={{ clickable: true }}
+                    navigation={{
+                      nextEl: `.next-${post.id}`,
+                      prevEl: `.prev-${post.id}`,
+                    }}
+                    autoplay={{ delay: 3500, disableOnInteraction: false }}
+                    spaceBetween={15}
+                    slidesPerView={1}
+                    breakpoints={{
+                      640: { slidesPerView: 2 },
+                      1024: { slidesPerView: 3 },
+                    }}
+                    className="!overflow-hidden rounded-xl mb-6"
+                  >
+                    {post.images.map((img, i) => (
+                      <SwiperSlide key={i}>
+                        <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-72">
+                          <Image
+                            src={img}
+                            alt={`${post.title} image ${i + 1}`}
+                            fill
+                            className="object-cover rounded-xl"
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          />
+                        </div>
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
 
-              </div>
+                  {/* Navigation Arrows (Hidden on mobile) */}
+                  <button
+                    className={`prev-${post.id} hidden sm:flex absolute top-1/2 -left-3 z-10 -translate-y-1/2 bg-white shadow-md p-2 rounded-full hover:bg-amber-100 transition`}
+                  >
+                    ❮
+                  </button>
+                  <button
+                    className={`next-${post.id} hidden sm:flex absolute top-1/2 -right-3 z-10 -translate-y-1/2 bg-white shadow-md p-2 rounded-full hover:bg-amber-100 transition`}
+                  >
+                    ❯
+                  </button>
+                </div>
+              )}
 
               <Link
                 href={`/blog/${post.slug}`}

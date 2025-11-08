@@ -115,7 +115,7 @@ export default function Leadership() {
               </div>
 
               {/* Info */}
-              <h3 className="text-base font-semibold text-gray-900 mb-1 font-serif">
+              <h3 className="font-bold text-gray-800 font-serif md:text-lg my-2">
                 {leader.name}
               </h3>
               <p className="text-sm text-gray-600 mb-3">{leader.role}</p>
