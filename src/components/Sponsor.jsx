@@ -6,12 +6,12 @@ import { HeartHandshake, GraduationCap, Stethoscope } from "lucide-react";
 
 export default function SponsorProgram() {
   return (
-    <section className="relative bg-amber-50 gradient-to-br from-blue-950 via-blue-800 to-blue-900 text-white py-24 sm-py-12 px-4 sm:px-8 md:px-12 overflow-hidden">
+    <section className="relative bg-amber-50 gradient-to-br from-blue-950 via-blue-800 to-blue-900 text-white py-24 sm-py-12  sm:px8 md:px- overflow-hidden">
             {/* Background Overlay with Patterns 
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/60 via-[#0a2540]/90 to-blue-800/70 z-0"></div>
       <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-10 bg-cover bg-center z-0"></div>
 */}
-      <div className="relative mx-auto max-w-6xl px6 grid md:grid-cols-2 gap-8 items-center z-10">
+      <div className="relative mx-auto max-w-6xl px-6 grid md:grid-cols-2 gap-8 items-center z-10">
         {/* Left Side - Text */}
         <motion.div
           initial={{ opacity: 0, x: -25 }}

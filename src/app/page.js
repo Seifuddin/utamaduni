@@ -14,6 +14,7 @@ import ChildSleepSection from "@/components/Ask";
 import FAQ from "@/components/Faq";
 import Projects from "@/components/Projects";
 import CTA from "@/components/CTA";
+import EventGallerySlider from "@/components/Events";
 
 export default function Home() {
   return (
@@ -25,7 +26,7 @@ export default function Home() {
       <Programs />
       <CTA />
       <FAQ />
-      <PastEvents />
+      <EventGallerySlider />
     </main>
   );
 }

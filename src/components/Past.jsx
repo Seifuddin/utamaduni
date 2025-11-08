@@ -46,10 +46,10 @@ export default function PastEvents() {
       {/* Title */}
       <div className="text-center mb-8">
         <p className="text-sm uppercase tracking-wide font-semibold text-pink-700 mb-2">
-            Our Achievements
+            Achievements
           </p>
         <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4">
-          Achievements and Past Events
+          Our Achievements as Utamaduni
         </h2>
         <motion.div
                     initial={{ width: 0 }}

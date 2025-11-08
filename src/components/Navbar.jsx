@@ -33,14 +33,14 @@ const Navbar = () => {
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative w-12 h-12">
             <Image
-              src="/images/logo.jpg"
+              src="/images/logo.png"
               alt="Utamaduni Logo"
               fill
               className="rounded-md object-contain"
             />
           </div>
-          <span className="hidden md:flex text-lg md:text-xl font-bold tracking-wide text-pink-700 font-serif group-hover:text-pink-800 transition">
-            Utamaduni Organization
+          <span className="hidden md:flex text-lg md:text-xl font-bold tracking-wide text-blue-900 font-serif group-hover:text-pink-800 transition">
+            Utamaduni
           </span>
         </Link>
 

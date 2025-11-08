@@ -3,6 +3,14 @@
 import { motion } from "framer-motion";
 import { HeartHandshake, Globe, Award } from "lucide-react";
 
+// Swiper imports
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper";
+
+// Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
 export default function Mission() {
   const values = [
     {
@@ -48,7 +56,8 @@ export default function Mission() {
           Guided by compassion, inclusion, and sustainable impact in everything we do.
         </p>
 
-        <div className="grid sm:grid-cols-3 gap-6">
+        {/* Grid for md+ screens, Swiper for small screens */}
+        <div className="hidden sm:grid sm:grid-cols-3 gap-6">
           {values.map((item, i) => (
             <motion.div
               key={i}
@@ -70,6 +79,38 @@ export default function Mission() {
               </p>
             </motion.div>
           ))}
+        </div>
+
+        {/* Swiper for small screens */}
+        <div className="sm:hidden">
+          <Swiper
+            spaceBetween={16}
+            slidesPerView={1}
+            pagination={{ clickable: true }}
+          >
+            {values.map((item, i) => (
+              <SwiperSlide key={i}>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="bg-white/80 backdrop-blur-sm border border-pink-100 rounded-2xl shadow-sm p-4 text-left"
+                >
+                  <div className="flex items-center mb-3">
+                    <div className="p-2 rounded-xl bg-pink-50">
+                      {item.icon}
+                    </div>
+                    <h4 className="ml-3 text-lg font-semibold text-blue-900 font-serif">
+                      {item.title}
+                    </h4>
+                  </div>
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    {item.text}
+                  </p>
+                </motion.div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </section>
