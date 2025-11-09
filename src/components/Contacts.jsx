@@ -27,7 +27,7 @@ export default function ContactUs() {
       <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-10 bg-cover"></div>
 
       <div className="relative max-w-6xl mx-auto z-10">
-        {/* Header */}
+        {/* Header 
         <motion.div
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -42,7 +42,7 @@ export default function ContactUs() {
             love to hear from you at <span className="font-semibold">Utamaduni Organization</span>.
           </p>
         </motion.div>
-
+      */}
         {/* Contact Info + Form */}
         <div className="grid md:grid-cols-2 gap-10 items-start">
           {/* Contact Info */}

@@ -15,6 +15,7 @@ import FAQ from "@/components/Faq";
 import Projects from "@/components/Projects";
 import CTA from "@/components/CTA";
 import EventGallerySlider from "@/components/Events";
+import VideoHighlights from "@/components/Youtube";
 
 export default function Home() {
   return (
@@ -22,11 +23,12 @@ export default function Home() {
       <Hero />
       <SponsorProgram />
       <ImpactStats />
+      <EventGallerySlider />
       <DidYouKnow />
       <Programs />
       <CTA />
       <FAQ />
-      <EventGallerySlider />
+      <VideoHighlights />
     </main>
   );
 }
