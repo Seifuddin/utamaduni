@@ -68,7 +68,7 @@ export default function Mission() {
                   {item.title}
                 </h4>
               </div>
-              <p className="text-gray-700 text-sm text-left md:text-base leading-relaxed">
+              <p className="text-gray-700 text-bse text-left md:text-base leading-relaxed">
                 {item.text}
               </p>
             </motion.div>

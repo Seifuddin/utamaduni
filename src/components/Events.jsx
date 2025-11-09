@@ -93,8 +93,8 @@ export default function EventGallerySlider() {
                   <h3 className="font-bold text-blue-900 font-serif md:text-lg my-2">
                     {event.title}
                   </h3>
-                  <p className="text-xs text-gray-700 italic mb-2">{event.date}</p>
-                  <p className="text-gray-600 text-sm mb-4">{event.description}</p>
+                  <p className="text-sm text-gray-700 italic mb-2">{event.date}</p>
+                  <p className="text-gray-600 text-base mb-4">{event.description}</p>
                   <a
                     href="#"
                     className="mt-auto inline-block bg-blue-900 text-white text-center text-sm px-4 py-2 rounded font-semibold hover:bg-pink-800 transition"

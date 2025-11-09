@@ -100,8 +100,8 @@ export default function PastEvents() {
                 <h3 className="font-bold text-blue-900 font-serif md:text-lg my-2">
                   {event.title}
                 </h3>
-                <p className="text-xs text-gray-700 italic mb-2">{event.date}</p>
-                <p className="text-gray-600 text-sm">{event.description}</p>
+                <p className="text-sm text-gray-700 italic mb-2">{event.date}</p>
+                <p className="text-gray-600 text-base">{event.description}</p>
               </div>
             </motion.div>
           </SwiperSlide>

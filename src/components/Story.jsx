@@ -66,7 +66,7 @@ export default function OurStory() {
             and celebrate the spirit of togetherness.
           </p>
 
-          <div className="grid sm:grid-cols-2 gap-5 mt-6 hidden">
+          <div className="grid sm:grid-cols-2 gap-5 mt-6 hi">
             <FeaturePoint
               icon={<Users className="w-4 h-4 text-pink-700" />}
               title="Community Driven"
@@ -98,8 +98,8 @@ function FeaturePoint({ icon, title, children }) {
     >
       <div className="p-1 rounded-lg bg-amber-50 shadow-md border border-amber-100">{icon}</div>
       <div>
-        <h4 className="font-bold text-gray-800 font-serif md:text-lg my-2">{title}</h4>
-        <p className="text-sm text-gray-700 mt-1">{children}</p>
+        <h4 className="font-bold text-blue-900 font-serif md:text-lg my-2">{title}</h4>
+        <p className="text-base text-gray-700 mt-1">{children}</p>
       </div>
     </motion.div>
   );

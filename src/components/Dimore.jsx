@@ -54,7 +54,7 @@ export default function CEOSection() {
             </h3>
             <p className="text-gray-700 font-medium mb-4 textleft">Founder & CEO</p>
 
-            <p className="text-gray-600 leading-relaxed mb-6 max-w-xl text-left">
+            <p className="text-gray-600 text-base leading-relaxed mb-6 max-w-xl text-left">
               “At Utamaduni Charitable Organization, our mission is to uplift
               communities through compassion, empowerment, and sustainable
               development. Together, we build hope for a brighter and more

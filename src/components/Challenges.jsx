@@ -85,7 +85,7 @@ export default function Challenges() {
                 <h3 className="font-bold text-blue-900 font-serif md:text-lg my-2">
                   {item.title}
                 </h3>
-                <p className="text-gray-700 text-sm leading-relaxed">
+                <p className="text-gray-700 text-base leading-relaxed">
                   {item.description}
                 </p>
               </div>
