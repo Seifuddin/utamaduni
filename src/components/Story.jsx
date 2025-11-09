@@ -53,13 +53,13 @@ export default function OurStory() {
           transition={{ duration: 0.6 }}
           className="space-y-6"
         >
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-gray-700 leading-relaxed text-base">
             Born from a shared vision of hope and unity, <strong>Utamaduni Charity Organization </strong> 
             began as a small circle of compassionate individuals determined to uplift 
             underprivileged families through cultural identity, education, and sustainable action.  
           </p>
 
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-gray-700 leading-relaxed text-base">
             Over the years, our passion has grown into a movement — one that blends 
             <em>heritage and humanity</em> to create real change. From local classrooms to 
             community health drives, Utamaduni continues to restore dignity, empower families, 

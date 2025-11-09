@@ -33,7 +33,7 @@ export default function Abouts() {
             className="h-1 bg-pink-700 rounded-full mb-7"
           ></motion.div>
 
-          <p className="font-medium leading-relaxed text-gray-700">
+          <p className="font-base leading-relaxed text-gray-700">
             <span className="font-semibold text-gray-900">Utamaduni</span> is a
             community-based, non-profit organization committed to preserving{" "}
             <span className="font-medium text-gray-900">cultural heritage</span>{" "}

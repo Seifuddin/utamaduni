@@ -70,7 +70,7 @@ export default function Navbar() {
                   {item.label} <ChevronDown size={16} />
                 </button>
                 {openDropdown === item.label && (
-                  <ul className="absolute left-0 mt2 bg-white shadow-lg rounded-md w-48 py-2 z-50">
+                  <ul className="absolute left-0 mt-2 bg-white shadow-lg rounded-md w-48 py-2 z-50">
                     {item.dropdown.map((subItem) => (
                       <li key={subItem.href}>
                         <Link
@@ -144,7 +144,7 @@ export default function Navbar() {
                   />
                 </button>
                 {openDropdown === item.label && (
-                  <ul className="mt-2 pl-3 space-y-2">
+                  <ul className="mt2 pl-3 space-y-2">
                     {item.dropdown.map((subItem) => (
                       <li key={subItem.href}>
                         <Link
