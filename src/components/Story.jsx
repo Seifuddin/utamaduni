@@ -66,7 +66,7 @@ export default function OurStory() {
             and celebrate the spirit of togetherness.
           </p>
 
-          <div className="grid sm:grid-cols-2 gap-5 mt-6">
+          <div className="grid sm:grid-cols-2 gap-5 mt-6 hidden">
             <FeaturePoint
               icon={<Users className="w-4 h-4 text-pink-700" />}
               title="Community Driven"

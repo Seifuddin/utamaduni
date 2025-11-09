@@ -79,7 +79,7 @@ export default function Programs() {
           Our Projects & Focus Areas
         </motion.h2>
         <motion.p
-          className="text-gray-700 font-medium text-center"
+          className="text-gray-700 font-medium mb-4 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}

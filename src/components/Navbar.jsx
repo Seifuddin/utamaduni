@@ -31,7 +31,7 @@ const Navbar = () => {
       <div className="max-w-6xl mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative w-14 h-14">
+          <div className="relative w-12 h-12">
             <Image
               src="/images/logo.jpg"
               alt="Utamaduni Logo"
