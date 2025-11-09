@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, Send } from "lucide-react";
+import { FaFacebookF, FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
 import { useState } from "react";
 
 export default function ContactUs() {
@@ -11,9 +12,8 @@ export default function ContactUs() {
     message: "",
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,157 +22,172 @@ export default function ContactUs() {
   };
 
   return (
-    <section className="relative bg-amber-50 text-gray-900 py-20 px6 md:px-16 overflow-hidden">
-      <div className="mx-auto px-6 max-w-6xl">
-      {/* Background pattern overlay */}
+    <section className="relative bg-gradient-to-br from-amber-50 via-white to-blue-50 text-gray-900 py-20 px-6 md:px-16 overflow-hidden">
+      {/* Subtle Background Pattern */}
       <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-10 bg-cover"></div>
 
-      {/* Header 
-      <motion.div
-        initial={{ opacity: 0, y: -40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="relative text-center mb-16"
-      >
-        <h2 className="text-4xl md:text-6xl font-bold mb-4 text-blue-700">
-          Contact Us
-        </h2>
-        <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-          We’d love to hear from you. Whether you want to volunteer, donate, or
-          learn more about Utamaduni, we’re always happy to connect.
-        </p>
-      </motion.div>
-      */}
-
-      {/* Contact Info & Form */}
-      <div className="relative grid md:grid-cols-2 gap-10 items-start">
-        {/* Contact Info */}
+      <div className="relative max-w-6xl mx-auto z-10">
+        {/* Header */}
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: -40 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="space-y-8"
+          className="text-center mb-16"
         >
-          <div>
-          {/*
-            <h3 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4">
-              Contacts Us
-            </h3>
-            */}
-            <p className="text-gray-700">
-              You can reach us through any of the contact options below or send
-              a message directly via the form.
-            </p>
-          </div>
-
-          <div className="space-y-6">
-            <div className="flex items-center gap-4">
-              <div className="p-3 bg-blue-100 rounded-full">
-                <Phone className="text-blue-900" size={24} />
-              </div>
-              <p className="text-gray-700 font-medium">+254 704 337 351</p>
-            </div>
-
-            <div className="flex items-center gap-4">
-              <div className="p-3 bg-blue-100 rounded-full">
-                <Mail className="text-blue-900" size={24} />
-              </div>
-              <p className="text-gray-700 font-medium">
-                utamadunicharity@gmail.com
-              </p>
-            </div>
-
-            <div className="flex items-center gap-4">
-              <div className="p-3 bg-blue-100 rounded-full">
-                <MapPin className="text-blue-900" size={24} />
-              </div>
-              <p className="text-gray-700 font-medium">
-                Nairobi, Kenya
-              </p>
-            </div>
-          </div>
+          <h2 className="text-2xl md:text-4xl font-extrabold text-blue-900 mb-4 font-serif">
+            Get in Touch
+          </h2>
+          <p className="text-gray-700 text-lg max-w-2xl mx-auto leading-relaxed">
+            Whether you want to collaborate, volunteer, or just say hello — we’d
+            love to hear from you at <span className="font-semibold">Utamaduni Organization</span>.
+          </p>
         </motion.div>
 
-        {/* Contact Form */}
-        <motion.form
-          onSubmit={handleSubmit}
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          className="bg-white shadow-xl p-8 rounded-2xl border border-blue-100 space-y-6"
-        >
-          <div>
-            <label className="block text-gray-700 mb-2 font-medium">
-              Your Name
-            </label>
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              className="w-full bg-amber-50 text-gray-900 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 border border-blue-100"
-              placeholder="Enter your full name"
-            />
-          </div>
-
-          <div>
-            <label className="block text-gray-700 mb-2 font-medium">
-              Email Address
-            </label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className="w-full bg-amber-50 text-gray-900 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 border border-blue-100"
-              placeholder="example@email.com"
-            />
-          </div>
-
-          <div>
-            <label className="block text-gray-700 mb-2 font-medium">
-              Your Message
-            </label>
-            <textarea
-              name="message"
-              rows="5"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              className="w-full bg-amber-50 text-gray-900 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 border border-blue-100"
-              placeholder="Write your message..."
-            ></textarea>
-          </div>
-
-          <button
-            type="submit"
-            className="flex items-center justify-center gap-2 bg-blue-900 hover:bg-blue-800 text-white font-semibold py-3 px-6 rounded-md w-full transition duration-300"
+        {/* Contact Info + Form */}
+        <div className="grid md:grid-cols-2 gap-10 items-start">
+          {/* Contact Info */}
+          <motion.div
+            initial={{ opacity: 0, x: -60 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            className="space-y-10"
           >
-            <Send size={20} /> Send Message
-          </button>
-        </motion.form>
-      </div>
+            <h4 className="text-xl font-semibold text-blue-900 mb-4 font-serif">
+                Contact Information
+              </h4>
+            <p className="text-gray-700 leading-relaxed">
+              You can reach us directly through the contacts below or send a
+              message using the form. We respond to all inquiries promptly.
+            </p>
 
-      {/* Google Map Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, delay: 0.5 }}
-        className="relative mt-20 rounded-2xl overflow-hidden shadow-lg border border-blue-100"
-      >
-        <iframe
-          title="Utamaduni Charitable Organization Location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8598659777323!2d36.82194641475394!3d-1.292065999051032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d0c7df3c91%3A0x36c4e5a1f8d60c52!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2ske!4v1685715227190!5m2!1sen!2ske"
-          width="100%"
-          height="400"
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          className="border-0 w-full"
-        ></iframe>
-      </motion.div>
+            <div className="space-y-6">
+              <div className="flex items-center gap-4">
+                <div className="p-3 bg-blue-100 rounded-full shadow-sm">
+                  <Phone className="text-blue-900" size={24} />
+                </div>
+                <p className="text-gray-800 font-medium text-lg">
+                  +254 704 337 351
+                </p>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="p-3 bg-blue-100 rounded-full shadow-sm">
+                  <Mail className="text-blue-900" size={24} />
+                </div>
+                <p className="text-gray-800 font-medium text-lg">
+                  utamadunicharity@gmail.com
+                </p>
+              </div>
+            </div>
+
+            {/* Social Media Links */}
+            <div className="mt-10">
+              <h4 className="text-xl font-semibold text-blue-900 mb-4 font-serif">
+                Follow Us
+              </h4>
+              <div className="flex gap-5">
+                {[
+                  {
+                    icon: <FaInstagram size={22} />,
+                    color: "hover:bg-pink-500",
+                    link: "#",
+                  },
+                  {
+                    icon: <FaTiktok size={22} />,
+                    color: "hover:bg-black",
+                    link: "#",
+                  },
+                  {
+                    icon: <FaFacebookF size={22} />,
+                    color: "hover:bg-blue-600",
+                    link: "#",
+                  },
+                  {
+                    icon: <FaYoutube size={22} />,
+                    color: "hover:bg-red-600",
+                    link: "#",
+                  },
+                ].map((social, i) => (
+                  <motion.a
+                    key={i}
+                    href={social.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.1 }}
+                    className={`p-3 bg-blue-100 text-blue-900 rounded-full shadow-md transition-all duration-300 ${social.color} hover:text-white`}
+                  >
+                    {social.icon}
+                  </motion.a>
+                ))}
+              </div>
+
+              <p className="mt-10 text-2xl font-serif italic text-pink-600 textsm">
+                @Utamaduni Organization
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Contact Form */}
+          <motion.form
+            onSubmit={handleSubmit}
+            initial={{ opacity: 0, x: 60 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            className="bg-white shadow-2xl p-8 rounded-2xl border border-blue-100 space-y-6"
+          >
+            <div>
+              <label className="block text-gray-700 mb-2 font-medium">
+                Your Name
+              </label>
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                className="w-full bg-amber-50 text-gray-900 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 border border-blue-100"
+                placeholder="Enter your full name"
+              />
+            </div>
+
+            <div>
+              <label className="block text-gray-700 mb-2 font-medium">
+                Email Address
+              </label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="w-full bg-amber-50 text-gray-900 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 border border-blue-100"
+                placeholder="example@email.com"
+              />
+            </div>
+
+            <div>
+              <label className="block text-gray-700 mb-2 font-medium">
+                Your Message
+              </label>
+              <textarea
+                name="message"
+                rows="5"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                className="w-full bg-amber-50 text-gray-900 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 border border-blue-100"
+                placeholder="Write your message..."
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              className="flex items-center justify-center gap-2 bg-blue-900 hover:bg-blue-800 text-white font-semibold py-3 px-6 rounded-md w-full transition-all duration-300 shadow-md"
+            >
+              <Send size={20} /> Send Message
+            </button>
+          </motion.form>
+        </div>
       </div>
     </section>
   );

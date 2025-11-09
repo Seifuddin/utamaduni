@@ -44,7 +44,7 @@ export default function Navbar() {
       <div className="max-w-6xl px-6 mx-auto flex justify-between items-center py-3">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative w-12 h-12">
+          <div className="relative w-10 h-10">
             <Image
               src="/images/logo.jpg"
               alt="Utamaduni Logo"
@@ -144,7 +144,7 @@ export default function Navbar() {
                   />
                 </button>
                 {openDropdown === item.label && (
-                  <ul className="mt2 pl-3 space-y-2">
+                  <ul className="mt-2 pl-3 space-y-2">
                     {item.dropdown.map((subItem) => (
                       <li key={subItem.href}>
                         <Link

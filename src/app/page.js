@@ -18,7 +18,7 @@ import EventGallerySlider from "@/components/Events";
 
 export default function Home() {
   return (
-    <main className="overflow-x-hidden pt-16">
+    <main className="overflow-x-hidden pt16">
       <Hero />
       <SponsorProgram />
       <ImpactStats />

@@ -21,7 +21,7 @@ export default function SinglePost() {
 
   if (!post) {
     return (
-      <section className="py-20 text-center bg-amber-50 text-gray-800">
+      <section className="py-16 text-center bg-amber-50 text-gray-800">
         <h2 className="text-3xl font-semibold mb-4">Post not found</h2>
         <Link
           href="/blog"
@@ -34,7 +34,7 @@ export default function SinglePost() {
   }
 
   return (
-    <section className="py-20 bg-white text-gray-800">
+    <section className="py-16 bg-white text-gray-800">
       <div className="max-w-4xl mx-auto px-6 py-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

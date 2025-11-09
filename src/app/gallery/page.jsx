@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function GalleryPage() {
   return (
-    <div className='overflow-x-hidden pt-16'>
+    <div className='overflow-x-hidden pt16'>
       <GalleryHero />
       <OurGallery />
     </div>

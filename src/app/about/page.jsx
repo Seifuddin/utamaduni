@@ -17,7 +17,7 @@ import PastEvents from "@/components/Past";
 
 export default function AboutPage() {
   return (
-    <main className="overflow-x-hidden pt-16">
+    <main className="overflow-x-hidden pt16">
       <AboutHero />
       <Abouts />
       <Mission />

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { FaFacebookF, FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaYoutube, FaTiktok } from "react-icons/fa";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -31,8 +31,8 @@ export default function Footer() {
             <Image
               src="/images/logo.jpg"
               alt="Utamaduni Logo"
-              width={50}
-              height={50}
+              width={40}
+              height={40}
               className="rounded-md"
             />
             <h2 className="text-2xl font-bold text-white font-serif">
@@ -48,7 +48,9 @@ export default function Footer() {
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-lg font-semibold text-white mb-4 font-serif">Quick Links</h3>
+          <h3 className="text-lg font-semibold text-white mb-4 font-serif">
+            Quick Links
+          </h3>
           <ul className="space-y-2 text-sm">
             {[
               { href: "/", label: "Home" },
@@ -71,28 +73,30 @@ export default function Footer() {
 
         {/* Contact Info */}
         <div>
-          <h3 className="text-lg font-semibold text-white mb-4 font-serif">Contact Us</h3>
+          <h3 className="text-lg font-semibold text-white mb-4 font-serif">
+            Contact Us
+          </h3>
           <p className="text-sm">📍 Nairobi, Kenya </p>
           <p className="text-sm">📞 +254 704 337 351 </p>
           <p className="text-sm">✉️ utamadunicharity@gmail.com </p>
           <div className="flex mt-4 space-x-3">
-            {[FaFacebookF, FaInstagram, FaYoutube, FaTwitter].map(
-              (Icon, i) => (
-                <Link
-                  key={i}
-                  href="#"
-                  className="p-2 bg-blue-600 hover:bg-maroon-600 text-white rounded-full transition shadow-md"
-                >
-                  <Icon size={18} />
-                </Link>
-              )
-            )}
+            {[FaFacebookF, FaInstagram, FaYoutube, FaTiktok].map((Icon, i) => (
+              <Link
+                key={i}
+                href="#"
+                className="p-2 bg-blue-600 hover:bg-maroon-600 text-white rounded-full transition shadow-md"
+              >
+                <Icon size={18} />
+              </Link>
+            ))}
           </div>
         </div>
 
         {/* Newsletter */}
         <div>
-          <h3 className="text-lg font-semibold text-white mb-4 font-serif">Newsletter</h3>
+          <h3 className="text-lg font-semibold text-white mb-4 font-serif">
+            Newsletter
+          </h3>
           <p className="text-sm mb-3 text-gray-300">
             Stay updated with our latest events and community initiatives.
           </p>
@@ -125,9 +129,25 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="relative mt-12 border-t border-gray-700 pt-6 text-center text-sm text-gray-400 z-10">
-        © {new Date().getFullYear()} Utamaduni Organization. All Rights
-        Reserved.
+      <div className="relative mt-12 border-t border-gray-700 pt-6 text-center text-sm text-gray-400 z-10 space-y-2">
+        <p>
+          © {new Date().getFullYear()} Utamaduni Organization. All Rights
+          Reserved.
+        </p>
+        <p className="text-gray-500">
+          Designed & Powered by{" "}
+          <Link
+            href="https://lapsa.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative text-blue-400 font-semibold transition-all duration-300 
+                       after:content-[''] after:absolute after:left-0 after:-bottom-1 
+                       after:w-0 after:h-[2px] after:bg-blue-400 
+                       hover:after:w-full after:transition-all after:duration-300"
+          >
+            Lapsa Web and Graphics
+          </Link>
+        </p>
       </div>
     </footer>
   );

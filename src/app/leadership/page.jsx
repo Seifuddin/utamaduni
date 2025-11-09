@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function LeadershipPage() {
   return (
-    <div className='relative overflow-x-hidden pt-16'>
+    <div className='relative overflow-x-hidden pt16'>
         <Leadership />
     </div>
   )

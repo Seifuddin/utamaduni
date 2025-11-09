@@ -17,7 +17,7 @@ export default function BlogPage() {
   return (
     <section className="bg-gray-50 overflow-hidden">
       {/* Featured Story Hero */}
-      <div className="relative h-[400px] md:h-[500px] w-full my-16 px-6">
+      <div className="relative h-[400px] md:h-[500px] w-full mb-16 px-6">
         <Image
           src={featuredPost.image}
           alt={featuredPost.title}
