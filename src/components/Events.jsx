@@ -18,7 +18,7 @@ const events = [
       "Engaged children with fun learning activities, storytelling, and cultural workshops.",
   },
   {
-    title: "Utamaduni Visit at Mathare Slums",
+    title: "Utamaduni Visit at Mathare Slums in Nairobi",
     date: "August 2025",
     img: "/images/utamaduni at mathare/_DSC8647.jpg",
     description:
@@ -51,7 +51,7 @@ export default function EventGallerySlider() {
             transition={{ duration: 0.5 }}
             className="h-1 bg-pink-700 rounded-full mx-auto mb-6"
           ></motion.div>
-          <p className="mt-2 text-gray-600 max-w-xl mx-auto text-sm md:text-base">
+          <p className="mt-2 text-gray-600 max-w-2xl mx-auto font-medium text-center md:text-lg mb-6">
             A glimpse into the workshops, campaigns, and visits that inspired and empowered communities.
           </p>
         </div>
@@ -90,7 +90,7 @@ export default function EventGallerySlider() {
 
                 {/* Event Content */}
                 <div className="p-4 flex flex-col flex-1">
-                  <h3 className="font-bold text-gray-800 font-serif md:text-lg my-2">
+                  <h3 className="font-bold text-blue-900 font-serif md:text-lg my-2">
                     {event.title}
                   </h3>
                   <p className="text-xs text-gray-700 italic mb-2">{event.date}</p>

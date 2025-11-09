@@ -23,7 +23,7 @@ export default function SponsorProgram() {
             Sponsor a Child, Transform a Future
           </h2>
 
-          <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-2">
+          <p className="tmt-2 text-gray-600 max-w-2xl mx-auto font-medium text-left md:text-lg mb-6">
             Your sponsorship provides{" "}
             <span className="font-semibold text-gray-700">
               education, healthcare, and daily essentials

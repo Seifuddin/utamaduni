@@ -1,34 +1,47 @@
-"use client";
-
-import { useState } from "react";
-import Link from "next/link";
+'use client';
+import { useState } from 'react';
+import Link from 'next/link';
 import Image from "next/image";
-import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { usePathname } from 'next/navigation';
+import { Menu, X, ChevronDown } from 'lucide-react';
 
-const Navbar = () => {
+const ministries = [
+  { label: 'JCM Headquarters', href: '/ministries/youth' },
+  { label: 'Nairobi CBD Branch', href: '/ministries/women' },
+  { label: 'Mombasa Branch', href: '/ministries/men' },
+];
+
+const resources = [
+  { label: 'Bible Study', href: '/resources/bible-study' },
+  { label: 'Devotionals', href: '/resources/devotionals' },
+  { label: 'Podcasts', href: '/resources/podcasts' },
+];
+
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
   const pathname = usePathname();
 
   const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About Us" },
-    { href: "/programs", label: "Our Programs" },
-    { href: "/gallery", label: "Gallery" },
-    { href: "/blog", label: "Blog" },
-    { href: "/contact", label: "Contact Us" },
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About' },
+    { href: '/programs', label: 'Programs' },
+    { href: '/gallery', label: 'Gallery' },
+    { href: '/blog', label: 'Blog' },
+    //{ label: 'Branches', dropdown: ministries },
+    { href: '/contact', label: 'Contacts' },
   ];
 
   const linkClasses = (href) =>
-    `relative font-medium transition-all duration-200 ${
+    `block font-medium transition-colors ${
       pathname === href
-        ? "text-pink-700 after:absolute after:left-0 after:bottom-[-4px] after:w-full after:h-[2px] after:bg-pink-700"
-        : "text-gray-700 hover:text-pink-700"
+        ? 'text-blue-700 underline underline-offset-4'
+        : 'text-gray-700 hover:text-blue-700'
     }`;
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white /90 backdrop-blur-md shadow-md">
-      <div className="max-w-6xl mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
+    <nav className="bg-white py-1 shadow-md sticky top-0 z-50">
+      <div className="max-w-6xl px-6 mx-auto flex justify-between items-center py-3">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative w-12 h-12">
@@ -43,73 +56,122 @@ const Navbar = () => {
             Utamaduni
           </span>
         </Link>
-
-        {/* Desktop Navigation */}
-        <ul className="hidden md:flex space-x-8 items-center">
-          {navLinks.map((item, i) => (
-            <li key={i}>
-              <Link href={item.href} className={linkClasses(item.href)}>
-                {item.label}
-              </Link>
-            </li>
-          ))}
+        {/* Desktop menu */}
+        <ul className="hidden md:flex space-x-6 items-center">
+          {navLinks.map((item, i) =>
+            item.dropdown ? (
+              <li
+                key={i}
+                className="relative group"
+                onMouseEnter={() => setOpenDropdown(item.label)}
+                onMouseLeave={() => setOpenDropdown(null)}
+              >
+                <button className="flex items-center gap-1 text-gray-700 hover:text-blue-700 font-medium">
+                  {item.label} <ChevronDown size={16} />
+                </button>
+                {openDropdown === item.label && (
+                  <ul className="absolute left-0 mt-2 bg-white shadow-lg rounded-md w-48 py-2 z-50">
+                    {item.dropdown.map((subItem) => (
+                      <li key={subItem.href}>
+                        <Link
+                          href={subItem.href}
+                          className={linkClasses(subItem.href) + ' px-4 py-2 text-sm hover:bg-blue-50'}
+                        >
+                          {subItem.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ) : (
+              <li key={i}>
+                <Link href={item.href} className={linkClasses(item.href)}>
+                  {item.label}
+                </Link>
+              </li>
+            )
+          )}
         </ul>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile menu button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-pink-700 hover:text-pink-800 transition"
-          aria-label="Toggle menu"
+          className="md:hidden text-blue-700"
+          aria-label="Toggle Menu"
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
-      {/* Mobile Overlay */}
+      {/* Mobile menu overlay */}
       <div
-        onClick={() => setIsOpen(false)}
-        className={`fixed inset-0 bg-black/40 transition-opacity duration-300 ${
-          isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        className={`fixed inset-0 bg-black bg-opacity-40 transition-opacity duration-300 ${
+          isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
+        onClick={() => setIsOpen(false)}
       />
 
-      {/* Mobile Slide-in Drawer */}
+      {/* Mobile slide-in panel */}
       <div
-        className={`fixed top-0 right-0 h-full w-72 sm:w-80 bg-blue-900 text-gray-300 shadow-2xl transform transition-transform duration-300 ease-in-out ${
-          isOpen ? "translate-x-0" : "translate-x-full"
+        className={`fixed top-0 right-0 h-full w-72 bg-white shadow-lg transform transition-transform duration-300 ${
+          isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <div className="flex justify-between items-center px-6 py-5 border-b border-gray-200">
-          <h2 className="text-lg font-semibold text-white tracking-wide">
-            Menu
-          </h2>
-          <button
-            onClick={() => setIsOpen(false)}
-            className="text-gray-200 hover:text-pink-700 transition"
-          >
-            <X size={24} />
+        <div className="flex justify-between items-center px-6 py-4 border-b">
+          <h2 className="text-lg font-bold text-blue-700">Menu</h2>
+          <button onClick={() => setIsOpen(false)} aria-label="Close Menu">
+            <X size={24} className="text-gray-700" />
           </button>
         </div>
 
-        <div className="px-6 py-8 flex flex-col gap-5 bg-white">
-          {navLinks.map((item, i) => (
-            <Link
-              key={i}
-              href={item.href}
-              onClick={() => setIsOpen(false)}
-              className={`text-lg font-medium tracking-wide transition-all duration-200 ${
-                pathname === item.href
-                  ? "text-pink-700 underline underline-offset-4"
-                  : "text-gray-700 hover:text-pink-700"
-              }`}
-            >
-              {item.label}
-            </Link>
-          ))}
+        <div className="px-6 py-6 space-y-4">
+          {navLinks.map((item, i) =>
+            item.dropdown ? (
+              <div key={i} className="border-b pb-2">
+                <button
+                  className="flex justify-between items-center w-full text-left text-gray-700 font-medium"
+                  onClick={() =>
+                    setOpenDropdown(openDropdown === item.label ? null : item.label)
+                  }
+                >
+                  {item.label}
+                  <ChevronDown
+                    size={18}
+                    className={`transform transition-transform ${
+                      openDropdown === item.label ? 'rotate-180' : ''
+                    }`}
+                  />
+                </button>
+                {openDropdown === item.label && (
+                  <ul className="mt-2 pl-3 space-y-2">
+                    {item.dropdown.map((subItem) => (
+                      <li key={subItem.href}>
+                        <Link
+                          href={subItem.href}
+                          className="block text-gray-600 hover:text-blue-700"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {subItem.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ) : (
+              <Link
+                key={i}
+                href={item.href}
+                className="block text-gray-700 font-medium hover:text-blue-700"
+                onClick={() => setIsOpen(false)}
+              >
+                {item.label}
+              </Link>
+            )
+          )}
         </div>
       </div>
     </nav>
   );
-};
-
-export default Navbar;
+}

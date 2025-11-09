@@ -57,7 +57,7 @@ export default function PastEvents() {
                     transition={{ duration: 0.5 }}
                     className="h-1 bg-pink-700 rounded-full mx-auto mb-6"
                   ></motion.div>
-        <p className="mt-2 text-gray-600 max-w-xl mx-auto text-sm md:text-base">
+        <p className="mt-2 text-gray-600 max-w-2xl mx-auto font-medium text-center md:text-lg mb-6">
           A look back at the moments that inspired hope and strengthened our
           communities.
         </p>

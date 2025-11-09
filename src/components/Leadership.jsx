@@ -72,7 +72,7 @@ export default function Leadership() {
           The Leadership Behind Utamaduni
         </h2>
         <div className="mx-auto h-1 w-16 bg-pink-700 rounded-full mb-4"></div>
-        <p className="max-w-2xl mx-auto text-gray-700 text-base mdtext-base leading-relaxed">
+        <p className="mt-2 text-gray-600 max-w-2xl mx-auto font-medium text-center md:text-lg mb-6">
           A dedicated team working alongside our Founder & CEO — uniting passion,
           integrity, and service to sustain Utamaduni’s mission of compassion and growth.
         </p>
@@ -115,7 +115,7 @@ export default function Leadership() {
               </div>
 
               {/* Info */}
-              <h3 className="font-bold text-gray-800 font-serif md:text-lg my-2">
+              <h3 className="font-bold text-blue-900 font-serif md:text-lg my-2">
                 {leader.name}
               </h3>
               <p className="text-sm text-gray-600 mb-3">{leader.role}</p>

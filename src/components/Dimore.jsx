@@ -19,7 +19,7 @@ export default function CEOSection() {
             Founder & CEO of Utamaduni
           </h2>
           <div className="w-24 h-1 bg-pink-700 mx-auto mt-3 rounded-full"></div>
-          <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+          <p className="mt-2 text-gray-600 max-w-2xl mx-auto font-medium text-center md:text-lg mb-6">
             Meet the visionary behind Utamaduni Charity Organization — 
             a leader driven by compassion, unity, and sustainable impact.
           </p>
@@ -49,7 +49,7 @@ export default function CEOSection() {
 
           {/* CEO Details */}
           <div className="flex-1 text-center md:text-left">
-            <h3 className="font-bold text-gray-800 font-serif md:text-lg my-2">
+            <h3 className="font-bold text-blue-900 font-serif md:text-lg my-2">
               Brian Omondi
             </h3>
             <p className="text-gray-700 font-medium mb-4 textleft">Founder & CEO</p>

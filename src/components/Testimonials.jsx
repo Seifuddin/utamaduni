@@ -76,8 +76,8 @@ export default function StoriesAndTestimonials() {
             transition={{ duration: 0.5 }}
             className="h-1 bg-pink-700 rounded-full mx-auto mb-6"
           ></motion.div>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Every story from <span className="font-semibold text-blue-900">Utamaduni</span>{" "}
+          <p className="mt-2 text-gray-600 max-w-2xl mx-auto font-medium text-center md:text-lg mb-6">
+            Every story from <span className="font-semibold text-gray-800">Utamaduni</span>{" "}
             reminds us why we serve — transforming lives through compassion, unity, and culture.
           </p>
         </motion.div>

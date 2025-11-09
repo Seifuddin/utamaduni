@@ -44,7 +44,7 @@ export default function Mission() {
           className="mx-auto h-1 bg-pink-700 rounded-full mb-6"
         />
 
-        <p className="text-gray-600 max-w-2xl mx-auto mb-10 text-base md:text-lg">
+        <p className="mt-2 text-gray-600 max-w-2xl mx-auto font-medium text-center md:text-lg mb-6">
           Guided by compassion, inclusion, and sustainable impact in everything we do.
         </p>
 
@@ -58,13 +58,13 @@ export default function Mission() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.3, delay: i * 0.2 }}
-              className="bg-white/90 backdrop-blur-sm border border-blue-100 rounded-2xl shadow-md p-5 flex flex-col items-start cursor-pointer"
+              className="bg-white/90 backdrop-blur-sm border border-blue-100 rounded shadow-md p-5 flex flex-col items-start cursor-pointer"
             >
               <div className="flex items-center text-left mb-3">
                 <div className="p-3 rounded-xl bg-pink-50">
                   {item.icon}
                 </div>
-                <h4 className="ml-3 font-bold text-gray-800 font-serif md:text-lg my-2">
+                <h4 className="ml-3 font-bold text-blue-900 font-serif md:text-lg my-2">
                   {item.title}
                 </h4>
               </div>
