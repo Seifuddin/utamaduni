@@ -35,8 +35,8 @@ const events = [
 
 export default function EventGallerySlider() {
   return (
-    <section className="bg-amber-50 py-16 px-6 md:px-12 lg:px-16">
-      <div className="mx-auto max-w-6xl">
+    <section className="bg-amber-50 py-6 md:px-12 lg:px-16">
+      <div className="mx-auto max-w-6xl px-6 ">
         {/* Header */}
         <div className="text-center mb-10">
           <p className="text-sm uppercase tracking-wide font-semibold text-pink-700 mb-2">
@@ -77,7 +77,7 @@ export default function EventGallerySlider() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className="bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-md overflow-hidden flex flex-col transition-transform hover:-translate-y-1"
+                className="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md overflow-hidden flex flex-col transition-transform hover:-translate-y-1"
               >
                 {/* Event Image */}
                 <div className="h-40 overflow-hidden">
@@ -93,11 +93,11 @@ export default function EventGallerySlider() {
                   <h3 className="font-bold text-blue-900 font-serif md:text-lg my-2">
                     {event.title}
                   </h3>
-                  <p className="text-sm text-gray-700 italic mb-2">{event.date}</p>
+                  {/* <p className="text-sm text-gray-700 italic mb-2">{event.date}</p> */}
                   <p className="text-gray-600 text-base mb-4">{event.description}</p>
                   <a
-                    href="#"
-                    className="mt-auto inline-block bg-blue-900 text-white text-center text-sm px-4 py-2 rounded font-semibold hover:bg-pink-800 transition"
+                    href="/gallery"
+                    className="mt-auto inline-block bg-white border border-gray-300 text-blue-900 text-center text-sm px-4 py-2 rounded font-semibold hover:bg-blue-800 hover:text-white transition"
                   >
                     View Event
                   </a>

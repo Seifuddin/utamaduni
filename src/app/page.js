@@ -22,8 +22,8 @@ export default function Home() {
     <main className="overflow-x-hidden pt16">
       <Hero />
       <SponsorProgram />
-      <ImpactStats />
       <EventGallerySlider />
+      <ImpactStats />
       <DidYouKnow />
       <Programs />
       <CTA />

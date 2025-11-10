@@ -42,7 +42,7 @@ export default function OurStory() {
             alt="Utamaduni community at work"
             width={700}
             height={500}
-            className="object-cover w-full h-80 md:h-[420px]"
+            className="object-cover w-full h-80 rounded border border-gray-100 md:h-[420px]"
           />
         </motion.div>
 
@@ -61,21 +61,25 @@ export default function OurStory() {
 
           <p className="text-gray-700 leading-relaxed text-base">
             Over the years, our passion has grown into a movement — one that blends 
-            <em>heritage and humanity</em> to create real change. From local classrooms to 
+            <em> heritage and humanity</em> to create real change. From local classrooms to 
             community health drives, Utamaduni continues to restore dignity, empower families, 
             and celebrate the spirit of togetherness.
           </p>
+          <div className="relative mt-6 flex justifycenter gap-4">
+            <a href="/donate" className="bg-blue-900 text-white px-7 py-1 rounded font-semibold shadow">Donate</a>
+            <a href="/volunteer" className="border border-blue-900 text-blue-900 px-7 py-1 font-semibold rounded">Volunteer</a>
+          </div>
 
-          <div className="grid sm:grid-cols-2 gap-5 mt-6 hi">
+          <div className="grd sm:grid-cols-2 gap-5 mt-6 hidden">
             <FeaturePoint
-              icon={<Users className="w-4 h-4 text-pink-700" />}
+              icon={<Users className="w-4 h-4 text-blue-800" />}
               title="Community Driven"
             >
               We work hand-in-hand with local leaders to ensure every voice is heard and every action counts.
             </FeaturePoint>
 
             <FeaturePoint
-              icon={<BookOpen className="w-4 h-4 text-pink-700" />}
+              icon={<BookOpen className="w-4 h-4 text-blue-800" />}
               title="Empowering Education"
             >
               From children to adults, we build capacity for lifelong learning and self-reliance.
@@ -94,9 +98,9 @@ function FeaturePoint({ icon, title, children }) {
   return (
     <motion.div
       whileHover={{ scale: 1.03 }}
-      className="p-3 bg-white rounded-md border border-blue-100  shadow-md flex gap-3 items-start hover:shadow-lg transition"
+      className="p-3 bg-white rounded-md border border-gray-200  shadow-md flex gap-3 items-start hover:shadow-lg transition"
     >
-      <div className="p-1 rounded-lg bg-amber-50 shadow-md border border-amber-100">{icon}</div>
+      <div className="p-2 rounded-full border border-blue-100 bg-blue-50">{icon}</div>
       <div>
         <h4 className="font-bold text-blue-900 font-serif md:text-lg my-2">{title}</h4>
         <p className="text-base text-gray-700 mt-1">{children}</p>

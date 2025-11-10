@@ -60,12 +60,10 @@ export default function SponsorProgram() {
             viewport={{ once: true }}
             className="text-gray-700 font-medium"
           >
-            <Link
-              href="/donate"
-              className="inline-block bg-blue-900 text-white font-bold px-5 py-2 rounded-lg shadow-md hover:from-yellow-300 hover:to-yellow-400 transition transform hover:-translate-y-0.5 hover:shadow-xl text-sm"
-            >
-              Sponsor Now
-            </Link>
+            <div className="relative mt-6 flex justifycenter gap-4">
+            <a href="/donate" className="bg-blue-900 text-white px-7 py-1 rounded font-semibold shadow">Donate</a>
+            <a href="/volunteer" className="border border-blue-900 text-blue-900 px-7 py-1 font-semibold rounded">Volunteer</a>
+          </div>
           </motion.div>
         </motion.div>
 
@@ -81,7 +79,7 @@ export default function SponsorProgram() {
             <img
               src="/images/utamaduni at mathare/_DSC8782.jpg" // replace with your own image
               alt="Child Sponsorship"
-              className="object-cover w-full h-full transform group-hover:scale-105 transition duration-700"
+              className="object-cover border rounded border-gray-100 w-full h-full transform group-hover:scale-105 transition duration-700"
             />
             {/* Overlay Gradient */}
             <div className="absolute inset-0 bg-gradient-to-t from-blue900/70 via-transparent to-transparent"></div>

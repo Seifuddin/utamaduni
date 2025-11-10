@@ -56,8 +56,8 @@ const leaders = [
 
 export default function Leadership() {
   return (
-    <section className="relative bg-amber-50 py-12 px-6 md:px-12 overflow-hidden">
-      <div className="mx-auto px6 max-w-6xl">
+    <section className="relative bg-amber-50 py-12 px6 md:px-12 overflow-hidden">
+      <div className="mx-auto px-6 max-w-6xl">
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -127,9 +127,9 @@ export default function Leadership() {
                     href={leader.socials.facebook}
                     target="_blank"
                     whileHover={{ scale: 1.2 }}
-                    className="p-1.5 rounded-full bg-amber-50 border border-amber-100 shadow-md hover:bg-amber-200 transition"
+                    className="p-1.5 rounded-full bg-blue-50 border border-gray-200 shadow-md hover:bg-blue-200 transition"
                   >
-                    <Facebook className="w-5 h-5 text-pink-700" />
+                    <Facebook className="w-5 h-5 text-blue-800" />
                   </motion.a>
                 )}
                 {leader.socials.linkedin && (
@@ -137,9 +137,9 @@ export default function Leadership() {
                     href={leader.socials.linkedin}
                     target="_blank"
                     whileHover={{ scale: 1.2 }}
-                    className="p-1.5 rounded-full bg-amber-50 border border-amber-100 shadow-md hover:bg-amber-200 transition"
+                    className="p-1.5 rounded-full bg-blue-50 border border-blue-100 shadow-md hover:bg-blue-200 transition"
                   >
-                    <Linkedin className="w-5 h-5 text-pink-700" />
+                    <Linkedin className="w-5 h-5 text-blue-800" />
                   </motion.a>
                 )}
                 {leader.socials.twitter && (
@@ -147,9 +147,9 @@ export default function Leadership() {
                     href={leader.socials.twitter}
                     target="_blank"
                     whileHover={{ scale: 1.2 }}
-                    className="p-1.5 rounded-full bg-amber-50 border border-amber-100 shadow-md hover:bg-amber-200 transition"
+                    className="p-1.5 rounded-full bg-blue-50 border border-blue-100 shadow-md hover:bg-blue-200 transition"
                   >
-                    <Twitter className="w-5 h-5 text-pink-700" />
+                    <Twitter className="w-5 h-5 text-blue-800" />
                   </motion.a>
                 )}
               </div>

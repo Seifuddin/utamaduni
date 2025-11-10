@@ -10,7 +10,7 @@ export default function VideoHighlights() {
     },
     {
       id: "XgMOSQ9Ue5c",
-      title: "Utamaduni Workshop – Community Empowerment",
+      title: "Utamaduni travel and adventure team",
     },
     {
       id: "J0td4PE1m1o",
@@ -38,9 +38,9 @@ export default function VideoHighlights() {
               key={id}
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.3 }}
-              className="rounded overflow-hidden shadow-lg bg-white"
+              className="rounded overflow-hidden shadow-lg bg-white border border-gray-200"
             >
-              <div className="aspect-w-20 aspect-h-12">
+              <div className="aspect-w-20 aspect-h-14">
                 <iframe
                   src={`https://www.youtube.com/embed/${id}`}
                   title={title}
@@ -50,7 +50,7 @@ export default function VideoHighlights() {
                   className="w-full h-full"
                 ></iframe>
               </div>
-              <p className="md:font-bold text-blue-900 font-serif font-medium md:text-lg my-2 px-2">
+              <p className="font-bold text-left text-blue-900 font-serif fontmedium md:text-lg my-2 px-2">
                 {title}
               </p>
             </motion.div>
@@ -67,7 +67,7 @@ export default function VideoHighlights() {
             href="https://www.youtube.com/@utamadunifoundation"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-8 py-4 bg-blue-900 hover:bg-blue-800 text-white font-semibold rounded-md transition-all duration-300 shadow-md"
+            className="inline-block px-8 py-2 bg-blue-900 hover:bg-blue-800 text-white font-semibold rounded-md transition-all duration-300 shadow-md"
           >
             Watch More on YouTube
           </a>

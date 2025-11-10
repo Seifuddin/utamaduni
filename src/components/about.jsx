@@ -45,6 +45,11 @@ export default function Abouts() {
             initiatives.
           </p>
 
+          <div className="relative mt-6 flex justifycenter gap-4">
+            <a href="/donate" className="bg-blue-900 text-white px-7 py-1 rounded font-semibold shadow">Donate</a>
+            <a href="/volunteer" className="border border-blue-900 text-blue-900 px-7 py-1 font-semibold rounded">Volunteer</a>
+          </div>
+
           {/* Mission & Vision Cards 
           <div className="mt-10 grid sm:grid-cols-2 gap-6">
             <motion.div

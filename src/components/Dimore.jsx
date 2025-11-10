@@ -30,7 +30,7 @@ export default function CEOSection() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex flex-col md:flex-row items-center gap-10 bg-white shadow-xl rounded-3xl overflow-hidden border border-blue-100 p-4 md:p-8"
+          className="flex flex-col md:flex-row items-center gap-10 bg-white shadow-xl rounded-3xl overflow-hidden border border-gray-100 p-4 md:p-8"
         >
           {/* CEO Image */}
           <div className="relative w-64 h-64 md:w-64 md:h-64 flex-shrink-0 rounded-2xl overflow-hidden shadow-lg group">
@@ -92,7 +92,7 @@ function SocialIcon({ href, icon }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="p-2 bg-amber-50 border border-amber-100 text-pink-700 rounded-full hover:bg-blue-700 hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
+      className="p-2 bg-blue-50 border border-blue-100 text-blue-800 rounded-full hover:bg-blue-700 hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
     >
       {icon}
     </a>

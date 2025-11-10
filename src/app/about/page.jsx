@@ -21,6 +21,7 @@ export default function AboutPage() {
       <AboutHero />
       <Abouts />
       <Mission />
+      <CTA />
       <OurStory />
       <Challenges />
       <PastEvents />
