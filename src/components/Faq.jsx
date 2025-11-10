@@ -44,9 +44,18 @@ export default function FAQ() {
       <div className="max-w-4xl mx-auto px-6">
         {/* Section Heading */}
         <div className="text-center mb-12">
+          <p className="text-sm uppercase tracking-wide font-semibold text-pink-700 mb-2">
+            questions and answers
+          </p>
           <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4">
             Frequently Asked Questions
           </h2>
+           <motion.div
+                      initial={{ width: 0 }}
+                      whileInView={{ width: "5rem" }}
+                      transition={{ duration: 0.5 }}
+                      className="h-1 bg-pink-700 rounded-full mx-auto mb-6"
+                    ></motion.div>
           <p className="mt-2 text-gray-600 max-w-2xl mx-auto font-medium text-center md:text-lg mb-6">
             Have questions? We’ve got answers. Learn more about how we work and how you can get involved.
           </p>

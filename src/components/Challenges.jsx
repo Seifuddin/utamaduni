@@ -37,7 +37,7 @@ export default function Challenges() {
   ];
 
   return (
-    <section className="relative bg-amber-50 gradient-to-b from-blue-50 via-white to-amber-50 text-gray-800 py-16 overflow-hidden">
+    <section className="relative bg-amber-50 gradient-to-b from-blue-50 via-white to-amber-50 text-gray-800 py-10 overflow-hidden">
       {/* Decorative background */}
       <div className="absolute inset-0 bg-[url('/images/pattern-light.png')] opacity-5 bg-cover bg-center"></div>
 

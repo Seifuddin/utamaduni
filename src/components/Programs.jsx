@@ -76,8 +76,17 @@ export default function Programs() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
+          <p className="text-sm uppercase tracking-wide font-semibold text-pink-700 mb-2">
+            what we do
+          </p>
           Our Projects & Focus Areas
         </motion.h2>
+         <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: "5rem" }}
+                    transition={{ duration: 0.5 }}
+                    className="h-1 bg-pink-700 rounded-full mx-auto mb-6"
+                  ></motion.div>
         <motion.p
           className="mt-2 text-gray-600 max-w-2xl mx-auto font-medium text-center md:text-lg mb-6"
           initial={{ opacity: 0, y: 20 }}

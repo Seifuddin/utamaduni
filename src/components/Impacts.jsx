@@ -73,6 +73,12 @@ export default function ImpactStats() {
         <h2 className="text-center text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-6">
           Our Achievement in Numbers
         </h2>
+        <motion.div
+                              initial={{ width: 0 }}
+                              whileInView={{ width: "5rem" }}
+                              transition={{ duration: 0.5 }}
+                              className="h-1 bg-pink-700 rounded-full mx-auto mb-6"
+                            ></motion.div>
         
         <Swiper
           modules={[Pagination, Autoplay]}
