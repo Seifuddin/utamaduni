@@ -119,7 +119,7 @@ export default function Programs() {
 
               {/* Text Content */}
               <div className="p-4 flex flex-col flex-1 text-left">
-                <h3 className="font-bold text-gray-900 font-serif md:text-lg my-2">
+                <h3 className="font-bold text-blue-800 font-serif md:text-lg my-2">
                   {program.title}
                 </h3>
                 <p className="text-gray-600 text-base flex-1">{program.description}</p>
