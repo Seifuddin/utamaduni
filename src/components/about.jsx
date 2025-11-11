@@ -22,7 +22,7 @@ export default function Abouts() {
             About Us
           </p>
 
-          <h1 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4">
+          <h1 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-3">
             Who We Are
           </h1>
 
@@ -45,7 +45,7 @@ export default function Abouts() {
             initiatives.
           </p>
 
-          <div className="relative mt-6 flex justifycenter gap-4">
+          <div className="relative mt-6 mb-5 flex justifycenter gap-4">
             <a href="/donate" className="bg-blue-900 text-white px-7 py-1 rounded font-semibold shadow">Donate</a>
             <a href="/volunteer" className="border border-blue-900 text-blue-900 px-7 py-1 font-semibold rounded">Volunteer</a>
           </div>

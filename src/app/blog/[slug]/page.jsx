@@ -48,16 +48,16 @@ export default function SinglePost() {
               navigation
               pagination={{ clickable: true }}
               loop
-              className="rounded-2xl mb-8"
+              className="rounded mb-8"
             >
               {post.images.map((img, index) => (
                 <SwiperSlide key={index}>
                   <Image
                     src={img}
                     alt={`${post.title} image ${index + 1}`}
-                    width={900}
-                    height={500}
-                    className="w-full h-[500px] md:h-[600px] object-cover rounded-2xl shadow-md"
+                    width={700}
+                    height={300}
+                    className="w-full h-[300px] md:h-[400px] object-cover rounded shadow-md"
                   />
                 </SwiperSlide>
               ))}

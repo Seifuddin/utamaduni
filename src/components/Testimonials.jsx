@@ -125,7 +125,7 @@ export default function StoriesAndTestimonials() {
         >
           <HeartHandshake className="absolute opacity-10 w-40 h-40 right-10 bottom-10 text-blue-200" />
           <div className="text-center mb-12">
-            <Quote className="w-10 h-10 mx-auto mb-4 text-yellow-400" />
+            <Quote className="w-10 h-10 mx-auto mb-4 text-white" />
             <h3 className="text-2xl md:text-3xl font-semibold mb-3 font-serif">
               Voices of Gratitude
             </h3>
@@ -161,7 +161,7 @@ export default function StoriesAndTestimonials() {
                       alt={t.name}
                       width={50}
                       height={50}
-                      className="rounded-full border-2 border-gray-200"
+                      className="rounded-full border-2 border-blue-300"
                     />
                     <div>
                       <h4 className="font-bold text-gray-100 font-serif md:text-lg my-2">{t.name}</h4>
@@ -176,12 +176,13 @@ export default function StoriesAndTestimonials() {
             ))}
           </Swiper>
 
-          {/* Call to Action */}
+          {/* Call to Action 
           <div className="text-center mt-14">
             <button className="bg-yellow-400 text-blue-800 px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-white transition-all duration-300">
               Share Your Story
             </button>
           </div>
+          */}
         </motion.div>
       </div>
     </section>

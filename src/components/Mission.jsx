@@ -6,17 +6,17 @@ import { HeartHandshake, Globe, Award } from "lucide-react";
 export default function Mission() {
   const values = [
     {
-      icon: <HeartHandshake className="w-5 h-5 text-blue-800" />,
+      icon: <HeartHandshake className="w-5 h-5 text-white" />,
       title: "Our Mission",
       text: "To preserve cultural heritage while empowering lives through education, compassion, and sustainable community initiatives.",
     },
     {
-      icon: <Globe className="w-5 h-5 text-blue-800" />,
+      icon: <Globe className="w-5 h-5 text-white" />,
       title: "Our Vision",
       text: "To build a culturally inspired, compassionate society where every family and child can thrive with dignity and hope.",
     },
     {
-      icon: <Award className="w-5 h-5 text-blue-800" />,
+      icon: <Award className="w-5 h-5 text-white" />,
       title: "Our Values",
       text: "Compassion • Integrity • Culture • Community • Sustainability.",
     },
@@ -61,10 +61,10 @@ export default function Mission() {
               className="bg-white/90 backdrop-blur-sm border border-gray-100 rounded-md shadow-md p-5 flex flex-col items-start cursor-pointer"
             >
               <div className="flex items-center text-left mb-3">
-                <div className="p-3 rounded-full border border-blue-100 bg-blue-50">
+                <div className="p-3 rounded-full border border-blue-800 bg-blue-900">
                   {item.icon}
                 </div>
-                <h4 className="ml-3 font-bold text-blue-900 font-serif md:text-lg my-2">
+                <h4 className="ml-2 font-bold text-blue-900 font-serif md:text-lg my-2">
                   {item.title}
                 </h4>
               </div>

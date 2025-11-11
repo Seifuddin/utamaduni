@@ -92,7 +92,7 @@ function SocialIcon({ href, icon }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="p-2 bg-blue-50 border border-blue-100 text-blue-800 rounded-full hover:bg-blue-700 hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
+      className="p-2 border border-blue-800 bg-blue-900 text-white rounded-full hover:bg-blue-700 hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
     >
       {icon}
     </a>

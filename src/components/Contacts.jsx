@@ -62,17 +62,17 @@ export default function ContactUs() {
 
             <div className="space-y-6">
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-blue-100 rounded-full shadow-sm">
-                  <Phone className="text-blue-900" size={24} />
+                <div className="p-3 bg-blue-900 rounded-full shadow-sm">
+                  <Phone className="text-white" size={24} />
                 </div>
-                <p className="text-gray-800 font-medium text-lg">
+                <p className="text-gray-800 font-base text-lg">
                   +254 704 337 351
                 </p>
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-blue-100 rounded-full shadow-sm">
-                  <Mail className="text-blue-900" size={24} />
+                <div className="p-3 bg-blue-900 rounded-full shadow-sm">
+                  <Mail className="text-white" size={24} />
                 </div>
                 <p className="text-gray-800 font-medium text-lg">
                   utamadunicharity@gmail.com
@@ -83,7 +83,7 @@ export default function ContactUs() {
             {/* Social Media Links */}
             <div className="mt-10">
               <h4 className="text-xl font-semibold text-blue-900 mb-4 font-serif">
-                Follow Us
+                Follow Us @Utamaduni Organization
               </h4>
               <div className="flex gap-5">
                 {[
@@ -114,16 +114,14 @@ export default function ContactUs() {
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.1 }}
-                    className={`p-3 bg-blue-100 text-blue-900 rounded-full shadow-md transition-all duration-300 ${social.color} hover:text-white`}
+                    className={`p-3 bg-blue-900 text-white rounded-full shadow-md transition-all duration-300 ${social.color} hover:text-white`}
                   >
                     {social.icon}
                   </motion.a>
                 ))}
               </div>
 
-              <p className="mt-10 text-2xl font-serif italic text-pink-600 textsm">
-                @Utamaduni Organization
-              </p>
+              
             </div>
           </motion.div>
 

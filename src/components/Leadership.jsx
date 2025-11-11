@@ -127,9 +127,9 @@ export default function Leadership() {
                     href={leader.socials.facebook}
                     target="_blank"
                     whileHover={{ scale: 1.2 }}
-                    className="p-1.5 rounded-full bg-blue-50 border border-gray-200 shadow-md hover:bg-blue-200 transition"
+                    className="p-1.5 rounded-full border border-blue-800 bg-blue-900 shadow-md hover:bg-blue-200 transition"
                   >
-                    <Facebook className="w-5 h-5 text-blue-800" />
+                    <Facebook className="w-5 h-5 text-white" />
                   </motion.a>
                 )}
                 {leader.socials.linkedin && (
@@ -137,9 +137,9 @@ export default function Leadership() {
                     href={leader.socials.linkedin}
                     target="_blank"
                     whileHover={{ scale: 1.2 }}
-                    className="p-1.5 rounded-full bg-blue-50 border border-blue-100 shadow-md hover:bg-blue-200 transition"
+                    className="p-1.5 rounded-full border border-blue-800 bg-blue-900 shadow-md hover:bg-blue-200 transition"
                   >
-                    <Linkedin className="w-5 h-5 text-blue-800" />
+                    <Linkedin className="w-5 h-5 text-white" />
                   </motion.a>
                 )}
                 {leader.socials.twitter && (
@@ -147,9 +147,9 @@ export default function Leadership() {
                     href={leader.socials.twitter}
                     target="_blank"
                     whileHover={{ scale: 1.2 }}
-                    className="p-1.5 rounded-full bg-blue-50 border border-blue-100 shadow-md hover:bg-blue-200 transition"
+                    className="p-1.5 rounded-full border border-blue-800 bg-blue-900 shadow-md hover:bg-blue-200 transition"
                   >
-                    <Twitter className="w-5 h-5 text-blue-800" />
+                    <Twitter className="w-5 h-5 text-white" />
                   </motion.a>
                 )}
               </div>

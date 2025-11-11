@@ -59,12 +59,6 @@ export default function BlogPage() {
               transition={{ delay: idx * 0.1 }}
               className="bg-white rounded-2xl shadow-md p-6 overflow-hidden"
             >
-              <p className="text-sm text-amber-700 mb-2">{post.date}</p>
-              <h3 className="text-2xl font-semibold text-gray-800 mb-4">
-                {post.title}
-              </h3>
-              <p className="text-gray-600 mb-6">{post.excerpt}</p>
-
               {/* Swiper Image Carousel */}
               {post.images && post.images.length > 0 && (
                 <div className="relative">
@@ -82,7 +76,7 @@ export default function BlogPage() {
                       640: { slidesPerView: 2 },
                       1024: { slidesPerView: 3 },
                     }}
-                    className="!overflow-hidden rounded-xl mb-6"
+                    className="!overflow-hidden rounded mb-6"
                   >
                     {post.images.map((img, i) => (
                       <SwiperSlide key={i}>
@@ -91,7 +85,7 @@ export default function BlogPage() {
                             src={img}
                             alt={`${post.title} image ${i + 1}`}
                             fill
-                            className="object-cover rounded-xl"
+                            className="object-cover rounded"
                             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                           />
                         </div>
@@ -112,6 +106,13 @@ export default function BlogPage() {
                   </button>
                 </div>
               )}
+              <p className="text-sm text-amber-700 mb-2">{post.date}</p>
+              <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+                {post.title}
+              </h3>
+              <p className="text-gray-600 mb-6">{post.excerpt}</p>
+
+              
 
               <Link
                 href={`/blog/${post.slug}`}

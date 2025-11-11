@@ -70,15 +70,15 @@ export default function Programs() {
 
       <div className="mx-auto px-6 text-center max-w-6xl">
         {/* Heading */}
+        <p className="text-sm uppercase tracking-wide font-semibold text-pink-700 mb-2">
+            what we do
+          </p>
         <motion.h2
           className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <p className="text-sm uppercase tracking-wide font-semibold text-pink-700 mb-2">
-            what we do
-          </p>
           Our Projects & Focus Areas
         </motion.h2>
          <motion.div
@@ -119,7 +119,7 @@ export default function Programs() {
 
               {/* Text Content */}
               <div className="p-4 flex flex-col flex-1 text-left">
-                <h3 className="font-bold text-blue-900 font-serif md:text-lg my-2">
+                <h3 className="font-bold text-gray-900 font-serif md:text-lg my-2">
                   {program.title}
                 </h3>
                 <p className="text-gray-600 text-base flex-1">{program.description}</p>

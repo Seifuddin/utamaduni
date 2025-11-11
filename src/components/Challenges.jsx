@@ -5,31 +5,31 @@ import { HeartCrack, Users, Droplet, School, Leaf } from "lucide-react";
 export default function Challenges() {
   const challenges = [
     {
-      icon: <HeartCrack className="w-6 h-6 text-blue-800" />,
+      icon: <HeartCrack className="w-6 h-6 text-white" />,
       title: "Poverty & Vulnerability",
       description:
         "Many families struggle to afford basic needs such as food, shelter, and healthcare, leaving children especially vulnerable.",
     },
     {
-      icon: <School className="w-6 h-6 text-blue-800" />,
+      icon: <School className="w-6 h-6 text-white" />,
       title: "Limited Access to Education",
       description:
         "Numerous children lack access to quality education due to financial hardship and limited resources.",
     },
     {
-      icon: <Droplet className="w-6 h-6 text-blue-800" />,
+      icon: <Droplet className="w-6 h-6 text-white" />,
       title: "Clean Water & Sanitation",
       description:
         "Some communities still face water scarcity and sanitation challenges that affect health and well-being.",
     },
     {
-      icon: <Users className="w-6 h-6 text-blue-800" />,
+      icon: <Users className="w-6 h-6 text-white" />,
       title: "Youth Unemployment",
       description:
         "High unemployment rates among youth lead to frustration, hopelessness, and social instability.",
     },
     {
-      icon: <Leaf className="w-6 h-6 text-blue-800" />,
+      icon: <Leaf className="w-6 h-6 text-white" />,
       title: "Environmental Degradation",
       description:
         "Deforestation and poor waste management continue to threaten the environment and community sustainability.",
@@ -80,7 +80,7 @@ export default function Challenges() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="flex items-start gap-4 bg-white/80 border border-gray-200 rounded-md p-4 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="p-2 rounded-full border border-blue-100 bg-blue-50">{item.icon}</div>
+              <div className="p-2 rounded-full border border-blue-800 bg-blue-900">{item.icon}</div>
               <div>
                 <h3 className="font-bold text-blue-900 font-serif md:text-lg my-2">
                   {item.title}
