@@ -121,7 +121,7 @@ export default function StoriesAndTestimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="bg-blue-900 text-white rounded p-10 md:p-14 shadow-2xl relative overflow-hidden"
+          className="bg-blue-900 text-white rounded-2xl p-10 md:p-14 shadow-2xl relative overflow-hidden"
         >
           <HeartHandshake className="absolute opacity-10 w-40 h-40 right-10 bottom-10 text-blue-200" />
           <div className="text-center mb-12">

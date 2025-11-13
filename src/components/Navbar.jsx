@@ -5,10 +5,10 @@ import Image from "next/image";
 import { usePathname } from 'next/navigation';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
-const ministries = [
-  { label: 'JCM Headquarters', href: '/ministries/youth' },
-  { label: 'Nairobi CBD Branch', href: '/ministries/women' },
-  { label: 'Mombasa Branch', href: '/ministries/men' },
+const gallery = [
+  { label: 'Mathare Visit', href: '/ministries/youth' },
+  { label: 'Oyugis Childrens Home', href: '/ministries/women' },
+  { label: 'Malia Childrens Home', href: '/ministries/men' },
 ];
 
 const resources = [
@@ -28,7 +28,7 @@ export default function Navbar() {
     { href: '/programs', label: 'Programs' },
     { href: '/gallery', label: 'Gallery' },
     { href: '/blog', label: 'Blog' },
-    //{ label: 'Branches', dropdown: ministries },
+    //{ label: 'Gallery', dropdown: gallery },
     { href: '/contact', label: 'Contacts' },
   ];
 

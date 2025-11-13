@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Phone, Send } from "lucide-react";
+import { Mail, Phone, Send, MapPin } from "lucide-react";
 import { FaFacebookF, FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
 import { useState } from "react";
 
@@ -53,7 +53,7 @@ export default function ContactUs() {
             className="space-y-10"
           >
             <h4 className="text-xl font-semibold text-blue-900 mb-4 font-serif">
-                Contact Information
+                Contact Information:
               </h4>
             <p className="text-gray-700 leading-relaxed">
               You can reach us directly through the contacts below or send a
@@ -65,25 +65,44 @@ export default function ContactUs() {
                 <div className="p-3 bg-blue-900 rounded-full shadow-sm">
                   <Phone className="text-white" size={24} />
                 </div>
-                <p className="text-gray-800 font-base text-lg">
+                <div>
+                <h4 className="font-bold text-gray-800">Phone</h4>
+                <p className="text-gray-800 font-base textlg">
                   +254 704 337 351
                 </p>
+                </div>
               </div>
+              
 
               <div className="flex items-center gap-4">
                 <div className="p-3 bg-blue-900 rounded-full shadow-sm">
                   <Mail className="text-white" size={24} />
                 </div>
-                <p className="text-gray-800 font-medium text-lg">
+                <div>
+                <h4 className="font-bold text-gray-800">Email</h4>
+                <p className="text-gray-800 font-medium text-g">
                   utamadunicharity@gmail.com
                 </p>
+                </div>
+              </div>
+
+               <div className="flex items-center gap-4">
+                <div className="p-3 bg-blue-900 rounded-full shadow-sm">
+                  <MapPin className="text-white" size={24} />
+                </div>
+                <div>
+                    <h4 className="font-bold text-gray-800">Location</h4>
+                <p className="text-gray-800 font-medium text-g">
+                  Nairobi, Kenya
+                </p>
+              </div>
               </div>
             </div>
 
             {/* Social Media Links */}
             <div className="mt-10">
               <h4 className="text-xl font-semibold text-blue-900 mb-4 font-serif">
-                Follow Us @Utamaduni Organization
+                Follow Us:
               </h4>
               <div className="flex gap-5">
                 {[
@@ -121,7 +140,10 @@ export default function ContactUs() {
                 ))}
               </div>
 
-              
+              <h4 className="text-xl font-semibold text-blue-900 mt-6 font-serif">
+                @Utamaduni Organization
+              </h4>
+
             </div>
           </motion.div>
 
