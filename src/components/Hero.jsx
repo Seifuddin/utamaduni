@@ -10,7 +10,8 @@ const slides = [
     id: 1,
     image: "/images/utamaduni at mathare/_DSC8782.jpg",
     title: "Children's Welfare",
-    subtitle: "Donations to children's homes and educational support for orphans",
+    subtitle:
+      "Donations to children's homes and educational support for orphans",
     button: "Learn More",
   },
   {
@@ -33,7 +34,8 @@ const slides = [
     id: 4,
     image: "/images/how_it_went_down/_DSC7803.jpg",
     title: "Housekeeping Programmes",
-    subtitle: "Supporting struggling households with essential items and skills",
+    subtitle:
+      "Supporting struggling households with essential items and skills",
     button: "Learn More",
   },
   {
@@ -56,16 +58,13 @@ export default function Hero() {
     return () => clearInterval(timer);
   }, []);
 
-  const prevSlide = () => {
+  const prevSlide = () =>
     setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
-  };
-
-  const nextSlide = () => {
+  const nextSlide = () =>
     setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-  };
 
   return (
-    <section className="relative w-full h-[60vh] overflow-hidden">
+    <section className="relative w-full h-[70vh] md:h-[70vh] overflow-hidden">
       <AnimatePresence mode="wait">
         <motion.div
           key={slides[current].id}
@@ -82,37 +81,41 @@ export default function Hero() {
             className="object-cover"
             priority
           />
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
         </motion.div>
       </AnimatePresence>
 
       {/* Text Content */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
+      <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-6">
         <motion.h1
           key={slides[current].title}
           initial={{ y: 40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-6xl font-serif font-bold drop-shadow-lg"
+          className="text-4xl md:text-6xl font-serif font-bold drop-shadow-xl"
         >
           {slides[current].title}
         </motion.h1>
+
         <motion.p
           key={slides[current].subtitle}
           initial={{ y: 40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="mt-4 text-lg md:text-2xl text-gray-200 max-w-2xl"
+          className="mt-4 text-lg md:text-2xl text-gray-200 max-w-2xl leading-relaxed"
         >
           {slides[current].subtitle}
         </motion.p>
+
         <motion.button
           key={slides[current].button}
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.4 }}
-          className="mt-6 px-8 py-3 font-serif text-lg font-bold rounded-full bg-gradient-to-r from-pink-600 to-red-600 hover:from-red-700 hover:to-pink-700 shadow-xl transition"
+          className="mt-8 px-8 py-3 font-serif text-lg font-semibold rounded-full 
+                     bg-gradient-to-r from-pink-600 to-red-600 
+                     hover:from-red-700 hover:to-pink-700 
+                     shadow-lg hover:shadow-2xl transition-all duration-300"
         >
           {slides[current].button}
         </motion.button>
@@ -121,24 +124,29 @@ export default function Hero() {
       {/* Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-6 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-3 rounded-full shadow-lg transition"
+        className="absolute left-4 md:left-10 top-1/2 -translate-y-1/2 
+                   bg-white/20 hover:bg-white/40 text-white p-3 md:p-4 
+                   rounded-full shadow-lg transition-all"
       >
         <ChevronLeft size={28} />
       </button>
+
       <button
         onClick={nextSlide}
-        className="absolute right-6 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-3 rounded-full shadow-lg transition"
+        className="absolute right-4 md:right-10 top-1/2 -translate-y-1/2 
+                   bg-white/20 hover:bg-white/40 text-white p-3 md:p-4 
+                   rounded-full shadow-lg transition-all"
       >
         <ChevronRight size={28} />
       </button>
 
       {/* Indicators */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-3">
+      <div className="absolute bottom-8 flex justify-center w-full space-x-3">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrent(index)}
-            className={`w-3 h-3 rounded-full transition-all ${
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
               current === index
                 ? "bg-pink-600 scale-125 shadow-md"
                 : "bg-gray-400 hover:bg-pink-400"

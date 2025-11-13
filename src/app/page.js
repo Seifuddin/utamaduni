@@ -16,11 +16,13 @@ import Projects from "@/components/Projects";
 import CTA from "@/components/CTA";
 import EventGallerySlider from "@/components/Events";
 import VideoHighlights from "@/components/Youtube";
+import WhatsAppButton from "@/components/WhatsApp";
 
 export default function Home() {
   return (
     <main className="overflow-x-hidden pt16">
       <Hero />
+      <WhatsAppButton />
       <SponsorProgram />
       <EventGallerySlider />
       <ImpactStats />

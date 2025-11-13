@@ -109,12 +109,12 @@ export default function ContactUs() {
                   {
                     icon: <FaInstagram size={22} />,
                     color: "hover:bg-pink-500",
-                    link: "#",
+                    link: "https://www.instagram.com/p/DPxtpTujjnj/?utm_source=ig_web_copy_link",
                   },
                   {
                     icon: <FaTiktok size={22} />,
                     color: "hover:bg-black",
-                    link: "#",
+                    link: "https://www.tiktok.com/@utamaduni01_org?is_from_webapp=1&sender_device=pc",
                   },
                   {
                     icon: <FaFacebookF size={22} />,
@@ -124,7 +124,7 @@ export default function ContactUs() {
                   {
                     icon: <FaYoutube size={22} />,
                     color: "hover:bg-red-600",
-                    link: "#",
+                    link: "https://www.youtube.com/@utamadunifoundation",
                   },
                 ].map((social, i) => (
                   <motion.a
