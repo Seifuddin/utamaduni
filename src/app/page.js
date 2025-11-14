@@ -20,7 +20,7 @@ import WhatsAppButton from "@/components/WhatsApp";
 
 export default function Home() {
   return (
-    <main className="overflow-x-hidden pt16">
+    <main className="overflow-x-hidden pt16 bg-amber-50">
       <Hero />
       <WhatsAppButton />
       <SponsorProgram />

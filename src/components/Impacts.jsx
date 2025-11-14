@@ -35,28 +35,28 @@ function useCountUp(target, inView, duration = 2000) {
 export default function ImpactStats() {
   const stats = [
     {
-      icon: <Users className="w-5 h-5 text-pink-700" />,
+      icon: <Users className="w-5 h-5 text-white" />,
       value: 500,
       suffix: "+",
       label: "Children Helped",
       progress: 85,
     },
     {
-      icon: <UtensilsCrossed className="w-5 h-5 text-pink-700" />,
+      icon: <UtensilsCrossed className="w-5 h-5 text-white" />,
       value: 2000,
       suffix: "+",
       label: "Meals Provided",
       progress: 90,
     },
     {
-      icon: <GraduationCap className="w-5 h-5 text-pink-700" />,
+      icon: <GraduationCap className="w-5 h-5 text-white" />,
       value: 20,
       suffix: "+",
       label: "Volunteers",
       progress: 70,
     },
     {
-      icon: <Heart className="w-5 h-5 text-pink-700" />,
+      icon: <Heart className="w-5 h-5 text-white" />,
       value: 2,
       suffix: "Years",
       label: "Of Service",
@@ -105,16 +105,19 @@ export default function ImpactStats() {
                   className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition-all h-[140px] flex flex-col justify-between"
                 >
                   <div className="flex items-center gap-2">
-                    <div className="p-1.5 bg-amber-100 rounded-full">{stat.icon}</div>
-                    <h3 className="font-serif font-semibold text-sm text-gray-800">
+                    <div className="p-2 bg-gradient-to-br from-blue-900/60 via-[#0a2540]/90 to-blue-800/70 rounded-full">{stat.icon}</div>
+                    </div>
+                  <div className="flex items-center gap-2">
+                    <p className="font-serif text-blue-700 text-base font-bold mt1">
+                    {count}
+                    {stat.suffix}
+                  </p>
+                   <h3 className="font-serif font-semibold text-base text-gray-800">
                       {stat.label}
                     </h3>
                   </div>
 
-                  <p className="font-serif text-gray-700 text-base font-bold mt-1">
-                    {count}
-                    {stat.suffix}
-                  </p>
+                  
 
                   <div className="w-full bg-gray-200 rounded-full h-1">
                     <motion.div

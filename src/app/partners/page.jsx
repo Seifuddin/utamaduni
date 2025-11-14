@@ -1,52 +1,37 @@
-"use client";
+import Image from "next/image";
 
-import { motion } from "framer-motion";
+export const metadata = {
+  title: "Partners | Utamaduni Foundation",
+  description:
+    "Join hands with us to expand our impact and support vulnerable communities.",
+};
 
 export default function PartnersPage() {
   return (
-    <section className="py-16 bg-amber-50 min-h-screen">
-      <div className="container mx-auto px-6 lg:px-12 text-center">
-        {/* Heading */}
-        <motion.h1
-          className="text-3xl md:text-4xl font-bold text-blue-900 mb-4 font-serif"
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-        >
-          Partner With Us
-        </motion.h1>
-        <p className="text-gray-600 max-w-2xl mx-auto mb-12 text-base">
-          Together, we can achieve greater impact. Partner with Utamaduni
-          through corporate sponsorships, cultural collaborations, or community
-          initiatives.
-        </p>
+    <section className="min-h-screen py-20 px-6 max-w-5xl mx-auto">
+      <h1 className="text-4xl md:text-5xl font-bold font-serif">
+        Partnerships
+      </h1>
 
-        {/* Partnership form */}
-        <div className="bg-white shadow-md border border-gray-300 rounded-xl p-8 max-w-lg mx-auto">
-          <form className="space-y-4">
-            <input
-              type="text"
-              placeholder="Organization / Name"
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring focus:ring-blue-200 text-gray-700"
-            />
-            <input
-              type="email"
-              placeholder="Contact Email"
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring focus:ring-blue-200 text-gray-700"
-            />
-            <textarea
-              placeholder="How would you like to partner with us?"
-              rows="4"
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring focus:ring-blue-200 text-gray-700"
-            />
-            <button
-              type="submit"
-              className="w-full bg-blue-900 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Send Proposal
-            </button>
-          </form>
-        </div>
+      <p className="mt-6 text-lg leading-relaxed text-gray-700">
+        We work with organizations, individuals, and community groups to
+        amplify our mission and reach more people in need. Whether through
+        funding, volunteering, or collaboration, every partnership strengthens
+        our impact.
+      </p>
+
+      <div className="mt-10 relative w-full h-[40vh] rounded-xl overflow-hidden shadow-lg">
+        <Image
+          src="/images/WhatsApp Image 2025-10-04 at 23.04.29.jpeg"
+          alt="Partners"
+          fill
+          className="object-cover"
+        />
       </div>
+
+      <button className="mt-10 px-8 py-3 bg-pink-600 hover:bg-pink-700 text-white rounded-full font-semibold text-lg">
+        Become a Partner
+      </button>
     </section>
   );
 }

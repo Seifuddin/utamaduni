@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -12,7 +13,8 @@ const slides = [
     title: "Children's Welfare",
     subtitle:
       "Donations to children's homes and educational support for orphans",
-    button: "Learn More",
+    button: "Support Children",
+    slug: "children",
   },
   {
     id: 2,
@@ -20,7 +22,8 @@ const slides = [
     title: "Community Outreach",
     subtitle:
       "Food distribution, health awareness to people living with disabilities and HIV, and empowerment projects",
-    button: "Learn More",
+    button: "Get Involved",
+    slug: "community",
   },
   {
     id: 3,
@@ -28,7 +31,8 @@ const slides = [
     title: "Cultural Preservation",
     subtitle:
       "Incorporating traditional values, arts, and practices into charity work",
-    button: "Learn More",
+    button: "Get Involved",
+    slug: "culture",
   },
   {
     id: 4,
@@ -36,7 +40,8 @@ const slides = [
     title: "Housekeeping Programmes",
     subtitle:
       "Supporting struggling households with essential items and skills",
-    button: "Learn More",
+    button: "Support a Family",
+    slug: "housekeeping",
   },
   {
     id: 5,
@@ -44,7 +49,8 @@ const slides = [
     title: "Partnerships",
     subtitle:
       "Collaborating with like-minded individuals and organizations to extend our impact",
-    button: "Learn More",
+    button: "Partner With Us",
+    slug: "partners",
   },
 ];
 
@@ -107,18 +113,27 @@ export default function Hero() {
           {slides[current].subtitle}
         </motion.p>
 
-        <motion.button
-          key={slides[current].button}
-          initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.4 }}
-          className="mt-8 px-8 py-3 font-serif text-lg font-semibold rounded-full 
-                     bg-gradient-to-r from-pink-600 to-red-600 
-                     hover:from-red-700 hover:to-pink-700 
-                     shadow-lg hover:shadow-2xl transition-all duration-300"
+        {/* FIXED BUTTON + LINK */}
+        <Link
+          href={`${
+            slides[current].slug === "partners"
+              ? "/partners"
+              : `/programs/${slides[current].slug}`
+          }`}
         >
-          {slides[current].button}
-        </motion.button>
+          <motion.button
+            key={slides[current].button}
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.4 }}
+            className="mt-8 px-8 py-3 font-serif text-lg font-semibold rounded-full 
+                       bg-gradient-to-r from-pink-600 to-red-600 
+                       hover:from-red-700 hover:to-pink-700 
+                       shadow-lg hover:shadow-2xl transition-all duration-300"
+          >
+            {slides[current].button}
+          </motion.button>
+        </Link>
       </div>
 
       {/* Arrows */}

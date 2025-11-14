@@ -25,7 +25,7 @@ export default function Navbar() {
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
-    { href: '/programs', label: 'Programs' },
+    { href: '/programz', label: 'Programs' },
     { href: '/gallery', label: 'Gallery' },
     { href: '/blog', label: 'Blog' },
     //{ label: 'Gallery', dropdown: gallery },

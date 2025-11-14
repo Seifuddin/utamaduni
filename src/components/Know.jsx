@@ -12,7 +12,7 @@ import Link from "next/link";
 export default function DidYouKnowHybrid() {
   const slides = [
     {
-      icon: <Users className="w-7 h-7 text-pink-600" />,
+      icon: <Users className="w-6 h-6 text-pink-600" />,
       stat: "150M+",
       text: "children live on the streets worldwide with no care or safety.",
     },
@@ -22,29 +22,30 @@ export default function DidYouKnowHybrid() {
       text: "go to bed hungry every night, crying themselves to sleep.",
     },
     {
-      icon: <Home className="w-7 h-7 text-pink-600" />,
+      icon: <Home className="w-6 h-6 text-pink-600" />,
       stat: "Millions",
       text: "sleep without shelter, warmth, or protection from harm.",
     },
     {
-      icon: <Heart className="w-7 h-7 text-pink-600" />,
+      icon: <Heart className="w-6 h-6 text-pink-600" />,
       stat: "Your Help",
       text: "can bring food, safety, and hope. Even the smallest gift saves lives.",
     },
   ];
 
   return (
-    <section className="relative text-white py-20 px-4 md:px-10">
+    <section className="relative text-white py-14 px-6 md:px16 rounded-2xl bg-amber-50">
+      <div className="relative mx-auto text-center max-w-6xl rounded-2xl py-16">
       {/* Background image with overlay */}
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-center rounded-2xl"
         style={{
           backgroundImage: "url('/images/childrenwelfare.webp')", // replace with your background
         }}
       />
-      <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
+      <div className="absolute inset-0 bg-black/20 backdrop-blur-sm" />
 
-      <div className="relative max-w-6xl mx-auto px-6 text-center">
+      <div className="relative max-w-5xl mx-auto px-6 text-center">
         {/* Title */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -88,7 +89,7 @@ export default function DidYouKnowHybrid() {
                   className="bg-white/10 backdrop-blur-lg border border-white/20 
                              rounded-xl p-5 shadow-lg"
                 >
-                  <div className="flex justify-center mb-3">{slide.icon}</div>
+                  <div className="flex inline-block justify-center mb-3 bg-white/80 rounded-full p-2">{slide.icon}</div>
                   <h3 className="text-xl font-bold font-serif">{slide.stat}</h3>
                   <p className="mt-2 text-sm text-gray-300">{slide.text}</p>
                 </motion.div>
@@ -109,14 +110,14 @@ export default function DidYouKnowHybrid() {
               className="bg-white/10 backdrop-blur-lg border border-white/20 
                          rounded-xl p-5 shadow-lg hover:scale-105 transition"
             >
-              <div className="flex justify-center mb-3">{slide.icon}</div>
+              <div className="flex inline-block justify-center mb-3 bg-white/80 rounded-full p-2">{slide.icon}</div>
               <h3 className="text font-bold font-serif">{slide.stat}</h3>
               <p className="mt-2 text-sm text-gray-200">{slide.text}</p>
             </motion.div>
           ))}
         </div>
 
-        {/* CTA 
+        {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -132,8 +133,9 @@ export default function DidYouKnowHybrid() {
             Donate & Save a Life
           </Link>
         </motion.div>
-        */}
+        
 
+      </div>
       </div>
     </section>
   );
