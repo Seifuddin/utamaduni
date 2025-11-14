@@ -55,7 +55,7 @@ export default function Footer() {
             {[
               { href: "/", label: "Home" },
               { href: "/about", label: "About Us" },
-              { href: "/programs", label: "Programs" },
+              { href: "/programz", label: "Programs" },
               { href: "/gallery", label: "Gallery" },
               { href: "/contact", label: "Contact" },
             ].map((link, i) => (
@@ -79,16 +79,40 @@ export default function Footer() {
           <p className="text-sm">📍 Nairobi, Kenya </p>
           <p className="text-sm">📞 +254 704 337 351 </p>
           <p className="text-sm">✉️ utamadunicharity@gmail.com </p>
+          {/* Social Media Links */}
           <div className="flex mt-4 space-x-3">
-            {[FaFacebookF, FaInstagram, FaYoutube, FaTiktok].map((Icon, i) => (
-              <Link
-                key={i}
-                href="#"
-                className="p-2 bg-blue-600 hover:bg-maroon-600 text-white rounded-full transition shadow-md"
-              >
-                <Icon size={18} />
-              </Link>
-            ))}
+            <Link
+              href="https://www.facebook.com/profile.php?id=61570938634560"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition shadow-md"
+            >
+              <FaFacebookF size={18} />
+            </Link>
+            <Link
+              href="https://www.instagram.com/utamaduni_organization"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 bg-pink-500 hover:bg-pink-600 text-white rounded-full transition shadow-md"
+            >
+              <FaInstagram size={18} />
+            </Link>
+            <Link
+              href="https://www.youtube.com/@utamadunifoundation"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 bg-red-600 hover:bg-red-700 text-white rounded-full transition shadow-md"
+            >
+              <FaYoutube size={18} />
+            </Link>
+            <Link
+              href="https://www.tiktok.com/@utamaduni01_org?is_from_webapp=1&sender_device=pc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 bg-black hover:bg-gray-800 text-white rounded-full transition shadow-md"
+            >
+              <FaTiktok size={18} />
+            </Link>
           </div>
         </div>
 

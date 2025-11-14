@@ -109,7 +109,7 @@ export default function ContactUs() {
                   {
                     icon: <FaInstagram size={22} />,
                     color: "hover:bg-pink-500",
-                    link: "https://www.instagram.com/p/DPxtpTujjnj/?utm_source=ig_web_copy_link",
+                    link: "https://www.instagram.com/utamaduni_organization",
                   },
                   {
                     icon: <FaTiktok size={22} />,
@@ -119,7 +119,7 @@ export default function ContactUs() {
                   {
                     icon: <FaFacebookF size={22} />,
                     color: "hover:bg-blue-600",
-                    link: "#",
+                    link: "https://www.facebook.com/profile.php?id=61570938634560",
                   },
                   {
                     icon: <FaYoutube size={22} />,
