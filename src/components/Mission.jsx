@@ -64,7 +64,7 @@ export default function Mission() {
                 <div className="p-3 rounded-full border border-blue-800 bg-blue-900">
                   {item.icon}
                 </div>
-                <h4 className="ml-2 font-bold text-blue-900 font-serif md:text-lg my-2">
+                <h4 className="ml-2 font-bold text-blue-900 fontserif md:text-lg my-2">
                   {item.title}
                 </h4>
               </div>

@@ -34,8 +34,8 @@ export default function DidYouKnowHybrid() {
   ];
 
   return (
-    <section className="relative text-white py-14 px-6 md:px16 rounded-2xl bg-amber-50">
-      <div className="relative mx-auto text-center max-w-6xl rounded-2xl py-16">
+    <section className="relative  max-w-6xl mx-auto text-white py-14 px-6 md:px16 rounded bg-amber-50">
+      <div className="relative text-center rounded-2xl py-16">
       {/* Background image with overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center rounded-2xl"

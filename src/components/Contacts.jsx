@@ -140,7 +140,7 @@ export default function ContactUs() {
                 ))}
               </div>
 
-              <h4 className="text-xl font-semibold text-blue-900 mt-6 font-serif">
+              <h4 className="text-lg font-semibold text-gray-900 mt-6 fontserif">
                 @Utamaduni Organization
               </h4>
 

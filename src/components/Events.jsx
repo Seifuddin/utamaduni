@@ -90,14 +90,14 @@ export default function EventGallerySlider() {
 
                 {/* Event Content */}
                 <div className="p-4 flex flex-col flex-1">
-                  <h3 className="font-bold text-blue-900 font-serif md:text-lg my-2">
+                  <h3 className="font-bold text-blue-900 fontserif md:text-lg my-2">
                     {event.title}
                   </h3>
                   {/* <p className="text-sm text-gray-700 italic mb-2">{event.date}</p> */}
                   <p className="text-gray-600 text-base mb-4">{event.description}</p>
                   <a
                     href="/gallery"
-                    className="mt-auto inline-block bg-white border border-gray-300 text-pink-700 text-center text-sm px-4 py-2 rounded font-semibold hover:bg-blue-800 hover:text-white transition"
+                    className="mt-auto inline-block bg-white border border-gray-300 text-blue-800 text-center text-sm px-4 py-2 rounded font-semibold hover:bg-blue-800 hover:text-white transition"
                   >
                     View Event
                   </a>

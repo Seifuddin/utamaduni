@@ -84,7 +84,7 @@ export default function PastEvents() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-md overflow-hidden flex flex-col transition-transform hover:-translate-y-1"
+              className="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md overflow-hidden flex flex-col transition-transform hover:-translate-y-1"
             >
               {/* Smaller image height */}
               <div className="h-40 overflow-hidden">
@@ -97,7 +97,7 @@ export default function PastEvents() {
 
               {/* Content */}
               <div className="p-4">
-                <h3 className="font-bold text-blue-900 font-serif md:text-lg my-2">
+                <h3 className="font-bold text-blue-900 fontserif md:text-lg my-2">
                   {event.title}
                 </h3>
                 <p className="text-sm text-gray-700 italic mb-2">{event.date}</p>

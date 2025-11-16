@@ -50,7 +50,7 @@ export default function VideoHighlights() {
                   className="w-full h-full"
                 ></iframe>
               </div>
-              <p className="fontbold text-left text-blue-900 font-serif fontmedium md:text-lg my-2 px-2">
+              <p className="font-semibold text-left text-blue-900 fontserif fontmedium md:text-lg my-2 px-2">
                 {title}
               </p>
             </motion.div>

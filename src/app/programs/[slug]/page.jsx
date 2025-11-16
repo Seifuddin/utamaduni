@@ -26,6 +26,12 @@ const programs = {
       "Helping households in need with essential items, training, and long-term support to restore dignity and stability.",
     image: "/images/how_it_went_down/_DSC7803.jpg",
   },
+  partners: {
+    title: "Partnerships",
+    description:
+      "Collaborating with like-minded individuals and organizations to extend our impact.",
+    image: "/images/WhatsApp Image 2025-10-04 at 23.04.29.jpeg",
+  },
 };
 
 // ------------------------------
@@ -71,19 +77,19 @@ export default async function ProgramPage({ params }) {
       </div>
 
       {/* Title */}
-      <h1 className="mt-10 text-4xl text-blue-800 md:text-5xl font-bold font-serif">
+      <h1 className="mt-10 text-2xl text-blue-800 md:text-4xl font-bold font-serif">
         {data.title}
       </h1>
 
       {/* Description */}
-      <p className="mt-6 text-lg leading-relaxed text-gray-700">
+      <p className="mt-6 md:text-lg leading-relaxed text-gray-700">
         {data.description}
       </p>
 
       {/* Button */}
 <Link
   href={`/donate?program=${slug}`}
-  className="mt-10 inline-block px-8 py-3 bg-blue-800 hover:bg-pink-800 text-white rounded-md font-semibold mdtext-lg transition-all"
+  className="mt-10 inline-block px-8 py-3 bg-blue-800 hover:bg-pink-800 text-white rounded-md font-semibold md:text-lg transition-all"
 >
   Support This Program
 </Link>

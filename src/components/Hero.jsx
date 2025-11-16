@@ -87,7 +87,7 @@ export default function Hero() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90" />
         </motion.div>
       </AnimatePresence>
 
@@ -98,7 +98,7 @@ export default function Hero() {
           initial={{ y: 40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-6xl font-serif font-bold drop-shadow-xl"
+          className="text-4xl md:text-6xl font-black font- font-bold drop-shadow-xl"
         >
           {slides[current].title}
         </motion.h1>
@@ -126,7 +126,7 @@ export default function Hero() {
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="mt-8 px-8 py-3 font-serif text-lg font-semibold rounded-full 
+            className="mt-8 px-10 py-2.5 fontserif md:text-lg font-semibold rounded-full 
                        bg-gradient-to-r from-pink-600 to-red-600 
                        hover:from-red-700 hover:to-pink-700 
                        shadow-lg hover:shadow-2xl transition-all duration-300"

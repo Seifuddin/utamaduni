@@ -106,13 +106,14 @@ export default function ImpactStats() {
                 >
                   <div className="flex items-center gap-2">
                     <div className="p-2 bg-gradient-to-br from-blue-900/60 via-[#0a2540]/90 to-blue-800/70 rounded-full">{stat.icon}</div>
-                    </div>
-                  <div className="flex items-center gap-2">
-                    <p className="font-serif text-blue-700 text-base font-bold mt1">
+                    <p className="font-serif text-blue-700 text-base text-lg md:text-xl font-bold ml-1">
                     {count}
                     {stat.suffix}
                   </p>
-                   <h3 className="font-serif font-semibold text-base text-gray-800">
+                    </div>
+                  <div className="fle items-center gap-2">
+                    
+                   <h3 className="fontserif md:font-semibold text-base text-gray-800">
                       {stat.label}
                     </h3>
                   </div>

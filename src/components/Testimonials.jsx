@@ -121,7 +121,7 @@ export default function StoriesAndTestimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="bg-blue-900 text-white rounded-2xl p-10 md:p-14 shadow-2xl relative overflow-hidden"
+          className="bg-blue-900 text-white rounded-2xl p-7 md:p-14 shadow-2xl relative overflow-hidden"
         >
           <HeartHandshake className="absolute opacity-10 w-40 h-40 right-10 bottom-10 text-blue-200" />
           <div className="text-center mb-12">
@@ -153,7 +153,7 @@ export default function StoriesAndTestimonials() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
-                  className="bg-white/5 rounded-2xl border border-blue-700 p-6 backdrop-blur-sm shadow-md hover:shadow-lg transition-all h-full"
+                  className="bg-white/5 rounded-2xl border border-blue-700 p-4 backdrop-blur-sm shadow-md hover:shadow-lg transition-all h-full"
                 >
                   <div className="flex items-center gap-4 mb-4">
                     <Image
@@ -161,7 +161,7 @@ export default function StoriesAndTestimonials() {
                       alt={t.name}
                       width={50}
                       height={50}
-                      className="rounded-full border-2 border-blue-300"
+                      className="rounded-full border-2 border-blue-500"
                     />
                     <div>
                       <h4 className="font-bold text-gray-100 font-serif md:text-lg my-2">{t.name}</h4>
