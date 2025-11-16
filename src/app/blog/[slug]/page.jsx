@@ -34,7 +34,7 @@ export default function SinglePost() {
   }
 
   return (
-    <section className="py-16 bg-white text-gray-800">
+    <section className="py-16 bg-amber-50 text-gray-800">
       <div className="max-w-4xl mx-auto px-6 py-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -65,7 +65,7 @@ export default function SinglePost() {
           )}
 
           <p className="text-sm text-blue-800 mb-2">{post.date}</p>
-          <h1 className="text-2xl md:text-4xl font-extrabold text-blue-800 mb-8">
+          <h1 className="text-2xl md:text-4xl font-bold text-gray-800 mb-8">
             {post.title}
           </h1>
 

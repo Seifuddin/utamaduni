@@ -62,7 +62,7 @@ export default function ContactUs() {
 
             <div className="space-y-6">
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-blue-900 rounded-full shadow-sm">
+                <div className="p-3 bg-gradient-to-br from-blue-800 via-blue-700 to-blue-900 rounded-full shadow-sm">
                   <Phone className="text-white" size={24} />
                 </div>
                 <div>
@@ -75,7 +75,7 @@ export default function ContactUs() {
               
 
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-blue-900 rounded-full shadow-sm">
+                <div className="p-3 bg-gradient-to-br from-blue-800 via-blue-700 to-blue-900 rounded-full shadow-sm">
                   <Mail className="text-white" size={24} />
                 </div>
                 <div>
@@ -87,7 +87,7 @@ export default function ContactUs() {
               </div>
 
                <div className="flex items-center gap-4">
-                <div className="p-3 bg-blue-900 rounded-full shadow-sm">
+                <div className="p-3 bg-gradient-to-br from-blue-800 via-blue-700 to-blue-900 rounded-full shadow-sm">
                   <MapPin className="text-white" size={24} />
                 </div>
                 <div>
@@ -133,7 +133,7 @@ export default function ContactUs() {
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.1 }}
-                    className={`p-3 bg-blue-900 text-white rounded-full shadow-md transition-all duration-300 ${social.color} hover:text-white`}
+                    className={`p-3 bg-gradient-to-br from-blue-800 via-blue-700 to-blue-900 text-white rounded-full shadow-md transition-all duration-300 ${social.color} hover:text-white`}
                   >
                     {social.icon}
                   </motion.a>
@@ -202,7 +202,7 @@ export default function ContactUs() {
 
             <button
               type="submit"
-              className="flex items-center justify-center gap-2 bg-blue-900 hover:bg-blue-800 text-white font-semibold py-3 px-6 rounded-md w-full transition-all duration-300 shadow-md"
+              className="flex items-center justify-center gap-2 bg-gradient-to-br from-blue-800 via-blue-700 to-blue-900 hover:bg-blue-800 text-white font-semibold py-3 px-6 rounded-md w-full transition-all duration-300 shadow-md"
             >
               <Send size={20} /> Send Message
             </button>

@@ -67,7 +67,7 @@ export default function VideoHighlights() {
             href="https://www.youtube.com/@utamadunifoundation"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-8 py-2 bg-blue-900 hover:bg-blue-800 text-white font-semibold rounded-md transition-all duration-300 shadow-md"
+            className="inline-block px-8 py-2 bg-gradient-to-br from-blue-800 via-blue-700 to-blue-900 hover:bg-blue-800 text-white font-semibold rounded-md transition-all duration-300 shadow-md"
           >
             Watch More on YouTube
           </a>

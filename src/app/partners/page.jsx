@@ -8,8 +8,8 @@ export const metadata = {
 
 export default function PartnersPage() {
   return (
-    <section className="min-h-screen py-20 px-6 max-w-5xl mx-auto">
-      <h1 className="text-4xl md:text-5xl font-bold font-serif">
+    <section className="min-h-screen bg-amber-50 py-20 px-6 max-w-5xl mx-auto">
+      <h1 className="text-2xl md:text-4xl font-bold font-serif text-blue-900">
         Partnerships
       </h1>
 
@@ -29,7 +29,7 @@ export default function PartnersPage() {
         />
       </div>
 
-      <button className="mt-10 px-8 py-3 bg-pink-600 hover:bg-pink-700 text-white rounded-full font-semibold text-lg">
+      <button className="mt-10 px-8 py-3 bg-gradient-to-br from-blue-800 via-blue-700 to-blue-900 hover:bg-pink-700 text-white rounded-full font-semibold text-lg">
         Become a Partner
       </button>
     </section>

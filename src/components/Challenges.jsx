@@ -37,11 +37,11 @@ export default function Challenges() {
   ];
 
   return (
-    <section className="relative bg-amber-50 gradient-to-b from-blue-50 via-white to-amber-50 text-gray-800 py-10 overflow-hidden">
-      {/* Decorative background */}
+    <section className="relative bg-amber-50 gradient-to-b from-blue-50 via-white to-amber-50 text-gray-800 px6 py-10 overflow-hidden">
+      {/* Decorative background 
       <div className="absolute inset-0 bg-[url('/images/pattern-light.png')] opacity-5 bg-cover bg-center"></div>
-
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+*/}
+      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -80,7 +80,7 @@ export default function Challenges() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="flex items-start gap-4 bg-white/80 border border-gray-200 rounded-md p-2 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="p-2 rounded-full border border-blue-800 bg-blue-900">{item.icon}</div>
+              <div className="p-2 rounded-full border border-blue-800 bg-gradient-to-br from-blue-800 via-blue-700 to-blue-900">{item.icon}</div>
               <div>
                 <h3 className="font-bold text-blue-900 fontserif md:text-lg my-2">
                   {item.title}
@@ -92,14 +92,13 @@ export default function Challenges() {
             </motion.div>
           ))}
         </div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.5 }}
           viewport={{ once: true }}
-          className="mt-14 bg-gradient-to-r from-blue-900 to-blue-700 text-white rounded-2xl w-full p-8 shadow-2xl max-w3xl mx-auto"
+          className="relativ text-center mt-14 bg-gradient-to-r from-blue-900 to-blue-700 text-white rounded-xl wfull p-4 py-10 shadow2xl max-w-6xl mx-auto"
         >
           <h3 className="text-xl md:text-2xl font-bold mb-2 font-serif">
             Together, We Can Overcome
@@ -113,6 +112,7 @@ export default function Challenges() {
           </button>
         </motion.div>
       </div>
+      
     </section>
   );
 }

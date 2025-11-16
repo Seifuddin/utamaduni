@@ -24,12 +24,6 @@ export const posts = [
       <p>Our volunteers and teachers organize daily learning sessions in community centers, 
       where children and adults alike can read, write, and learn new skills such as coding, tailoring, and creative arts.</p>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
-        <img src="/images/how_it_went_down/_DSC7993.jpg" class="rounded-xl shadow-md" alt="Utamaduni education program" />
-        <img src="/images/how_it_went_down/_DSC7992.jpg" class="rounded-xl shadow-md" alt="Children learning" />
-        <img src="/images/how_it_went_down/_DSC8007.jpg" class="rounded-xl shadow-md" alt="Volunteer teaching" />
-      </div>
-
       <p>Through these initiatives, we’ve seen children regain confidence, parents return to learning, 
       and entire families embrace a brighter future. Knowledge has truly become our strongest tool for empowerment.</p>
     `,
@@ -54,12 +48,6 @@ export const posts = [
 
       <p>Through community partnerships, we drilled boreholes, installed filtration systems, 
       and provided education on water conservation and hygiene.</p>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
-        <img src="/images/utamaduni at mathare/_DSC8626.jpg" class="rounded-xl shadow-md" alt="Clean water project" />
-        <img src="/images/utamaduni at mathare/_DSC8674.jpg" class="rounded-xl shadow-md" alt="Volunteers installing water system" />
-        <img src="/images/utamaduni at mathare/_DSC8631.jpg" class="rounded-xl shadow-md" alt="Community enjoying fresh water" />
-      </div>
 
       <p>Today, hundreds of families wake up to safe, clean water. 
       The joy in children’s faces as they fill their bottles is a powerful reminder that when we unite for good, 
@@ -87,12 +75,6 @@ export const posts = [
       <p>Every month, our volunteers distribute food packages and host community cooking days, 
       where families come together to share meals, stories, and smiles. 
       Beyond feeding bodies, we aim to nourish minds and hearts.</p>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
-        <img src="/images/how_it_went_down/_DSC7928.jpg" class="rounded-xl shadow-md" alt="Food distribution" />
-        <img src="/images/how_it_went_down/_DSC7666.jpg" class="rounded-xl shadow-md" alt="Volunteers serving meals" />
-        <img src="/images/how_it_went_down/_DSC7924.jpg" class="rounded-xl shadow-md" alt="Happy children with meals" />
-      </div>
 
       <p>Our work has fed thousands and inspired many to join hands. 
       Because at Utamaduni, we believe that together, we can create a future where every plate is full — 

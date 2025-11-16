@@ -46,7 +46,7 @@ export default function Abouts() {
           </p>
 
           <div className="relative mt-6 mb-5 flex justifycenter gap-4">
-            <a href="/donate" className="bg-blue-900 text-white px-7 py-1 rounded font-semibold shadow">Donate</a>
+            <a href="/donate" className="bg-gradient-to-br from-blue-800 via-blue-700 to-blue-900 text-white px-7 py-1 rounded font-semibold shadow">Donate</a>
             <a href="/volunteer" className="border border-blue-900 text-blue-900 px-7 py-1 font-semibold rounded">Volunteer</a>
           </div>
 

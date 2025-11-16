@@ -53,7 +53,7 @@ export default function OurStory() {
           transition={{ duration: 0.6 }}
           className="space-y-6"
         >
-          <h2 className="text-xl md:text-3xl fontserif font-bold text-blue-800 mb-4">
+          <h2 className="font-bold text-blue-900 fontserif md:text-lg my-3">
                     A brief history about Utamaduni
                   </h2>
           <p className="text-gray-700 leading-relaxed text-base">
@@ -69,7 +69,7 @@ export default function OurStory() {
             and celebrate the spirit of togetherness.
           </p>
           <div className="relative mt-6 flex justifycenter gap-4">
-            <a href="/donate" className="bg-blue-900 text-white px-7 py-1 rounded font-semibold shadow">Donate</a>
+            <a href="/donate" className="bg-gradient-to-br from-blue-800 via-blue-700 to-blue-900 text-white px-7 py-1 rounded font-semibold shadow">Donate</a>
             <a href="/volunteer" className="border border-blue-900 text-blue-900 px-7 py-1 font-semibold rounded">Volunteer</a>
           </div>
 

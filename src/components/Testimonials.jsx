@@ -56,7 +56,7 @@ export default function StoriesAndTestimonials() {
       <div className="absolute inset-0 bg-[url('/images/pattern-light.png')] opacity-5 bg-cover bg-center"></div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
-        {/* Header */}
+        {/* Header 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -81,7 +81,7 @@ export default function StoriesAndTestimonials() {
             reminds us why we serve — transforming lives through compassion, unity, and culture.
           </p>
         </motion.div>
-
+*/}
         {/* Stories Grid 
         <div className="grid md:grid-cols-3 gap-8 mb-20">
           {stories.map((story, index) => (
@@ -127,7 +127,7 @@ export default function StoriesAndTestimonials() {
           <div className="text-center mb-12">
             <Quote className="w-10 h-10 mx-auto mb-4 text-white" />
             <h3 className="text-2xl md:text-3xl font-semibold mb-3 font-serif">
-              Voices of Gratitude
+              Testimonials
             </h3>
             <p className="text-blue-100 max-w-2xl mx-auto">
               Hear from those whose lives have been touched by our work and partnerships.

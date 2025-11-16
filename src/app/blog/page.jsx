@@ -107,7 +107,7 @@ export default function BlogPage() {
                 </div>
               )}
               <p className="text-sm text-blue-800 mb-2">{post.date}</p>
-              <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+              <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-4">
                 {post.title}
               </h3>
               <p className="text-gray-600 mb-6">{post.excerpt}</p>

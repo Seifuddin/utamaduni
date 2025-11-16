@@ -89,7 +89,7 @@ export default async function ProgramPage({ params }) {
       {/* Button */}
 <Link
   href={`/donate?program=${slug}`}
-  className="mt-10 inline-block px-8 py-3 bg-blue-800 hover:bg-pink-800 text-white rounded-md font-semibold md:text-lg transition-all"
+  className="mt-10 inline-block px-8 py-3 bg-gradient-to-br from-blue-800 via-blue-700 to-blue-900 hover:bg-pink-800 text-white rounded-md font-semibold md:text-lg transition-all"
 >
   Support This Program
 </Link>

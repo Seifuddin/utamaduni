@@ -125,7 +125,7 @@ export default function Programs() {
                 <p className="text-gray-600 text-base flex-1">{program.description}</p>
                 <button
                   onClick={() => setSelectedProgram(program)}
-                  className="mt-4 inline-block bg-blue-900 text-white text-center text-sm px-4 py-2 rounded font-semibold hover:bg-pink-800 transition"
+                  className="mt-4 inline-block bg-gradient-to-br from-blue-800 via-blue-700 to-blue-900 text-white text-center text-sm px-4 py-2 rounded font-semibold hover:bg-pink-800 transition"
                 >
                   Learn More
                 </button>

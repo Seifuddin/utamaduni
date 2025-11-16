@@ -127,7 +127,7 @@ export default function Leadership() {
                     href={leader.socials.facebook}
                     target="_blank"
                     whileHover={{ scale: 1.2 }}
-                    className="p-1.5 rounded-full border border-blue-800 bg-blue-900 shadow-md hover:bg-blue-200 transition"
+                    className="p-1.5 rounded-full border border-blue-800 bg-gradient-to-br from-blue-800 via-blue-700 to-blue-900 shadow-md hover:bg-blue-200 transition"
                   >
                     <Facebook className="w-5 h-5 text-white" />
                   </motion.a>
@@ -137,7 +137,7 @@ export default function Leadership() {
                     href={leader.socials.linkedin}
                     target="_blank"
                     whileHover={{ scale: 1.2 }}
-                    className="p-1.5 rounded-full border border-blue-800 bg-blue-900 shadow-md hover:bg-blue-200 transition"
+                    className="p-1.5 rounded-full border border-blue-800 bg-gradient-to-br from-blue-800 via-blue-700 to-blue-900 shadow-md hover:bg-blue-200 transition"
                   >
                     <Linkedin className="w-5 h-5 text-white" />
                   </motion.a>
@@ -147,7 +147,7 @@ export default function Leadership() {
                     href={leader.socials.twitter}
                     target="_blank"
                     whileHover={{ scale: 1.2 }}
-                    className="p-1.5 rounded-full border border-blue-800 bg-blue-900 shadow-md hover:bg-blue-200 transition"
+                    className="p-1.5 rounded-full border border-blue-800 bg-gradient-to-br from-blue-800 via-blue-700 to-blue-900 shadow-md hover:bg-blue-200 transition"
                   >
                     <Twitter className="w-5 h-5 text-white" />
                   </motion.a>

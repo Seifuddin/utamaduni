@@ -98,7 +98,7 @@ export default function Hero() {
           initial={{ y: 40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-6xl font-black font- font-bold drop-shadow-xl"
+          className="text-5xl md:text-6xl font-black font-extrabold drop-shadow-xl"
         >
           {slides[current].title}
         </motion.h1>

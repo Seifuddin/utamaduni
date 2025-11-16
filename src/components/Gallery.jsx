@@ -218,7 +218,7 @@ export default function OurGallery() {
           <div className="mt-10">
             <motion.button
               onClick={loadMore}
-              className="px-6 py-3 bg-blue-800 text-white rounded-full shadow-lg hover:bg-blue-900 transition-all"
+              className="px-6 py-3 bg-gradient-to-br from-blue-800 via-blue-700 to-blue-900 text-white rounded-full shadow-lg hover:bg-blue-900 transition-all"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
