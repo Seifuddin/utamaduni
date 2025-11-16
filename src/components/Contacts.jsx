@@ -62,8 +62,8 @@ export default function ContactUs() {
 
             <div className="space-y-6">
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-gradient-to-br from-blue-800 via-blue-700 to-blue-900 rounded-full shadow-sm">
-                  <Phone className="text-white" size={24} />
+                <div className="p-3 bg-blue-200 border border-gray-300 rounded-full shadow-sm">
+                  <Phone className="text-blue-900" size={24} />
                 </div>
                 <div>
                 <h4 className="font-bold text-gray-800">Phone</h4>
@@ -75,8 +75,8 @@ export default function ContactUs() {
               
 
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-gradient-to-br from-blue-800 via-blue-700 to-blue-900 rounded-full shadow-sm">
-                  <Mail className="text-white" size={24} />
+                <div className="p-3 bg-blue-200 border border-gray-300 rounded-full shadow-sm">
+                  <Mail className="text-blue-900" size={24} />
                 </div>
                 <div>
                 <h4 className="font-bold text-gray-800">Email</h4>
@@ -87,8 +87,8 @@ export default function ContactUs() {
               </div>
 
                <div className="flex items-center gap-4">
-                <div className="p-3 bg-gradient-to-br from-blue-800 via-blue-700 to-blue-900 rounded-full shadow-sm">
-                  <MapPin className="text-white" size={24} />
+                <div className="p-3 bg-blue-200 border border-gray-300 rounded-full shadow-sm">
+                  <MapPin className="text-blue-900" size={24} />
                 </div>
                 <div>
                     <h4 className="font-bold text-gray-800">Location</h4>
@@ -133,7 +133,7 @@ export default function ContactUs() {
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.1 }}
-                    className={`p-3 bg-gradient-to-br from-blue-800 via-blue-700 to-blue-900 text-white rounded-full shadow-md transition-all duration-300 ${social.color} hover:text-white`}
+                    className={`p-3 bg-blue-200 border border-gray-300 text-blue-900 rounded-full shadow-md transition-all duration-300 ${social.color} hover:text-white`}
                   >
                     {social.icon}
                   </motion.a>
