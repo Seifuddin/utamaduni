@@ -165,7 +165,7 @@ export default function ContactUs() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full bg-amber-50 text-gray-900 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 border border-blue-100"
+                className="w-full bg-amber50 text-gray-900 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 border border-blue-100"
                 placeholder="Enter your full name"
               />
             </div>
@@ -180,7 +180,7 @@ export default function ContactUs() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full bg-amber-50 text-gray-900 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 border border-blue-100"
+                className="w-full bg-amber50 text-gray-900 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 border border-blue-100"
                 placeholder="example@email.com"
               />
             </div>
@@ -195,7 +195,7 @@ export default function ContactUs() {
                 value={formData.message}
                 onChange={handleChange}
                 required
-                className="w-full bg-amber-50 text-gray-900 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 border border-blue-100"
+                className="w-full bg-amber50 text-gray-900 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 border border-blue-100"
                 placeholder="Write your message..."
               ></textarea>
             </div>

@@ -164,7 +164,7 @@ export default function StoriesAndTestimonials() {
                       className="rounded-full border-2 border-blue-500"
                     />
                     <div>
-                      <h4 className="font-bold text-gray-100 font-serif md:text-lg my-2">{t.name}</h4>
+                      <h4 className="font-bold text-gray-100 fontserif md:text-lg my-2">{t.name}</h4>
                       <p className="text-blue-200 text-sm">{t.role}</p>
                     </div>
                   </div>
