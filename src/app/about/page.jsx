@@ -20,7 +20,6 @@ export default function AboutPage() {
     <main className="overflow-x-hidden pt16">
       <AboutHero />
       <Abouts />
-      <Mission />
       <CTA />
       <OurStory />
       <Challenges />

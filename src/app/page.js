@@ -24,8 +24,8 @@ export default function Home() {
       <Hero />
       <WhatsAppButton />
       <SponsorProgram />
-      <EventGallerySlider />
       <ImpactStats />
+      <EventGallerySlider />
       <DidYouKnow />
       <Programs />
       <CTA />

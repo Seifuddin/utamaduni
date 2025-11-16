@@ -53,6 +53,9 @@ export default function OurStory() {
           transition={{ duration: 0.6 }}
           className="space-y-6"
         >
+          <h2 className="text-xl md:text-3xl fontserif font-bold text-blue-800 mb-4">
+                    A brief history about Utamaduni
+                  </h2>
           <p className="text-gray-700 leading-relaxed text-base">
             Born from a shared vision of hope and unity, <strong>Utamaduni Charity Organization </strong> 
             began as a small circle of compassionate individuals determined to uplift 

@@ -25,7 +25,7 @@ export default function SinglePost() {
         <h2 className="text-3xl font-semibold mb-4">Post not found</h2>
         <Link
           href="/blog"
-          className="text-amber-700 font-semibold hover:underline"
+          className="text-blue-800 font-semibold hover:underline"
         >
           ← Back to Blog
         </Link>
@@ -64,8 +64,8 @@ export default function SinglePost() {
             </Swiper>
           )}
 
-          <p className="text-sm text-amber-700 mb-2">{post.date}</p>
-          <h1 className="text-4xl font-extrabold text-amber-800 mb-8">
+          <p className="text-sm text-blue-800 mb-2">{post.date}</p>
+          <h1 className="text-2xl md:text-4xl font-extrabold text-blue-800 mb-8">
             {post.title}
           </h1>
 
@@ -76,7 +76,7 @@ export default function SinglePost() {
 
           <Link
             href="/blog"
-            className="text-amber-700 mt-12 inline-block font-semibold hover:underline"
+            className="text-blue-700 mt-12 inline-block font-semibold hover:underline"
           >
             ← Back to Blog
           </Link>

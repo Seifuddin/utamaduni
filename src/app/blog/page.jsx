@@ -33,7 +33,7 @@ export default function BlogPage() {
           </p>
           <Link
             href={`/blog/${featuredPost.slug}`}
-            className="mt-6 inline-block bg-amber-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-amber-700 transition"
+            className="mt-6 inline-block bg-pink-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-amber-700 transition"
           >
             Read Story
           </Link>
@@ -106,7 +106,7 @@ export default function BlogPage() {
                   </button>
                 </div>
               )}
-              <p className="text-sm text-amber-700 mb-2">{post.date}</p>
+              <p className="text-sm text-blue-800 mb-2">{post.date}</p>
               <h3 className="text-2xl font-semibold text-gray-800 mb-4">
                 {post.title}
               </h3>
@@ -116,7 +116,7 @@ export default function BlogPage() {
 
               <Link
                 href={`/blog/${post.slug}`}
-                className="text-amber-600 font-semibold hover:underline"
+                className="text-blue-800 font-semibold hover:underline"
               >
                 Read Full Story →
               </Link>

@@ -30,15 +30,15 @@ export default function CEOSection() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex flex-col md:flex-row items-center gap-10 bg-white shadow-xl rounded-lg overflow-hidden border border-gray-200 p-4 md:p-8"
+          className="flex flex-col md:flex-row items-center gap-10 bg-white shadow-xl rounded-lg overflow-hidden border border-gray-200 p-4 py-10 md:p-8"
         >
           {/* CEO Image */}
-          <div className="relative w-72 h-72 md:w-64 md:h-64 flex-shrink-0 rounded-2xl overflow-hidden shadow-lg group">
+          <div className="relative w-72 h-72 md:w-64 md:h-64 flex-shrink-0 rounded-lg overflow-hidden shadow-lg group">
             <Image
               src="/images/WhatsApp Image 2025-10-04 at 23.04.27.jpeg"
               alt="Founder & CEO - Utamaduni"
               fill
-              className="object-cover rounded-xl transition-transform duration-500 group-hover:scale-105"
+              className="object-cover rounded transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-blue-900 bg-opacity-70 flex items-center justify-center text-white text-center opacity-0 group-hover:opacity-100 transition duration-500">
               <p className="px-6 text-sm md:text-base italic leading-relaxed">

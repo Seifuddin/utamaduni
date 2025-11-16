@@ -1,142 +1,96 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { Heart, Users, UtensilsCrossed, GraduationCap } from "lucide-react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
+import { motion, useInView, useMotionValue, animate } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { Users, Utensils, HandHeart, Calendar } from "lucide-react"; 
 
-// Count-up hook
-function useCountUp(target, inView, duration = 2000) {
-  const [count, setCount] = useState(0);
+// Counter hook
+const AnimatedCounter = ({ from = 0, to }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const count = useMotionValue(from);
+  const [value, setValue] = useState(from);
 
   useEffect(() => {
-    if (!inView) return;
-    let start = 0;
-    const step = Math.ceil(target / (duration / 16));
-    const interval = setInterval(() => {
-      start += step;
-      if (start >= target) {
-        setCount(target);
-        clearInterval(interval);
-      } else {
-        setCount(start);
-      }
-    }, 16);
-    return () => clearInterval(interval);
-  }, [inView, target, duration]);
-
-  return count;
-}
-
-export default function ImpactStats() {
-  const stats = [
-    {
-      icon: <Users className="w-5 h-5 text-white" />,
-      value: 500,
-      suffix: "+",
-      label: "Children Helped",
-      progress: 85,
-    },
-    {
-      icon: <UtensilsCrossed className="w-5 h-5 text-white" />,
-      value: 2000,
-      suffix: "+",
-      label: "Meals Provided",
-      progress: 90,
-    },
-    {
-      icon: <GraduationCap className="w-5 h-5 text-white" />,
-      value: 20,
-      suffix: "+",
-      label: "Volunteers",
-      progress: 70,
-    },
-    {
-      icon: <Heart className="w-5 h-5 text-white" />,
-      value: 2,
-      suffix: "Years",
-      label: "Of Service",
-      progress: 100,
-    },
-  ];
-
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+    if (isInView) {
+      const controls = animate(count, to, { duration: 2, ease: "easeOut" });
+      const unsubscribe = count.on("change", (latest) => setValue(Math.floor(latest)));
+      return () => {
+        controls.stop();
+        unsubscribe();
+      };
+    }
+  }, [isInView, to, count]);
 
   return (
-    <section ref={ref} className="bg-amber-50 py-16">
-      <div className="relative max-w-6xl mx-auto px-6">
-        {/* */}
-        <h2 className="text-center text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-6">
-          Our Achievement in Numbers
-        </h2>
-        <motion.div
-                              initial={{ width: 0 }}
-                              whileInView={{ width: "5rem" }}
-                              transition={{ duration: 0.5 }}
-                              className="h-1 bg-pink-700 rounded-full mx-auto mb-6"
-                            ></motion.div>
-        
-        <Swiper
-          modules={[Pagination, Autoplay]}
-          spaceBetween={15}
-          slidesPerView={1}
-          pagination={{ clickable: true }}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
-          breakpoints={{
-            320: { slidesPerView: 2 },
-            640: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-            1280: { slidesPerView: 4 },
-          }}
-          className="pb-4"
+    <span ref={ref} className="text-lg md:text-2xl font-serif font-bold text-white">
+      {value.toLocaleString()}+
+    </span>
+  );
+};
+
+// Updated stats for charitable organization
+const stats = [
+  { icon: Users, label: "Children Helped", value: 500, color: "text-yellow-300" },
+  { icon: Utensils, label: "Meals Provided", value: 2000, color: "text-orange-300" },
+  { icon: HandHeart, label: "Volunteers", value: 20, color: "text-pink-300" },
+  { icon: Calendar, label: "Years of Service", value: 2, color: "text-blue-300" },
+];
+
+export default function ImpactStats() {
+  return (
+    <section className="relative py-20 bg-amber-50 px-6 overflow-hidden">
+      <div className="lg:px-6 max-w-6xl mx-auto text-center text-white">
+
+      {/* Decorative Waves 
+      <div className="absolute -top-16 left-0 w-full h-36 bg-gradient-to-r from-indigo-800 via-indigo-900 to-indigo-800 rounded-b-full opacity-30"></div>
+      <div className="absolute -bottom-16 right-0 w-56 h-56 bg-indigo-700 rounded-full mix-blend-multiply filter blur-2xl opacity-25"></div>
+*/}
+      <div className="rounded-md px-5 py-16 text-center bg-gradient-to-r from-blue-900 to-blue-700">
+        {/* Heading */}
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-2xl md:text-3xl font-serif font-extrabold text-white mb-6"
         >
+          Our Impact in Numbers
+        </motion.h2>
+
+        <p className="text-indigo-210 text-sm md:text-base max-w-2xl mx-auto mb-10">
+          At <span className="font-semibold text-white">Utamaduni organization</span>, we strive every day to uplift communities and change lives.
+        </p>
+
+        {/* Stats Grid */}
+        <div className="grid gap-4 xs:gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((stat, index) => {
-            const count = useCountUp(stat.value, inView);
+            const Icon = stat.icon;
             return (
-              <SwiperSlide key={index}>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={inView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition-all h-[140px] flex flex-col justify-between"
-                >
-                  <div className="flex items-center gap-2">
-                    <div className="p-2 bg-gradient-to-br from-blue-900/60 via-[#0a2540]/90 to-blue-800/70 rounded-full">{stat.icon}</div>
-                    <p className="font-serif text-blue-700 text-base text-lg md:text-xl font-bold ml-1">
-                    {count}
-                    {stat.suffix}
-                  </p>
-                    </div>
-                  <div className="fle items-center gap-2">
-                    
-                   <h3 className="fontserif md:font-semibold text-base text-gray-800">
-                      {stat.label}
-                    </h3>
-                  </div>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ scale: 1.05 }}
+                className="bg-white/10 backdrop-blur-md border border-white/20 p-4 xs:p-5 sm:p-6 rounded-2xl flex flex-col items-center"
+              >
+                {/* Icon */}
+                <div className="w-14 h-14 flex items-center justify-center rounded-full bg-white/20 mb-2 xs:mb-3">
+                  <Icon className={`${stat.color} w-6 h-6`} />
+                </div>
 
-                  
+                {/* Counter */}
+                <AnimatedCounter to={stat.value} />
 
-                  <div className="w-full bg-gray-200 rounded-full h-1">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      animate={inView ? { width: `${stat.progress}%` } : {}}
-                      transition={{ duration: 1, delay: 0.2 }}
-                      className="h-1 rounded-full bg-blue-900"
-                    />
-                  </div>
-
-                  <p className="text-[11px] text-gray-800">
-                    {stat.progress}% Goal Reached
-                  </p>
-                </motion.div>
-              </SwiperSlide>
+                {/* Label */}
+                <p className="text-white/90 mt-1 font-medium text-xs xs:text-sm md:text-base">{stat.label}</p>
+              </motion.div>
             );
           })}
-        </Swiper>
+        </div>
+      </div>
       </div>
     </section>
   );
