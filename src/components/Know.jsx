@@ -34,8 +34,7 @@ export default function DidYouKnowHybrid() {
   ];
 
   return (
-    <section className="relative  max-w-6xl mx-auto text-white py-14 px-6 md:px16 rounded bg-amber-50">
-      <div className="relative text-center rounded-2xl py-16">
+    <section className="relative  text-white py-14 px6 md:px16 rounded bg-amber50">
       {/* Background image with overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center rounded-2xl"
@@ -45,14 +44,14 @@ export default function DidYouKnowHybrid() {
       />
       <div className="absolute inset-0 bg-black/20 backdrop-blur-sm" />
 
-      <div className="relative max-w-5xl mx-auto px-6 text-center">
+      <div className="relative max-w-6xl mx-auto px-6 text-center">
         {/* Title */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-2xl md:text-3xl font-serif font-bold text-white mb-4"
+          className="text-2xl md:text-3xl fontserif font-bold text-white mb-4"
         >
           Did You Know?
         </motion.h2>
@@ -90,7 +89,7 @@ export default function DidYouKnowHybrid() {
                              rounded-xl p-5 shadow-lg"
                 >
                   <div className="flex inline-block justify-center mb-3 bg-white/80 rounded-full p-2">{slide.icon}</div>
-                  <h3 className="text-xl font-bold font-serif">{slide.stat}</h3>
+                  <h3 className="text-xl font-bold fontserif">{slide.stat}</h3>
                   <p className="mt-2 text-sm text-gray-300">{slide.text}</p>
                 </motion.div>
               </SwiperSlide>
@@ -111,7 +110,7 @@ export default function DidYouKnowHybrid() {
                          rounded-xl p-5 shadow-lg hover:scale-105 transition"
             >
               <div className="flex inline-block justify-center mb-3 bg-white/80 rounded-full p-2">{slide.icon}</div>
-              <h3 className="text font-bold font-serif">{slide.stat}</h3>
+              <h3 className="text font-bold fontserif">{slide.stat}</h3>
               <p className="mt-2 text-sm text-gray-200">{slide.text}</p>
             </motion.div>
           ))}
@@ -127,15 +126,14 @@ export default function DidYouKnowHybrid() {
         >
           <Link
             href="/donate"
-            className="bg-yellow-300 text-blue-900 font-semibold px-5 py-2 font-serif 
-                       rounded-full shadow-lg hover:bg-yellow-200 transition text-sm md:text-base"
+            className="bg-gray-100 text-pink-600 font-semibold px-8 py-2 md:py-3 fontserif 
+                       rounded-lg shadow-lg hover:bg-pink-600 transition text-sm md:text-base"
           >
             Donate & Save a Life
           </Link>
         </motion.div>
         
 
-      </div>
       </div>
     </section>
   );

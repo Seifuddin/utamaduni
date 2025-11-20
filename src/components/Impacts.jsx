@@ -23,7 +23,7 @@ const AnimatedCounter = ({ from = 0, to }) => {
   }, [isInView, to, count]);
 
   return (
-    <span ref={ref} className="text-lg md:text-2xl font-serif font-bold text-white">
+    <span ref={ref} className="text-lg md:text-2xl fontserif font-bold text-white">
       {value.toLocaleString()}+
     </span>
   );
@@ -31,39 +31,38 @@ const AnimatedCounter = ({ from = 0, to }) => {
 
 // Updated stats for charitable organization
 const stats = [
-  { icon: Users, label: "Children Helped", value: 500, color: "text-yellow-300" },
-  { icon: Utensils, label: "Meals Provided", value: 2000, color: "text-orange-300" },
-  { icon: HandHeart, label: "Volunteers", value: 20, color: "text-pink-300" },
-  { icon: Calendar, label: "Years of Service", value: 2, color: "text-blue-300" },
+  { icon: Users, label: "Children Helped", value: 500, color: "text-pink-500" },
+  { icon: Utensils, label: "Meals Provided", value: 2000, color: "text-pink-500" },
+  { icon: HandHeart, label: "Volunteers", value: 20, color: "text-pink-500" },
+  { icon: Calendar, label: "Years of Service", value: 2, color: "text-pink-500" },
 ];
 
 export default function ImpactStats() {
   return (
-    <section className="relative py-20 bg-amber-50 px-6 overflow-hidden">
-      <div className="lg:px-6 max-w-6xl mx-auto text-center text-white">
+    <section className="relative py-20 bg-amber-50 px6 overflow-hidden bg-gradient-to-r from-blue-900 to-blue-800">
 
-      {/* Decorative Waves 
+      {/* Decorative Waves */}
       <div className="absolute -top-16 left-0 w-full h-36 bg-gradient-to-r from-indigo-800 via-indigo-900 to-indigo-800 rounded-b-full opacity-30"></div>
       <div className="absolute -bottom-16 right-0 w-56 h-56 bg-indigo-700 rounded-full mix-blend-multiply filter blur-2xl opacity-25"></div>
-*/}
-      <div className="rounded-md px-5 py-16 text-center bg-gradient-to-r from-blue-900 to-blue-800">
+
+      <div className="roundedmd px5 py16 text-center ">
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-2xl md:text-3xl font-serif font-extrabold text-white mb-6"
+          className="text-2xl md:text-3xl fontserif  font-extrabold text-white mb-6"
         >
           Our Impact in Numbers
         </motion.h2>
 
-        <p className="text-indigo-210 text-sm md:text-base max-w-2xl mx-auto mb-10">
+        <p className="text-indigo-210 px-5 text-sm md:text-base max-w-2xl mx-auto mb-10">
           At <span className="font-semibold text-white">Utamaduni organization</span>, we strive every day to uplift communities and change lives.
         </p>
 
         {/* Stats Grid */}
-        <div className="grid gap-4 xs:gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 xs:gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-6xl px-6 mx-auto">
           {stats.map((stat, index) => {
             const Icon = stat.icon;
             return (
@@ -74,10 +73,10 @@ export default function ImpactStats() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ scale: 1.05 }}
-                className="bg-white/10 backdrop-blur-md border border-white/20 p-4 xs:p-5 sm:p-6 rounded-2xl flex flex-col items-center"
+                className="bg-white/5 backdrop-blur-md border border-white/20 p-4 xs:p-5 sm:p-6 rounded-lg flex flex-col items-center"
               >
                 {/* Icon */}
-                <div className="w-14 h-14 flex items-center justify-center rounded-full bg-white/20 mb-2 xs:mb-3">
+                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 mb-2 xs:mb-3">
                   <Icon className={`${stat.color} w-6 h-6`} />
                 </div>
 
@@ -90,7 +89,6 @@ export default function ImpactStats() {
             );
           })}
         </div>
-      </div>
       </div>
     </section>
   );

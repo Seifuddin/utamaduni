@@ -53,7 +53,7 @@ export default function Challenges() {
           <p className="text-sm uppercase tracking-wide font-semibold text-pink-700 mb-2">
             Our Challenges
           </p>
-          <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl md:text-4xl fontserif font-bold text-gray-900 mb-4">
             The Realities We Face
           </h2>
           <motion.div
@@ -78,11 +78,11 @@ export default function Challenges() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex items-start gap-4 bg-white/80 border border-gray-200 rounded-md p-2 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+              className="flex items-start gap-4 bgwhite/80 border-b border-gray-200 rounded-md p-2 shadowhover:shadow-md hover:-translate-y-1 transition-all duration-300"
             >
               <div className="p-2 rounded-full border border-blue-800 bg-gradient-to-br from-blue-800 via-blue-700 to-blue-900">{item.icon}</div>
               <div>
-                <h3 className="font-bold text-blue-900 fontserif md:text-lg my-2">
+                <h3 className="font-bold text-blue-800 fontserif md:text-lg my-2">
                   {item.title}
                 </h3>
                 <p className="text-gray-700 text-base leading-relaxed">
@@ -100,14 +100,14 @@ export default function Challenges() {
           viewport={{ once: true }}
           className="relativ text-center mt-14 bg-gradient-to-r from-blue-900 to-blue-700 text-white rounded-xl wfull p-4 py-10 shadow2xl max-w-6xl mx-auto"
         >
-          <h3 className="text-xl md:text-2xl font-bold mb-2 font-serif">
+          <h3 className="text-xl md:text-2xl font-bold mb-2 fontserif">
             Together, We Can Overcome
           </h3>
           <p className="text-base text-blue-50 mb-5">
             Each challenge is a call to action — an opportunity to uplift lives,
             restore hope, and strengthen the foundation of our shared humanity.
           </p>
-          <button className="bg-white text-blue-700 px-6 py-3 rounded-full font-medium shadow-md hover:bg-yellow-400 hover:text-gray-900 transition-all duration-300">
+          <button className="bg-white text-pink-600 font-semibold px-6 py-3 rounded-full font-medium shadow-md hover:bg-yellow-400 hover:text-gray-900 transition-all duration-300">
             Join Our Mission
           </button>
         </motion.div>

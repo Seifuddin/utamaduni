@@ -98,7 +98,7 @@ export default function Hero() {
           initial={{ y: 40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="text-5xl md:text-6xl font-black font-extrabold drop-shadow-xl"
+          className="text-4xl md:text-5xl font-black font-extrabold drop-shadow-xl"
         >
           {slides[current].title}
         </motion.h1>
@@ -140,7 +140,7 @@ export default function Hero() {
       <button
         onClick={prevSlide}
         className="absolute left-4 md:left-10 top-1/2 -translate-y-1/2 
-                   bg-white/20 hover:bg-white/40 text-white p-3 md:p-4 
+                   bg-white/20 hover:bg-white/40 text-pink-600 p-3 md:p-4 
                    rounded-full shadow-lg transition-all"
       >
         <ChevronLeft size={28} />
@@ -149,7 +149,7 @@ export default function Hero() {
       <button
         onClick={nextSlide}
         className="absolute right-4 md:right-10 top-1/2 -translate-y-1/2 
-                   bg-white/20 hover:bg-white/40 text-white p-3 md:p-4 
+                   bg-white/20 hover:bg-white/40 text-pink-600 p-3 md:p-4 
                    rounded-full shadow-lg transition-all"
       >
         <ChevronRight size={28} />

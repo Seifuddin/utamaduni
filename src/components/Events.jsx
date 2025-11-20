@@ -35,14 +35,14 @@ const events = [
 
 export default function EventGallerySlider() {
   return (
-    <section className="bg-amber-50 py-6 md:px-12 lg:px-16">
-      <div className="mx-auto max-w-6xl px-6 ">
+    <section className="bg-amber-50 py-20 md:px-12 lg:px-16">
+      <div className="mx-auto max-w-7xl px-6 ">
         {/* Header */}
         <div className="text-center mb-10">
           <p className="text-sm uppercase tracking-wide font-semibold text-pink-700 mb-2">
             Past Events & Highlights
           </p>
-          <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl md:text-4xl fontserif font-bold text-gray-900 mb-4">
             Explore Our Community Impact
           </h2>
           <motion.div
@@ -77,7 +77,7 @@ export default function EventGallerySlider() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md overflow-hidden flex flex-col transition-transform hover:-translate-y-1"
+                className="bgwhite borderborder-pink-100 rounded-lg shadow hover:shadow-md overflow-hidden flex flex-col transition-transform hover:-translate-y-1"
               >
                 {/* Event Image */}
                 <div className="h-40 overflow-hidden">
@@ -89,7 +89,7 @@ export default function EventGallerySlider() {
                 </div>
 
                 {/* Event Content */}
-                <div className="p-4 flex flex-col flex-1">
+                <div className="p-1 flex flex-col flex-1">
                   <h3 className="font-bold text-blue-900 fontserif md:text-lg my-2">
                     {event.title}
                   </h3>
@@ -97,9 +97,9 @@ export default function EventGallerySlider() {
                   <p className="text-gray-600 text-base mb-4">{event.description}</p>
                   <a
                     href="/gallery"
-                    className="mt-auto inline-block bg-blue-100 border border-gray-300 text-blue-800 text-center text-sm px-4 py-2 rounded font-semibold hover:bg-blue-800 hover:text-white transition"
+                    className="mt-2 inline-block bgpink-50 borderborder-pink-100 text-pink-600 textcenter text-sm px-1 py2 rounded font-semibold hover:text-white hover:bg-blue-800 transition"
                   >
-                    View Event
+                    View Event →
                   </a>
                 </div>
               </motion.div>
@@ -111,7 +111,7 @@ export default function EventGallerySlider() {
         <style jsx global>{`
           .swiper-button-next,
           .swiper-button-prev {
-            color: #1d4ed8;
+            color: #d81d84ff;
             background: rgba(255, 255, 255, 0.9);
             border-radius: 9999px;
             padding: 6px;
@@ -122,7 +122,7 @@ export default function EventGallerySlider() {
           }
           .swiper-button-next:hover,
           .swiper-button-prev:hover {
-            background: #1d4ed8;
+            background: #d81d84ff;
             color: white;
           }
           .swiper-pagination-bullet {

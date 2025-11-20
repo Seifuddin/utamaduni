@@ -48,7 +48,7 @@ export default function PastEvents() {
         <p className="text-sm uppercase tracking-wide font-semibold text-pink-700 mb-2">
             Achievements
           </p>
-        <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4">
+        <h2 className="text-2xl md:text-4xl fontserif font-bold text-gray-900 mb-4">
           Our Achievements as Utamaduni
         </h2>
         <motion.div
@@ -113,7 +113,7 @@ export default function PastEvents() {
         /* Navigation arrows */
         .swiper-button-next,
         .swiper-button-prev {
-          color: #1d4ed8;
+          color: #be185d;
           background: rgba(255, 255, 255, 0.9);
           border-radius: 9999px;
           padding: 6px;
@@ -124,7 +124,7 @@ export default function PastEvents() {
         }
         .swiper-button-next:hover,
         .swiper-button-prev:hover {
-          background: #1d4ed8;
+          background: #be185d;
           color: white;
         }
 
@@ -134,7 +134,7 @@ export default function PastEvents() {
           opacity: 1;
         }
         .swiper-pagination-bullet-active {
-          background: #1d4ed8;
+          background: #be185d;
         }
       `}</style>
       </div>

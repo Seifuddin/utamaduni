@@ -22,7 +22,7 @@ export default function VideoHighlights() {
   return (
     <section className="py-16 bg-amber-50 text-gray-900">
       <div className="max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4">
+        <h2 className="text-2xl md:text-4xl fontserif font-bold text-gray-900 mb-4">
                     Video Highlights
                   </h2>
                   <motion.div

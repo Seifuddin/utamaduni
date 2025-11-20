@@ -74,7 +74,7 @@ export default function Programs() {
             what we do
           </p>
         <motion.h2
-          className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4"
+          className="text-2xl md:text-3xl fontserif font-bold text-gray-900 mb-4"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -101,7 +101,7 @@ export default function Programs() {
           {programs.map((program, i) => (
             <motion.div
               key={i}
-              className="group bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-xl overflow-hidden flex flex-col transition-transform hover:-translate-y-1"
+              className="group bg-white border border-blue-100 rounded-lg shadow-md hover:shadow-xl overflow-hidden flex flex-col transition-transform hover:-translate-y-1"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
@@ -125,7 +125,7 @@ export default function Programs() {
                 <p className="text-gray-600 text-base flex-1">{program.description}</p>
                 <button
                   onClick={() => setSelectedProgram(program)}
-                  className="mt-4 inline-block bg-blue-200 border border-gray-300 text-blue-800 text-center text-sm px-4 py-2 rounded font-semibold hover:bg-pink-800 transition"
+                  className="mt-4 inline-block bg-blue-800 bordr border-pink-700 text-white text-center text-sm px-4 py-2 rounded font-semibold hover:text-white hover:bg-blue-800 transition"
                 >
                   Learn More
                 </button>

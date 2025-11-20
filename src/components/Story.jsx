@@ -18,7 +18,7 @@ export default function OurStory() {
                   <p className="text-sm uppercase tracking-wide font-semibold text-pink-700 mb-2">
                     Our Story
                   </p>
-                  <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4">
+                  <h2 className="text-2xl md:text-4xl fontserif font-bold text-gray-900 mb-4">
                     How It All Began
                   </h2>
                   <motion.div
@@ -53,7 +53,7 @@ export default function OurStory() {
           transition={{ duration: 0.6 }}
           className="space-y-6"
         >
-          <h2 className="font-bold text-blue-900 fontserif md:text-lg my-3">
+          <h2 className="font-bold text-blue-800 fontserif md:text-lg my-3">
                     A brief history about Utamaduni
                   </h2>
           <p className="text-gray-700 leading-relaxed text-base">
@@ -68,10 +68,27 @@ export default function OurStory() {
             community health drives, Utamaduni continues to restore dignity, empower families, 
             and celebrate the spirit of togetherness.
           </p>
-          <div className="relative mt-6 flex justifycenter gap-4">
-            <a href="/donate" className="bg-gradient-to-br from-blue-800 via-blue-700 to-blue-900 text-white px-7 py-1 rounded font-semibold shadow">Donate</a>
-            <a href="/volunteer" className="border border-blue-900 text-blue-900 px-7 py-1 font-semibold rounded">Volunteer</a>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex flex-wrap gap-2 mt-10"
+          >
+            <div className="flex flex-col w-full sm:flex-row gap-4 justifycenter md: justify-start">
+            <a
+              href="/donate"
+              className="bg-blue-800 text-center md:px-8 md:py-3 text-white font-semibold py-2 px-3 rounded-lg shadow-md hover:bg-gray-100 transition"
+            >
+              Donate
+            </a>
+            <a
+              href="/volunteer"
+              className="border text-center md:px-8 md:py-3 border-blue-700 text-blue-700 font-semibold py-2 px-3 rounded-lg hover:bg-white/10 transition"
+            >
+              Volunteer
+            </a>
           </div>
+          </motion.div>
 
           <div className="grd sm:grid-cols-2 gap-5 mt-6 hidden">
             <FeaturePoint

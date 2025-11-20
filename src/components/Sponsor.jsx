@@ -19,8 +19,9 @@ export default function SponsorProgram() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl mdtext-4xl md:text-5xl font-serif font-bold text-gray-900 mb-4">
-            Sponsor a Child, Transform a Future
+          <h2 className="text-3xl mdtext-4xl md:text-5xl fontserif font-bold text-gray-900 mb-4">
+            Sponsor a Child, <span className="block font-semibold text-pink-600">Transform a Future
+            </span>
           </h2>
 
           <p className="tmt-2 text-gray-600 max-w-2xl mx-auto font-medium text-left md:text-lg mb-6">
@@ -30,39 +31,50 @@ export default function SponsorProgram() {
             </span>{" "}
             for children in need.
           </p>
-{/* Icon Highlights 
+
+
+          {/* Icon Highlights */}
+          <div className="flex justify-cente md:justify-start gap-6 mb-7 mt-5">
+            <div className="flex flex-col items-center">
+              <HeartHandshake className="w-10 h-10 sm:w-10 sm:h-10 text-blue-800 mb-1 p2 bgblue-200 bordr border-gray-300 rounded-full" />
+              <span className="text-pink-700 font-medium">Care</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <GraduationCap className="w-10 h-10 sm:w-10 sm:h-10 text-blue-800 mb-1 p2 bgblue-200 bordr border-gray-300 rounded-full" />
+              <span className="text-pink-700 font-medium">Education</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <Stethoscope className="w-10 h-10 sm:w-10 sm:h-10 text-blue-800 mb-1 p2 bgblue-200 bordr border-gray-300 rounded-full" />
+              <span className="text-pink-700 font-medium">Health</span>
+            </div>
+          </div>
+
+          {/* Icon Highlights */}
           <p className="italic text-gray-600 text-xs sm:text-sm mb-4">
             “Whoever welcomes one of these little children in my name welcomes
             me; and whoever welcomes me does not welcome me but the One who sent
             me.”
           </p>
-*/}
-          {/* Icon Highlights */}
-          <div className="flex justify-cente md:justify-start gap-6 mb-7 mt-5">
-            <div className="flex flex-col items-center">
-              <HeartHandshake className="w-10 h-10 sm:w-10 sm:h-10 text-blue-800 mb-1 p-2 bg-blue-200 border border-gray-300 rounded-full" />
-              <span className="text-gray-700 font-medium">Care</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <GraduationCap className="w-10 h-10 sm:w-10 sm:h-10 text-blue-800 mb-1 p-2 bg-blue-200 border border-gray-300 rounded-full" />
-              <span className="text-gray-700 font-medium">Education</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <Stethoscope className="w-10 h-10 sm:w-10 sm:h-10 text-blue-800 mb-1 p-2 bg-blue-200 border border-gray-300 rounded-full" />
-              <span className="text-gray-700 font-medium">Health</span>
-            </div>
-          </div>
 
           <motion.div
-            initial={{ opacity: 0, y: 12 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-gray-700 font-medium"
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex flex-wrap gap-2 mt-10"
           >
-            <div className="relative mt-6 mb-10 flex justifycenter gap-4">
-            <a href="/donate" className="bg-gradient-to-br from-blue-800 via-blue-700 to-blue-900 text-white px-7 py-1 rounded font-semibold shadow">Donate</a>
-            <a href="/volunteer" className="border border-blue-900 text-blue-900 px-7 py-1 font-semibold rounded">Volunteer</a>
+            <div className="flex flex-col w-full sm:flex-row gap-4 justifycenter md: justify-start">
+            <a
+              href="/donate"
+              className="bg-blue-800 text-center md:px-8 md:py-3 text-white font-semibold py-2 px-3 rounded-lg shadow-md hover:bg-gray-100 transition"
+            >
+              Donate
+            </a>
+            <a
+              href="/volunteer"
+              className="border text-center md:px-8 md:py-3 border-blue-700 text-blue-700 font-semibold py-2 px-3 rounded-lg hover:bg-white/10 transition"
+            >
+              Volunteer
+            </a>
           </div>
           </motion.div>
         </motion.div>
@@ -75,7 +87,7 @@ export default function SponsorProgram() {
           viewport={{ once: true }}
           className="relative group"
         >
-          <div className="relative w-full h52 sm:h-64 md:h-full rounded overflow-hidden shadow-xl">
+          <div className="relative w-full h-full h52 sm:h64 md:h-ull rounded overflow-hidden shadow-xl">
             <img
               src="/images/utamaduni at mathare/_DSC8782.jpg" // replace with your own image
               alt="Child Sponsorship"
