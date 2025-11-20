@@ -31,10 +31,15 @@ export default function SponsorProgram() {
             </span>{" "}
             for children in need.
           </p>
+          <p className="tmt-2 text-gray-600 max-w-2xl mx-auto font-medium text-left md:text-lg mb-6">
+            “Whoever welcomes one of these little children in my name welcomes
+            me; and whoever welcomes me does not welcome me but the One who sent
+            me.”
+          </p>
 
 
           {/* Icon Highlights */}
-          <div className="flex justify-cente md:justify-start gap-6 mb-7 mt-5">
+          <div className="hidden flex justify-cente md:justify-start gap-6 mb-7 mt-5">
             <div className="flex flex-col items-center">
               <HeartHandshake className="w-7 h-7 text-blue-800 mb-1 p2 bgblue-200 bordr border-gray-300 roundedfull" />
               <span className="text-gray-800 font-medium">Care</span>

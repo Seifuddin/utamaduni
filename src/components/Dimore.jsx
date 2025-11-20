@@ -49,10 +49,10 @@ export default function CEOSection() {
 
           {/* CEO Details */}
           <div className="flex-1 text-center md:text-left">
-            <h3 className="font-bold text-blue-900 fontserif md:text-lg my-2">
+            <h3 className="font-bold text-left text-blue-900 fontserif md:text-lg my-2">
               Brian Omondi
             </h3>
-            <p className="text-gray-700 font-medium mb-4 textleft">Founder & CEO</p>
+            <p className="text-gray-700 font-medium mb-4 text-left">Founder & CEO</p>
 
             <p className="text-gray-600 text-base leading-relaxed mb-6 max-w-xl text-left">
               “At Utamaduni Charitable Organization, our mission is to uplift
@@ -62,7 +62,7 @@ export default function CEOSection() {
             </p>
 
             {/* Social Links */}
-            <div className="flex justify-center md:justify-start gap-4">
+            <div className="flex justifycenter md: justify-start gap-4">
               <SocialIcon
                 href="https://www.facebook.com/share/1BhrvdwE23/"
                 icon={<Facebook className="w-5 h-5" />}
@@ -92,7 +92,7 @@ function SocialIcon({ href, icon }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="p-2 text-blue-800 bgblue-200 borderborder-gray-300 rounded -full hover:bg-blue-700 hover:text-white transition-all duration-300 shadow hover:shadow-md"
+      className="p-2 text-blue-800 bg-blue-50 borderborder-gray-300 rounded -full hover:bg-blue-700 hover:text-white transition-all duration-300 shadow hover:shadow-md"
     >
       {icon}
     </a>
