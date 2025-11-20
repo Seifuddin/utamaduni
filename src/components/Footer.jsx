@@ -60,6 +60,7 @@ export default function Footer() {
               { href: "/about", label: "About Us" },
               { href: "/programz", label: "Programs" },
               { href: "/gallery", label: "Gallery" },
+              { href: "/blog", label: "Blog" },
               { href: "/contact", label: "Contact" },
             ].map((link, i) => (
               <li key={i}>

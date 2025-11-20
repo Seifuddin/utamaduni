@@ -126,8 +126,8 @@ export default function DidYouKnowHybrid() {
         >
           <Link
             href="/donate"
-            className="bg-gray-100 text-pink-600 font-semibold px-8 py-2 md:py-3 fontserif 
-                       rounded-lg shadow-lg hover:bg-pink-600 transition text-sm md:text-base"
+            className="bg-gray-100 text-pink-600 font-semibold px-8 py-3 md:py-3 fontserif 
+                       rounded-full shadow-lg hover:bg-pink-600 transition text-sm md:text-base"
           >
             Donate & Save a Life
           </Link>

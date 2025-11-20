@@ -99,7 +99,7 @@ export default function EventGallerySlider() {
                     href="/gallery"
                     className="mt-2 inline-block bgpink-50 borderborder-pink-100 text-blue-700 textcenter text-sm px-1 py2 rounded font-semibold hover:text-white hover:bg-blue-800 transition"
                   >
-                    View Event →
+                    View Event in Gallery →
                   </a>
                 </div>
               </motion.div>

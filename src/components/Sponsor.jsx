@@ -37,15 +37,15 @@ export default function SponsorProgram() {
           <div className="flex justify-cente md:justify-start gap-6 mb-7 mt-5">
             <div className="flex flex-col items-center">
               <HeartHandshake className="w-7 h-7 text-blue-800 mb-1 p2 bgblue-200 bordr border-gray-300 roundedfull" />
-              <span className="text-pink-700 font-medium">Care</span>
+              <span className="text-gray-800 font-medium">Care</span>
             </div>
             <div className="flex flex-col items-center">
               <GraduationCap className="w-7 h-7 text-blue-800 mb-1 p2 bgblue-200 bordr border-gray-300 roundedfull" />
-              <span className="text-pink-700 font-medium">Education</span>
+              <span className="text-gray-800 font-medium">Education</span>
             </div>
             <div className="flex flex-col items-center">
               <Stethoscope className="w-7 h-7 text-blue-800 mb-1 p2 bgblue-200 bordr border-gray-300 roundedfull" />
-              <span className="text-pink-700 font-medium">Health</span>
+              <span className="text-gray-800 font-medium">Health</span>
             </div>
           </div>
 

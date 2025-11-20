@@ -78,7 +78,7 @@ export default function Challenges() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex items-start gap-4 bgwhite/80 border-b border-gray-200 rounded-md p-2 shadowhover:shadow-md hover:-translate-y-1 transition-all duration-300"
+              className="flex items-start gap-4 bgwhite/80 border-b-2 border-gray-200 rounded-lg p-2 shadowhover:shadow-md hover:-translate-y-1 transition-all duration-300"
             >
               <div className="p-2 rounded-full border border-blue-800 bg-gradient-to-br from-blue-800 via-blue-700 to-blue-900">{item.icon}</div>
               <div>

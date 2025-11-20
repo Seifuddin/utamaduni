@@ -31,10 +31,10 @@ const AnimatedCounter = ({ from = 0, to }) => {
 
 // Updated stats for charitable organization
 const stats = [
-  { icon: Users, label: "Children Helped", value: 500, color: "text-pink-500" },
-  { icon: Utensils, label: "Meals Provided", value: 2000, color: "text-pink-500" },
-  { icon: HandHeart, label: "Volunteers", value: 20, color: "text-pink-500" },
-  { icon: Calendar, label: "Years of Service", value: 2, color: "text-pink-500" },
+  { icon: Users, label: "Children Helped", value: 500, color: "text-white" },
+  { icon: Utensils, label: "Meals Provided", value: 2000, color: "text-white" },
+  { icon: HandHeart, label: "Volunteers", value: 20, color: "text-white" },
+  { icon: Calendar, label: "Years of Service", value: 2, color: "text-white" },
 ];
 
 export default function ImpactStats() {

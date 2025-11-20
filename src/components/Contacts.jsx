@@ -13,7 +13,7 @@ export default function Contact() {
         backgroundImage: `url('/images/pngwng.com (7).png')`,
       }}
         */}
-      <div className="rounded-xl p-6 md:p-12 max-w-6xl mx-auto">
+      <div className="rounded-xl p6 md:p12 max-w-7xl mx-auto">
         {/* Header 
         <motion.div
           initial={{ opacity: 0, y: -30 }}
@@ -30,7 +30,7 @@ export default function Contact() {
         </motion.div>
         */}
         {/* Grid */}
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid md:grid-cols-2 gap-5">
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -100,7 +100,7 @@ export default function Contact() {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="bg-gray-50 border border-blue-100 p-6 rounded-lg shadow-xl space-y-4"
+            className="bg-gray-50 border border-blue-100 p-5 rounded-lg shadow-xl space-y-4"
             onSubmit={(e) => {
               epreventDefault();
               // Handle submission
