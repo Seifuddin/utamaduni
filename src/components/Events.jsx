@@ -18,7 +18,7 @@ const events = [
       "Engaged children with fun learning activities, storytelling, and cultural workshops.",
   },
   {
-    title: "Utamaduni Visit at Mathare Slums in Nairobi",
+    title: "Utamaduni Visit at Mathare Slums",
     date: "August 2025",
     img: "/images/utamaduni at mathare/_DSC8647.jpg",
     description:
@@ -36,7 +36,7 @@ const events = [
 export default function EventGallerySlider() {
   return (
     <section className="bg-amber-50 py-20 md:px-12 lg:px-16">
-      <div className="mx-auto max-w-7xl px-6 ">
+      <div className="mx-auto max-w-6xl px-6 ">
         {/* Header */}
         <div className="text-center mb-10">
           <p className="text-sm uppercase tracking-wide font-semibold text-pink-700 mb-2">
@@ -77,7 +77,7 @@ export default function EventGallerySlider() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className="bgwhite borderborder-pink-100 rounded-lg shadow hover:shadow-md overflow-hidden flex flex-col transition-transform hover:-translate-y-1"
+                className="bg-white border border-pink-100 rounded-lg shadow hover:shadow-md overflow-hidden flex flex-col transition-transform hover:-translate-y-1"
               >
                 {/* Event Image */}
                 <div className="h-40 overflow-hidden">
@@ -89,7 +89,7 @@ export default function EventGallerySlider() {
                 </div>
 
                 {/* Event Content */}
-                <div className="p-1 flex flex-col flex-1">
+                <div className="p-3 flex flex-col flex-1">
                   <h3 className="font-bold text-blue-900 fontserif md:text-lg my-2">
                     {event.title}
                   </h3>

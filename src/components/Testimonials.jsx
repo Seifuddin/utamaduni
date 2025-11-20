@@ -51,11 +51,13 @@ export default function StoriesAndTestimonials() {
   ];
 
   return (
-    <section className="relative bg-amber-50 gradient-to-b from-amber-50  via-white to-blue-50 py-20 text-gray-800 overflow-hidden">
-      {/* Decorative pattern */}
-      <div className="absolute inset-0 bg-[url('/images/pattern-light.png')] opacity-5 bg-cover bg-center"></div>
+    <section className="relative py-20 bg-amber-50 px6 overflow-hidden bg-gradient-to-r from-blue-900 to-blue-800">
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6">
+      {/* Decorative Waves */}
+      <div className="absolute -top-16 left-0 w-full h-36 bg-gradient-to-r from-indigo-800 via-indigo-900 to-indigo-800 rounded-b-full opacity-30"></div>
+      <div className="absolute -bottom-16 right-0 w-56 h-56 bg-indigo-700 rounded-full mix-blend-multiply filter blur-2xl opacity-25"></div>
+
+      <div className="relative z-10 px6">
         {/* Header 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -121,12 +123,12 @@ export default function StoriesAndTestimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="bg-blue-900 text-white rounded-2xl p-7 md:p-14 shadow-2xl relative overflow-hidden"
+          className="text-white max-w-6xl mx-auto rounded-2xl px-6 md:p14 shadow2xl relative overflow-hidden"
         >
           <HeartHandshake className="absolute opacity-10 w-40 h-40 right-10 bottom-10 text-blue-200" />
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 px-4">
             <Quote className="w-10 h-10 mx-auto mb-4 text-white" />
-            <h3 className="text-2xl md:text-3xl font-semibold mb-3 font-serif">
+            <h3 className="text-2xl md:text-4xl font-semibold mb-3 fontserif">
               Testimonials
             </h3>
             <p className="text-blue-100 max-w-2xl mx-auto">

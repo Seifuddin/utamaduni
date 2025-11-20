@@ -64,15 +64,15 @@ export default function CEOSection() {
             {/* Social Links */}
             <div className="flex justify-center md:justify-start gap-4">
               <SocialIcon
-                href="https://facebook.com"
+                href="https://www.facebook.com/share/1BhrvdwE23/"
                 icon={<Facebook className="w-5 h-5" />}
               />
               <SocialIcon
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/brian-odhiambo-802103368"
                 icon={<Linkedin className="w-5 h-5" />}
               />
               <SocialIcon
-                href="https://twitter.com"
+                href=" https://x.com/Dimore41759?t=cWFprjNn1N9NtA4LaL_u1g&s=08"
                 icon={<Twitter className="w-5 h-5" />}
               />
             </div>

@@ -39,7 +39,7 @@ const leaders = [
     socials: { facebook: "#", linkedin: "#", twitter: "#" },
   },
   {
-    name: "Sharon Rono",
+    name: "Sharon Jerono",
     role: "Treasurer",
     image: "/images/Sharonronotreasurer.jpg",
     quote: "Financial transparency fuels trust and impact.",
@@ -71,7 +71,7 @@ export default function Leadership() {
         <h2 className="text-2xl md:text-4xl fontserif font-bold text-gray-900 mt-2 mb-3">
           The Leadership Behind Utamaduni
         </h2>
-        <div className="mx-auto h-1 w-16 bg-pink-700 rounded-full mb-4"></div>
+        <div className="mt-2 text-gray-600 max-w-2xl mx-auto font-medium text-center md:text-lg mb-6"></div>
         <p className="mt-2 text-gray-600 max-w-2xl mx-auto font-medium text-center md:text-lg mb-6">
           A dedicated team working alongside our Founder & CEO — uniting passion,
           integrity, and service to sustain Utamaduni’s mission of compassion and growth.
@@ -121,7 +121,7 @@ export default function Leadership() {
               <p className="text-sm text-gray-600 mb-3">{leader.role}</p>
 
               {/* Socials */}
-              <div className="flex justify-center gap-3 mb-3">
+              <div className="hidden flex justify-center gap-3 mb-3">
                 {leader.socials.facebook && (
                   <motion.a
                     href={leader.socials.facebook}
