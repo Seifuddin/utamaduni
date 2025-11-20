@@ -28,7 +28,7 @@ export default function ContactHero() {
 
 
           {/* Description */}
-          <p className="text-lg leading-relaxed text-gray-200 mt-5 text-center">
+          <p className="text-base md:text-lg leading-relaxed text-gray-200 mt-2 text-center">
           We'd love to hear from you, Contact us today.
         </p>
 

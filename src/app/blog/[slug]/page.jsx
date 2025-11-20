@@ -35,7 +35,7 @@ export default function SinglePost() {
 
   return (
     <section className="py-16 bg-amber-50 text-gray-800">
-      <div className="max-w-4xl mx-auto px-6 py-10">
+      <div className="max-w-7xl mx-auto px-6 py-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

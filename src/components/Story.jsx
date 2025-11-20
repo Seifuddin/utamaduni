@@ -28,7 +28,7 @@ export default function OurStory() {
                     className="h-1 bg-pink-700 rounded-full mx-auto mb-4"
                   ></motion.div>
                 </motion.div>
-      <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
+      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
 
         {/* Left: Image */}
         <motion.div

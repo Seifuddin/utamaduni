@@ -39,7 +39,7 @@ const stats = [
 
 export default function ImpactStats() {
   return (
-    <section className="relative py-20 bg-amber-50 px6 overflow-hidden bg-gradient-to-r from-blue-900 to-blue-800">
+    <section className="relative py-20 bgamber-50 px6 overflow-hidden bg-gradient-to-r from-blue-900 to-blue-800">
 
       {/* Decorative Waves */}
       <div className="absolute -top-16 left-0 w-full h-36 bg-gradient-to-r from-indigo-800 via-indigo-900 to-indigo-800 rounded-b-full opacity-30"></div>
@@ -62,7 +62,7 @@ export default function ImpactStats() {
         </p>
 
         {/* Stats Grid */}
-        <div className="grid gap-4 xs:gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-6xl px-6 mx-auto">
+        <div className="grid gap-4 xs:gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-7xl px-6 mx-auto">
           {stats.map((stat, index) => {
             const Icon = stat.icon;
             return (
@@ -73,10 +73,10 @@ export default function ImpactStats() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ scale: 1.05 }}
-                className="bg-white/5 backdrop-blur-md border border-white/20 p-4 xs:p-5 sm:p-6 rounded-lg flex flex-col items-center"
+                className="bg-white/10 backdrop-blur-md border border-white/20 p-4 xs:p-5 sm:p-6 rounded-lg flex flex-col items-center"
               >
                 {/* Icon */}
-                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 mb-2 xs:mb-3">
+                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white/30 mb-2 xs:mb-3">
                   <Icon className={`${stat.color} w-6 h-6`} />
                 </div>
 

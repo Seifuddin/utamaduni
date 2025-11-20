@@ -6,7 +6,7 @@ export default function VideoHighlights() {
   const videos = [
     {
       id: "7C9wMJwsnqs",  // replace with your actual first YouTube video ID
-      title: "Utamaduni Visit – Event at Nairobi",
+      title: "Utamaduni Fun Day",
     },
     {
       id: "XgMOSQ9Ue5c",
@@ -14,14 +14,14 @@ export default function VideoHighlights() {
     },
     {
       id: "J0td4PE1m1o",
-      title: "Utamaduni Foundation – Children’s Day Celebration",
+      title: "Children’s Day Celebration",
     },
     // add more objects if you like
   ];
 
   return (
     <section className="py-16 bg-amber-50 text-gray-900">
-      <div className="max-w-6xl mx-auto px-6 text-center">
+      <div className="max-w-7xl mx-auto px-6 text-center">
         <h2 className="text-2xl md:text-4xl fontserif font-bold text-gray-900 mb-4">
                     Video Highlights
                   </h2>
@@ -40,7 +40,7 @@ export default function VideoHighlights() {
               transition={{ duration: 0.3 }}
               className="rounded overflow-hidden shadow-lg bg-white border border-gray-200"
             >
-              <div className="aspect-w-20 aspect-h-14">
+              <div className="aspect-w-20 aspect-h-20">
                 <iframe
                   src={`https://www.youtube.com/embed/${id}`}
                   title={title}
@@ -50,7 +50,7 @@ export default function VideoHighlights() {
                   className="w-full h-full"
                 ></iframe>
               </div>
-              <p className="font-semibold text-left text-blue-900 fontserif fontmedium md:text-lg my-2 px-2">
+              <p className="hidden font-semibold text-left text-blue-900 fontserif fontmedium md:text-lg my-2 px-2">
                 {title}
               </p>
             </motion.div>

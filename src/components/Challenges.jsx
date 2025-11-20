@@ -41,7 +41,7 @@ export default function Challenges() {
       {/* Decorative background 
       <div className="absolute inset-0 bg-[url('/images/pattern-light.png')] opacity-5 bg-cover bg-center"></div>
 */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -70,7 +70,7 @@ export default function Challenges() {
         </motion.div>
 
         {/* Challenges Points */}
-        <div className="space-y-5 text-left max-w-3xl mx-auto">
+        <div className="space-y-5 text-left max-w-5xl mx-auto">
           {challenges.map((item, index) => (
             <motion.div
               key={index}
@@ -98,7 +98,7 @@ export default function Challenges() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.5 }}
           viewport={{ once: true }}
-          className="relativ text-center mt-14 bg-gradient-to-r from-blue-900 to-blue-700 text-white rounded-xl wfull p-4 py-10 shadow2xl max-w-6xl mx-auto"
+          className="relativ text-center mt-14 bg-gradient-to-r from-blue-900 to-blue-700 text-white rounded-xl wfull p-4 py-10 shadow2xl max-w-7xl mx-auto"
         >
           <h3 className="text-xl md:text-2xl font-bold mb-2 fontserif">
             Together, We Can Overcome

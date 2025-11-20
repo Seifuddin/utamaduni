@@ -8,7 +8,7 @@ export default function DonatePage() {
       <div className="container mx-auto px-6 lg:px-12 text-center">
         {/* Heading */}
         <motion.h1
-          className="text-2xl md:text-4xl font-bold text-blue-900 mb-4 font-serif"
+          className="text-2xl md:text-4xl font-bold text-blue-900 mb-4 fontserif"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
         >

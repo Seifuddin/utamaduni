@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { FaFacebookF, FaInstagram, FaYoutube, FaTiktok } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTiktok, FaYoutube, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -24,7 +24,7 @@ export default function Footer() {
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/60 via-[#0a2540]/90 to-blue-800/70 z-0"></div>
       <div className="absolute inset-0 bg-[url('/images/patterns.png')] opacity-10 bg-cover bg-center z-0"></div>
 
-      <div className="relative max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-5 gap-12 z-10">
+      <div className="relative max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-5 gap-12 z-10">
         {/* Logo & About */}
         <div className="md:col-span-2">
           <div className="flex items-center gap-3 mb-4">
@@ -35,9 +35,12 @@ export default function Footer() {
               height={40}
               className="rounded-md"
             />
-            <h2 className="text-2xl font-bold text-white font-serif">
-              Utamaduni
+            <h2 className="text-2xl font-bold text-white fontserif">
+              Utamaduni<p className="text-sm font-semibold text-white fontserif">
+              Organization
+            </p>
             </h2>
+            
           </div>
           <p className="text-sm leading-relaxed text-gray-300">
             Supporting orphans and vulnerable children, empowering communities
@@ -48,7 +51,7 @@ export default function Footer() {
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-lg font-semibold text-white mb-4 font-serif">
+          <h3 className="text-lg font-semibold text-white mb-4 fontserif">
             Quick Links
           </h3>
           <ul className="space-y-2 text-sm">
@@ -73,7 +76,7 @@ export default function Footer() {
 
         {/* Contact Info */}
         <div>
-          <h3 className="text-lg font-semibold text-white mb-4 font-serif">
+          <h3 className="text-lg font-semibold text-white mb-4 fontserif">
             Contact Us
           </h3>
           <p className="text-sm">📍 Nairobi, Kenya </p>
@@ -113,12 +116,29 @@ export default function Footer() {
             >
               <FaTiktok size={18} />
             </Link>
+              <Link
+              href="https://www.linkedin.com/in/utamaduni-organization-408a24345?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 bg-blue-600 hover:bg-gray-800 text-white rounded-full transition shadow-md"
+            >
+              <FaLinkedinIn size={18} />
+            </Link>
+            <Link
+              href="https://x.com/UTAMADUNIF23567?t=rjVT0oXFEUwkKdPeiYyDKg&s=09"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 bg-blue-500 hover:bg-gray-800 text-white rounded-full transition shadow-md"
+            >
+              <FaTwitter size={18} />
+            </Link>
+          
           </div>
         </div>
 
         {/* Newsletter */}
         <div>
-          <h3 className="text-lg font-semibold text-white mb-4 font-serif">
+          <h3 className="text-lg font-semibold text-white mb-4 fontserif">
             Newsletter
           </h3>
           <p className="text-sm mb-3 text-gray-300">

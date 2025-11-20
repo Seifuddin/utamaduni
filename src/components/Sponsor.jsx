@@ -11,7 +11,7 @@ export default function SponsorProgram() {
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/60 via-[#0a2540]/90 to-blue-800/70 z-0"></div>
       <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-10 bg-cover bg-center z-0"></div>
 */}
-      <div className="relative mx-auto max-w-6xl px-6 grid md:grid-cols-2 gap-8 items-center z-10">
+      <div className="relative mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-8 items-center z-10">
         {/* Left Side - Text */}
         <motion.div
           initial={{ opacity: 0, x: -25 }}
@@ -36,21 +36,21 @@ export default function SponsorProgram() {
           {/* Icon Highlights */}
           <div className="flex justify-cente md:justify-start gap-6 mb-7 mt-5">
             <div className="flex flex-col items-center">
-              <HeartHandshake className="w-10 h-10 sm:w-10 sm:h-10 text-blue-800 mb-1 p2 bgblue-200 bordr border-gray-300 rounded-full" />
+              <HeartHandshake className="w-7 h-7 text-blue-800 mb-1 p2 bgblue-200 bordr border-gray-300 roundedfull" />
               <span className="text-pink-700 font-medium">Care</span>
             </div>
             <div className="flex flex-col items-center">
-              <GraduationCap className="w-10 h-10 sm:w-10 sm:h-10 text-blue-800 mb-1 p2 bgblue-200 bordr border-gray-300 rounded-full" />
+              <GraduationCap className="w-7 h-7 text-blue-800 mb-1 p2 bgblue-200 bordr border-gray-300 roundedfull" />
               <span className="text-pink-700 font-medium">Education</span>
             </div>
             <div className="flex flex-col items-center">
-              <Stethoscope className="w-10 h-10 sm:w-10 sm:h-10 text-blue-800 mb-1 p2 bgblue-200 bordr border-gray-300 rounded-full" />
+              <Stethoscope className="w-7 h-7 text-blue-800 mb-1 p2 bgblue-200 bordr border-gray-300 roundedfull" />
               <span className="text-pink-700 font-medium">Health</span>
             </div>
           </div>
 
           {/* Icon Highlights */}
-          <p className="italic text-gray-600 text-xs sm:text-sm mb-4">
+          <p className="hidden italic text-gray-600 text-xs sm:text-sm mb-4">
             “Whoever welcomes one of these little children in my name welcomes
             me; and whoever welcomes me does not welcome me but the One who sent
             me.”

@@ -68,7 +68,7 @@ export default function Programs() {
         <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-amber-300 rounded-full blur-3xl opacity-10 animate-pulse"></div>
       </div>
 
-      <div className="mx-auto px-6 text-center max-w-6xl">
+      <div className="mx-auto px-6 text-center max-w-7xl">
         {/* Heading */}
         <p className="text-sm uppercase tracking-wide font-semibold text-pink-700 mb-2">
             what we do

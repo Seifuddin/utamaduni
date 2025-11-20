@@ -7,7 +7,7 @@ import { Facebook, Linkedin, Twitter } from "lucide-react";
 export default function CEOSection() {
   return (
     <section className="py-20 bg-amber-50 gradient-to-b from-amber-50 to-white text-gray-800">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -92,7 +92,7 @@ function SocialIcon({ href, icon }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="p-2 text-blue-800 bg-blue-200 border border-gray-300 rounded-full hover:bg-blue-700 hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
+      className="p-2 text-blue-800 bgblue-200 borderborder-gray-300 rounded -full hover:bg-blue-700 hover:text-white transition-all duration-300 shadow hover:shadow-md"
     >
       {icon}
     </a>

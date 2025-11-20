@@ -106,7 +106,7 @@ export default function Contact() {
               // Handle submission
             }}
           >
-          8<h2 className="hiddn text-xl font-bold text-blue-900 mb-6 fontserif">Send Us a Message</h2>
+          <h2 className="hiddn text-xl font-bold text-blue-800 mb-6 fontserif">Send Us a Message</h2>
 
             <div>
               <label className="block font-semibold text-gray-800">Full Name</label>

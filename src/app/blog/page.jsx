@@ -41,7 +41,7 @@ export default function BlogPage() {
       </div>
 
       {/* Blog List */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 pb-20 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-20 overflow-hidden">
         <motion.h3
           initial={{ opacity: 0, y: -10 }}
           whileInView={{ opacity: 1, y: 0 }}

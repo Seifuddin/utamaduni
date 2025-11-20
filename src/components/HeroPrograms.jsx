@@ -28,7 +28,7 @@ export default function ProgramsHero() {
 
 
           {/* Description */}
-          <p className="text-lg leading-relaxed text-gray-200 mt-5 text-center">
+          <p className="text-base md:text-lg leading-relaxed text-gray-200 mt-2 text-center">
           We are dedicated to preserving cultural heritage while uplifting vulnerable families and children.
         </p>
 

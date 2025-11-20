@@ -36,7 +36,7 @@ const events = [
 export default function EventGallerySlider() {
   return (
     <section className="bg-amber-50 py-20 md:px-12 lg:px-16">
-      <div className="mx-auto max-w-6xl px-6 ">
+      <div className="mx-auto max-w-7xl px-6 ">
         {/* Header */}
         <div className="text-center mb-10">
           <p className="text-sm uppercase tracking-wide font-semibold text-pink-700 mb-2">
@@ -77,7 +77,7 @@ export default function EventGallerySlider() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className="bg-white border border-pink-100 rounded-lg shadow hover:shadow-md overflow-hidden flex flex-col transition-transform hover:-translate-y-1"
+                className="bg-white border border-blue-100 rounded-lg shadow hover:shadow-md overflow-hidden flex flex-col transition-transform hover:-translate-y-1"
               >
                 {/* Event Image */}
                 <div className="h-40 overflow-hidden">
@@ -97,7 +97,7 @@ export default function EventGallerySlider() {
                   <p className="text-gray-600 text-base mb-4">{event.description}</p>
                   <a
                     href="/gallery"
-                    className="mt-2 inline-block bgpink-50 borderborder-pink-100 text-pink-600 textcenter text-sm px-1 py2 rounded font-semibold hover:text-white hover:bg-blue-800 transition"
+                    className="mt-2 inline-block bgpink-50 borderborder-pink-100 text-blue-700 textcenter text-sm px-1 py2 rounded font-semibold hover:text-white hover:bg-blue-800 transition"
                   >
                     View Event →
                   </a>

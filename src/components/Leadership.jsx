@@ -57,7 +57,7 @@ const leaders = [
 export default function Leadership() {
   return (
     <section className="relative bg-amber-50 py-12 px6 md:px-12 overflow-hidden">
-      <div className="mx-auto px-6 max-w-6xl">
+      <div className="mx-auto px-6 max-w-7xl">
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -91,7 +91,7 @@ export default function Leadership() {
           640: { slidesPerView: 2 },
           1024: { slidesPerView: 3 },
         }}
-        className="max-w-6xl mx-auto pb-8"
+        className="max-w-7xl mx-auto pb-8"
       >
         {leaders.map((leader, index) => (
           <SwiperSlide key={index}>

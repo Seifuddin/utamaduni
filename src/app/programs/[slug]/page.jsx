@@ -77,7 +77,7 @@ export default async function ProgramPage({ params }) {
       </div>
 
       {/* Title */}
-      <h1 className="mt-10 text-2xl text-blue-800 md:text-4xl font-bold font-serif">
+      <h1 className="mt-10 text-2xl text-blue-800 md:text-4xl font-bold fontserif">
         {data.title}
       </h1>
 

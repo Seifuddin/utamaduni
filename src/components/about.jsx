@@ -9,7 +9,7 @@ export default function Abouts() {
       {/* Subtle background pattern */}
       <div className="absolute inset-0 bg-[url('/images/pattern-light.png')] opacity-10 bg-cover bg-center"></div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px12 grid md:grid-cols-2 gap-16 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px12 grid md:grid-cols-2 gap-16 items-center">
         {/* LEFT CONTENT */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}

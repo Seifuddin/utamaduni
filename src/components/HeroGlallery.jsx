@@ -28,7 +28,7 @@ export default function GalleryHero() {
 
 
           {/* Description */}
-          <p className="text-lg leading-relaxed text-gray-200 mt-5 text-center">
+          <p className="text-base md:text-lg leading-relaxed text-gray-200 mt-2 text-center">
           Glimpses of compassion, action, and unity — captured from Utamaduni’s
           heartwarming initiatives and events across Kenya.
         </p>
