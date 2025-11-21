@@ -24,14 +24,14 @@ export default function SponsorProgram() {
             </span>
           </h2>
 
-          <p className="tmt-2 text-gray-600 max-w-2xl mx-auto font-medium text-left md:text-lg mb-6">
+          <p className="tmt-2 text-gray-600 max-w-2xl mx-auto fontmedium text-left md:text-lg mb-2">
             Your sponsorship provides{" "}
             <span className="font-semibold text-gray-700">
               education, healthcare, and daily essentials
             </span>{" "}
             for children in need.
           </p>
-          <p className="tmt-2 text-gray-600 max-w-2xl mx-auto font-medium text-left md:text-lg mb-6">
+          <p className="tmt-2 italic text-blue-900 max-w-2xl mx-auto fontmedium text-left md:text-lg mb-6">
             “Whoever welcomes one of these little children in my name welcomes
             me; and whoever welcomes me does not welcome me but the One who sent
             me.”

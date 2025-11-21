@@ -129,7 +129,7 @@ export default function Footer() {
               href="https://x.com/UTAMADUNIF23567?t=rjVT0oXFEUwkKdPeiYyDKg&s=09"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 bg-blue-500 hover:bg-gray-800 text-white rounded-full transition shadow-md"
+              className="hidden p-2 bg-blue-500 hover:bg-gray-800 text-white rounded-full transition shadow-md"
             >
               <FaTwitter size={18} />
             </Link>

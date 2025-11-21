@@ -41,7 +41,7 @@ export default function FAQ() {
 
   return (
     <section className="py-16 bg-amber-50">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-4xl mx-auto px-6">
         {/* Section Heading */}
         <div className="text-center mb-12">
           <p className="text-sm uppercase tracking-wide font-semibold text-pink-700 mb-2">
@@ -66,7 +66,7 @@ export default function FAQ() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border-b-2 border-gray-200 rounded-lg shadowsm bgwhite overflow-hidden"
+              className="border-b border-gray-300 rounded-lg shadowsm bgwhite overflow-hidden"
             >
               <button
                 onClick={() => toggleFAQ(index)}

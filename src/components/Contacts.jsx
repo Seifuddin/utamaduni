@@ -42,7 +42,7 @@ export default function Contact() {
             <div className="flex items-start space-x-4 shadowmd p1">
               <Mail className="text-pink-600 mt-1" />
               <div>
-                <h4 className="font-bold text-gray-800">Email</h4>
+                <h4 className="font-bold text-gray-700">Email</h4>
                 <p className="text-gray-600">utamadunicharity@gmail.com</p>
               </div>
             </div>
@@ -50,7 +50,7 @@ export default function Contact() {
             <div className="flex items-start space-x-4 shadowmd p1">
               <Phone className="text-pink-600 mt-1" />
               <div>
-                <h4 className="font-bold text-gray-800">Phone</h4>
+                <h4 className="font-bold text-gray-700">Phone</h4>
                 <p className="text-gray-600">+254 704 337 351</p>
               </div>
             </div>
@@ -58,7 +58,7 @@ export default function Contact() {
             <div className="flex items-start space-x-4 shadowmd p1">
               <MapPin className="text-pink-600 mt-1" />
               <div>
-                <h4 className="font-bold text-gray-800">Location</h4>
+                <h4 className="font-bold text-gray-700">Location</h4>
                 <p className="text-gray-600">Nairobi, Kenya</p>
               </div>
             </div>
@@ -66,7 +66,7 @@ export default function Contact() {
             <div className="flex items-start space-x-4 shadowmd p1">
               <Building2 className="text-pink-600 mt-1" />
               <div>
-                <h4 className="font-bold text-gray-800">Building</h4>
+                <h4 className="font-bold text-gray-700">Building</h4>
                 <p className="text-gray-600">Moi Avenue, Utamaduni House, First Floor, Room No. 1</p>
               </div>
             </div>
@@ -109,7 +109,7 @@ export default function Contact() {
           <h2 className="hiddn text-xl font-bold text-blue-800 mb-6 fontserif">Send Us a Message</h2>
 
             <div>
-              <label className="block font-semibold text-gray-800">Full Name</label>
+              <label className="block font-semibold text-gray-700">Full Name</label>
               <input
                 type="text"
                 name="name"
@@ -120,7 +120,7 @@ export default function Contact() {
             </div>
 
             <div>
-              <label className="block font-semibold  text-gray-800">Email Address</label>
+              <label className="block font-semibold  text-gray-700">Email Address</label>
               <input
                 type="email"
                 name="email"
@@ -131,7 +131,7 @@ export default function Contact() {
             </div>
 
             <div>
-              <label className="block font-semibold text-gray-800">Phone Number</label>
+              <label className="block font-semibold text-gray-700">Phone Number</label>
               <input
                 type="tel"
                 name="phone"
@@ -141,7 +141,7 @@ export default function Contact() {
             </div>
 
             <div>
-              <label className="block font-semibold text-gray-800">Subject</label>
+              <label className="block font-semibold text-gray-700">Subject</label>
               <input
                 type="text"
                 name="subject"
@@ -151,7 +151,7 @@ export default function Contact() {
             </div>
 
             <div>
-              <label className="block font-semibold text-gray-800">Message</label>
+              <label className="block font-semibold text-gray-700">Message</label>
               <textarea
                 name="message"
                 rows="4"
