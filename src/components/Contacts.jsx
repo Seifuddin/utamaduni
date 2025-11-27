@@ -42,7 +42,7 @@ export default function Contact() {
 
   return (
     <div className="relative bg-gradient-to-br from-amber-50 via-white to-blue-50 text-gray-900 py-20 px-6 md:px-16 overflow-hidden">
-      <div className="rounded-xl p6 md:p12 max-w-7xl mx-auto">
+      <div className="rounded-xl p6 md:p12 max-w-6xl mx-auto">
 
         <div className="grid md:grid-cols-2 gap-5">
 
