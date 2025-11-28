@@ -33,7 +33,6 @@ export const metadata = {
     "outreach programs"
   ],
 
-  // This sets the base URL for all canonical and OpenGraph links
   metadataBase: new URL("https://utamaduniorganization.vercel.app"),
 
   alternates: {
@@ -46,7 +45,7 @@ export const metadata = {
       "Empowering orphans, vulnerable children, and communities through education, food support, donations, and outreach programs.",
     url: "https://utamaduniorganization.vercel.app",
     siteName: "Utamaduni Organization",
-    images: ["/og-image.jpg"], // upload this image later to /public
+    images: ["/og-image.jpg"],
     type: "website",
     locale: "en_US",
   },
@@ -69,6 +68,23 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        {/* Google Analytics */}
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=G-7HS1PK0F12`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-7HS1PK0F12', { page_path: window.location.pathname });
+            `,
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
