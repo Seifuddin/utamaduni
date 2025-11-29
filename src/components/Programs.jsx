@@ -122,7 +122,7 @@ export default function Programs() {
           what we do
         </p>
 
-        <h2 className="text-3xl font-bold fontserif text-gray-900 mb-4">
+        <h2 className="text-2xl md:text-4xl font-bold fontserif text-gray-900 mb-4">
           Our Projects & Focus Areas
         </h2>
 
@@ -155,12 +155,12 @@ export default function Programs() {
                 {/* ICON + TITLE */}
                 <div className="flex items-center gap-3 mb-3">
                   <div
-                    className="w-12 h-12 rounded-full flex items-center justify-center 
+                    className="w-10 h-10 rounded-full flex items-center justify-center 
                     bg-gradient-to-br from-blue-700 via-blue-600 to-pink-600 shadow-md"
                   >
                     {program.icon}
                   </div>
-                  <h3 className="font-bold text-blue-800 fontserif text-lg">
+                  <h3 className="font-semibold text-gray-900 fontserif text-lg">
                     {program.title}
                   </h3>
                 </div>

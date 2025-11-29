@@ -53,12 +53,12 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="space-y-6 bg-gray-50 shadow-xl border border-blue-100 p-5 py-10 rounded-lg"
           >
-            <h4 className="text-xl font-bold text-blue-800 mb-6 fontserif">
+            <h4 className="text-xl font-semibold text-gray-900 mb-6 fontserif">
               Contact Information
             </h4>
 
             <div className="flex items-start space-x-4">
-              <Mail className="text-pink-600 mt-1" />
+              <Mail className="text-blue-800 mt-1" />
               <div>
                 <h4 className="font-bold text-gray-700">Email</h4>
                 <p className="text-gray-600">utamadunicharity@gmail.com</p>
@@ -66,7 +66,7 @@ export default function Contact() {
             </div>
 
             <div className="flex items-start space-x-4">
-              <Phone className="text-pink-600 mt-1" />
+              <Phone className="text-blue-800 mt-1" />
               <div>
                 <h4 className="font-bold text-gray-700">Phone</h4>
                 <p className="text-gray-600">+254 704 337 351</p>
@@ -74,7 +74,7 @@ export default function Contact() {
             </div>
 
             <div className="flex items-start space-x-4">
-              <MapPin className="text-pink-600 mt-1" />
+              <MapPin className="text-blue-800 mt-1" />
               <div>
                 <h4 className="font-bold text-gray-700">Location</h4>
                 <p className="text-gray-600">Nairobi, Kenya</p>
@@ -82,16 +82,16 @@ export default function Contact() {
             </div>
 
             <div className="flex items-start space-x-4">
-              <Building2 className="text-pink-600 mt-1" />
+              <Building2 className="text-blue-800 mt-1" />
               <div>
                 <h4 className="font-bold text-gray-700">Building</h4>
                 <p className="text-gray-600">
-                  Moi Avenue, Utamaduni House, First Floor, Room No. 1
+                  Utamaduni Plaza, Nairobi
                 </p>
               </div>
             </div>
 
-            <h4 className="font-bold text-blue-800 text-lg fontserif mt-5">
+            <h4 className="font-semibold text-gray-900 text-lg fontserif mt-5">
               Follow, Like and Subscribe: @Utamaduni Organization
             </h4>
 
@@ -125,7 +125,7 @@ export default function Contact() {
             className="bg-gray-50 border border-blue-100 p-5 rounded-lg shadow-xl space-y-4"
             onSubmit={handleSubmit}
           >
-            <h2 className="text-xl font-bold text-blue-800 mb-6 fontserif">
+            <h2 className="text-xl font-semibold text-gray-900 mb-6 fontserif">
               Send Us a Message
             </h2>
 

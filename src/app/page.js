@@ -16,7 +16,6 @@ import Projects from "@/components/Projects";
 import CTA from "@/components/CTA";
 import EventGallerySlider from "@/components/Events";
 import VideoHighlights from "@/components/Youtube";
-import WhatsAppButton from "@/components/WhatsApp";
 
 // ✅ Homepage SEO Metadata
 export const metadata = {
@@ -59,7 +58,6 @@ export default function Home() {
   return (
     <main className="overflow-x-hidden bg-amber-50">
       <Hero />
-      <WhatsAppButton />
       <SponsorProgram />
       <ImpactStats />
       <EventGallerySlider />

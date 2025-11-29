@@ -70,9 +70,9 @@ export default function FAQ() {
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full flex justify-between items-center px-5 py-4 text-left hover:bg-amber-100 transition"
+                className="w-full flex justify-between items-center px-3 py-4 text-left hover:bg-amber-100 transition"
               >
-                <span className="text-gray-900 fontserif font-medium font-semibold text-base md:text-lg">
+                <span className="text-gray-900 fontserif fontmedium font-semibold text-base md: text-lg">
                   {faq.question}
                 </span>
                 <ChevronDown
@@ -89,7 +89,7 @@ export default function FAQ() {
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="px-5 pb-4 text-gray-600 text-base md:text-base leading-relaxed"
+                    className="px-3 pb-4 text-gray-600 text-base md:font-medium leading-relaxed"
                   >
                     {faq.answer}
                   </motion.div>

@@ -5,11 +5,11 @@ import { HeartHandshake, GraduationCap, Stethoscope } from "lucide-react";
 
 export default function SponsorProgram() {
   return (
-    <section className="relative bg-amber-50 text-gray-900 py-16 px-6 md:px-12 overflow-hidden">
+    <section className="relative bg-amber-50 text-gray-900 py-24 px-6 md:px-12 overflow-hidden">
       <div className="relative mx-auto max-w-7xl grid md:grid-cols-2 gap-8 items-center z-10">
         {/* Left Side - Text */}
         <div>
-          <h2 className="text-2xl md:text-3xl fontserif font-bold text-gray-900 mb-3">
+          <h2 className="text-3xl md:text-4xl fontserif font-bold text-gray-900 mb-3">
             Sponsor a Child,{" "}
             <span className="block font-semibold text-blue-800">
               Transform a Future
@@ -28,19 +28,19 @@ export default function SponsorProgram() {
           {/* Icon Highlights - Compact */}
           <div className="flex gap-4 mb-5">
             <div className="flex flex-col items-center text-center">
-              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100">
+              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-br from-pink-200 to-blue-100">
                 <HeartHandshake className="w-5 h-5 text-blue-800" />
               </div>
               <span className="mt-1 text-gray-800 text-sm font-medium">Care</span>
             </div>
             <div className="flex flex-col items-center text-center">
-              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100">
+              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-br from-pink-200 to-blue-100">
                 <GraduationCap className="w-5 h-5 text-blue-800" />
               </div>
               <span className="mt-1 text-gray-800 text-sm font-medium">Education</span>
             </div>
             <div className="flex flex-col items-center text-center">
-              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100">
+              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-br from-pink-200 to-blue-100">
                 <Stethoscope className="w-5 h-5 text-blue-800" />
               </div>
               <span className="mt-1 text-gray-800 text-sm font-medium">Health</span>
