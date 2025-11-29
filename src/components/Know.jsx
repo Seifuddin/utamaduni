@@ -122,7 +122,7 @@ export default function DidYouKnowHybrid() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.6 }}
           viewport={{ once: true }}
-          className="mt-8"
+          className="hidden mt-8"
         >
           <Link
             href="/donate"

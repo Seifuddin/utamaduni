@@ -1,182 +1,218 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 
-// 🔹 Projects Data (replaces the old programs)
+/* =======================
+   🔹 Custom SVG Icons
+   ======================= */
+const ChildIcon = (
+  <svg
+    width="26"
+    height="26"
+    fill="white"
+    viewBox="0 0 24 24"
+  >
+    <path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm7 2h-2.1c-.9 0-1.7.6-2 1.5-.5 1.4-1.8 2.5-3.4 2.5s-2.9-1.1-3.4-2.5c-.3-.9-1.1-1.5-2-1.5H4c-1.1 0-2 .9-2 2v3c0 .5.4 1 1 1h18c.6 0 1-.5 1-1v-3c0-1.1-.9-2-2-2z" />
+  </svg>
+);
+
+const HivIcon = (
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="white">
+    <path d="M12 2a7 7 0 00-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1114.5 9 2.5 2.5 0 0112 11.5z"/>
+  </svg>
+);
+
+const DisabilityIcon = (
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="white">
+    <path d="M12 2a3 3 0 110 6 3 3 0 010-6zm5 13h-3l-2-5H9v2h1.2l2 5H17a2 2 0 110 4h-1a2 2 0 110-4zM6 22a4 4 0 110-8 4 4 0 010 8z"/>
+  </svg>
+);
+
+const ElderlyIcon = (
+  <svg width="26" height="26" fill="white" viewBox="0 0 24 24">
+    <path d="M12 4a3 3 0 110 6 3 3 0 010-6zm5 8h-1l-2 7h2l3 3 2-2-4-4 1-4h2V9h-3zM6 11H4v10h2V11z"/>
+  </svg>
+);
+
+const StreetIcon = (
+  <svg width="26" height="26" fill="white" viewBox="0 0 24 24">
+    <path d="M12 3l8 4v4c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V7l8-4zm0 6a2 2 0 100 4 2 2 0 000-4z"/>
+  </svg>
+);
+
+const RefugeeIcon = (
+  <svg width="26" height="26" fill="white" viewBox="0 0 24 24">
+    <path d="M12 2L2 7l10 5 10-5-10-5zm0 7L2 14l10 5 10-5-10-5z"/>
+  </svg>
+);
+
+/* =======================
+   🔹 Programs Array
+   ======================= */
 const programs = [
   {
     image: "/images/childsupport.webp",
     title: "Orphans and Vulnerable Children",
     description:
-      "Providing shelter, education, and emotional support to children without families, helping them build a hopeful future.",
+      "Providing shelter, education, and emotional support to vulnerable children.",
     details:
-      "We dedicate this project to supporting children who are orphaned or vulnerable by providing access to education, healthcare, and safe environments where they can grow with dignity and hope.",
+      "We dedicate this program to supporting orphaned and vulnerable kids through health, education, and emotional care.",
+    icon: ChildIcon,
   },
   {
     image: "/images/hiv.webp",
     title: "Persons Living with HIV/AIDS",
     description:
-      "Offering healthcare, counseling, and awareness programs to promote dignity, hope, and healthy living.",
+      "Offering healthcare, counseling, and awareness programs.",
     details:
-      "Through this project, we offer medical support, mental health counseling, and awareness campaigns that empower individuals living with HIV/AIDS to live healthy and fulfilling lives free from stigma.",
+      "We empower individuals living with HIV/AIDS with medical support and anti-stigma campaigns.",
+    icon: HivIcon,
   },
   {
     image: "/images/Disabilities.jpg",
     title: "Persons with Disabilities",
     description:
-      "Supporting inclusion through accessibility programs, education, and skills empowerment for persons with disabilities.",
+      "Supporting inclusion through accessibility and empowerment.",
     details:
-      "This initiative focuses on providing training, assistive tools, and inclusive community engagement for persons with disabilities, ensuring they are empowered and included in every part of society.",
+      "This initiative empowers persons with disabilities through tools, education, and skills training.",
+    icon: DisabilityIcon,
   },
   {
     image: "/images/elderly_villagers.jpg",
     title: "Elderly Persons",
     description:
-      "Providing care, companionship, and medical assistance to elderly people who lack family or social support.",
+      "Providing care and companionship to the elderly.",
     details:
-      "This project supports elderly individuals through companionship programs, home visits, and healthcare services, ensuring they live with dignity and comfort in their later years.",
+      "We support elderly individuals with medical services, home visits, and social programs.",
+    icon: ElderlyIcon,
   },
   {
     image: "/images/Street-family.jpg",
     title: "Street Children",
     description:
-      "Rehabilitating and educating street children and youth to help them become productive and confident members of society.",
+      "Rehabilitating and educating street children.",
     details:
-      "We reach out to street children and vulnerable youth by providing education, shelter, and mentorship programs that transform their lives and open pathways to a brighter future.",
+      "We provide shelter, mentorship, and education for street children and vulnerable youth.",
+    icon: StreetIcon,
   },
   {
     image: "/images/refugee-families-2.jpeg",
     title: "Refugees and Displaced Families",
     description:
-      "Offering emergency support, education, and empowerment to families affected by displacement and conflict.",
+      "Offering emergency support and empowerment.",
     details:
-      "We provide refugees and displaced families with essential resources, psychosocial support, and education to rebuild their lives and regain a sense of stability and hope.",
+      "We help displaced families rebuild through education, psychosocial support, and basic needs.",
+    icon: RefugeeIcon,
   },
 ];
 
+/* =======================
+   🔹 Component
+   ======================= */
 export default function Programs() {
   const [selectedProgram, setSelectedProgram] = useState(null);
 
   return (
     <section className="py-24 bg-amber-50 relative overflow-hidden" id="programs">
-      {/* 🔹 Background Decorations */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-10 left-10 w-40 h-40 bg-pink-400 rounded-full blur-3xl opacity-20 animate-pulse"></div>
-        <div className="absolute bottom-10 right-10 w-52 h-52 bg-blue-400 rounded-full blur-3xl opacity-20 animate-pulse"></div>
-        <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-amber-300 rounded-full blur-3xl opacity-10 animate-pulse"></div>
-      </div>
 
       <div className="mx-auto px-6 text-center max-w-7xl">
-        {/* Heading */}
-        <p className="text-sm uppercase tracking-wide font-semibold text-pink-700 mb-2">
-            what we do
-          </p>
-        <motion.h2
-          className="text-2xl md:text-3xl fontserif font-bold text-gray-900 mb-4"
-          initial={{ opacity: 0, y: -30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          Our Projects & Focus Areas
-        </motion.h2>
-         <motion.div
-                    initial={{ width: 0 }}
-                    whileInView={{ width: "5rem" }}
-                    transition={{ duration: 0.5 }}
-                    className="h-1 bg-pink-700 rounded-full mx-auto mb-6"
-                  ></motion.div>
-        <motion.p
-          className="mt-2 text-gray-600 max-w-2xl mx-auto font-medium text-center md:text-lg mb-6"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-        >
-          We dedicate our programs to improving the lives of vulnerable and marginalized groups through compassion, empowerment, and sustainable support.
-        </motion.p>
 
-        {/* Projects Grid */}
+        <p className="text-sm uppercase tracking-wide font-semibold text-pink-700 mb-2">
+          what we do
+        </p>
+
+        <h2 className="text-3xl font-bold fontserif text-gray-900 mb-4">
+          Our Projects & Focus Areas
+        </h2>
+
+        <div className="h-1 w-20 bg-pink-700 mx-auto rounded-full mb-6"></div>
+
+        <p className="mt-2 text-gray-600 max-w-2xl mx-auto text-lg mb-12">
+          We dedicate our programs to improving the lives of vulnerable and marginalized groups through compassion, empowerment, and sustainable support.
+        </p>
+
+        {/* =======================
+            🔹 Program Grid
+            ======================= */}
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-10">
           {programs.map((program, i) => (
-            <motion.div
+            <div
               key={i}
               className="group bg-white border border-blue-100 rounded-lg shadow-md hover:shadow-xl overflow-hidden flex flex-col transition-transform hover:-translate-y-1"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1, duration: 0.6 }}
-              viewport={{ once: true }}
             >
-              {/* Image */}
-              <div className="relative w-full h-40 overflow-hidden">
+              <div className="relative w-full h-40">
                 <Image
                   src={program.image}
                   alt={program.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-
-              {/* Text Content */}
-              <div className="p-4 flex flex-col flex-1 text-left">
-                <h3 className="font-bold text-blue-800 fontserif md:text-lg my-2">
-                  {program.title}
-                </h3>
-                <p className="text-gray-600 text-base flex-1">{program.description}</p>
-                <button
-                  onClick={() => setSelectedProgram(program)}
-                  className="mt-4 inline-block bg-blue-800 bordr border-pink-700 text-white text-center text-sm px-4 py-2 rounded font-semibold hover:text-white hover:bg-blue-800 transition"
-                >
-                  Learn More
-                </button>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-
-      {/* Modal */}
-      {selectedProgram && (
-        <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 px-4">
-          {/* Glow Background */}
-          <div className="absolute inset-0 -z-10">
-            <div className="absolute top-20 left-1/3 w-72 h-72 bg-pink-400 rounded-full blur-3xl opacity-20 animate-pulse"></div>
-            <div className="absolute bottom-20 right-1/4 w-80 h-80 bg-blue-500 rounded-full blur-3xl opacity-20 animate-pulse"></div>
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.3 }}
-            className="relative rounded-lg shadow-xl max-w-md w-full overflow-hidden"
-          >
-            <div className="absolute inset-0 bg-gradient-to-br from-pink-100 via-white to-blue-100"></div>
-
-            <div className="relative p-5">
-              <div className="relative w-full h-44 mb-3 rounded-md overflow-hidden shadow-md">
-                <Image
-                  src={selectedProgram.image}
-                  alt={selectedProgram.title}
                   fill
                   className="object-cover"
                 />
               </div>
 
+              <div className="p-4 flex flex-col flex-1 text-left">
+
+                {/* ICON + TITLE */}
+                <div className="flex items-center gap-3 mb-3">
+                  <div
+                    className="w-12 h-12 rounded-full flex items-center justify-center 
+                    bg-gradient-to-br from-blue-700 via-blue-600 to-pink-600 shadow-md"
+                  >
+                    {program.icon}
+                  </div>
+                  <h3 className="font-bold text-blue-800 fontserif text-lg">
+                    {program.title}
+                  </h3>
+                </div>
+
+                <p className="text-gray-600 flex-1">{program.description}</p>
+
+                <button
+                  onClick={() => setSelectedProgram(program)}
+                  className="mt-4 bg-blue-800 text-white text-sm px-4 py-2 rounded font-semibold hover:bg-blue-900 transition"
+                >
+                  Learn More
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* =======================
+          🔹 Modal
+          ======================= */}
+      {selectedProgram && (
+        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 px-4">
+          <div className="bg-white max-w-md w-full rounded-lg shadow-xl overflow-hidden">
+
+            <div className="relative w-full h-44">
+              <Image
+                src={selectedProgram.image}
+                alt={selectedProgram.title}
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            <div className="p-5">
               <h3 className="text-lg font-semibold text-blue-900 mb-2">
                 {selectedProgram.title}
               </h3>
+
               <p className="text-gray-700 text-sm mb-4">
                 {selectedProgram.details}
               </p>
 
               <button
                 onClick={() => setSelectedProgram(null)}
-                className="bg-gradient-to-r from-pink-600 to-blue-900 text-white px-4 py-2 text-sm rounded-md shadow hover:from-pink-700 hover:to-blue-800 transition"
+                className="bg-gradient-to-r from-pink-600 to-blue-900 text-white px-4 py-2 text-sm rounded-md shadow hover:opacity-90 transition"
               >
                 Close
               </button>
             </div>
-          </motion.div>
+
+          </div>
         </div>
       )}
     </section>

@@ -1,91 +1,55 @@
 "use client";
 
-import { motion, useInView, useMotionValue, animate } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
-import { Users, Utensils, HandHeart, Calendar } from "lucide-react"; 
+import { Users, Utensils, HandHeart, Calendar } from "lucide-react";
 
-// Counter hook
-const AnimatedCounter = ({ from = 0, to }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-  const count = useMotionValue(from);
-  const [value, setValue] = useState(from);
-
-  useEffect(() => {
-    if (isInView) {
-      const controls = animate(count, to, { duration: 2, ease: "easeOut" });
-      const unsubscribe = count.on("change", (latest) => setValue(Math.floor(latest)));
-      return () => {
-        controls.stop();
-        unsubscribe();
-      };
-    }
-  }, [isInView, to, count]);
-
-  return (
-    <span ref={ref} className="text-lg md:text-2xl fontserif font-bold text-white">
-      {value.toLocaleString()}+
-    </span>
-  );
-};
-
-// Updated stats for charitable organization
 const stats = [
-  { icon: Users, label: "Children Helped", value: 500, color: "text-white" },
-  { icon: Utensils, label: "Meals Provided", value: 2000, color: "text-white" },
-  { icon: HandHeart, label: "Volunteers", value: 20, color: "text-white" },
-  { icon: Calendar, label: "Years of Service", value: 2, color: "text-white" },
+  { icon: Users, label: "Children Helped", value: 500, gradient: "from-blue-400 to-pink-500" },
+  { icon: Utensils, label: "Meals Provided", value: 2000, gradient: "from-pink-500 to-blue-400" },
+  { icon: HandHeart, label: "Volunteers", value: 20, gradient: "from-blue-300 to-pink-400" },
+  { icon: Calendar, label: "Years of Service", value: 2, gradient: "from-pink-400 to-blue-300" },
 ];
 
 export default function ImpactStats() {
   return (
-    <section className="relative py-20 bgamber-50 px6 overflow-hidden bg-gradient-to-r from-blue-900 to-blue-800">
+    <section className="relative py-12 bg-blue-900 overflow-hidden">
 
-      {/* Decorative Waves */}
-      <div className="absolute -top-16 left-0 w-full h-36 bg-gradient-to-r from-indigo-800 via-indigo-900 to-indigo-800 rounded-b-full opacity-30"></div>
-      <div className="absolute -bottom-16 right-0 w-56 h-56 bg-indigo-700 rounded-full mix-blend-multiply filter blur-2xl opacity-25"></div>
+      {/* Background Decorations */}
+      <div className="absolute -top-16 left-0 w-80 h-80 bg-gradient-to-tr from-blue-700 to-pink-500 rounded-full opacity-20 blur-3xl"></div>
+      <div className="absolute -bottom-16 right-0 w-64 h-64 bg-gradient-to-tr from-pink-600 to-blue-600 rounded-full opacity-20 blur-3xl"></div>
 
-      <div className="roundedmd px5 py16 text-center ">
+      <div className="relative max-w-6xl mx-auto px-4 text-center">
         {/* Heading */}
-        <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-2xl md:text-3xl fontserif  font-extrabold text-white mb-6"
-        >
+        <h2 className="text-2xl md:text-3xl fontserif font-extrabold text-white mb-3">
           Our Impact in Numbers
-        </motion.h2>
-
-        <p className="text-indigo-210 px-5 text-sm md:text-base max-w-2xl mx-auto mb-10">
-          At <span className="font-semibold text-white">Utamaduni organization</span>, we strive every day to uplift communities and change lives.
+        </h2>
+        <p className="text-white text-sm md:text-base max-w-2xl mx-auto mb-8">
+          At <span className="font-semibold">Utamaduni Organization</span>, we work tirelessly to uplift communities and transform lives.
         </p>
 
         {/* Stats Grid */}
-        <div className="grid gap-4 xs:gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-7xl px-6 mx-auto">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((stat, index) => {
             const Icon = stat.icon;
             return (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ scale: 1.05 }}
-                className="bg-white/10 backdrop-blur-md border border-white/20 p-4 xs:p-5 sm:p-6 rounded-lg flex flex-col items-center"
+                className="flex flex-col items-center p-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl hover:shadow-lg transition-all"
               >
                 {/* Icon */}
-                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white/30 mb-2 xs:mb-3">
-                  <Icon className={`${stat.color} w-6 h-6`} />
+                <div
+                  className={`w-14 h-14 flex items-center justify-center rounded-full mb-2 bg-gradient-to-br ${stat.gradient} text-white shadow-md`}
+                >
+                  <Icon className="w-6 h-6" />
                 </div>
 
                 {/* Counter */}
-                <AnimatedCounter to={stat.value} />
+                <span className="text-xl md:text-2xl font-extrabold text-white">
+                  {stat.value.toLocaleString()}+
+                </span>
 
                 {/* Label */}
-                <p className="text-white/90 mt-1 font-medium text-xs xs:text-sm md:text-base">{stat.label}</p>
-              </motion.div>
+                <p className="mt-1 text-white/90 font-medium text-center text-sm">{stat.label}</p>
+              </div>
             );
           })}
         </div>

@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const slides = [
@@ -66,54 +65,38 @@ export default function Hero() {
 
   const prevSlide = () =>
     setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+
   const nextSlide = () =>
     setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
 
   return (
     <section className="relative w-full h-[70vh] md:h-[70vh] overflow-hidden">
-      <AnimatePresence mode="wait">
-        <motion.div
+      
+      {/* Slide Background */}
+      <div className="absolute inset-0">
+        <Image
           key={slides[current].id}
-          initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.95 }}
-          transition={{ duration: 1 }}
-          className="absolute inset-0"
-        >
-          <Image
-            src={slides[current].image}
-            alt={slides[current].title}
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90" />
-        </motion.div>
-      </AnimatePresence>
+          src={slides[current].image}
+          alt={slides[current].title}
+          fill
+          className="object-cover"
+          priority
+        />
 
-      {/* Text Content */}
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90" />
+      </div>
+
+      {/* TEXT CONTENT */}
       <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-6">
-        <motion.h1
-          key={slides[current].title}
-          initial={{ y: 40, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          className="text-4xl md:text-5xl font-black font-extrabold drop-shadow-xl"
-        >
+        <h1 className="text-4xl md:text-5xl font-extrabold drop-shadow-xl">
           {slides[current].title}
-        </motion.h1>
+        </h1>
 
-        <motion.p
-          key={slides[current].subtitle}
-          initial={{ y: 40, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="mt-4 text-lg md:text-2xl text-gray-200 max-w-2xl leading-relaxed"
-        >
+        <p className="mt-4 text-lg md:text-2xl text-gray-200 max-w-2xl leading-relaxed">
           {slides[current].subtitle}
-        </motion.p>
+        </p>
 
-        {/* FIXED BUTTON + LINK */}
         <Link
           href={`${
             slides[current].slug === "partners"
@@ -121,36 +104,33 @@ export default function Hero() {
               : `/programs/${slides[current].slug}`
           }`}
         >
-          <motion.button
-            key={slides[current].button}
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.4 }}
+          <button
             className="mt-8 px-10 py-2.5 fontserif md:text-lg font-semibold rounded-full 
                        bg-gradient-to-r from-pink-600 to-red-600 
                        hover:from-red-700 hover:to-pink-700 
                        shadow-lg hover:shadow-2xl transition-all duration-300"
           >
             {slides[current].button}
-          </motion.button>
+          </button>
         </Link>
       </div>
 
-      {/* Arrows */}
+      {/* Left Arrow */}
       <button
         onClick={prevSlide}
         className="absolute left-4 md:left-10 top-1/2 -translate-y-1/2 
                    bg-white/20 hover:bg-white/40 text-pink-600 p-3 md:p-4 
-                   rounded-full shadow-lg transition-all"
+                   rounded-full shadow-lg transition"
       >
         <ChevronLeft size={28} />
       </button>
 
+      {/* Right Arrow */}
       <button
         onClick={nextSlide}
         className="absolute right-4 md:right-10 top-1/2 -translate-y-1/2 
                    bg-white/20 hover:bg-white/40 text-pink-600 p-3 md:p-4 
-                   rounded-full shadow-lg transition-all"
+                   rounded-full shadow-lg transition"
       >
         <ChevronRight size={28} />
       </button>
@@ -161,7 +141,7 @@ export default function Hero() {
           <button
             key={index}
             onClick={() => setCurrent(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+            className={`w-3 h-3 rounded-full transition-all ${
               current === index
                 ? "bg-pink-600 scale-125 shadow-md"
                 : "bg-gray-400 hover:bg-pink-400"

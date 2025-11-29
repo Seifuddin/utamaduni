@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
@@ -36,7 +35,7 @@ const events = [
 export default function EventGallerySlider() {
   return (
     <section className="bg-amber-50 py-20 md:px-12 lg:px-16">
-      <div className="mx-auto max-w-7xl px-6 ">
+      <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
         <div className="text-center mb-10">
           <p className="text-sm uppercase tracking-wide font-semibold text-pink-700 mb-2">
@@ -45,12 +44,7 @@ export default function EventGallerySlider() {
           <h2 className="text-2xl md:text-4xl fontserif font-bold text-gray-900 mb-4">
             Explore Our Community Impact
           </h2>
-          <motion.div
-            initial={{ width: 0 }}
-            whileInView={{ width: "5rem" }}
-            transition={{ duration: 0.5 }}
-            className="h-1 bg-pink-700 rounded-full mx-auto mb-6"
-          ></motion.div>
+          <div className="h-1 bg-pink-700 rounded-full mx-auto mb-6 w-20"></div>
           <p className="mt-2 text-gray-600 max-w-2xl mx-auto font-medium text-center md:text-lg mb-6">
             A glimpse into the workshops, campaigns, and visits that inspired and empowered communities.
           </p>
@@ -72,15 +66,9 @@ export default function EventGallerySlider() {
         >
           {events.map((event, index) => (
             <SwiperSlide key={index}>
-              <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                className="bg-white border border-blue-100 rounded-lg shadow hover:shadow-md overflow-hidden flex flex-col transition-transform hover:-translate-y-1"
-              >
+              <div className="bg-white border border-blue-100 rounded-lg shadow hover:shadow-md overflow-hidden flex flex-col transition-transform hover:-translate-y-1">
                 {/* Event Image */}
-                <div className="h-40 overflow-hidden">
+                <div className="h-48 overflow-hidden">
                   <img
                     src={event.img}
                     alt={event.title}
@@ -89,20 +77,21 @@ export default function EventGallerySlider() {
                 </div>
 
                 {/* Event Content */}
-                <div className="p-3 flex flex-col flex-1">
-                  <h3 className="font-bold text-blue-900 fontserif md:text-lg my-2">
+                <div className="p-4 flex flex-col flex-1">
+                  <p className="text-blue-800 text-sm mb-1 italic">{event.date}</p>
+                  <h3 className="font-semibold text-gray-900 fontserif md: text-lg mb-2">
                     {event.title}
                   </h3>
-                  {/* <p className="text-sm text-gray-700 italic mb-2">{event.date}</p> */}
                   <p className="text-gray-600 text-base mb-4">{event.description}</p>
                   <a
-                    href="/gallery"
-                    className="mt-2 inline-block bgpink-50 borderborder-pink-100 text-blue-700 textcenter text-sm px-1 py2 rounded font-semibold hover:text-white hover:bg-blue-800 transition"
-                  >
-                    View Event in Gallery →
-                  </a>
+  href="/gallery"
+  className="mt-auto inline-block px-4 py-2 text-sm font-semibold text-white rounded bg-blue-800 shadow hover:bg-blue-600 transition-colors duration-300 text-center"
+>
+  View Event in Gallery →
+</a>
+
                 </div>
-              </motion.div>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>
