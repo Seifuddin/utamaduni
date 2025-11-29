@@ -97,10 +97,10 @@ export default function PastEvents() {
 
               {/* Content */}
               <div className="p-4">
-                <h3 className="font-bold text-blue-900 fontserif md:text-lg my-2">
+                <p className="text-sm text-blue-800 italic mb-2">{event.date}</p>
+                <h3 className="font-semibold text-gray-900 fontserif text-lg md:text-xl my-2">
                   {event.title}
                 </h3>
-                <p className="text-sm text-gray-700 italic mb-2">{event.date}</p>
                 <p className="text-gray-600 text-base">{event.description}</p>
               </div>
             </motion.div>

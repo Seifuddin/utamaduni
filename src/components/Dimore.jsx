@@ -6,7 +6,7 @@ import { Facebook, Linkedin, Twitter } from "lucide-react";
 
 export default function CEOSection() {
   return (
-    <section className="py-20 bg-amber-50 gradient-to-b from-amber-50 to-white text-gray-800">
+    <section className="py-16 bg-amber-50 gradient-to-b from-amber-50 to-white text-gray-800">
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <motion.div
@@ -19,7 +19,7 @@ export default function CEOSection() {
             Founder & CEO
           </h2>
           <div className="w-24 h-1 bg-pink-700 mx-auto mt-3 rounded-full"></div>
-          <p className="mt-2 text-gray-600 max-w-2xl mx-auto font-medium text-center md:text-lg mb-6">
+          <p className="mt-2 text-gray-600 max-wxl mx-auto font-medium textcenter md:text-lg mb-6 borderb">
             Meet the visionary behind Utamaduni Charity Organization — 
             a leader driven by compassion, unity, and sustainable impact.
           </p>
@@ -30,7 +30,7 @@ export default function CEOSection() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex flex-col md:flex-row items-center gap-10 bg-white shadow-xl rounded-lg overflow-hidden border border-gray-200 p-4 py-10 md:p-8"
+          className="flex flex-col md:flex-row items-center gap-10 bgwhite shadowxl roundedlg overflow-hidden borderborder-gray-200 p4 py10 mdp-8"
         >
           {/* CEO Image */}
           <div className="relative w-72 h-72 md:w-96 md:h-96 flex-shrink-0 rounded-lg overflow-hidden shadow-lg group">
@@ -48,7 +48,8 @@ export default function CEOSection() {
           </div>
 
           {/* CEO Details */}
-          <div className="flex-1 text-center md:text-left">
+          <div className="flex-1 text-centermd: text-left">
+            
             <h3 className="font-bold text-left text-blue-900 fontserif md:text-lg my-2">
               Brian Omondi
             </h3>
@@ -92,7 +93,7 @@ function SocialIcon({ href, icon }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="p-2 text-blue-800 bg-amber-100 border border-blue-100 rounded -full hover:bg-blue-700 hover:text-white transition-all duration-300 shadow hover:shadow-md"
+      className="p-2 text-blue-800 bg-blue-100 borderborder-blue-100 rounded-full hover:bg-blue-700 hover:text-white transition-all duration-300 shadow hover:shadow-md"
     >
       {icon}
     </a>

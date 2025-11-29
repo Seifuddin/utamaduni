@@ -11,13 +11,13 @@ const stats = [
 
 export default function ImpactStats() {
   return (
-    <section className="relative py-12 bg-blue-900 overflow-hidden">
+    <section className="relative py-12 bg-blue-900 px-6 overflow-hidden">
 
       {/* Background Decorations */}
       <div className="absolute -top-16 left-0 w-80 h-80 bg-gradient-to-tr from-blue-700 to-pink-500 rounded-full opacity-20 blur-3xl"></div>
       <div className="absolute -bottom-16 right-0 w-64 h-64 bg-gradient-to-tr from-pink-600 to-blue-600 rounded-full opacity-20 blur-3xl"></div>
 
-      <div className="relative max-w-6xl mx-auto px-4 text-center">
+      <div className="relative max-w-7xl mx-auto md:px-6 text-center">
         {/* Heading */}
         <h2 className="text-2xl md:text-3xl fontserif font-extrabold text-white mb-3">
           Our Impact in Numbers

@@ -51,14 +51,14 @@ export default function Contact() {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="space-y-6 bg-gray-50 shadow-xl border border-blue-100 p-5 py-10 rounded-lg"
+            className="space-y-6 bg-gray-50 shadow-xl border border-gray-200 p-5 py-10 rounded-lg"
           >
             <h4 className="text-xl font-semibold text-gray-900 mb-6 fontserif">
               Contact Information
             </h4>
 
             <div className="flex items-start space-x-4">
-              <Mail className="text-blue-800 mt-1" />
+              <Mail className="text-blue-700 shadow rounded mt-1" />
               <div>
                 <h4 className="font-bold text-gray-700">Email</h4>
                 <p className="text-gray-600">utamaduniorganization@gmail.com</p>
@@ -66,7 +66,7 @@ export default function Contact() {
             </div>
 
             <div className="flex items-start space-x-4">
-              <Phone className="text-blue-800 mt-1" />
+              <Phone className="text-blue-700 shadow rounded mt-1" />
               <div>
                 <h4 className="font-bold text-gray-700">Phone</h4>
                 <p className="text-gray-600">+254 704 337 351</p>
@@ -74,7 +74,7 @@ export default function Contact() {
             </div>
 
             <div className="flex items-start space-x-4">
-              <MapPin className="text-blue-800 mt-1" />
+              <MapPin className="text-blue-700 shadow rounded mt-1" />
               <div>
                 <h4 className="font-bold text-gray-700">Location</h4>
                 <p className="text-gray-600">Nairobi, Kenya</p>
@@ -82,7 +82,7 @@ export default function Contact() {
             </div>
 
             <div className="flex items-start space-x-4">
-              <Building2 className="text-blue-800 mt-1" />
+              <Building2 className="text-blue-700 shadow rounded mt-1" />
               <div>
                 <h4 className="font-bold text-gray-700">Building</h4>
                 <p className="text-gray-600">
@@ -97,22 +97,22 @@ export default function Contact() {
 
             <div className="flex space-x-4 pt-4">
               <a href="https://www.facebook.com/profile.php?id=61570938634560">
-                <FaFacebookF size={20} className="text-blue-700 hover:text-orange-500" />
+                <FaFacebookF size={25} className="text-blue-700 hover:text-orange-500" />
               </a>
               <a href="https://www.instagram.com/utamaduni_organization">
-                <FaInstagram size={20} className="text-pink-600 hover:text-orange-500" />
+                <FaInstagram size={25} className="text-pink-600 hover:text-orange-500" />
               </a>
               <a href="https://www.youtube.com/@utamadunifoundation">
-                <FaYoutube size={20} className="text-red-700 hover:text-orange-500" />
+                <FaYoutube size={25} className="text-red-700 hover:text-orange-500" />
               </a>
               <a href="https://x.com/UTAMADUNIF23567">
-                <FaTwitter size={20} className="text-blue-400 hover:text-orange-500" />
+                <FaTwitter size={25} className="text-blue-400 hover:text-orange-500" />
               </a>
               <a href="https://www.tiktok.com/@utamaduni01_org">
-                <FaTiktok size={20} className="text-black hover:text-orange-500" />
+                <FaTiktok size={25} className="text-black hover:text-orange-500" />
               </a>
               <a href="https://www.linkedin.com/in/utamaduni-organization-408a24345">
-                <FaLinkedinIn size={20} className="text-blue-600 hover:text-orange-500" />
+                <FaLinkedinIn size={25} className="text-blue-600 hover:text-orange-500" />
               </a>
             </div>
           </motion.div>
@@ -122,7 +122,7 @@ export default function Contact() {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="bg-gray-50 border border-blue-100 p-5 rounded-lg shadow-xl space-y-4"
+            className="bg-gray-50 border border-gray-200 p-5 rounded-lg shadow-xl space-y-4"
             onSubmit={handleSubmit}
           >
             <h2 className="text-xl font-semibold text-gray-900 mb-6 fontserif">
@@ -132,7 +132,7 @@ export default function Contact() {
             <input
               type="text"
               name="name"
-              className="w-full mt-1 p-2 border rounded-md bg-gray-50"
+              className="w-full mt-1 p-2 border border-gray-400 rounded-md bg-gray-50"
               placeholder="Your Name"
               required
             />
@@ -140,7 +140,7 @@ export default function Contact() {
             <input
               type="email"
               name="email"
-              className="w-full mt-1 p-2 border rounded-md bg-gray-50"
+              className="w-full mt-1 p-2 border border-gray-400 rounded-md bg-gray-50"
               placeholder="Your Email"
               required
             />
@@ -148,21 +148,21 @@ export default function Contact() {
             <input
               type="tel"
               name="phone"
-              className="w-full mt-1 p-2 border rounded-md bg-gray-50"
+              className="w-full mt-1 p-2 border border-gray-400 rounded-md bg-gray-50"
               placeholder="Your Phone Number"
             />
 
             <input
               type="text"
               name="subject"
-              className="w-full mt-1 p-2 border rounded-md bg-gray-50"
+              className="w-full mt-1 p-2 border border-gray-400 rounded-md bg-gray-50"
               placeholder="Subject of Your Message"
             />
 
             <textarea
               name="message"
               rows="4"
-              className="w-full mt-1 p-2 rounded-lg border bg-gray-50"
+              className="w-full mt-1 p-2 rounded-lg border border-gray-400 bg-gray-50"
               placeholder="Your Message"
               required
             ></textarea>

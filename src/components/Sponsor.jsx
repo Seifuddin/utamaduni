@@ -5,8 +5,8 @@ import { HeartHandshake, GraduationCap, Stethoscope } from "lucide-react";
 
 export default function SponsorProgram() {
   return (
-    <section className="relative bg-amber-50 text-gray-900 py-24 px-6 md:px-12 overflow-hidden">
-      <div className="relative mx-auto max-w-7xl grid md:grid-cols-2 gap-8 items-center z-10">
+    <section className="relative bg-amber-50 text-gray-900 py-24 px-6 mdpx-12 overflow-hidden">
+      <div className="relative mx-auto max-w-7xl md:px-6 grid md:grid-cols-2 gap-8 items-center z-10">
         {/* Left Side - Text */}
         <div>
           <h2 className="text-3xl md:text-4xl fontserif font-bold text-gray-900 mb-3">

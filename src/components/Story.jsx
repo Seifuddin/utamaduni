@@ -53,7 +53,7 @@ export default function OurStory() {
           transition={{ duration: 0.6 }}
           className="space-y-6"
         >
-          <h2 className="font-bold text-blue-800 fontserif md:text-lg my-3">
+          <h2 className="font-seibold text-blue-800 fontserif text-xl md:text-xl my-3">
                     A brief history about Utamaduni
                   </h2>
           <p className="text-gray-700 leading-relaxed text-base">
