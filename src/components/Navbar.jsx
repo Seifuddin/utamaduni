@@ -106,7 +106,7 @@ export default function Navbar() {
 
       {/* Mobile menu overlay */}
       <div
-        className={`fixed inset-0 bg-black bg-opacity-40 transition-opacity duration-300 ${
+        className={`fixed inset-0 bgblack bg-opacity-40 transition-opacity duration-300 ${
           isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
         onClick={() => setIsOpen(false)}
@@ -114,7 +114,7 @@ export default function Navbar() {
 
       {/* Mobile slide-in panel */}
       <div
-        className={`fixed top-0 right-0 h-full w-72 bg-white shadow-lg transform transition-transform duration-300 ${
+        className={`fixed top-0 right-0 h-auto w-full bg-white shadow-lg transform transition-transform duration-300 ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -163,7 +163,7 @@ export default function Navbar() {
               <Link
                 key={i}
                 href={item.href}
-                className="block text-gray-700 font-medium hover:text-blue-700"
+                className="block text-gray-700 text-lg font-semibold hover:text-blue-700"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}
