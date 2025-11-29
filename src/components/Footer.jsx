@@ -82,7 +82,7 @@ export default function Footer() {
           </h3>
           <p className="text-sm">📍 Nairobi, Kenya </p>
           <p className="text-sm">📞 +254 704 337 351 </p>
-          <p className="text-sm">✉️ utamadunicharity@gmail.com </p>
+          <p className="text-sm">✉️ utamaduniorganization@gmail.com</p>
           {/* Social Media Links */}
           <div className="flex mt-4 space-x-3">
             <Link

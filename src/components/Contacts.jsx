@@ -61,7 +61,7 @@ export default function Contact() {
               <Mail className="text-blue-800 mt-1" />
               <div>
                 <h4 className="font-bold text-gray-700">Email</h4>
-                <p className="text-gray-600">utamadunicharity@gmail.com</p>
+                <p className="text-gray-600">utamaduniorganization@gmail.com</p>
               </div>
             </div>
 
