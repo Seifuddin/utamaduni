@@ -33,12 +33,12 @@ export default function CEOSection() {
           className="flex flex-col md:flex-row items-center gap-10 bgwhite shadowxl roundedlg overflow-hidden borderborder-gray-200 p4 py10 mdp-8"
         >
           {/* CEO Image */}
-          <div className="relative w-72 h-72 md:w-96 md:h-96 flex-shrink-0 rounded-lg overflow-hidden shadow-lg group">
+          <div className="relative w-72 h-72 md:w-96 md:h-96 flex-shrink-0 roundedlg overflow-hidden shadowlg group">
             <Image
               src="/images/WhatsApp Image 2025-10-04 at 23.04.27.jpeg"
               alt="Founder & CEO - Utamaduni"
               fill
-              className="object-cover rounded transition-transform duration-500 group-hover:scale-105"
+              className="object-cover rounded-full transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-blue-900 bg-opacity-70 flex items-center justify-center text-white text-center opacity-0 group-hover:opacity-100 transition duration-500">
               <p className="px-6 text-sm md:text-base italic leading-relaxed">
@@ -93,7 +93,7 @@ function SocialIcon({ href, icon }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="p-2 text-blue-800 bg-blue-100 borderborder-blue-100 rounded-full hover:bg-blue-700 hover:text-white transition-all duration-300 shadow hover:shadow-md"
+      className="p-2 text-white bg-blue-900 borderborder-blue-100 rounded hover:bg-blue-700 hover:text-white transition-all duration-300 shadow hover:shadow-md"
     >
       {icon}
     </a>

@@ -12,22 +12,22 @@ import Link from "next/link";
 export default function DidYouKnowHybrid() {
   const slides = [
     {
-      icon: <Users className="w-6 h-6 text-pink-600" />,
+      icon: <Users className="w-7 h-7 text-white" />,
       stat: "150M+",
       text: "children live on the streets worldwide with no care or safety.",
     },
     {
-      icon: <Utensils className="w-6 h-6 text-pink-600" />,
+      icon: <Utensils className="w-7 h-7 text-white" />,
       stat: "1 in 3",
       text: "go to bed hungry every night, crying themselves to sleep.",
     },
     {
-      icon: <Home className="w-6 h-6 text-pink-600" />,
+      icon: <Home className="w-7 h-7 text-white" />,
       stat: "Millions",
       text: "sleep without shelter, warmth, or protection from harm.",
     },
     {
-      icon: <Heart className="w-6 h-6 text-pink-600" />,
+      icon: <Heart className="w-7 h-7 text-white" />,
       stat: "Your Help",
       text: "can bring food, safety, and hope. Even the smallest gift saves lives.",
     },
@@ -86,9 +86,9 @@ export default function DidYouKnowHybrid() {
                   transition={{ duration: 0.6 }}
                   viewport={{ once: true }}
                   className="bg-white/10 backdrop-blur-lg border border-white/20 
-                             rounded-xl p-5 shadow-lg"
+                             rounded p-5 shadow-lg"
                 >
-                  <div className="flex inline-block justify-center mb-3 bg-white/80 rounded-full p-2">{slide.icon}</div>
+                  <div className="flex inline-block justify-center mb-3 bg-white/30 border border-white/50  rounded p-2">{slide.icon}</div>
                   <h3 className="text-xl font-bold fontserif">{slide.stat}</h3>
                   <p className="mt-2 text-sm text-gray-300">{slide.text}</p>
                 </motion.div>
@@ -109,7 +109,7 @@ export default function DidYouKnowHybrid() {
               className="bg-white/10 backdrop-blur-lg border border-white/20 
                          rounded-xl p-5 shadow-lg hover:scale-105 transition"
             >
-              <div className="flex inline-block justify-center mb-3 bg-white/80 rounded-full p-2">{slide.icon}</div>
+              <div className="flex inline-block justify-center mb-3 bg-white/30 rounded border border-white/50 p-2">{slide.icon}</div>
               <h3 className="text font-bold fontserif">{slide.stat}</h3>
               <p className="mt-2 text-sm text-gray-200">{slide.text}</p>
             </motion.div>

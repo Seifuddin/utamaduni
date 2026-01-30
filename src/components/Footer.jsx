@@ -89,7 +89,7 @@ export default function Footer() {
               href="https://www.facebook.com/profile.php?id=61570938634560"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition shadow-md"
+              className="p-2 bg-blue-600 an hover:bg-blue-700 text-white rounded-full transition shadow-md"
             >
               <FaFacebookF size={18} />
             </Link>

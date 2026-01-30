@@ -155,8 +155,8 @@ export default function Programs() {
                 {/* ICON + TITLE */}
                 <div className="flex items-center gap-3 mb-3">
                   <div
-                    className="w-10 h-10 rounded-full flex items-center justify-center 
-                    bg-gradient-to-br from-blue-700 via-blue-600 to-pink-600 shadow-md"
+                    className="w-10 h-10 rounded flex items-center justify-center 
+                    bg-gradient-to-br from-blue-900 via-blue-600 to-blue-700 shadow-md"
                   >
                     {program.icon}
                   </div>

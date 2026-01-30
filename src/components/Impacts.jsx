@@ -33,13 +33,13 @@ export default function ImpactStats() {
             return (
               <div
                 key={index}
-                className="flex flex-col items-center p-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl hover:shadow-lg transition-all"
+                className="flex flex-col items-center p-4 bg-blue-900 backdrop-blur-md border border-white/20 rounded-xl hover:shadow-lg transition-all"
               >
                 {/* Icon */}
                 <div
-                  className={`w-14 h-14 flex items-center justify-center rounded-full mb-2 bg-gradient-to-br ${stat.gradient} text-white shadow-md`}
+                  className={`w-14 h-14 flex items-center border border-white/40  bg-blue-800 rounded justify-center shadow rounded-ull mb-2 bg-gradient-t-br ${stat.gradient} text-white shadow-md`}
                 >
-                  <Icon className="w-6 h-6" />
+                  <Icon className="w-6 h-6 text-white" />
                 </div>
 
                 {/* Counter */}

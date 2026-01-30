@@ -11,7 +11,7 @@ export default function SponsorProgram() {
         <div>
           <h2 className="text-3xl md:text-4xl fontserif font-bold text-gray-900 mb-3">
             Sponsor a Child,{" "}
-            <span className="block font-semibold text-blue-800">
+            <span className="block font-semibold text-gray-700">
               Transform a Future
             </span>
           </h2>
@@ -28,20 +28,20 @@ export default function SponsorProgram() {
           {/* Icon Highlights - Compact */}
           <div className="flex gap-4 mb-5">
             <div className="flex flex-col items-center text-center">
-              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-br from-pink-200 to-blue-100">
-                <HeartHandshake className="w-5 h-5 text-blue-800" />
+              <div className="w-10 h-10 flex items-center justify-center shadow rounded-md bg-gradient-to-br from-pink200 toblue-100">
+                <HeartHandshake className="w-7 h-7 text-blue-800" />
               </div>
               <span className="mt-1 text-gray-800 text-sm font-medium">Care</span>
             </div>
             <div className="flex flex-col items-center text-center">
-              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-br from-pink-200 to-blue-100">
-                <GraduationCap className="w-5 h-5 text-blue-800" />
+              <div className="w-10 h-10 flex items-center justify-center shadow rounded-md bg-gradient-to-br from-pink200 toblue-100">
+                <GraduationCap className="w-7 h-7 text-blue-800" />
               </div>
               <span className="mt-1 text-gray-800 text-sm font-medium">Education</span>
             </div>
             <div className="flex flex-col items-center text-center">
-              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-br from-pink-200 to-blue-100">
-                <Stethoscope className="w-5 h-5 text-blue-800" />
+              <div className="w-10 h-10 flex items-center justify-center shadow rounded-md bg-gradient-to-br from-pink200 toblue-100">
+                <Stethoscope className="w-7 h-7 text-blue-800" />
               </div>
               <span className="mt-1 text-gray-800 text-sm font-medium">Health</span>
             </div>
@@ -79,11 +79,11 @@ export default function SponsorProgram() {
               className="object-cover border rounded border-gray-100 w-full h-full transform group-hover:scale-105 transition duration-700"
             />
             {/* Overlay Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-blue-900/70 via-transparent to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-blue900/70 via-transparent to-transparent"></div>
           </div>
 
           {/* Floating Decorative Circle */}
-          <div className="absolute -bottom-4 -left-4 w-14 h-14 bg-yellow-400/40 rounded-full blur-xl"></div>
+          <div className="absolute -bottom-4 -left-4 w-14 h-14 bgyellow-400/40 rounded-full blur-xl"></div>
         </div>
       </div>
     </section>
