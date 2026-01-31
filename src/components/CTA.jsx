@@ -12,8 +12,18 @@ export default function CTA() {
           <p className="relative mt-2 text-white max-w-2xl mx-auto">Volunteer, donate or partner — your support helps transform lives and communities.</p>
 
           <div className="relative mt-6 flex justify-center gap-4">
-            <a href="/donate" className="bg-white text-blue-900 px-5 py-3 rounded font-semibold shadow">Donate</a>
-            <a href="/volunteer" className="border border-white px-5 py-3 font-semibold rounded">Volunteer</a>
+            <a
+              href="/donate"
+              className="bg-pink-600 text-center md:px-8 md:py-3 text-white font-semibold py-2 px-3 rounded-lg shadow-md hover:bg-gray-100 transition"
+            >
+              Support Us
+            </a>
+            <a
+              href="/contact"
+              className="border border-white text-center md:px-8 md:py-3 text-white font-semibold py-2 px-3 rounded-lg hover:bg-white/10 transition"
+            >
+              Join Us
+            </a>
           </div>
         </div>
         </div>

@@ -92,7 +92,9 @@ export default function Contact() {
             </div>
 
             <h4 className="font-semibold text-gray-900 text-lg fontserif mt-5">
-              Follow, Like and Subscribe: @Utamaduni Organization
+              Follow, Like and Subscribe: <span className="block font-semibold text-pink-700">
+              @Utamaduni Organization
+            </span>
             </h4>
 
             <div className="flex space-x-4 pt-4">

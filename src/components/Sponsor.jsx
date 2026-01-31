@@ -57,15 +57,15 @@ export default function SponsorProgram() {
           <div className="flex flex-wrap gap-3 mt-4">
             <a
               href="/donate"
-              className="bg-blue-800 text-white font-semibold py-2 px-5 rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300 text-center text-sm"
+              className="bg-pink-600 text-center md:px-8 md:py-3 text-white font-semibold py-2 px-3 rounded-lg shadow-md hover:bg-blue-800 transition"
             >
-              Donate
+              Support Us
             </a>
             <a
-              href="/volunteer"
-              className="border border-blue-700 text-blue-700 font-semibold py-2 px-5 rounded-lg hover:bg-blue-100 transition-colors duration-300 text-center text-sm"
+              href="/contact"
+              className="border border-pink-600 text-center md:px-8 md:py-3 text-pink-600 font-semibold py-2 px-3 rounded-lg hover:bg-white/10 transition"
             >
-              Volunteer
+              Join Us
             </a>
           </div>
         </div>

@@ -12,7 +12,7 @@ const slides = [
     title: "Children's Welfare",
     subtitle:
       "Donations to children's homes and educational support for orphans",
-    button: "Support Children",
+    button: "Support Program",
     slug: "children",
   },
   {
@@ -104,15 +104,23 @@ export default function Hero() {
               : `/programs/${slides[current].slug}`
           }`}
         >
-          <button
-            className="mt-8 px-10 py-2.5 fontserif md:text-lg font-semibold rounded-full 
-                       bg-gradient-to-r from-pink-600 to-red-600 
-                       hover:from-red-700 hover:to-pink-700 
-                       shadow-lg hover:shadow-2xl transition-all duration-300"
-          >
-            {slides[current].button}
-          </button>
+          
         </Link>
+        {/* Buttons */}
+          <div className="flex flex-wrap gap-3 mt-10">
+            <a
+              href="/donate"
+              className="bg-pink-800 text-white border border-white/50 font-semibold py-2 px-5 md:py-3 md:px-10 rounded-full shadow-md hover:bg-blue-700 transition-colors duration-300 text-center text-sm md:text-lg"
+            >
+              Support Us
+            </a>
+            <a
+              href="/contact"
+              className="border border-white text-white font-semibold py-2 px-5 md:py-3 md:px-10 rounded-full hover:bg-blue-100 transition-colors duration-300 text-center text-sm md:text-lg"
+            >
+              Contact Us
+            </a>
+          </div>
       </div>
 
       {/* Left Arrow */}
@@ -120,7 +128,7 @@ export default function Hero() {
         onClick={prevSlide}
         className="absolute left-4 md:left-10 top-1/2 -translate-y-1/2 
                    bg-white/20 hover:bg-white/40 text-pink-600 p-3 md:p-4 
-                   rounded-full shadow-lg transition"
+                   rounded-full shadow-lg transition border border-white/30"
       >
         <ChevronLeft size={28} />
       </button>
@@ -130,7 +138,7 @@ export default function Hero() {
         onClick={nextSlide}
         className="absolute right-4 md:right-10 top-1/2 -translate-y-1/2 
                    bg-white/20 hover:bg-white/40 text-pink-600 p-3 md:p-4 
-                   rounded-full shadow-lg transition"
+                   rounded-full shadow-lg transition border border-white/30"
       >
         <ChevronRight size={28} />
       </button>

@@ -107,9 +107,20 @@ export default function Challenges() {
             Each challenge is a call to action — an opportunity to uplift lives,
             restore hope, and strengthen the foundation of our shared humanity.
           </p>
-          <button className="bg-white text-pink-600 font-semibold px-6 py-3 rounded-full font-medium shadow-md hover:bg-yellow-400 hover:text-gray-900 transition-all duration-300">
-            Join Our Mission
-          </button>
+           <div className="flex flex-col w-full sm:flex-row gap-4 justify-center md: justifystart">
+            <a
+              href="/donate"
+              className="bg-pink-600 text-center md:px-8 md:py-3 text-white font-semibold py-2 px-3 rounded-lg shadow-md hover:bg-gray-100 transition"
+            >
+              Support Us
+            </a>
+            <a
+              href="/contact"
+              className="border border-white text-center md:px-8 md:py-3 text-white font-semibold py-2 px-3 rounded-lg hover:bg-white/10 transition"
+            >
+              Join Us
+            </a>
+          </div>
         </motion.div>
       </div>
       
