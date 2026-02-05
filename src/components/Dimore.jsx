@@ -38,7 +38,7 @@ export default function CEOSection() {
               src="/images/WhatsApp Image 2025-10-04 at 23.04.27.jpeg"
               alt="Founder & CEO - Utamaduni"
               fill
-              className="object-cover rounded-full transition-transform duration-500 group-hover:scale-105"
+              className="object-cover border-4 border-blue-800 rounded-full transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-blue-900 bg-opacity-70 flex items-center justify-center text-white text-center opacity-0 group-hover:opacity-100 transition duration-500">
               <p className="px-6 text-sm md:text-base italic leading-relaxed">
@@ -93,7 +93,7 @@ function SocialIcon({ href, icon }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="p-2 text-white bg-blue-900 borderborder-blue-100 rounded hover:bg-blue-700 hover:text-white transition-all duration-300 shadow hover:shadow-md"
+      className="p-2 text-white bg-gradient-to-br from-pink-900 via-pink-700 to-pink-500 borderborder-blue-100 rounded hover:bg-blue-700 hover:text-white transition-all duration-300 shadow hover:shadow-md"
     >
       {icon}
     </a>

@@ -110,7 +110,7 @@ export default function Hero() {
           <div className="flex flex-wrap gap-3 mt-10">
             <a
               href="/donate"
-              className="bg-pink-800 text-white border border-white/50 font-semibold py-2 px-5 md:py-3 md:px-10 rounded-full shadow-md hover:bg-blue-700 transition-colors duration-300 text-center text-sm md:text-lg"
+              className="bg-gradient-to-br from-pink-900 via-pink-700 to-pink-500 text-white border border-white/50 font-semibold py-2 px-5 md:py-3 md:px-10 rounded-full shadow-md hover:bg-blue-700 transition-colors duration-300 text-center text-sm md:text-lg"
             >
               Support Us
             </a>

@@ -14,7 +14,7 @@ export default function CTA() {
           <div className="relative mt-6 flex justify-center gap-4">
             <a
               href="/donate"
-              className="bg-pink-600 text-center md:px-8 md:py-3 text-white font-semibold py-2 px-3 rounded-lg shadow-md hover:bg-gray-100 transition"
+              className="bg-gradient-to-br from-pink-900 via-pink-700 to-pink-500 text-center md:px-8 md:py-3 text-white font-semibold py-2 px-3 rounded-lg shadow-md hover:bg-gray-100 transition"
             >
               Support Us
             </a>

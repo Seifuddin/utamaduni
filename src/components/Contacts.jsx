@@ -58,7 +58,7 @@ export default function Contact() {
             </h4>
 
             <div className="flex items-start space-x-4">
-              <Mail className="text-blue-700 shadow rounded mt-1" />
+              <Mail className="text-pink-700 shadow rounded mt-1" />
               <div>
                 <h4 className="font-bold text-gray-700">Email</h4>
                 <p className="text-gray-600">utamaduniorganization@gmail.com</p>
@@ -66,7 +66,7 @@ export default function Contact() {
             </div>
 
             <div className="flex items-start space-x-4">
-              <Phone className="text-blue-700 shadow rounded mt-1" />
+              <Phone className="text-pink-700 shadow rounded mt-1" />
               <div>
                 <h4 className="font-bold text-gray-700">Phone</h4>
                 <p className="text-gray-600">+254 704 337 351</p>
@@ -74,7 +74,7 @@ export default function Contact() {
             </div>
 
             <div className="flex items-start space-x-4">
-              <MapPin className="text-blue-700 shadow rounded mt-1" />
+              <MapPin className="text-pink-700 shadow rounded mt-1" />
               <div>
                 <h4 className="font-bold text-gray-700">Location</h4>
                 <p className="text-gray-600">Nairobi, Kenya</p>
@@ -82,7 +82,7 @@ export default function Contact() {
             </div>
 
             <div className="flex items-start space-x-4">
-              <Building2 className="text-blue-700 shadow rounded mt-1" />
+              <Building2 className="text-pink-700 shadow rounded mt-1" />
               <div>
                 <h4 className="font-bold text-gray-700">Building</h4>
                 <p className="text-gray-600">

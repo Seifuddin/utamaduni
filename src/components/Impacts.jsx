@@ -37,7 +37,7 @@ export default function ImpactStats() {
               >
                 {/* Icon */}
                 <div
-                  className={`w-14 h-14 flex items-center border border-white/40  bg-blue-800 rounded justify-center shadow rounded-ull mb-2 bg-gradient-t-br ${stat.gradient} text-white shadow-md`}
+                  className={`w-10 h-10 flex items-center border border-white/40 bg-gradient-to-br from-pink-900 via-pink-700 to-pink-500 rounded justify-center shadow rounded-ull mb-2 bg-gradient-t-br ${stat.gradient} text-white shadow-md`}
                 >
                   <Icon className="w-6 h-6 text-white" />
                 </div>

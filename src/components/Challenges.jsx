@@ -80,7 +80,7 @@ export default function Challenges() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="flex items-start gap-4 bgwhite/80 border-b border-gray-200 rounded-lg p-2 shadowhover:shadow-md hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="p-2 rounded -full border border-blue-800 bg-gradient-to-br from-blue-800 via-blue-700 to-blue-900">{item.icon}</div>
+              <div className="p-2 rounded -full borderborder-blue-800 bg-gradient-to-br from-pink-900 via-pink-700 to-pink-500">{item.icon}</div>
               <div>
                 <h3 className="font-semibold text-gray-900 fontserif text-lg md:text-xl my-2">
                   {item.title}
@@ -110,7 +110,7 @@ export default function Challenges() {
            <div className="flex flex-col w-full sm:flex-row gap-4 justify-center md: justifystart">
             <a
               href="/donate"
-              className="bg-pink-600 text-center md:px-8 md:py-3 text-white font-semibold py-2 px-3 rounded-lg shadow-md hover:bg-gray-100 transition"
+              className="bg-gradient-to-br from-pink-900 via-pink-700 to-pink-500 text-center md:px-8 md:py-3 text-white font-semibold py-2 px-3 rounded-lg shadow-md hover:bg-gray-100 transition"
             >
               Support Us
             </a>

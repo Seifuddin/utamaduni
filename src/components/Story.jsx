@@ -53,7 +53,7 @@ export default function OurStory() {
           transition={{ duration: 0.6 }}
           className="space-y-6"
         >
-          <h2 className="font-seibold text-blue-800 fontserif text-xl md:text-xl my-3">
+          <h2 className="font-bold text-blue-800 fontserif text-xlmd:text-xl my-3">
                     A brief history about Utamaduni
                   </h2>
           <p className="text-gray-700 leading-relaxed text-base">
@@ -72,12 +72,12 @@ export default function OurStory() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-wrap gap-2 mt-10"
+            className="hidden flexflex-wrap gap-2 mt-10"
           >
             <div className="flex flex-col w-full sm:flex-row gap-4 justifycenter md: justify-start">
             <a
               href="/donate"
-              className="bg-pink-600 text-center md:px-8 md:py-3 text-white font-semibold py-2 px-3 rounded-lg shadow-md hover:bg-blue-800 transition"
+              className="bg-gradient-to-br from-pink-900 via-pink-700 to-pink-500 text-center md:px-8 md:py-3 text-white font-semibold py-2 px-3 rounded-lg shadow-md hover:bg-blue-800 transition"
             >
               Support Us
             </a>

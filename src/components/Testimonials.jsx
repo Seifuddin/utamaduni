@@ -163,7 +163,7 @@ export default function StoriesAndTestimonials() {
                       alt={t.name}
                       width={50}
                       height={50}
-                      className="rounded-full border-2 border-blue-500"
+                      className="rounded-full border-2 border-pink-500"
                     />
                     <div>
                       <h4 className="font-bold text-gray-100 fontserif md:text-lg my-2">{t.name}</h4>
