@@ -10,7 +10,7 @@ export default function SponsorProgram() {
         {/* Left Side - Text */}
         <div>
           <h2 className="md:text-left text-center text-3xl md:text-4xl fontserif font-bold text-gray-700 mb-3">
-            Sponsor a Child,{" "}
+            Sponsor a Child Today,{" "}
             <span className="bloc font-semibold text-gray-700">
               Transform a Future
             </span>
@@ -54,7 +54,7 @@ export default function SponsorProgram() {
           </p>
 
           {/* Buttons */}
-          <div className="flex justify-center md:justify-start flex-wrap gap-3 mt-4">
+          <div className="flex justify-center md:justify-start flex-wrap gap-3 mt-4 mb-10">
             <a
               href="/donate"
               className="bg-blue-600 text-center md:px-8 md:py-3 text-white font-emibold w-full md:w-1/3 py-1.5 px-7 rounded-lg shadow-md hover:bg-blue-800 transition"
