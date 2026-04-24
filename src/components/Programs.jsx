@@ -2,17 +2,13 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import Link from "next/link";
 
 /* =======================
    🔹 Custom SVG Icons
    ======================= */
 const ChildIcon = (
-  <svg
-    width="26"
-    height="26"
-    fill="white"
-    viewBox="0 0 24 24"
-  >
+  <svg width="26" height="26" fill="white" viewBox="0 0 24 24">
     <path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm7 2h-2.1c-.9 0-1.7.6-2 1.5-.5 1.4-1.8 2.5-3.4 2.5s-2.9-1.1-3.4-2.5c-.3-.9-1.1-1.5-2-1.5H4c-1.1 0-2 .9-2 2v3c0 .5.4 1 1 1h18c.6 0 1-.5 1-1v-3c0-1.1-.9-2-2-2z" />
   </svg>
 );
@@ -115,7 +111,6 @@ export default function Programs() {
 
   return (
     <section className="py-24 bg-amber-50 relative overflow-hidden" id="programs">
-
       <div className="mx-auto px-6 text-center max-w-7xl">
 
         <p className="text-sm uppercase tracking-wide font-semibold text-pink-700 mb-2">
@@ -167,12 +162,24 @@ export default function Programs() {
 
                 <p className="text-gray-600 flex-1">{program.description}</p>
 
-                <button
-                  onClick={() => setSelectedProgram(program)}
-                  className="mt-4 bg-blue-800 text-white text-sm px-4 py-2 rounded font-semibold hover:bg-blue-900 transition"
-                >
-                  Learn More
-                </button>
+                {/* BUTTONS */}
+                <div className="mt-4 flex gap-2">
+  <button
+    onClick={() => setSelectedProgram(program)}
+    className="flex-1 bg-blue-800 text-white text-sm px-4 py-2 rounded font-semibold hover:bg-blue-900 transition"
+  >
+    Learn More
+  </button>
+
+  <Link href="/donate" className="flex-1">
+    <button
+      className="w-full bg-pink-700 text-white text-sm px-4 py-2 rounded font-semibold hover:bg-pink-800 transition"
+    >
+      Donate
+    </button>
+  </Link>
+</div>
+
               </div>
             </div>
           ))}

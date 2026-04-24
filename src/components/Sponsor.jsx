@@ -9,14 +9,14 @@ export default function SponsorProgram() {
       <div className="relative mx-auto max-w-7xl md:px-6 grid md:grid-cols-2 gap-8 items-center z-10">
         {/* Left Side - Text */}
         <div>
-          <h2 className="md:text-left text-center text-3xl md:text-4xl fontserif font-bold text-gray-700 mb-3">
+          <h2 className="text-left textcenter text-3xl md:text-4xl fontserif font-bold text-gray-700 mb-3">
             Sponsor a Child Today,{" "}
             <span className="bloc font-semibold text-gray-700">
               Transform a Future
             </span>
           </h2>
 
-          <p className="mt-1 text-gray-700 max-w-2xl font-medium md:text-left text-center md:text-base mb-2">
+          <p className="mt-1 text-gray-700 max-w-2xl font-medium text-left textcenter md:text-base mb-2">
             Your sponsorship provides{" "}
             <span className="font-semibold text-gray-800">
               education, healthcare, and daily essentials
@@ -26,8 +26,8 @@ export default function SponsorProgram() {
 
           
           {/* Icon Highlights - Compact */}
-          <div className="flex justify-center md:justify-start gap-4 mb-5">
-            <div className="flex flex-col items-center text-center">
+          <div className="flex justify-start gap-4 mb-5">
+            <div className="flex flex-col items-start textcenter">
               <div className="w-8 h-8 bg-gradient-to-br from-pink-900 via-pink-700 to-pink-500 flex items-center justify-center shadow rounded-md">
                 <HeartHandshake className="w-6 h-6 text-white" />
               </div>
@@ -47,14 +47,14 @@ export default function SponsorProgram() {
             </div>
           </div>
 
-          <p className="mt-1 italic text-blue-900 max-w-2xl font-medium md:text-left text-center md:text-base mb-4">
+          <p className="mt-1 italic text-blue-900 max-w-2xl font-medium text-left textcenter md:text-base mb-4">
             “Whoever welcomes one of these little children in my name welcomes
             me; and whoever welcomes me does not welcome me but the One who sent
             me.”
           </p>
 
           {/* Buttons */}
-          <div className="flex justify-center md:justify-start flex-wrap gap-3 mt-4 mb-10">
+          <div className="flex justify-start flexwrap gap-3 mt-4 mb-10">
             <a
               href="/donate"
               className="bg-blue-600 text-center md:px-8 md:py-3 text-white font-emibold w-full md:w-1/3 py-1.5 px-7 rounded-lg shadow-md hover:bg-blue-800 transition"
