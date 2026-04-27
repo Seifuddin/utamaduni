@@ -59,10 +59,10 @@ export default function AboutPage() {
       <Abouts />
       <CTA />
       <OurStory />
+      <CEOSection />
       <Challenges />
       <PastEvents />
       <StoriesAndTestimonials />
-      <CEOSection />
       <Leadership />
     </main>
   );

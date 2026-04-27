@@ -166,14 +166,14 @@ export default function Programs() {
                 <div className="mt-4 flex gap-2">
   <button
     onClick={() => setSelectedProgram(program)}
-    className="flex-1 bg-blue-800 text-white text-sm px-4 py-2 rounded font-semibold hover:bg-blue-900 transition"
+    className="flex-1 bg-blue-800 text-white text-sm px-4 py-1.5 rounded fontsemibold hover:bg-blue-900 transition"
   >
     Learn More
   </button>
 
   <Link href="/donate" className="flex-1">
     <button
-      className="w-full bg-pink-700 text-white text-sm px-4 py-2 rounded font-semibold hover:bg-pink-800 transition"
+      className="w-full border border-blue-700 text-blue-700 text-sm px-4 py-1.5 rounded fontsemibold hover:bg-blue-800 transition"
     >
       Donate
     </button>

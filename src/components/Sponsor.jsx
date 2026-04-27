@@ -1,90 +1,133 @@
 "use client";
 
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { HeartHandshake, GraduationCap, Stethoscope, Utensils } from "lucide-react";
 import Link from "next/link";
-import { HeartHandshake, GraduationCap, Stethoscope } from "lucide-react";
 
 export default function SponsorProgram() {
   return (
-    <section className="relative bg-amber-50 text-gray-900 py-24 px-6 mdpx-12 overflow-hidden">
-      <div className="relative mx-auto max-w-7xl md:px-6 grid md:grid-cols-2 gap-8 items-center z-10">
-        {/* Left Side - Text */}
-        <div>
-          <h2 className="text-left textcenter text-3xl md:text-4xl fontserif font-bold text-gray-700 mb-3">
-            Sponsor a Child Today,{" "}
-            <span className="bloc font-semibold text-gray-700">
-              Transform a Future
-            </span>
-          </h2>
+    <section className="bg-amber-50 py-20 px-6 lg:px-20">
+      
+      {/* HEADER */}
+      <motion.div
+        initial={{ opacity: 0, y: -40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+        className="text-center mb-16"
+      >
+        <span className="inline-block bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm font-medium mb-4">
+          Child Sponsorship
+        </span>
 
-          <p className="mt-1 text-gray-700 max-w-2xl font-medium text-left textcenter md:text-base mb-2">
-            Your sponsorship provides{" "}
-            <span className="font-semibold text-gray-800">
-              education, healthcare, and daily essentials
-            </span>{" "}
-            for children in need.
+        <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">
+          Sponsor a Child Today,
+          <span className="text-blue-800"> Transform a Future</span>
+        </h2>
+
+        <div className="w-24 h-1 bg-blue-200 mx-auto rounded-full mb-6"></div>
+
+        <p className="text-gray-600 max-w-2xl mx-auto">
+          Your support provides education, healthcare, and essential needs for children in vulnerable communities.
+        </p>
+      </motion.div>
+
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
+        
+        {/* LEFT IMAGE */}
+        <motion.div
+          initial={{ opacity: 0, x: -80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="relative w-full h-[300px] md:h-[450px] rounded overflow-hidden"
+        >
+          <Image
+            src="/images/utamaduni at mathare/_DSC8782.jpg"
+            alt="Child Sponsorship"
+            fill
+            className="object-cover"
+          />
+        </motion.div>
+
+        {/* RIGHT CONTENT */}
+        <motion.div
+          initial={{ opacity: 0, x: 80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <p className="text-gray-800 text-base md:text-lg leading-relaxed mb-8">
+            Through sponsorship, you directly impact a child’s future by ensuring access to education, healthcare, and daily care.
           </p>
 
-          
-          {/* Icon Highlights - Compact */}
-          <div className="flex justify-start gap-4 mb-5">
-            <div className="flex flex-col items-start textcenter">
-              <div className="w-8 h-8 bg-gradient-to-br from-pink-900 via-pink-700 to-pink-500 flex items-center justify-center shadow rounded-md">
-                <HeartHandshake className="w-6 h-6 text-white" />
+          {/* FEATURES */}
+          <div className="grid sm:grid-cols-2 gap-6">
+            
+            <div className="flex items-start gap-4 p-2 border-b border-blue-200">
+              <HeartHandshake className="bg-gradient-to-r from-blue-600 to-blue-900 text-white p-2 rounded" size={32} />
+              <div>
+                <h4 className="font-semibold text-blue-900">Care & Support</h4>
+                <p className="text-gray-700 text-sm">
+                  Providing emotional and social support for every child.
+                </p>
               </div>
-              <span className="mt-1 text-gray-800 text-sm font-medium">Care</span>
             </div>
-            <div className="flex flex-col items-center text-center">
-              <div className="w-8 h-8 bg-gradient-to-br from-pink-900 via-pink-700 to-pink-500 flex items-center justify-center shadow rounded-md">
-                <GraduationCap className="w-6 h-6 text-white" />
+
+            <div className="flex items-start gap-4 p-2 border-b border-blue-200">
+              <GraduationCap className="bg-gradient-to-r from-blue-600 to-blue-900 text-white p-2 rounded" size={32} />
+              <div>
+                <h4 className="font-semibold text-blue-900">Education</h4>
+                <p className="text-gray-700 text-sm">
+                  Access to quality education and school essentials.
+                </p>
               </div>
-              <span className="mt-1 text-gray-800 text-sm font-medium">Education</span>
             </div>
-            <div className="flex flex-col items-center text-center">
-              <div className="w-8 h-8 bg-gradient-to-br from-pink-900 via-pink-700 to-pink-500 flex items-center justify-center shadow rounded-md">
-                <Stethoscope className="w-6 h-6 text-white" />
+
+            <div className="flex items-start gap-4 p-2 border-b border-blue-200">
+              <Stethoscope className="bg-gradient-to-r from-blue-600 to-blue-900 text-white p-2 rounded" size={32} />
+              <div>
+                <h4 className="font-semibold text-blue-900">Healthcare</h4>
+                <p className="text-gray-700 text-sm">
+                  Medical care and regular health support.
+                </p>
               </div>
-              <span className="mt-1 text-gray-800 text-sm font-medium">Health</span>
             </div>
+
+            <div className="flex items-start gap-4 p-2 border-b border-blue-200">
+  <HeartHandshake className="bg-gradient-to-r from-blue-600 to-blue-900 text-white p-2 rounded" size={32} />
+  <div>
+    <h4 className="font-semibold text-blue-900">Nutrition</h4>
+    <p className="text-gray-700 text-sm">
+      Access to balanced meals for healthy growth and development.
+    </p>
+  </div>
+</div>
           </div>
 
-          <p className="mt-1 italic text-blue-900 max-w-2xl font-medium text-left textcenter md:text-base mb-4">
-            “Whoever welcomes one of these little children in my name welcomes
-            me; and whoever welcomes me does not welcome me but the One who sent
-            me.”
+          {/* QUOTE */}
+          <p className="mt-8 italic text-blue-900">
+            “Whoever welcomes one of these little children in my name welcomes me.”
           </p>
 
-          {/* Buttons */}
-          <div className="flex justify-start flexwrap gap-3 mt-4 mb-10">
-            <a
+          {/* BUTTONS */}
+          <div className="hidden mt-8 flex flex-wrap gap-4">
+            <Link
               href="/donate"
-              className="bg-blue-600 text-center md:px-8 md:py-3 text-white font-emibold w-full md:w-1/3 py-1.5 px-7 rounded-lg shadow-md hover:bg-blue-800 transition"
+              className="px-6 py-2 bg-gradient-to-r from-blue-600 to-blue-900 text-white rounded-md shadow-md hover:opacity-90 transition"
             >
               Support Us
-            </a>
-            <a
+            </Link>
+
+            <Link
               href="/contact"
-              className="border border-blue-600 text-center md:px-8 md:py-3 text-blue-600 w-full md:w-1/3 font-emibold py-1.5 px-7 rounded-lg hover:bg-white/10 transition"
+              className="px-6 py-2 border border-blue-900 text-blue-900 rounded-md hover:bg-blue-100 transition"
             >
               Join Us
-            </a>
+            </Link>
           </div>
-        </div>
-
-        {/* Right Side - Image */}
-        <div className="relative group">
-          <div className="relative w-full h-full sm:h-64md:h-ull rounded overflow-hidden shadow-xl">
-            <img
-              src="/images/utamaduni at mathare/_DSC8782.jpg"
-              alt="Child Sponsorship"
-              className="object-cover border rounded border-gray-100 w-full h-full transform group-hover:scale-105 transition duration-700"
-            />
-            {/* Overlay Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-blue900/70 via-transparent to-transparent"></div>
-          </div>
-
-          {/* Floating Decorative Circle */}
-          <div className="absolute -bottom-4 -left-4 w-14 h-14 bgyellow-400/40 rounded-full blur-xl"></div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

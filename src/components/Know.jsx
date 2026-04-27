@@ -1,139 +1,113 @@
 "use client";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
-
 import { motion } from "framer-motion";
 import { Users, Utensils, Home, Heart } from "lucide-react";
 import Link from "next/link";
 
-export default function DidYouKnowHybrid() {
-  const slides = [
-    {
-      icon: <Users className="w-5 h-5 text-white" />,
-      stat: "150M+",
-      text: "children live on the streets worldwide with no care or safety.",
-    },
-    {
-      icon: <Utensils className="w-5 h-5 text-white" />,
-      stat: "1 in 3",
-      text: "go to bed hungry every night, crying themselves to sleep.",
-    },
-    {
-      icon: <Home className="w-5 h-5 text-white" />,
-      stat: "Millions",
-      text: "sleep without shelter, warmth, or protection from harm.",
-    },
-    {
-      icon: <Heart className="w-5 h-5 text-white" />,
-      stat: "Your Help",
-      text: "can bring food, safety, and hope. Even the smallest gift saves lives.",
-    },
-  ];
+const items = [
+  { icon: Users, label: "Children affected", value: "150M+" },
+  { icon: Utensils, label: "Food insecurity", value: "1 in 3" },
+  { icon: Home, label: "Without shelter", value: "Millions" },
+  { icon: Heart, label: "Hope created", value: "Every donation counts" },
+];
 
+export default function DidYouKnowHybrid() {
   return (
-    <section className="relative  text-white py-14 px6 md:px16 rounded bg-amber50">
-      {/* Background image with overlay */}
+    <section className="relative overflow-hidden py-14 px-6 text-white">
+
+      {/* Background */}
       <div
-        className="absolute inset-0 bg-cover bg-center rounded-2xl"
+        className="absolute inset-0 bg-cover bg-center scale-110"
         style={{
-          backgroundImage: "url('/images/childrenwelfare.webp')", // replace with your background
+          backgroundImage: "url('/images/childrenwelfare.webp')",
         }}
       />
-      <div className="absolute inset-0 bg-black/20 backdrop-blur-sm" />
 
-      <div className="relative max-w-7xl mx-auto px-6 text-center">
-        {/* Title */}
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-2xl md:text-3xl fontserif font-bold text-white mb-4"
-        >
-          Did You Know?
-        </motion.h2>
+      {/* Overlays */}
+      <div className="absolute inset-0 bg-black/70" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/60" />
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.7 }}
-          viewport={{ once: true }}
-          className="text-base md:text-lg mb-8 max-w-2xl mx-auto text-blue-100"
-        >
-          Every day, children suffer silently on the streets. Your kindness can
-          rewrite their tomorrow.
-        </motion.p>
+      {/* Glow */}
+      <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-pink-500/20 blur-[110px]" />
 
-        {/* Slider for small screens */}
-        <div className="block md:hidden">
-          <Swiper
-            modules={[Pagination, Autoplay]}
-            spaceBetween={16}
-            slidesPerView={1}
-            autoplay={{ delay: 3500, disableOnInteraction: false }}
-            pagination={{ clickable: true }}
-            loop={true}
-            className="w-full"
-          >
-            {slides.map((slide, index) => (
-              <SwiperSlide key={index}>
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                  viewport={{ once: true }}
-                  className="bg-white/10 backdrop-blur-lg border border-white/20 
-                             rounded p-5 shadow-lg"
-                >
-                  <div className="flex inline-block justify-center mb-3 bg-gradient-to-br from-pink-900 via-pink-700 to-pink-500 border border-white/50  rounded p-2">{slide.icon}</div>
-                  <h3 className="text-xl font-bold fontserif">{slide.stat}</h3>
-                  <p className="mt-2 text-sm text-gray-300">{slide.text}</p>
-                </motion.div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+      <div className="relative max-w-5xl mx-auto">
 
-        {/* Grid for medium+ screens */}
-        <div className="hidden md:grid gap-6 md:grid-cols-2 lg:grid-cols-4 mt-4">
-          {slides.map((slide, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-white/10 backdrop-blur-lg border border-white/20 
-                         rounded-xl p-5 shadow-lg hover:scale-105 transition"
-            >
-              <div className="flex inline-block justify-center mb-3 bg-gradient-to-br from-pink-900 via-pink-700 to-pink-500 rounded border border-white/50 p-2">{slide.icon}</div>
-              <h3 className="text font-bold fontserif">{slide.stat}</h3>
-              <p className="mt-2 text-sm text-gray-200">{slide.text}</p>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* CTA */}
+        {/* HEADER */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.6 }}
           viewport={{ once: true }}
-          className="hidden mt-8"
+          className="text-center"
         >
-          <Link
-            href="/donate"
-            className="bg-gray-100 text-pink-600 font-semibold px-8 py-3 md:py-3 fontserif 
-                       rounded-full shadow-lg hover:bg-pink-600 transition text-sm md:text-base"
-          >
-            Donate & Save a Life
-          </Link>
-        </motion.div>
-        
+          <h2 className="text-2xl md:text-4xl font-bold">
+            Every child deserves safety.
+          </h2>
 
+          <p className="mt-3 text-white/70 max-w-xl mx-auto text-sm md:text-base">
+            Millions still live without food, shelter, or protection. These numbers reflect real lives.
+          </p>
+        </motion.div>
+
+        {/* GRID */}
+        <div className="mt-10 grid md:grid-cols-3 gap-5 items-stretch">
+
+          {/* HERO CARD */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.97 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="md:col-span-1 rounded-2xl p-5 bg-white/10 backdrop-blur-xl border border-white/10 relative overflow-hidden"
+          >
+            <Heart className="w-5 h-5 text-pink-300 mb-4" />
+
+            <h3 className="text-xl font-bold">
+              Your action matters
+            </h3>
+
+            <p className="mt-2 text-white/70 text-xs leading-relaxed">
+              Even a small donation can provide safety, food, and hope.
+            </p>
+
+            <Link
+              href="/donate"
+              className="inline-flex mt-4 px-5 py-2 rounded-full bg-white text-black text-sm font-semibold hover:bg-pink-500 hover:text-white transition"
+            >
+              Donate Now
+            </Link>
+
+            <div className="absolute -bottom-16 -right-16 w-32 h-32 bg-pink-500/30 blur-2xl" />
+          </motion.div>
+
+          {/* STATS */}
+          <div className="md:col-span-2 grid sm:grid-cols-2 gap-5">
+
+            {items.map((item, i) => {
+              const Icon = item.icon;
+
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.08 }}
+                  viewport={{ once: true }}
+                  className="rounded-xl p-5 bg-white/5 hover:bg-white/10 transition border border-white/10 backdrop-blur-md"
+                >
+                  <Icon className="w-4 h-4 text-pink-300 mb-3" />
+
+                  <div className="text-lg font-bold">
+                    {item.value}
+                  </div>
+
+                  <div className="text-white/60 text-xs mt-1">
+                    {item.label}
+                  </div>
+                </motion.div>
+              );
+            })}
+
+          </div>
+        </div>
       </div>
     </section>
   );

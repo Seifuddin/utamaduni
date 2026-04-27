@@ -92,13 +92,15 @@ export default function Challenges() {
             </motion.div>
           ))}
         </div>
-        {/* Call to Action */}
+      </div>
+
+      {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.5 }}
           viewport={{ once: true }}
-          className="relativ text-center mt-14 bg-gradient-to-r from-blue-900 to-blue-700 text-white rounded-xl wfull p-4 py-10 shadow2xl max-w-7xl mx-auto"
+          className="w-full text-center mt-14 bg-gradient-to-r from-blue-900 to-blue-700 text-white p-6 py-16 shadow2xl max-w-7xlmx-auto"
         >
           <h3 className="text-xl md:text-2xl font-bold mb-2 fontserif">
             Together, We Can Overcome
@@ -107,22 +109,22 @@ export default function Challenges() {
             Each challenge is a call to action — an opportunity to uplift lives,
             restore hope, and strengthen the foundation of our shared humanity.
           </p>
-           <div className="flex flex-col w-full sm:flex-row gap-4 justify-center md: justifystart">
+           <div className="flex flexcol w-full sm:flex-row gap-4 justify-center md: justifystart">
             <a
               href="/donate"
-              className="bg-gradient-to-br from-pink-900 via-pink-700 to-pink-500 text-center md:px-8 md:py-3 text-white font-semibold py-2 px-3 rounded-lg shadow-md hover:bg-gray-100 transition"
+              className="bg-gradient-to-br from-pink-900 via-pink-700 to-pink-500 text-center md:px-8 md:py-2 text-white fontsemibold py-1.5 px-3 rounded shadowmd hover:bg-gray-100 transition"
             >
               Support Us
             </a>
             <a
               href="/contact"
-              className="border border-white text-center md:px-8 md:py-3 text-white font-semibold py-2 px-3 rounded-lg hover:bg-white/10 transition"
+              className="border border-white text-center md:px-8 md:py-2 text-white fontsemibold py-1.5 px-3 rounded hover:bg-white/10 transition"
             >
               Join Us
             </a>
           </div>
         </motion.div>
-      </div>
+      
       
     </section>
   );

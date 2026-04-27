@@ -70,7 +70,7 @@ export default function Hero() {
     setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
 
   return (
-    <section className="relative w-full h-[70vh] md:h-[70vh] overflow-hidden">
+    <section className="relative w-full h-[50vh] md:h-[60vh] overflow-hidden">
       
       {/* Slide Background */}
       <div className="absolute inset-0">
@@ -89,11 +89,11 @@ export default function Hero() {
 
       {/* TEXT CONTENT */}
       <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-6">
-        <h1 className="text-4xl md:text-5xl font-extrabold drop-shadow-xl">
+        <h1 className="text-3xl md:text-4xl font-extrabold drop-shadow-xl">
           {slides[current].title}
         </h1>
 
-        <p className="mt-4 text-lg md:text-2xl text-gray-200 max-w-2xl leading-relaxed">
+        <p className="mt-4 text-lg mdtext-xl text-gray-200 max-w-2xl leading-relaxed">
           {slides[current].subtitle}
         </p>
 
@@ -110,13 +110,13 @@ export default function Hero() {
           <div className="flex flex-wrap gap-3 mt-10">
             <a
               href="/donate"
-              className="bg-gradient-to-br from-pink-900 via-pink-700 to-pink-500 text-white border border-white/50 font-semibold py-2 px-5 md:py-3 md:px-10 rounded-full shadow-md hover:bg-blue-700 transition-colors duration-300 text-center text-sm md:text-lg"
+              className="bg-gradient-to-br from-pink-900 via-pink-700 to-pink-800 text-white border border-white/50 font-semibold py-1.5 px-5 md:py-1.5 md:px-10 rounded shadow-md hover:bg-blue-700 transition-colors duration-300 text-center text-smmd:text-lg"
             >
               Support Us
             </a>
             <a
               href="/contact"
-              className="border border-white text-white font-semibold py-2 px-5 md:py-3 md:px-10 rounded-full hover:bg-blue-100 transition-colors duration-300 text-center text-sm md:text-lg"
+              className="border border-white text-white font-semibold py-1.5 px-5 md:py-1.5 md:px-10 rounded hover:bg-blue-100 transition-colors duration-300 text-center text-smmd:text-lg"
             >
               Contact Us
             </a>
@@ -127,7 +127,7 @@ export default function Hero() {
       <button
         onClick={prevSlide}
         className="absolute left-4 md:left-10 top-1/2 -translate-y-1/2 
-                   bg-white/20 hover:bg-white/40 text-pink-600 p-3 md:p-4 
+                   bg-white/20 hover:bg-white/40 text-pink-600 p-2 md:p-2 
                    rounded-full shadow-lg transition border border-white/30"
       >
         <ChevronLeft size={28} />
@@ -137,7 +137,7 @@ export default function Hero() {
       <button
         onClick={nextSlide}
         className="absolute right-4 md:right-10 top-1/2 -translate-y-1/2 
-                   bg-white/20 hover:bg-white/40 text-pink-600 p-3 md:p-4 
+                   bg-white/20 hover:bg-white/40 text-pink-600 p-2 md:p-2 
                    rounded-full shadow-lg transition border border-white/30"
       >
         <ChevronRight size={28} />

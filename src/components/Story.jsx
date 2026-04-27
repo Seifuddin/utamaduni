@@ -6,125 +6,112 @@ import { Users, BookOpen } from "lucide-react";
 
 export default function OurStory() {
   return (
-    <section className="bg-amber-50 to-white py-16 text-gray-800">
-        {/* Header */}
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6 }}
-                  className="mb-12 text-center"
-                >
-                  <p className="text-sm uppercase tracking-wide font-semibold text-pink-700 mb-2">
-                    Our Story
-                  </p>
-                  <h2 className="text-2xl md:text-4xl fontserif font-bold text-gray-900 mb-4">
-                    How It All Began
-                  </h2>
-                  <motion.div
-                    initial={{ width: 0 }}
-                    whileInView={{ width: "5rem" }}
-                    transition={{ duration: 0.5 }}
-                    className="h-1 bg-pink-700 rounded-full mx-auto mb-4"
-                  ></motion.div>
-                </motion.div>
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
+    <section className="bg-amber-50 py-20 px-6 lg:px-20">
+      
+      {/* HEADER */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+        className="text-center mb-16"
+      >
+        <span className="inline-block bg-pink-100 text-pink-700 px-4 py-1 rounded-full text-sm font-medium mb-4">
+          Our Story
+        </span>
 
-        {/* Left: Image */}
+        <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">
+          How It All Began
+        </h2>
+
+        <div className="w-24 h-1 bg-pink-200 mx-auto rounded-full mb-6"></div>
+
+        <p className="text-gray-600 max-w-2xl mx-auto">
+          A journey rooted in compassion, culture, and community transformation.
+        </p>
+      </motion.div>
+
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
+        
+        {/* LEFT IMAGE */}
         <motion.div
-          initial={{ opacity: 0, x: -40 }}
+          initial={{ opacity: 0, x: -80 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          className="rounded overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="relative w-full h-[320px] md:h-[450px] rounded-xl overflow-hidden shadow-xl group"
         >
           <Image
             src="/images/utamaduni at mathare/_DSC8943.jpg"
-            alt="Utamaduni community at work"
-            width={700}
-            height={500}
-            className="object-cover w-full h-80 rounded border border-gray-100 md:h-[420px]"
+            alt="Utamaduni community"
+            fill
+            className="object-cover group-hover:scale-105 transition duration-700"
           />
+
+          {/* overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
         </motion.div>
 
-        {/* Right: Text */}
+        {/* RIGHT CONTENT */}
         <motion.div
-          initial={{ opacity: 0, x: 40 }}
+          initial={{ opacity: 0, x: 80 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          className="space-y-6"
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
         >
-          <h2 className="font-bold text-blue-800 fontserif text-xlmd:text-xl my-3">
-                    A brief history about Utamaduni
-                  </h2>
-          <p className="text-gray-700 leading-relaxed text-base">
-            Born from a shared vision of hope and unity, <strong>Utamaduni Charity Organization </strong> 
-            began as a small circle of compassionate individuals determined to uplift 
-            underprivileged families through cultural identity, education, and sustainable action.  
+          <h3 className="text-xl md:text-2xl font-bold text-blue-900 mb-4">
+            A Movement Born from Compassion
+          </h3>
+
+          <p className="text-gray-700 leading-relaxed mb-5">
+            <span className="font-semibold text-gray-900">
+              Utamaduni Charity Organization
+            </span>{" "}
+            began as a small circle of individuals united by a shared vision —
+            to uplift underprivileged families through{" "}
+            <span className="font-medium text-gray-900">
+              culture, education, and community care
+            </span>.
           </p>
 
-          <p className="text-gray-700 leading-relaxed text-base">
-            Over the years, our passion has grown into a movement — one that blends 
-            <em> heritage and humanity</em> to create real change. From local classrooms to 
-            community health drives, Utamaduni continues to restore dignity, empower families, 
-            and celebrate the spirit of togetherness.
+          <p className="text-gray-700 leading-relaxed mb-8">
+            What started as a humble initiative has grown into a powerful movement,
+            blending{" "}
+            <span className="italic text-gray-900">heritage</span> and{" "}
+            <span className="italic text-gray-900">humanity</span> to create lasting impact.
+            Today, we continue to restore dignity, empower families, and build
+            stronger communities.
           </p>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="hidden flexflex-wrap gap-2 mt-10"
-          >
-            <div className="flex flex-col w-full sm:flex-row gap-4 justifycenter md: justify-start">
-            <a
-              href="/donate"
-              className="bg-gradient-to-br from-pink-900 via-pink-700 to-pink-500 text-center md:px-8 md:py-3 text-white font-semibold py-2 px-3 rounded-lg shadow-md hover:bg-blue-800 transition"
-            >
-              Support Us
-            </a>
-            <a
-              href="/contact"
-              className="border border-pink-600 text-center md:px-8 md:py-3 text-pink-600 font-semibold py-2 px-3 rounded-lg hover:bg-white/10 transition"
-            >
-              Join Us
-            </a>
-          </div>
-          </motion.div>
 
-          <div className="grd sm:grid-cols-2 gap-5 mt-6 hidden">
-            <FeaturePoint
-              icon={<Users className="w-4 h-4 text-blue-800" />}
-              title="Community Driven"
-            >
-              We work hand-in-hand with local leaders to ensure every voice is heard and every action counts.
-            </FeaturePoint>
+          {/* FEATURES */}
+          <div className="grid sm:grid-cols-2 gap-6">
+            
+            <div className="flex items-start gap-4 p-3 border-b border-pink-200">
+              <Users className="bg-gradient-to-r from-pink-600 to-pink-800 text-white p-2 rounded" size={32} />
+              <div>
+                <h4 className="font-semibold text-blue-900">
+                  Community Driven
+                </h4>
+                <p className="text-gray-700 text-sm">
+                  Working hand-in-hand with local communities to create real impact.
+                </p>
+              </div>
+            </div>
 
-            <FeaturePoint
-              icon={<BookOpen className="w-4 h-4 text-blue-800" />}
-              title="Empowering Education"
-            >
-              From children to adults, we build capacity for lifelong learning and self-reliance.
-            </FeaturePoint>
+            <div className="flex items-start gap-4 p-3 border-b border-pink-200">
+              <BookOpen className="bg-gradient-to-r from-pink-600 to-pink-800 text-white p-2 rounded" size={32} />
+              <div>
+                <h4 className="font-semibold text-blue-900">
+                  Education Focused
+                </h4>
+                <p className="text-gray-700 text-sm">
+                  Empowering individuals through knowledge and lifelong learning.
+                </p>
+              </div>
+            </div>
           </div>
         </motion.div>
       </div>
     </section>
-  );
-}
-
-/* ----------------------
-   Subcomponent
----------------------- */
-function FeaturePoint({ icon, title, children }) {
-  return (
-    <motion.div
-      whileHover={{ scale: 1.03 }}
-      className="p-3 bg-white rounded-md border border-gray-200  shadow-md flex gap-3 items-start hover:shadow-lg transition"
-    >
-      <div className="p-2 rounded-full border border-blue-100 bg-blue-50">{icon}</div>
-      <div>
-        <h4 className="font-bold text-blue-900 font-serif md:text-lg my-2">{title}</h4>
-        <p className="text-base text-gray-700 mt-1">{children}</p>
-      </div>
-    </motion.div>
   );
 }

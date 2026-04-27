@@ -1,32 +1,70 @@
-import React from 'react'
+import React from "react";
 
 export default function CTA() {
   return (
-    <section className="relative bg-gradient-to-r from-blue-900 to-blue-700 px-6 pb10 overflow-hidden">
-      <div className="mx-auto lg:px-6 text-center max-w7xl text-white py16 ">
-      {/* Background Overlay with Patterns */}
-      <div className="relative inset-0 bg-gradient-to-br from-blue-900/60 via-[#0a2540]/90 to-blue-800/70 z-0"></div>
-      <div className="relative inset-0 bg-[url('/images/patterns.png')] opacity-10 bg-cover bg-center z-0"></div>
-        <div className="max--7xl mx-auto rounded-md px-3 py-16 text-center bg-gradient-to-r from-blue-900 to-blue-700">
-          <h3 className="relative text-2xl md:text-3xl fontmedium font-erif font-bold text-white mb-4">Join Us in Making a Difference</h3>
-          <p className="relative mt-2 text-white max-w-2xl mx-auto">Volunteer, donate or partner — your support helps transform lives and communities.</p>
+    <section className="relative overflow-hidden py-16 px-6 text-white">
 
-          <div className="relative mt-6 flex justify-center gap-4">
-            <a
-              href="/donate"
-              className="bg-gradient-to-br from-pink-900 via-pink-700 to-pink-500 text-center md:px-8 md:py-3 text-white font-semibold py-2 px-3 rounded-lg shadow-md hover:bg-gray-100 transition"
-            >
-              Support Us
-            </a>
-            <a
-              href="/contact"
-              className="border border-white text-center md:px-8 md:py-3 text-white font-semibold py-2 px-3 rounded-lg hover:bg-white/10 transition"
-            >
-              Join Us
-            </a>
-          </div>
+      {/* Background */}
+      <div className="absolute inset-0 bg-[#050b1a]" />
+
+      {/* Soft cinematic glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.2),transparent_55%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(236,72,153,0.12),transparent_60%)]" />
+
+      {/* Subtle texture */}
+      <div className="absolute inset-0 opacity-10 bg-[url('/images/patterns.png')] bg-cover bg-center" />
+
+      {/* Content */}
+      <div className="relative max-w-2xl mx-auto text-center">
+
+        {/* Label */}
+        <p className="text-[10px] tracking-[0.25em] uppercase text-white/40 mb-4">
+          One Action • Real Impact
+        </p>
+
+        {/* Heading */}
+        <h2 className="text-2xl md:text-3xl font-semibold leading-snug">
+          Change starts with a single decision.
+        </h2>
+
+        {/* Subtext */}
+        <p className="mt-4 text-white/60 text-sm leading-relaxed">
+          Your support helps provide food, shelter, and care to children in need.
+        </p>
+
+        {/* Buttons */}
+        <div className="mt-7 flex flex-col sm:flex-row gap-3 justify-center">
+
+          <a
+            href="/donate"
+            className="
+              px-7 py-2.5 rounded-full
+              bg-white text-black text-sm font-medium
+              hover:bg-pink-500 hover:text-white
+              transition
+            "
+          >
+            Donate
+          </a>
+
+          <a
+            href="/contact"
+            className="
+              px-7 py-2.5 rounded-full
+              border border-white/20 text-white/70 text-sm
+              hover:border-white hover:text-white
+              transition
+            "
+          >
+            Get Involved
+          </a>
         </div>
-        </div>
-      </section>
-  )
+
+        {/* Micro trust line */}
+        <p className="mt-6 text-[10px] text-white/40">
+          Transparent • Verified impact • Community driven
+        </p>
+      </div>
+    </section>
+  );
 }

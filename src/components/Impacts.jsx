@@ -1,55 +1,67 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { Users, Utensils, HandHeart, Calendar } from "lucide-react";
 
 const stats = [
-  { icon: Users, label: "Children Helped", value: 500, gradient: "from-blue-400 to-pink-500" },
-  { icon: Utensils, label: "Meals Provided", value: 2000, gradient: "from-pink-500 to-blue-400" },
-  { icon: HandHeart, label: "Volunteers", value: 20, gradient: "from-blue-300 to-pink-400" },
-  { icon: Calendar, label: "Years of Service", value: 2, gradient: "from-pink-400 to-blue-300" },
+  { icon: Users, label: "Children Helped", value: "500+" },
+  { icon: Utensils, label: "Meals Provided", value: "2,000+" },
+  { icon: HandHeart, label: "Volunteers", value: "20+" },
+  { icon: Calendar, label: "Years of Service", value: "2+" },
 ];
 
 export default function ImpactStats() {
   return (
-    <section className="relative py-12 bg-blue-900 px-6 overflow-hidden">
+    <section className="relative py-12 bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#020617] text-white overflow-hidden">
 
-      {/* Background Decorations */}
-      <div className="absolute -top-16 left-0 w-80 h-80 bg-gradient-to-tr from-blue-700 to-pink-500 rounded-full opacity-20 blur-3xl"></div>
-      <div className="absolute -bottom-16 right-0 w-64 h-64 bg-gradient-to-tr from-pink-600 to-blue-600 rounded-full opacity-20 blur-3xl"></div>
+      {/* subtle glow */}
+      <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-pink-500/20 rounded-full blur-3xl"></div>
 
-      <div className="relative max-w-7xl mx-auto md:px-6 text-center">
-        {/* Heading */}
-        <h2 className="text-2xl md:text-3xl fontserif font-extrabold text-white mb-3">
-          Our Impact in Numbers
-        </h2>
-        <p className="text-white text-sm md:text-base max-w-2xl mx-auto mb-8">
-          At <span className="font-semibold">Utamaduni Organization</span>, we work tirelessly to uplift communities and transform lives.
-        </p>
+      <div className="relative max-w-6xl mx-auto px-6">
 
-        {/* Stats Grid */}
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {stats.map((stat, index) => {
+        {/* HEADER */}
+        <div className="text-center mb-8">
+          <h2 className="text-xl md:text-2xl font-semibold">
+            Our Impact
+          </h2>
+          <p className="text-gray-400 text-sm mt-2">
+            Real lives, real change.
+          </p>
+        </div>
+
+        {/* STATS */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {stats.map((stat, i) => {
             const Icon = stat.icon;
+
             return (
-              <div
-                key={index}
-                className="flex flex-col items-center p-4 bg-blue-900 backdrop-blur-md border border-white/20 rounded-xl hover:shadow-lg transition-all"
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className="relative group"
               >
-                {/* Icon */}
-                <div
-                  className={`w-10 h-10 flex items-center border border-white/40 bg-gradient-to-br from-pink-900 via-pink-700 to-pink-500 rounded justify-center shadow rounded-ull mb-2 bg-gradient-t-br ${stat.gradient} text-white shadow-md`}
-                >
-                  <Icon className="w-6 h-6 text-white" />
+                {/* card */}
+                <div className="p-4 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 text-center hover:border-pink-500/30 transition">
+
+                  {/* icon */}
+                  <div className="mx-auto mb-3 w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-br from-pink-500 to-purple-600">
+                    <Icon size={18} />
+                  </div>
+
+                  {/* number */}
+                  <h3 className="text-lg md:text-xl font-bold">
+                    {stat.value}
+                  </h3>
+
+                  {/* label */}
+                  <p className="text-gray-400 text-xs mt-1">
+                    {stat.label}
+                  </p>
                 </div>
-
-                {/* Counter */}
-                <span className="text-xl md:text-2xl font-extrabold text-white">
-                  {stat.value.toLocaleString()}+
-                </span>
-
-                {/* Label */}
-                <p className="mt-1 text-white/90 font-medium text-center text-sm">{stat.label}</p>
-              </div>
+              </motion.div>
             );
           })}
         </div>

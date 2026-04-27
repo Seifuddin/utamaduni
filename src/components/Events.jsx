@@ -85,7 +85,7 @@ export default function EventGallerySlider() {
                   <p className="text-gray-600 text-base mb-4">{event.description}</p>
                   <a
   href="/gallery"
-  className="mt-auto inline-block px-4 py-2 text-sm font-semibold text-white rounded bg-blue-800 shadow hover:bg-blue-600 transition-colors duration-300 text-center"
+  className="mt-auto inline-block px-4 py-2 text-sm fontsemibold text-white rounded bg-blue-800 shadow hover:bg-blue-600 transition-colors duration-300 text-center"
 >
   View Event in Gallery →
 </a>
