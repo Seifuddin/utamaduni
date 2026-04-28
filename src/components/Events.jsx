@@ -1,127 +1,135 @@
 "use client";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { useState } from "react";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-
+/* =======================
+   EVENTS
+   ======================= */
 const events = [
   {
     title: "Utamaduni Visit to Oyugis Children's Home",
     date: "September 2025",
     img: "/images/WhatsApp Image 2025-10-04 at 23.11.57 (2).jpeg",
     description:
-      "Engaged children with fun learning activities, storytelling, and cultural workshops.",
+      "Engaged children with storytelling, cultural learning, and creative expression sessions.",
   },
   {
-    title: "Utamaduni Visit at Mathare Slums",
+    title: "Community Outreach in Mathare",
     date: "August 2025",
     img: "/images/utamaduni at mathare/_DSC8647.jpg",
     description:
-      "Organized educational programs, community cleanups, and cultural awareness initiatives.",
+      "Led education drives, clean-up initiatives, and empowerment workshops within the community.",
   },
   {
-    title: "Utamaduni Visit at Malia Children's Center",
+    title: "Malia Children's Center Engagement",
     date: "July 2025",
     img: "/images/prisca.jpeg",
     description:
-      "Conducted workshops, games, and mentorship sessions for children, spreading hope and joy.",
+      "Mentorship, play therapy, and emotional support sessions for children in care.",
   },
 ];
 
-export default function EventGallerySlider() {
+/* =======================
+   COMPONENT
+   ======================= */
+export default function EventGallery() {
+  const [active, setActive] = useState(events[0]);
+
   return (
-    <section className="bg-amber-50 py-20 md:px-12 lg:px-16">
-      <div className="mx-auto max-w-7xl px-6">
-        {/* Header */}
-        <div className="text-center mb-10">
-          <p className="text-sm uppercase tracking-wide font-semibold text-pink-700 mb-2">
-            Past Events & Highlights
+    <section className="bg-amber-50 py-28">
+      <div className="max-w-7xl mx-auto px-6">
+
+        {/* HEADER */}
+        <div className="max-w-2xl mb-14">
+          <p className="text-xs tracking-[0.3em] uppercase text-pink-700 mb-3">
+            Field Stories
           </p>
-          <h2 className="text-2xl md:text-3xl fontserif font-bold text-[#050b1a] mb-4">
-            Explore Our Community Impact
+
+          <h2 className="text-4xl font-serif text-gray-900">
+            Moments That Shape Our Impact
           </h2>
-          <div className="h-1 bg-pink-700 rounded-full mx-auto mb-6 w-20"></div>
-          <p className="mt-2 text-gray-600 max-w-2xl mx-auto font-medium text-center md:text-lg mb-6">
-            A glimpse into the workshops, campaigns, and visits that inspired and empowered communities.
+
+          <p className="mt-5 text-gray-600 leading-relaxed">
+            These are not just events. They are lived experiences of connection,
+            healing, and transformation across communities we serve.
           </p>
         </div>
 
-        {/* Swiper Slider */}
-        <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
-          spaceBetween={20}
-          slidesPerView={1}
-          navigation
-          pagination={{ clickable: true }}
-          autoplay={{ delay: 5000, disableOnInteraction: false }}
-          breakpoints={{
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
-          className="relative"
-        >
-          {events.map((event, index) => (
-            <SwiperSlide key={index}>
-              <div className="bg-white w-full h-full border border-pink-200 rounded-lg shadow hover:shadow-md overflow-hidden flex flex-col transition-transform hover:-translate-y-1">
-                {/* Event Image */}
-                <div className="h-48 overflow-hidden">
-                  <img
-                    src={event.img}
-                    alt={event.title}
-                    className="w-full h-full object-cover hover:scale-105 transition duration-500"
-                  />
-                </div>
+        {/* =======================
+            FEATURED + LIST LAYOUT
+            ======================= */}
+        <div className="grid lg:grid-cols-2 gap-10">
 
-                {/* Event Content */}
-                <div className="p-4 flex flex-col flex-1">
-                  <p className="text-pink-800 text-sm mb-1 italic">{event.date}</p>
-                  <h3 className="font-semibold text-[#050b1a] fontserif md: text-lg mb-2">
-                    {event.title}
-                  </h3>
-                  <p className="text-gray-600 text-base mb-4">{event.description}</p>
-                  <a
-  href="/gallery"
-  className="mt-auto inline-block px-4 py-2 text-sm fontsemibold text-white rounded bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#020617] shadow hover:bg-blue-600 transition-colors duration-300 text-center"
->
-  View Event in Gallery →
-</a>
+          {/* FEATURED STORY */}
+          <div className="relative h-[420px] rounded-2xl overflow-hidden shadow-lg">
 
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+            <img
+              src={active.img}
+              alt={active.title}
+              className="w-full h-full object-cover"
+            />
 
-        {/* Custom Swiper styles */}
-        <style jsx global>{`
-          .swiper-button-next,
-          .swiper-button-prev {
-            color: #d81d84ff;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 9999px;
-            padding: 6px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-            transition: all 0.3s ease;
-            width: 28px;
-            height: 28px;
-          }
-          .swiper-button-next:hover,
-          .swiper-button-prev:hover {
-            background: #d81d84ff;
-            color: white;
-          }
-          .swiper-pagination-bullet {
-            background: #f472b6;
-            opacity: 1;
-          }
-          .swiper-pagination-bullet-active {
-            background: #be185d;
-          }
-        `}</style>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+
+            <div className="absolute bottom-0 p-6 text-white">
+
+              <p className="text-xs text-pink-300 tracking-wide mb-2">
+                {active.date}
+              </p>
+
+              <h3 className="text-2xl font-semibold">
+                {active.title}
+              </h3>
+
+              <p className="mt-2 text-sm text-white/80 max-w-md">
+                {active.description}
+              </p>
+            </div>
+          </div>
+
+          {/* STORY LIST */}
+          <div className="flex flex-col gap-4">
+
+            {events.map((event, i) => (
+              <button
+                key={i}
+                onClick={() => setActive(event)}
+                className={`text-left group p-4 rounded-xl border transition
+                ${
+                  active.title === event.title
+                    ? "border-pink-700 bg-white shadow-sm"
+                    : "border-gray-200 bg-white hover:border-pink-300"
+                }`}
+              >
+
+                <p className="text-xs text-pink-700 mb-1">
+                  {event.date}
+                </p>
+
+                <h4 className="font-semibold text-gray-900">
+                  {event.title}
+                </h4>
+
+                <p className="text-sm text-gray-600 mt-1 line-clamp-2">
+                  {event.description}
+                </p>
+
+              </button>
+            ))}
+
+            {/* CTA */}
+            <div className="mt-4">
+              <a
+                href="/gallery"
+                className="inline-flex items-center justify-center w-full px-3 py-1.5 rounded-md bg-pink-700 text-white hover:bg-pink-800 transition"
+              >
+                Explore Full Gallery →
+              </a>
+            </div>
+
+          </div>
+
+        </div>
       </div>
     </section>
   );

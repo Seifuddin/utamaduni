@@ -34,9 +34,9 @@ export default function VideoHighlights() {
           {videos.map(({ id, title }) => (
             <div
               key={id}
-              className="rounded overflow-hidden shadow-lg bg-white border border-gray-200 hover:shadow-md transition"
+              className="rounded overflow-hidden border-b border-pink-200 hover:shadow-md transition"
             >
-              <div className="aspect-w-16 aspect-h-9">
+              <div className="aspect-w-20 aspect-h-16">
                 <iframe
                   src={`https://www.youtube.com/embed/${id}`}
                   title={title}

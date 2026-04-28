@@ -5,221 +5,247 @@ import { useState } from "react";
 import Link from "next/link";
 
 /* =======================
-   🔹 Custom SVG Icons
+   Icon
    ======================= */
-const ChildIcon = (
-  <svg width="26" height="26" fill="white" viewBox="0 0 24 24">
-    <path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm7 2h-2.1c-.9 0-1.7.6-2 1.5-.5 1.4-1.8 2.5-3.4 2.5s-2.9-1.1-3.4-2.5c-.3-.9-1.1-1.5-2-1.5H4c-1.1 0-2 .9-2 2v3c0 .5.4 1 1 1h18c.6 0 1-.5 1-1v-3c0-1.1-.9-2-2-2z" />
-  </svg>
-);
-
-const HivIcon = (
-  <svg width="26" height="26" viewBox="0 0 24 24" fill="white">
-    <path d="M12 2a7 7 0 00-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1114.5 9 2.5 2.5 0 0112 11.5z"/>
-  </svg>
-);
-
-const DisabilityIcon = (
-  <svg width="26" height="26" viewBox="0 0 24 24" fill="white">
-    <path d="M12 2a3 3 0 110 6 3 3 0 010-6zm5 13h-3l-2-5H9v2h1.2l2 5H17a2 2 0 110 4h-1a2 2 0 110-4zM6 22a4 4 0 110-8 4 4 0 010 8z"/>
-  </svg>
-);
-
-const ElderlyIcon = (
-  <svg width="26" height="26" fill="white" viewBox="0 0 24 24">
-    <path d="M12 4a3 3 0 110 6 3 3 0 010-6zm5 8h-1l-2 7h2l3 3 2-2-4-4 1-4h2V9h-3zM6 11H4v10h2V11z"/>
-  </svg>
-);
-
-const StreetIcon = (
-  <svg width="26" height="26" fill="white" viewBox="0 0 24 24">
-    <path d="M12 3l8 4v4c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V7l8-4zm0 6a2 2 0 100 4 2 2 0 000-4z"/>
-  </svg>
-);
-
-const RefugeeIcon = (
-  <svg width="26" height="26" fill="white" viewBox="0 0 24 24">
-    <path d="M12 2L2 7l10 5 10-5-10-5zm0 7L2 14l10 5 10-5-10-5z"/>
-  </svg>
+const Icon = ({ children }) => (
+  <div className="w-10 h-10 rounded-full bg-pink-700 flex items-center justify-center text-white shadow-sm">
+    {children}
+  </div>
 );
 
 /* =======================
-   🔹 Programs Array
+   DATA (ADDED 1 MORE CARD)
    ======================= */
 const programs = [
   {
     image: "/images/childsupport.webp",
-    title: "Orphans and Vulnerable Children",
+    title: "Children in Vulnerable Situations",
     description:
-      "Providing shelter, education, and emotional support to vulnerable children.",
+      "We create safe environments where children can learn, heal, and grow with dignity and stability.",
     details:
-      "We dedicate this program to supporting orphaned and vulnerable kids through health, education, and emotional care.",
-    icon: ChildIcon,
+      "Long-term care programs focused on education, mentorship, emotional healing, and protection.",
+    icon: "👶",
+    featured: true,
   },
   {
     image: "/images/hiv.webp",
-    title: "Persons Living with HIV/AIDS",
+    title: "HIV & Community Health Support",
     description:
-      "Offering healthcare, counseling, and awareness programs.",
+      "We support individuals living with HIV through care, awareness, and stigma reduction programs.",
     details:
-      "We empower individuals living with HIV/AIDS with medical support and anti-stigma campaigns.",
-    icon: HivIcon,
+      "Medical access, counseling, outreach, and community education initiatives.",
+    icon: "❤️",
   },
   {
     image: "/images/Disabilities.jpg",
-    title: "Persons with Disabilities",
+    title: "Inclusion for Persons with Disabilities",
     description:
-      "Supporting inclusion through accessibility and empowerment.",
+      "We remove barriers to education, employment, and participation in society.",
     details:
-      "This initiative empowers persons with disabilities through tools, education, and skills training.",
-    icon: DisabilityIcon,
+      "Assistive support, training programs, advocacy, and empowerment initiatives.",
+    icon: "♿",
   },
   {
     image: "/images/elderly_villagers.jpg",
-    title: "Elderly Persons",
+    title: "Care for the Elderly",
     description:
-      "Providing care and companionship to the elderly.",
+      "We ensure dignity, companionship, and care for elderly individuals in vulnerable situations.",
     details:
-      "We support elderly individuals with medical services, home visits, and social programs.",
-    icon: ElderlyIcon,
+      "Home visits, healthcare support, and social inclusion programs.",
+    icon: "🧓",
   },
   {
     image: "/images/Street-family.jpg",
-    title: "Street Children",
+    title: "Street-Connected Children",
     description:
-      "Rehabilitating and educating street children.",
+      "We support rehabilitation and reintegration of children living on the streets.",
     details:
-      "We provide shelter, mentorship, and education for street children and vulnerable youth.",
-    icon: StreetIcon,
+      "Education, shelter, mentorship, and long-term reintegration support.",
+    icon: "🏙️",
   },
   {
     image: "/images/refugee-families-2.jpeg",
-    title: "Refugees and Displaced Families",
+    title: "Refugees & Displaced Families",
     description:
-      "Offering emergency support and empowerment.",
+      "We provide relief and long-term recovery support for displaced families.",
     details:
-      "We help displaced families rebuild through education, psychosocial support, and basic needs.",
-    icon: RefugeeIcon,
+      "Emergency aid, education, psychosocial care, and livelihood rebuilding.",
+    icon: "🧳",
+  },
+  /* ⭐ NEW CARD ADDED */
+  {
+    image: "/images/culturalpreservation.jpg",
+    title: "Community Empowerment & Livelihoods",
+    description:
+      "We help families build sustainable income through skills training and entrepreneurship support.",
+    details:
+      "We focus on long-term independence through vocational training, small business support, and community development programs.",
+    icon: "🌱",
   },
 ];
 
 /* =======================
-   🔹 Component
+   COMPONENT
    ======================= */
 export default function Programs() {
-  const [selectedProgram, setSelectedProgram] = useState(null);
+  const [active, setActive] = useState(programs[0]);
+
+  const featured = programs.find((p) => p.featured);
+  const others = programs.filter((p) => !p.featured);
 
   return (
-    <section className="py-24 bg-amber-50 relative overflow-hidden" id="programs">
-      <div className="mx-auto px-6 text-center max-w-7xl">
+    <section className="py-28 bg-amber-50">
+      <div className="max-w-7xl mx-auto px-6">
 
-        <p className="text-sm uppercase tracking-wide font-semibold text-pink-700 mb-2">
-          what we do
-        </p>
+        {/* HEADER */}
+        <div className="max-w-2xl mb-14">
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-900">
+            Areas of Impact
+          </h2>
 
-        <h2 className="text-2xl md:text-3xl font-bold fontserif text-[#050b1a] mb-4">
-          Our Projects & Focus Areas
-        </h2>
-
-        <div className="h-1 w-20 bg-pink-700 mx-auto rounded-full mb-6"></div>
-
-        <p className="mt-2 text-gray-600 max-w-2xl mx-auto text-lg mb-12">
-          We dedicate our programs to improving the lives of vulnerable and marginalized groups through compassion, empowerment, and sustainable support.
-        </p>
+          <p className="mt-5 text-gray-600 leading-relaxed">
+            We work across vulnerable communities with long-term programs designed
+            to restore dignity, opportunity, and stability.
+          </p>
+        </div>
 
         {/* =======================
-            🔹 Program Grid
+            FEATURED SECTION
             ======================= */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-10">
-          {programs.map((program, i) => (
+        <div className="grid lg:grid-cols-2 gap-10 mb-16">
+
+          {/* IMAGE */}
+          <div className="relative h-[420px] rounded-2xl overflow-hidden">
+            <Image
+              src={featured.image}
+              alt={featured.title}
+              fill
+              className="object-cover"
+            />
+
+            <div className="absolute inset-0 bg-black/40" />
+
+            <div className="absolute bottom-0 p-6 text-white">
+
+              <div className="flex items-center gap-3 mb-3">
+                <Icon>{featured.icon}</Icon>
+                <span className="text-xs tracking-[0.25em] uppercase">
+                  Featured Program
+                </span>
+              </div>
+
+              <h3 className="text-2xl font-semibold">
+                {featured.title}
+              </h3>
+
+              <p className="mt-2 text-sm text-white/80 max-w-md">
+                {featured.description}
+              </p>
+            </div>
+          </div>
+
+          {/* FEATURED TEXT (ENHANCED) */}
+          <div className="flex flex-col justify-center">
+
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              Why this work matters
+            </h3>
+
+            <p className="text-gray-600 leading-relaxed mb-4">
+              Vulnerability is not just about lack of resources—it is about lack of
+              stability, care, and opportunity. Our programs are designed to restore
+              all three through consistent, long-term support.
+            </p>
+
+            <p className="text-gray-600 leading-relaxed mb-6">
+              We do not offer short-term relief alone. We build systems that help
+              individuals and families regain independence and dignity over time.
+            </p>
+
+            {/* TWO BUTTONS (NEW) */}
+            <div className="flex gap-3">
+
+              <Link href="/donate" className="flex-1">
+                <button className="w-full bg-pink-700 text-white px-6 py-1.5 rounded-md hover:bg-pink-800 transition">
+                  Support This Program
+                </button>
+              </Link>
+
+              <Link href="/contact" className="flex-1">
+                <button className="w-full border border-pink-700 text-pink-700 px-6 py-1.5 rounded-md hover:bg-pink-50 transition">
+                  Get Involved
+                </button>
+              </Link>
+
+            </div>
+
+          </div>
+        </div>
+
+        {/* =======================
+            GRID (ALL PROGRAMS INCLUDING NEW ONE)
+            ======================= */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          {others.map((p, i) => (
             <div
               key={i}
-              className="group bg-white border border-pink-200 rounded-lg hover:shadow-xl overflow-hidden flex flex-col transition-transform hover:-translate-y-1"
+              onClick={() => setActive(p)}
+              className="group cursor-pointer bg-white border border-gray-200 rounded overflow-hidden hover:shadow-lg transition"
             >
-              <div className="relative w-full h-40">
+
+              <div className="relative h-44">
                 <Image
-                  src={program.image}
-                  alt={program.title}
+                  src={p.image}
+                  alt={p.title}
                   fill
-                  className="object-cover"
+                  className="object-cover group-hover:scale-[1.05] transition duration-700"
                 />
               </div>
 
-              <div className="p-4 flex flex-col flex-1 text-left">
+              <div className="p-5">
 
-                {/* ICON + TITLE */}
-                <div className="flex items-center gap-3 mb-3">
-                  <div
-                    className="w-8 h-8 rounded flex items-center justify-center 
-                    bg-gradient-to-br from-pink-900 via-pink-700 to-pink-500 shadow-md"
-                  >
-                    {program.icon}
-                  </div>
-                  <h3 className="font-semibold text-[#050b1a] fontserif text-lg">
-                    {program.title}
-                  </h3>
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-pink-700 text-lg">{p.icon}</span>
+                  <h4 className="font-semibold text-gray-900 text-sm">
+                    {p.title}
+                  </h4>
                 </div>
 
-                <p className="text-gray-600 flex-1">{program.description}</p>
-
-                {/* BUTTONS */}
-                <div className="mt-4 flex gap-2">
-  <button
-    onClick={() => setSelectedProgram(program)}
-    className="flex-1 bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#020617] text-white text-sm px-4 py-1.5 rounded fontsemibold hover:bg-blue-900 transition"
-  >
-    Learn More
-  </button>
-
-  <Link href="/donate" className="flex-1">
-    <button
-      className="w-full border border-[#050b1a] text-[#050b1a] text-sm px-4 py-1.5 rounded fontsemibold hover:bg-blue-800 transition"
-    >
-      Donate
-    </button>
-  </Link>
-</div>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  {p.description}
+                </p>
 
               </div>
             </div>
           ))}
+
         </div>
       </div>
 
-      {/* =======================
-          🔹 Modal
-          ======================= */}
-      {selectedProgram && (
-        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 px-4">
-          <div className="bg-white max-w-md w-full rounded-lg shadow-xl overflow-hidden">
+      {/* MODAL */}
+      {active && (
+        <div className="fixed inset-0 bg-black/70 flex items-center justify-center px-4 z-50">
 
-            <div className="relative w-full h-44">
-              <Image
-                src={selectedProgram.image}
-                alt={selectedProgram.title}
-                fill
-                className="object-cover"
-              />
-            </div>
+          <div className="bg-white max-w-md w-full rounded-2xl p-6">
 
-            <div className="p-5">
-              <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                {selectedProgram.title}
-              </h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              {active.title}
+            </h3>
 
-              <p className="text-gray-700 text-sm mb-4">
-                {selectedProgram.details}
-              </p>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              {active.details}
+            </p>
 
-              <button
-                onClick={() => setSelectedProgram(null)}
-                className="bg-gradient-to-r from-pink-600 to-blue-900 text-white px-4 py-2 text-sm rounded-md shadow hover:opacity-90 transition"
-              >
-                Close
-              </button>
-            </div>
+            <button
+              onClick={() => setActive(null)}
+              className="mt-6 w-full bg-pink-700 text-white py-2 rounded-md hover:bg-pink-800 transition"
+            >
+              Close
+            </button>
 
           </div>
+
         </div>
       )}
     </section>
