@@ -14,6 +14,7 @@ import StoriesAndTestimonials from "@/components/Testimonials";
 import OurStory from "@/components/Story";
 import Mission from "@/components/Mission";
 import PastEvents from "@/components/Past";
+import Hero from "@/components/Hero";
 
 // ✅ About Page SEO Metadata
 export const metadata = {
@@ -55,7 +56,7 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <main className="overflow-x-hidden">
-      <AboutHero />
+      <Hero />
       <Abouts />
       <CTA />
       <OurStory />

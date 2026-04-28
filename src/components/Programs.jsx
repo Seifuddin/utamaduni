@@ -117,7 +117,7 @@ export default function Programs() {
           what we do
         </p>
 
-        <h2 className="text-2xl md:text-4xl font-bold fontserif text-gray-900 mb-4">
+        <h2 className="text-2xl md:text-3xl font-bold fontserif text-[#050b1a] mb-4">
           Our Projects & Focus Areas
         </h2>
 
@@ -134,7 +134,7 @@ export default function Programs() {
           {programs.map((program, i) => (
             <div
               key={i}
-              className="group bg-white border border-blue-100 rounded-lg shadow-md hover:shadow-xl overflow-hidden flex flex-col transition-transform hover:-translate-y-1"
+              className="group bg-white border border-pink-200 rounded-lg hover:shadow-xl overflow-hidden flex flex-col transition-transform hover:-translate-y-1"
             >
               <div className="relative w-full h-40">
                 <Image
@@ -155,7 +155,7 @@ export default function Programs() {
                   >
                     {program.icon}
                   </div>
-                  <h3 className="font-semibold text-gray-900 fontserif text-lg">
+                  <h3 className="font-semibold text-[#050b1a] fontserif text-lg">
                     {program.title}
                   </h3>
                 </div>
@@ -166,14 +166,14 @@ export default function Programs() {
                 <div className="mt-4 flex gap-2">
   <button
     onClick={() => setSelectedProgram(program)}
-    className="flex-1 bg-blue-800 text-white text-sm px-4 py-1.5 rounded fontsemibold hover:bg-blue-900 transition"
+    className="flex-1 bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#020617] text-white text-sm px-4 py-1.5 rounded fontsemibold hover:bg-blue-900 transition"
   >
     Learn More
   </button>
 
   <Link href="/donate" className="flex-1">
     <button
-      className="w-full border border-blue-700 text-blue-700 text-sm px-4 py-1.5 rounded fontsemibold hover:bg-blue-800 transition"
+      className="w-full border border-[#050b1a] text-[#050b1a] text-sm px-4 py-1.5 rounded fontsemibold hover:bg-blue-800 transition"
     >
       Donate
     </button>

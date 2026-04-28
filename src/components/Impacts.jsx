@@ -66,6 +66,10 @@ export default function ImpactStats() {
           })}
         </div>
       </div>
+      {/* Micro trust line */}
+        <p className="text-center mt-6 text-[10px] text-white/40">
+          Transparent • Verified impact • Community driven
+        </p>
     </section>
   );
 }

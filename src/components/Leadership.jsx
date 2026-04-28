@@ -68,7 +68,7 @@ export default function Leadership() {
         <p className="text-xs uppercase tracking-widest font-semibold text-pink-700">
           Our Team
         </p>
-        <h2 className="text-2xl md:text-4xl fontserif font-bold text-gray-900 mt-2 mb-3">
+        <h2 className="text-2xl md:text-3xl fontserif font-bold text-gray-900 mt-2 mb-3">
           The Leadership Behind Utamaduni
         </h2>
         <div className="mt-2 text-gray-600 max-w-2xl mx-auto font-medium text-center md:text-lg mb-6"></div>

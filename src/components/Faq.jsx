@@ -47,7 +47,7 @@ export default function FAQ() {
           <p className="text-sm uppercase tracking-wide font-semibold text-pink-700 mb-2">
             questions and answers
           </p>
-          <h2 className="text-2xl md:text-4xl fontserif font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl md:text-3xl fontserif font-bold text-[#050b1a] mb-4">
             Frequently Asked Questions
           </h2>
            <motion.div
@@ -66,7 +66,7 @@ export default function FAQ() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border-b border-gray-300 rounded-lg shadowsm bgwhite overflow-hidden"
+              className="border-b border-pink-200 rounded overflow-hidden"
             >
               <button
                 onClick={() => toggleFAQ(index)}

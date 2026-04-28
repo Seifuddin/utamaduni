@@ -48,7 +48,7 @@ export default function PastEvents() {
         <p className="text-sm uppercase tracking-wide font-semibold text-pink-700 mb-2">
             Achievements
           </p>
-        <h2 className="text-2xl md:text-4xl fontserif font-bold text-gray-900 mb-4">
+        <h2 className="text-2xl md:text-3xl fontserif font-bold text-gray-900 mb-4">
           Our Achievements as Utamaduni
         </h2>
         <motion.div
@@ -97,7 +97,7 @@ export default function PastEvents() {
 
               {/* Content */}
               <div className="p-4">
-                <p className="text-sm text-blue-800 italic mb-2">{event.date}</p>
+                <p className="text-sm text-pink-800 italic mb-2">{event.date}</p>
                 <h3 className="font-semibold text-gray-900 fontserif text-lg md:text-xl my-2">
                   {event.title}
                 </h3>

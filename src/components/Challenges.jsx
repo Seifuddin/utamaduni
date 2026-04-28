@@ -37,11 +37,11 @@ export default function Challenges() {
   ];
 
   return (
-    <section className="relative bg-amber-50 gradient-to-b from-blue-50 via-white to-amber-50 text-gray-800 px6 py-10 overflow-hidden">
+    <section className="relative bg-amber-50 text-gray-800 overflow-hidden">
       {/* Decorative background 
       <div className="absolute inset-0 bg-[url('/images/pattern-light.png')] opacity-5 bg-cover bg-center"></div>
 */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+      <div className="relative bg-amber-50 z-10 max-w-7xl mx-auto px-6 pt-16 text-center">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -53,7 +53,7 @@ export default function Challenges() {
           <p className="text-sm uppercase tracking-wide font-semibold text-pink-700 mb-2">
             Our Challenges
           </p>
-          <h2 className="text-2xl md:text-4xl fontserif font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl md:text-3xl fontserif font-bold text-gray-900 mb-4">
             The Realities We Face
           </h2>
           <motion.div
@@ -78,7 +78,7 @@ export default function Challenges() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex items-start gap-4 bgwhite/80 border-b border-gray-200 rounded-lg p-2 shadowhover:shadow-md hover:-translate-y-1 transition-all duration-300"
+              className="flex items-start gap-4 bg-amber-50 border-b border-pink-200 rounded-lg p-2 shadowhover:shadow-md hover:-translate-y-1 transition-all duration-300"
             >
               <div className="p-2 rounded -full borderborder-blue-800 bg-gradient-to-br from-pink-900 via-pink-700 to-pink-500">{item.icon}</div>
               <div>
@@ -100,8 +100,15 @@ export default function Challenges() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.5 }}
           viewport={{ once: true }}
-          className="w-full text-center mt-14 bg-gradient-to-r from-blue-900 to-blue-700 text-white p-6 py-16 shadow2xl max-w-7xlmx-auto"
+          className="w-full text-center mt-14 bg-[#050b1a] text-white p-6 py-16 shadow2xl max-w-7xlmx-auto"
         >
+          {/* Background */}
+          {/* Soft cinematic glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.2),transparent_55%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(236,72,153,0.12),transparent_60%)]" />
+
+      {/* Subtle texture */}
+      <div className="absolute inset-0 opacity-10 bg-[url('/images/patterns.png')] bg-cover bg-center" />
           <h3 className="text-xl md:text-2xl font-bold mb-2 fontserif">
             Together, We Can Overcome
           </h3>
@@ -109,20 +116,37 @@ export default function Challenges() {
             Each challenge is a call to action — an opportunity to uplift lives,
             restore hope, and strengthen the foundation of our shared humanity.
           </p>
-           <div className="flex flexcol w-full sm:flex-row gap-4 justify-center md: justifystart">
-            <a
-              href="/donate"
-              className="bg-gradient-to-br from-pink-900 via-pink-700 to-pink-500 text-center md:px-8 md:py-2 text-white fontsemibold py-1.5 px-3 rounded shadowmd hover:bg-gray-100 transition"
-            >
-              Support Us
-            </a>
-            <a
-              href="/contact"
-              className="border border-white text-center md:px-8 md:py-2 text-white fontsemibold py-1.5 px-3 rounded hover:bg-white/10 transition"
-            >
-              Join Us
-            </a>
-          </div>
+           {/* Buttons */}
+        <div className="mt-7 flex flex-col sm:flex-row gap-3 justify-center">
+
+          <a
+            href="/donate"
+            className="
+              px-7 py-2.5 rounded-full
+              bg-white text-black text-sm font-medium
+              hover:bg-pink-500 hover:text-white
+              transition
+            "
+          >
+            Donate
+          </a>
+
+          <a
+            href="/contact"
+            className="
+              px-7 py-2.5 rounded-full
+              border border-white/20 text-white/70 text-sm
+              hover:border-white hover:text-white
+              transition
+            "
+          >
+            Get Involved
+          </a>
+        </div>
+        {/* Micro trust line */}
+        <p className="mt-6 text-[10px] text-white/40">
+          Transparent • Verified impact • Community driven
+        </p>
         </motion.div>
       
       

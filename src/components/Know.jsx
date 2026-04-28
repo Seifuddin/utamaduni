@@ -39,7 +39,7 @@ export default function DidYouKnowHybrid() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <h2 className="text-2xl md:text-4xl font-bold">
+          <h2 className="text-2xl md:text-3xl font-bold">
             Every child deserves safety.
           </h2>
 
@@ -108,6 +108,10 @@ export default function DidYouKnowHybrid() {
 
           </div>
         </div>
+        {/* Micro trust line */}
+        <p className="text-center mt-6 text-[10px] text-white/40">
+          Transparent • Verified impact • Community driven
+        </p>
       </div>
     </section>
   );

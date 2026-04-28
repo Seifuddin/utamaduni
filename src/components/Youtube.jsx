@@ -21,7 +21,7 @@ export default function VideoHighlights() {
     <section className="py-16 bg-amber-50 text-gray-900">
       <div className="max-w-7xl mx-auto px-6 text-center">
         {/* Heading */}
-        <h2 className="text-2xl md:text-4xl fontserif font-bold text-gray-900 mb-4">
+        <h2 className="text-2xl md:text-3xl fontserif font-bold text-[#050b1a] mb-4">
           Video Highlights
         </h2>
         <div className="h-1 bg-pink-700 rounded-full mx-auto mb-6 w-20"></div>
@@ -59,7 +59,7 @@ export default function VideoHighlights() {
             href="https://www.youtube.com/@utamadunifoundation"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-8 py-2 bg-gradient-to-br from-pink-800 via-pink-700 to-pink-900 hover:bg-blue-800 text-white font-semibold rounded-md transition-all duration-300 shadow-md"
+            className="inline-block px-4 py-1 md:py-2 bg-gradient-to-br from-pink-800 via-pink-700 to-pink-900 hover:bg-blue-800 text-white rounded-md transition-all duration-300 shadowmd"
           >
             Watch More on YouTube
           </a>

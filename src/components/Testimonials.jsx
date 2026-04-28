@@ -51,11 +51,10 @@ export default function StoriesAndTestimonials() {
   ];
 
   return (
-    <section className="relative py-20 bg-amber-50 px6 overflow-hidden bg-gradient-to-r from-blue-900 to-blue-800">
+    <section className="relative py-20 px6 overflow-hidden bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#020617]">
 
       {/* Decorative Waves */}
-      <div className="absolute -top-16 left-0 w-full h-36 bg-gradient-to-r from-indigo-800 via-indigo-900 to-indigo-800 rounded-b-full opacity-30"></div>
-      <div className="absolute -bottom-16 right-0 w-56 h-56 bg-indigo-700 rounded-full mix-blend-multiply filter blur-2xl opacity-25"></div>
+            <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-pink-500/20 rounded-full blur-3xl"></div>
 
       <div className="relative z-10 px6">
         {/* Header 
@@ -155,7 +154,7 @@ export default function StoriesAndTestimonials() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
-                  className="bg-white/5 rounded-2xl border border-blue-700 p-4 backdrop-blur-sm shadow-md hover:shadow-lg transition-all h-full"
+                  className="p-4 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 text-center hover:border-pink-500/30 transition h-full"
                 >
                   <div className="flex items-center gap-4 mb-4">
                     <Image
@@ -163,7 +162,7 @@ export default function StoriesAndTestimonials() {
                       alt={t.name}
                       width={50}
                       height={50}
-                      className="rounded-full border-2 border-pink-500"
+                      className="rounded-full border-2 border-pink-500/30"
                     />
                     <div>
                       <h4 className="font-bold text-gray-100 fontserif md:text-lg my-2">{t.name}</h4>
@@ -187,6 +186,10 @@ export default function StoriesAndTestimonials() {
           */}
         </motion.div>
       </div>
+      {/* Micro trust line */}
+        <p className="text-center mt-6 text-[10px] text-white/40">
+          Transparent • Verified impact • Community driven
+        </p>
     </section>
   );
 }

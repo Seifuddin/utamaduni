@@ -20,11 +20,11 @@ export default function OurStory() {
           Our Story
         </span>
 
-        <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
           How It All Began
         </h2>
 
-        <div className="w-24 h-1 bg-pink-200 mx-auto rounded-full mb-6"></div>
+        <div className="w-24 h-1 bg-pink-700 mx-auto rounded-full mb-6"></div>
 
         <p className="text-gray-600 max-w-2xl mx-auto">
           A journey rooted in compassion, culture, and community transformation.
@@ -39,7 +39,7 @@ export default function OurStory() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="relative w-full h-[320px] md:h-[450px] rounded-xl overflow-hidden shadow-xl group"
+          className="relative w-full h-[320px] md:h-[450px] rounded overflow-hidden group"
         >
           <Image
             src="/images/utamaduni at mathare/_DSC8943.jpg"
@@ -59,7 +59,7 @@ export default function OurStory() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-xl md:text-2xl font-bold text-blue-900 mb-4">
+          <h3 className="text-xl mdtext-2xl font-semibold text-blue-900 mb-4">
             A Movement Born from Compassion
           </h3>
 
@@ -86,7 +86,7 @@ export default function OurStory() {
           {/* FEATURES */}
           <div className="grid sm:grid-cols-2 gap-6">
             
-            <div className="flex items-start gap-4 p-3 border-b border-pink-200">
+            <div className="flex items-start gap-4 p-3 border-b border-pink-200 rounded-lg">
               <Users className="bg-gradient-to-r from-pink-600 to-pink-800 text-white p-2 rounded" size={32} />
               <div>
                 <h4 className="font-semibold text-blue-900">
@@ -98,7 +98,7 @@ export default function OurStory() {
               </div>
             </div>
 
-            <div className="flex items-start gap-4 p-3 border-b border-pink-200">
+            <div className="flex items-start gap-4 p-3 border-b border-pink-200 rounded-lg">
               <BookOpen className="bg-gradient-to-r from-pink-600 to-pink-800 text-white p-2 rounded" size={32} />
               <div>
                 <h4 className="font-semibold text-blue-900">

@@ -84,7 +84,7 @@ export default function Hero() {
         />
 
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/90" />
       </div>
 
       {/* TEXT CONTENT */}
@@ -107,20 +107,36 @@ export default function Hero() {
           
         </Link>
         {/* Buttons */}
-          <div className="flex flex-wrap gap-3 mt-10">
-            <a
-              href="/donate"
-              className="bg-gradient-to-br from-pink-900 via-pink-700 to-pink-800 text-white border border-white/50 font-semibold py-1.5 px-5 md:py-1.5 md:px-10 rounded shadow-md hover:bg-blue-700 transition-colors duration-300 text-center text-smmd:text-lg"
-            >
-              Support Us
-            </a>
-            <a
-              href="/contact"
-              className="border border-white text-white font-semibold py-1.5 px-5 md:py-1.5 md:px-10 rounded hover:bg-blue-100 transition-colors duration-300 text-center text-smmd:text-lg"
-            >
-              Contact Us
-            </a>
-          </div>
+        <div className="mt-7 flex flex-colsm: flex-row gap-3 justify-center">
+
+          <a
+            href="/donate"
+            className="
+              px-7 py-2.5 rounded-full
+              bg-white text-black text-sm font-medium
+              hover:bg-pink-500 hover:text-white
+              transition
+            "
+          >
+            Donate
+          </a>
+
+          <a
+            href="/contact"
+            className="
+              px-7 py-2.5 rounded-full
+              border border-white/40 text-white/90 text-sm
+              hover:border-white hover:text-white
+              transition
+            "
+          >
+            Contact Us
+          </a>
+        </div>
+          {/* Micro trust line */}
+        <p className="mt-6 text-[10px] text-white/40">
+          Transparent • Verified impact • Community driven
+        </p>
       </div>
 
       {/* Left Arrow */}

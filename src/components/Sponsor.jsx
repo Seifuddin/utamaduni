@@ -17,16 +17,16 @@ export default function SponsorProgram() {
         viewport={{ once: true }}
         className="text-center mb-16"
       >
-        <span className="inline-block bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm font-medium mb-4">
+        <span className="inline-block bg-pink-200 text-pink-800 px-4 py-1 rounded-full text-sm font-medium mb-4">
           Child Sponsorship
         </span>
 
-        <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
           Sponsor a Child Today,
           <span className="text-blue-800"> Transform a Future</span>
         </h2>
 
-        <div className="w-24 h-1 bg-blue-200 mx-auto rounded-full mb-6"></div>
+        <div className="w-24 h-1 bg-pink-300 mx-auto rounded-full mb-6"></div>
 
         <p className="text-gray-600 max-w-2xl mx-auto">
           Your support provides education, healthcare, and essential needs for children in vulnerable communities.
@@ -65,8 +65,8 @@ export default function SponsorProgram() {
           {/* FEATURES */}
           <div className="grid sm:grid-cols-2 gap-6">
             
-            <div className="flex items-start gap-4 p-2 border-b border-blue-200">
-              <HeartHandshake className="bg-gradient-to-r from-blue-600 to-blue-900 text-white p-2 rounded" size={32} />
+            <div className="flex items-start gap-4 p-2 border-b border-pink-200 rounded">
+              <HeartHandshake className="bg-gradient-to-r from-pink-600 to-pink-900 text-white p-2 rounded" size={32} />
               <div>
                 <h4 className="font-semibold text-blue-900">Care & Support</h4>
                 <p className="text-gray-700 text-sm">
@@ -75,8 +75,8 @@ export default function SponsorProgram() {
               </div>
             </div>
 
-            <div className="flex items-start gap-4 p-2 border-b border-blue-200">
-              <GraduationCap className="bg-gradient-to-r from-blue-600 to-blue-900 text-white p-2 rounded" size={32} />
+            <div className="flex items-start gap-4 p-2 border-b border-pink-200 rounded">
+              <GraduationCap className="bg-gradient-to-r from-pink-600 to-pink-900 text-white p-2 rounded" size={32} />
               <div>
                 <h4 className="font-semibold text-blue-900">Education</h4>
                 <p className="text-gray-700 text-sm">
@@ -85,8 +85,8 @@ export default function SponsorProgram() {
               </div>
             </div>
 
-            <div className="flex items-start gap-4 p-2 border-b border-blue-200">
-              <Stethoscope className="bg-gradient-to-r from-blue-600 to-blue-900 text-white p-2 rounded" size={32} />
+            <div className="flex items-start gap-4 p-2 border-b border-pink-200 rounded">
+              <Stethoscope className="bg-gradient-to-r from-pink-600 to-pink-900 text-white p-2 rounded" size={32} />
               <div>
                 <h4 className="font-semibold text-blue-900">Healthcare</h4>
                 <p className="text-gray-700 text-sm">
@@ -95,8 +95,8 @@ export default function SponsorProgram() {
               </div>
             </div>
 
-            <div className="flex items-start gap-4 p-2 border-b border-blue-200">
-  <HeartHandshake className="bg-gradient-to-r from-blue-600 to-blue-900 text-white p-2 rounded" size={32} />
+            <div className="flex items-start gap-4 p-2 border-b border-pink-200 rounded">
+  <HeartHandshake className="bg-gradient-to-r from-pink-600 to-pink-900 text-white p-2 rounded" size={32} />
   <div>
     <h4 className="font-semibold text-blue-900">Nutrition</h4>
     <p className="text-gray-700 text-sm">
