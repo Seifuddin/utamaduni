@@ -56,11 +56,9 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <main className="overflow-x-hidden">
-      <Hero />
+      <CEOSection />
       <Abouts />
       <CTA />
-      <OurStory />
-      <CEOSection />
       <Challenges />
       <PastEvents />
       <StoriesAndTestimonials />

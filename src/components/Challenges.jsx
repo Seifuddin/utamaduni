@@ -37,7 +37,7 @@ export default function Challenges() {
   ];
 
   return (
-    <section className="bg-[#f8f5f0] text-[#1a1a1a]">
+    <section className="bg-amber-50 text-[#1a1a1a]">
 
       {/* HEADER */}
       <div className="max-w-3xl mx-auto text-center px-6 pt-14 pb-10">
@@ -69,7 +69,7 @@ export default function Challenges() {
             initial={{ opacity: 0, scale: 1.02 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
-            className="relative w-full h-[220px] md:h-[260px] overflow-hidden"
+            className="relative w-full h-[220px] md:h-[320px] overflow-hidden"
           >
             <Image
               src="/images/feeding.jpg"
@@ -85,7 +85,7 @@ export default function Challenges() {
         </div>
 
         {/* RIGHT LIST */}
-        <div className="divide-y divide-black/10">
+        <div className="border-yborder-pink-200rounded-lg /10">
 
           {challenges.map((item, index) => {
             const Icon = item.icon;
@@ -96,9 +96,9 @@ export default function Challenges() {
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.05 }}
-                className="flex gap-3 py-4"
+                className="flex gap-3 py-4 border-b border-pink-200 rounded-lg"
               >
-                <Icon size={18} className="text-pink-500 mt-1" />
+                <Icon size={20} className="text-pink-500 mt-1" />
 
                 <div>
                   <h3 className="text-lg font-medium text-gray-900">

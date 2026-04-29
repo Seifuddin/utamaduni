@@ -13,13 +13,13 @@ export default function Abouts() {
         initial={{ opacity: 0, y: 12 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="max-w-3xl mx-auto text-center mb-16"
+        className="max-w-3xl mx-auto text-center mb-10 px-4"
       >
-        <p className="text-[10px] tracking-[0.35em] uppercase text-pink-500 mb-4">
+        <p className="text-[10px] tracking-[0.35em] uppercase text-pink-500 mb-2">
           About
         </p>
 
-        <h2 className="text-2xl md:text-3xl font-light leading-snug">
+        <h2 className="text-2xl md:text-3xl font-light">
           A Legacy of Culture{" "}
           <span className="italic text-blue-900">& Community Impact</span>
         </h2>
@@ -56,9 +56,9 @@ export default function Abouts() {
           className="max-w-lg"
         >
           {/* pink accent (brand color) */}
-          <div className="w-8 h-[2px] bg-pink-500 mb-6"></div>
+          <div className="w-8 h-[2px] bg-pink-500 mb-3"></div>
 
-          <h3 className="text-xl md:text-2xl font-light mb-6 leading-snug">
+          <h3 className="textxl md:text-xl font-light mb-3 leading-snug">
             Rooted in identity, driven by purpose.
           </h3>
 
@@ -77,13 +77,13 @@ export default function Abouts() {
           </div>
 
           {/* divider */}
-          <div className="w-10 h-[1px] bg-black/20 my-8"></div>
+          <div className="w-10 h-[1px] bg-pink-700 my-4"></div>
 
           {/* MISSION & VISION */}
           <div className="space-y-6">
             
             <div className="flex items-start gap-3 rounded-lg border-b border-pink-200 pb-2">
-              <Target size={16} className="mt-1 text-pink-500" />
+              <Target size={20} className="mt-1 text-pink-500" />
               <div>
                 <h4 className="text-[11px] uppercase tracking-[0.25em] text-blue-900 font-bold mb-1">
                   Mission
@@ -96,7 +96,7 @@ export default function Abouts() {
             </div>
 
             <div className="flex items-start gap-3 rounded-lg border-b border-pink-200 pb-2">
-              <Eye size={16} className="mt-1 text-pink-500" />
+              <Eye size={20} className="mt-1 text-pink-500" />
               <div>
                 <h4 className="text-[11px] uppercase tracking-[0.25em] text-blue-900 font-bold mb-1">
                   Vision
