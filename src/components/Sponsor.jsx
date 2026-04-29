@@ -17,7 +17,7 @@ export default function SponsorProgram() {
         viewport={{ once: true }}
         className="text-center mb-16"
       >
-        <span className="inline-block bg-pink-200 text-pink-800 px-4 py-1 rounded-full text-sm font-medium mb-4">
+        <span className="hidden inlineblock bg-pink-200 text-pink-800 px-4 py-1 rounded-full text-sm font-medium mb-4">
           Child Sponsorship
         </span>
 
@@ -26,7 +26,7 @@ export default function SponsorProgram() {
           <span className="text-blue-800"> Transform a Future</span>
         </h2>
 
-        <div className="w-24 h-1 bg-pink-300 mx-auto rounded-full mb-6"></div>
+        <div className="hidden w-24 h-1 bg-pink-300 mx-auto rounded-full mb-6"></div>
 
         <p className="text-gray-600 max-w-2xl mx-auto">
           Your support provides education, healthcare, and essential needs for children in vulnerable communities.
@@ -41,7 +41,7 @@ export default function SponsorProgram() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="relative w-full h-[300px] md:h-[450px] rounded overflow-hidden"
+          className="relative w-full h-[250px] md:h-[350px] rounded overflow-hidden"
         >
           <Image
             src="/images/utamaduni at mathare/_DSC8782.jpg"
@@ -68,7 +68,7 @@ export default function SponsorProgram() {
             <div className="flex items-start gap-4 p-2 border-b border-pink-200 rounded">
               <HeartHandshake className="bg-gradient-to-r from-pink-600 to-pink-900 text-white p-2 rounded" size={32} />
               <div>
-                <h4 className="font-semibold text-blue-900">Care & Support</h4>
+                <h4 className="text-lg font-medium text-gray-900">Care & Support</h4>
                 <p className="text-gray-700 text-sm">
                   Providing emotional and social support for every child.
                 </p>
@@ -78,7 +78,7 @@ export default function SponsorProgram() {
             <div className="flex items-start gap-4 p-2 border-b border-pink-200 rounded">
               <GraduationCap className="bg-gradient-to-r from-pink-600 to-pink-900 text-white p-2 rounded" size={32} />
               <div>
-                <h4 className="font-semibold text-blue-900">Education</h4>
+                <h4 className="text-lg font-medium text-gray-900">Education</h4>
                 <p className="text-gray-700 text-sm">
                   Access to quality education and school essentials.
                 </p>
@@ -88,7 +88,7 @@ export default function SponsorProgram() {
             <div className="flex items-start gap-4 p-2 border-b border-pink-200 rounded">
               <Stethoscope className="bg-gradient-to-r from-pink-600 to-pink-900 text-white p-2 rounded" size={32} />
               <div>
-                <h4 className="font-semibold text-blue-900">Healthcare</h4>
+                <h4 className="text-lg font-medium text-gray-900">Healthcare</h4>
                 <p className="text-gray-700 text-sm">
                   Medical care and regular health support.
                 </p>
@@ -98,7 +98,7 @@ export default function SponsorProgram() {
             <div className="flex items-start gap-4 p-2 border-b border-pink-200 rounded">
   <HeartHandshake className="bg-gradient-to-r from-pink-600 to-pink-900 text-white p-2 rounded" size={32} />
   <div>
-    <h4 className="font-semibold text-blue-900">Nutrition</h4>
+    <h4 className="text-lg font-medium text-gray-900">Nutrition</h4>
     <p className="text-gray-700 text-sm">
       Access to balanced meals for healthy growth and development.
     </p>

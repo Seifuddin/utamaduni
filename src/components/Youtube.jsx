@@ -18,14 +18,14 @@ export default function VideoHighlights() {
   ];
 
   return (
-    <section className="py-16 bg-amber-50 text-gray-900">
+    <section className="pb-16 bg-amber-50 text-gray-900">
       <div className="max-w-7xl mx-auto px-6 text-center">
         {/* Heading */}
-        <h2 className="text-2xl md:text-3xl fontserif font-bold text-[#050b1a] mb-4">
+        <h2 className="hidden text-2xl md:text-3xl fontserif font-bold text-[#050b1a] mb-4">
           Video Highlights
         </h2>
-        <div className="h-1 bg-pink-700 rounded-full mx-auto mb-6 w-20"></div>
-        <p className="text-gray-600 max-w-2xl mx-auto mb-10">
+        <div className="hidden h-1 bg-pink-700 rounded-full mx-auto mb-6 w-20"></div>
+        <p className="hidden text-gray-600 max-w-2xl mx-auto mb-10">
           A collection of our memorable moments, community events, and activities captured on video.
         </p>
 

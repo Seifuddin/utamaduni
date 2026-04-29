@@ -15,6 +15,7 @@ import OurStory from "@/components/Story";
 import Mission from "@/components/Mission";
 import PastEvents from "@/components/Past";
 import Hero from "@/components/Hero";
+import ImpactStats from "@/components/Impacts";
 
 // ✅ About Page SEO Metadata
 export const metadata = {
@@ -58,10 +59,10 @@ export default function AboutPage() {
     <main className="overflow-x-hidden">
       <CEOSection />
       <Abouts />
+      <ImpactStats />
+      <OurStory />
       <CTA />
       <Challenges />
-      <PastEvents />
-      <StoriesAndTestimonials />
       <Leadership />
     </main>
   );

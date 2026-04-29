@@ -16,6 +16,7 @@ import Projects from "@/components/Projects";
 import CTA from "@/components/CTA";
 import EventGallerySlider from "@/components/Events";
 import VideoHighlights from "@/components/Youtube";
+import StoriesAndTestimonials from "@/components/Testimonials";
 
 // ✅ Homepage SEO Metadata
 export const metadata = {
@@ -59,13 +60,13 @@ export default function Home() {
     <main className="overflow-x-hidden bg-amber-50">
       <Hero />
       <SponsorProgram />
-      <ImpactStats />
-      <EventGallerySlider />
       <DidYouKnow />
       <Programs />
       <CTA />
-      <FAQ />
+      <EventGallerySlider />
       <VideoHighlights />
+      <StoriesAndTestimonials />
+      <FAQ />
     </main>
   );
 }

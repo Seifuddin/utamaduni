@@ -98,8 +98,8 @@ export default function Programs() {
       <div className="max-w-7xl mx-auto px-6">
 
         {/* HEADER */}
-        <div className="max-w-2xl mb-14">
-          <h2 className="text-2xl md:text-3xl font-semibold text-gray-900">
+        <div className="text-center max-w5xl mb-14">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
             Areas of Impact
           </h2>
 
@@ -112,10 +112,57 @@ export default function Programs() {
         {/* =======================
             FEATURED SECTION
             ======================= */}
-        <div className="grid lg:grid-cols-2 gap-10 mb-16">
+        <div className="hidden grid lg:grid-cols-2 gap-10 mb-16">
+          {/* FEATURED TEXT (ENHANCED) */}
+          <div className="flex flex-col justify-center">
+             {/* HEADER */}
+        <div className="max-w-2xl mb-7">
+          <h2 className="text-2xl md:text-3xl font-light text-gray-900">
+            Areas of Impact
+          </h2>
+
+          <p className="mt-4 text-gray-600 leading-relaxed">
+            We work across vulnerable communities with long-term programs designed
+            to restore dignity, opportunity, and stability.
+          </p>
+        </div>
+
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">
+              Why this work matters
+            </h3>
+
+            <p className="text-gray-600 leading-relaxed mb-4">
+              Vulnerability is not just about lack of resources—it is about lack of
+              stability, care, and opportunity. Our programs are designed to restore
+              all three through consistent, long-term support.
+            </p>
+
+            <p className="hidden text-gray-600 leading-relaxed mb-6">
+              We do not offer short-term relief alone. We build systems that help
+              individuals and families regain independence and dignity over time.
+            </p>
+
+            {/* TWO BUTTONS (NEW) */}
+            <div className="flex gap-3">
+
+              <Link href="/donate" className="flex-1">
+                <button className="w-full bg-pink-700 text-white px-6 py-1.5 rounded-md hover:bg-pink-800 transition">
+                  Support This Program
+                </button>
+              </Link>
+
+              <Link href="/contact" className="flex-1">
+                <button className="w-full border border-pink-700 text-pink-700 px-6 py-1.5 rounded-md hover:bg-pink-50 transition">
+                  Get Involved
+                </button>
+              </Link>
+
+            </div>
+
+          </div>
 
           {/* IMAGE */}
-          <div className="relative h-[420px] rounded overflow-hidden">
+          <div className="relative h-[320px] rounded overflow-hidden">
             <Image
               src={featured.image}
               alt={featured.title}
@@ -144,42 +191,7 @@ export default function Programs() {
             </div>
           </div>
 
-          {/* FEATURED TEXT (ENHANCED) */}
-          <div className="flex flex-col justify-center">
-
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">
-              Why this work matters
-            </h3>
-
-            <p className="text-gray-600 leading-relaxed mb-4">
-              Vulnerability is not just about lack of resources—it is about lack of
-              stability, care, and opportunity. Our programs are designed to restore
-              all three through consistent, long-term support.
-            </p>
-
-            <p className="text-gray-600 leading-relaxed mb-6">
-              We do not offer short-term relief alone. We build systems that help
-              individuals and families regain independence and dignity over time.
-            </p>
-
-            {/* TWO BUTTONS (NEW) */}
-            <div className="flex gap-3">
-
-              <Link href="/donate" className="flex-1">
-                <button className="w-full bg-pink-700 text-white px-6 py-1.5 rounded-md hover:bg-pink-800 transition">
-                  Support This Program
-                </button>
-              </Link>
-
-              <Link href="/contact" className="flex-1">
-                <button className="w-full border border-pink-700 text-pink-700 px-6 py-1.5 rounded-md hover:bg-pink-50 transition">
-                  Get Involved
-                </button>
-              </Link>
-
-            </div>
-
-          </div>
+          
         </div>
 
         {/* =======================
@@ -206,8 +218,8 @@ export default function Programs() {
               <div className="p-5">
 
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-pink-700 text-lg">{p.icon}</span>
-                  <h4 className="font-semibold text-gray-900 text-sm">
+                  <span className="text-pink-700 text-2xl">{p.icon}</span>
+                  <h4 className="font-semibold text-gray-900 text-">
                     {p.title}
                   </h4>
                 </div>

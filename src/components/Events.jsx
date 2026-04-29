@@ -40,12 +40,12 @@ export default function EventGallery() {
       <div className="max-w-7xl mx-auto px-6">
 
         {/* HEADER */}
-        <div className="max-w-2xl mb-14">
+        <div className="mb-14 text-center">
           <p className="text-xs tracking-[0.3em] uppercase text-pink-700 mb-3">
             Field Stories
           </p>
 
-          <h2 className="text-4xl font-serif text-gray-900">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
             Moments That Shape Our Impact
           </h2>
 
@@ -61,7 +61,7 @@ export default function EventGallery() {
         <div className="grid lg:grid-cols-2 gap-10">
 
           {/* FEATURED STORY */}
-          <div className="relative h-[420px] rounded-2xl overflow-hidden shadow-lg">
+          <div className="relative h-[320px] md:h-[420px] rounded overflow-hidden shadow-lg">
 
             <img
               src={active.img}
