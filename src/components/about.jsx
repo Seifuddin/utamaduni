@@ -6,103 +6,107 @@ import { Target, Eye } from "lucide-react";
 
 export default function Abouts() {
   return (
-    <section className="bg-amber-50 py-20 px-6 lg:px-20">
+    <section className="bg-amber-50 text-[#1a1a1a] py-20 px-6 lg:px-20">
       
       {/* HEADER */}
       <motion.div
-        initial={{ opacity: 0, y: -40 }}
+        initial={{ opacity: 0, y: 12 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-        viewport={{ once: true }}
-        className="text-center mb-16"
+        transition={{ duration: 0.5 }}
+        className="max-w-3xl mx-auto text-center mb-16"
       >
-        <span className="inline-block bg-pink-200 text-pink-700 px-4 py-1 rounded-full text-sm font-medium mb-4">
-          About Us
-        </span>
-
-        <h2 className="text-2xl md:text-3xl font-bold text-[#050b1a] mb-4">
-          Who We Are
-        </h2>
-
-        <div className="w-24 h-1 bg-pink-300 mx-auto rounded-full mb-6"></div>
-
-        <p className="text-gray-600 max-w-2xl mx-auto">
-          Rooted in culture, compassion, and community impact.
+        <p className="text-[10px] tracking-[0.35em] uppercase text-pink-500 mb-4">
+          About
         </p>
+
+        <h2 className="text-2xl md:text-3xl font-light leading-snug">
+          A Legacy of Culture{" "}
+          <span className="italic text-blue-900">& Community Impact</span>
+        </h2>
       </motion.div>
 
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
-        {/* RIGHT IMAGE */}
-        <motion.div
-          initial={{ opacity: 0, x: 80 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="relative w-full h-[300px] md:h-[450px] rounded overflow-hidden"
-        >
-          <Image
-            src="/images/utamaduni at mathare/_DSC8999.jpg"
-            alt="Community work"
-            fill
-            className="object-cover"
-          />
-        </motion.div>
+      {/* GRID */}
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
         
-        {/* LEFT CONTENT */}
+        {/* IMAGE */}
         <motion.div
-          initial={{ opacity: 0, x: -80 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0, scale: 1.01 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          className="relative lg:ml-6"
         >
-          <h3 className="text-xl mdtext-2xl font-bold text-blue-900 mb-4">
-            A Legacy of Culture
+          <div className="relative h-[320px] md:h-[420px] overflow-hidden rounded-sm">
+            <Image
+              src="/images/utamaduni at mathare/_DSC8999.jpg"
+              alt="Utamaduni community work"
+              fill
+              className="object-cover"
+            />
+          </div>
+
+          {/* subtle frame */}
+          <div className="absolute inset-0 border border-black/10"></div>
+        </motion.div>
+
+        {/* TEXT */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="max-w-lg"
+        >
+          {/* pink accent (brand color) */}
+          <div className="w-8 h-[2px] bg-pink-500 mb-6"></div>
+
+          <h3 className="text-xl md:text-2xl font-light mb-6 leading-snug">
+            Rooted in identity, driven by purpose.
           </h3>
-          <p className="text-gray-800 text-base md:text-lg leading-relaxed mb-3">
-            <span className="font-semibold text-gray-900">Utamaduni</span> is a
-            community-based, non-profit organization committed to preserving{" "}
-            <span className="font-medium text-gray-900">
-              cultural heritage
-            </span>{" "}
-            while uplifting vulnerable families and children. We believe in
-            building stronger communities through{" "}
-            <span className="italic text-gray-900">unity</span>,{" "}
-            <span className="italic text-gray-900">compassion</span>, and{" "}
-            <span className="italic text-gray-900">shared identity</span>.
-          </p>
-          <p className="text-gray-800 text-base md:text-lg leading-relaxed mb-4">
-            <span className="font-semibold text-gray-900"></span>
-            The name “Utamaduni” means “culture” in Swahili — reflecting our belief 
-            that culture is the foundation of identity and a bridge to building 
-            stronger, more compassionate communities.{" "}
-          </p>
 
-          {/* FEATURES */}
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div className="space-y-4 text-gray-700 leading-relaxed text-sm md:text-base">
+            <p>
+              <span className="font-medium text-black">Utamaduni</span> is a
+              community-based organization dedicated to preserving cultural
+              heritage while uplifting vulnerable children and families.
+            </p>
+
+            <p>
+              The name — meaning <span className="italic">culture</span> —
+              reflects a belief that identity is the foundation of dignity,
+              connection, and lasting transformation.
+            </p>
+          </div>
+
+          {/* divider */}
+          <div className="w-10 h-[1px] bg-black/20 my-8"></div>
+
+          {/* MISSION & VISION */}
+          <div className="space-y-6">
             
-            <div className="flex items-start gap-4 p-3 border-b border-pink-200 rounded">
-              <Target className="bg-gradient-to-r from-pink-600 to-pink-800 text-white px-2 rounded" size={40} />
+            <div className="flex items-start gap-3 rounded-lg border-b border-pink-200 pb-2">
+              <Target size={16} className="mt-1 text-pink-500" />
               <div>
-                <h4 className="font-semibold text-blue-900">
-                  Our Mission
+                <h4 className="text-[11px] uppercase tracking-[0.25em] text-blue-900 font-bold mb-1">
+                  Mission
                 </h4>
-                <p className="text-gray-700 text-sm">
-                  To preserve cultural heritage while empowering lives through education, compassion, and sustainable initiatives.
+                <p className="text-gray-800 text-sm leading-relaxed">
+                  To preserve cultural heritage while empowering lives through
+                  education and sustainable initiatives.
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start gap-4 p-3 border-b border-pink-200 rounded">
-              <Eye className="bg-gradient-to-r from-pink-600 to-pink-800 text-white px-2 rounded" size={40} />
+            <div className="flex items-start gap-3 rounded-lg border-b border-pink-200 pb-2">
+              <Eye size={16} className="mt-1 text-pink-500" />
               <div>
-                <h4 className="font-semibold text-blue-900">
-                  Our Vision
+                <h4 className="text-[11px] uppercase tracking-[0.25em] text-blue-900 font-bold mb-1">
+                  Vision
                 </h4>
-                <p className="text-gray-700 text-sm">
-                  A compassionate society where every child and family thrives with dignity, hope, and opportunity.
+                <p className="text-gray-800 text-sm leading-relaxed">
+                  A society where every family thrives with dignity and opportunity.
                 </p>
               </div>
             </div>
+
           </div>
         </motion.div>
       </div>

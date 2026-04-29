@@ -115,7 +115,7 @@ export default function Programs() {
         <div className="grid lg:grid-cols-2 gap-10 mb-16">
 
           {/* IMAGE */}
-          <div className="relative h-[420px] rounded-2xl overflow-hidden">
+          <div className="relative h-[420px] rounded overflow-hidden">
             <Image
               src={featured.image}
               alt={featured.title}
@@ -191,7 +191,7 @@ export default function Programs() {
             <div
               key={i}
               onClick={() => setActive(p)}
-              className="group cursor-pointer bg-white border border-gray-200 rounded overflow-hidden hover:shadow-lg transition"
+              className="group cursor-pointer bg-white border border-pink-200 rounded overflow-hidden hover:shadow-lg transition"
             >
 
               <div className="relative h-44">
