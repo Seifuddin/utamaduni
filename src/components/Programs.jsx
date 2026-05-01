@@ -14,7 +14,7 @@ const Icon = ({ children }) => (
 );
 
 /* =======================
-   DATA (ADDED 1 MORE CARD)
+   DATA
    ======================= */
 const programs = [
   {
@@ -72,7 +72,6 @@ const programs = [
       "Emergency aid, education, psychosocial care, and livelihood rebuilding.",
     icon: "🧳",
   },
-  /* ⭐ NEW CARD ADDED */
   {
     image: "/images/culturalpreservation.jpg",
     title: "Community Empowerment & Livelihoods",
@@ -88,7 +87,8 @@ const programs = [
    COMPONENT
    ======================= */
 export default function Programs() {
-  const [active, setActive] = useState(programs[0]);
+  // ✅ FIX: start with null (not programs[0])
+  const [active, setActive] = useState(null);
 
   const featured = programs.find((p) => p.featured);
   const others = programs.filter((p) => !p.featured);
@@ -97,39 +97,24 @@ export default function Programs() {
     <section className="py-28 bg-amber-50">
       <div className="max-w-7xl mx-auto px-6">
 
-        {/* HEADER */}
-        <div className="hidden text-center max-w5xl mb-14">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-            Areas of Impact
-          </h2>
-
-          <p className="mt-5 text-gray-600 leading-relaxed">
-            We work across vulnerable communities with long-term programs designed
-            to restore dignity, opportunity, and stability.
-          </p>
-        </div>
-
-        {/* =======================
-            FEATURED SECTION
-            ======================= */}
+        {/* FEATURED SECTION */}
         <div className="grid lg:grid-cols-2 gap-10 mb-16">
-          {/* FEATURED TEXT (ENHANCED) */}
-          <div className="flex flex-col justify-center">
-             {/* HEADER */}
-        <div className="max-w-2xl mb-7">
-          <p className="text-sm upperase tracking-wide font-semibold text-pink-900 mb-2">
-            Our Programs
-          </p>
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-            Areas of 
-            <span className="text-pink-900"> Impact</span>
-          </h2>
 
-          <p className="mt-4 text-gray-800 leading-relaxed">
-            We work across vulnerable communities with long-term programs designed
-            to restore dignity, opportunity, and stability.
-          </p>
-        </div>
+          {/* TEXT */}
+          <div className="flex flex-col justify-center">
+            <div className="max-w-2xl mb-7">
+              <p className="text-sm uppercase tracking-wide font-semibold text-pink-900 mb-2">
+                Our Programs
+              </p>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                Areas of <span className="text-pink-900">Impact</span>
+              </h2>
+
+              <p className="mt-4 text-gray-800 leading-relaxed">
+                We work across vulnerable communities with long-term programs designed
+                to restore dignity, opportunity, and stability.
+              </p>
+            </div>
 
             <h3 className="text-lg font-semibold text-gray-900 mb-3">
               Why this work matters
@@ -137,32 +122,8 @@ export default function Programs() {
 
             <p className="text-gray-800 leading-relaxed mb-4">
               Vulnerability is not just about lack of resources—it is about lack of
-              stability, care, and opportunity. Our programs are designed to restore
-              all three through consistent, long-term support.
+              stability, care, and opportunity.
             </p>
-
-            <p className="hidden text-gray-800 leading-relaxed mb-6">
-              We do not offer short-term relief alone. We build systems that help
-              individuals and families regain independence and dignity over time.
-            </p>
-
-            {/* TWO BUTTONS (NEW) */}
-            <div className="hidden flex gap-3">
-
-              <Link href="/donate" className="flex-1">
-                <button className="w-full bg-pink-700 text-white px-6 py-1.5 rounded-full hover:bg-pink-800 transition">
-                  Support This Program
-                </button>
-              </Link>
-
-              <Link href="/contact" className="flex-1">
-                <button className="w-full border border-pink-700 text-pink-700 px-6 py-1.5 rounded-full hover:bg-pink-50 transition">
-                  Get Involved
-                </button>
-              </Link>
-
-            </div>
-
           </div>
 
           {/* IMAGE */}
@@ -177,7 +138,6 @@ export default function Programs() {
             <div className="absolute inset-0 bg-black/40" />
 
             <div className="absolute bottom-0 p-6 text-white">
-
               <div className="flex items-center gap-3 mb-3">
                 <Icon>{featured.icon}</Icon>
                 <span className="text-xs tracking-[0.25em] uppercase">
@@ -194,22 +154,16 @@ export default function Programs() {
               </p>
             </div>
           </div>
-
-          
         </div>
 
-        {/* =======================
-            GRID (ALL PROGRAMS INCLUDING NEW ONE)
-            ======================= */}
+        {/* GRID */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-
           {others.map((p, i) => (
             <div
               key={i}
               onClick={() => setActive(p)}
               className="group cursor-pointer bg-white border border-pink-200 rounded overflow-hidden hover:shadow-lg transition"
             >
-
               <div className="relative h-44">
                 <Image
                   src={p.image}
@@ -220,10 +174,9 @@ export default function Programs() {
               </div>
 
               <div className="p-5">
-
                 <div className="flex items-center gap-2 mb-2">
                   <span className="text-pink-700 text-2xl">{p.icon}</span>
-                  <h4 className="font-semibold text-gray-900 text-">
+                  <h4 className="font-semibold text-gray-900">
                     {p.title}
                   </h4>
                 </div>
@@ -231,27 +184,30 @@ export default function Programs() {
                 <p className="text-sm text-gray-600 leading-relaxed">
                   {p.description}
                 </p>
-
               </div>
             </div>
           ))}
-
         </div>
       </div>
 
       {/* MODAL */}
       {active && (
-        <div className="fixed inset-0 bg-black/70 flex items-center justify-center px-4 z-50">
-
-          <div className="bg-white max-w-md w-full rounded-2xl p-6">
-              <div className="relative w-full h-44">
-                <Image
-              src={active.image}
-              alt="true"
-              fill
-              className="object-cover"
-            />
-              </div>
+        <div
+          onClick={() => setActive(null)} // ✅ close on backdrop
+          className="fixed inset-0 bg-black/70 flex items-center justify-center px-4 z-50"
+        >
+          <div
+            onClick={(e) => e.stopPropagation()} // ✅ prevent close when clicking inside
+            className="bg-white max-w-md w-full rounded-2xl p-6"
+          >
+            <div className="relative w-full h-44 mb-4">
+              <Image
+                src={active.image}
+                alt={active.title}
+                fill
+                className="object-cover rounded-lg"
+              />
+            </div>
 
             <h3 className="text-xl font-semibold text-gray-900 mb-3">
               {active.title}
@@ -267,9 +223,7 @@ export default function Programs() {
             >
               Close
             </button>
-
           </div>
-
         </div>
       )}
     </section>
