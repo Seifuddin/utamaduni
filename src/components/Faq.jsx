@@ -48,7 +48,8 @@ export default function FAQ() {
             questions and answers
           </p>
           <h2 className="text-2xl md:text-3xl fontserif font-bold text-[#050b1a] mb-4">
-            Frequently Asked Questions
+            Frequently Asked
+            <span className="text-pink-900"> Questions</span> 
           </h2>
            <motion.div
                       initial={{ width: 0 }}

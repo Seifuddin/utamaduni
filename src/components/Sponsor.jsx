@@ -23,7 +23,7 @@ export default function SponsorProgram() {
 
         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
           Sponsor a Child Today,
-          <span className="text-blue-800"> Transform a Future</span>
+          <span className="text-pink-900"> Transform a Future</span>
         </h2>
 
         <div className="hidden w-24 h-1 bg-pink-300 mx-auto rounded-full mb-6"></div>
@@ -44,7 +44,7 @@ export default function SponsorProgram() {
           className="relative w-full h-[250px] md:h-[350px] rounded overflow-hidden"
         >
           <Image
-            src="/images/utamaduni at mathare/_DSC8782.jpg"
+            src="/images/childsupport.webp"
             alt="Child Sponsorship"
             fill
             className="object-cover"

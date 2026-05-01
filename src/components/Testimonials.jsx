@@ -46,12 +46,12 @@ export default function StoriesAndTestimonials() {
       role: "Partner Organization",
       quote:
         "Working with Utamaduni has shown us what true community-driven impact looks like — compassion, dedication, and unity.",
-      image: "/images/Commandant.jpg",
+      image: "/images/edited-photo.png",
     },
   ];
 
   return (
-    <section className="relative py-20 px6 overflow-hidden bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#020617]">
+    <section className="relative py-20 px6 overflow-hidden  bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#020617]">
 
       {/* Decorative Waves */}
             <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-pink-500/20 rounded-full blur-3xl"></div>

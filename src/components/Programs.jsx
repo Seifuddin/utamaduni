@@ -98,7 +98,7 @@ export default function Programs() {
       <div className="max-w-7xl mx-auto px-6">
 
         {/* HEADER */}
-        <div className="text-center max-w5xl mb-14">
+        <div className="hidden text-center max-w5xl mb-14">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
             Areas of Impact
           </h2>
@@ -112,16 +112,20 @@ export default function Programs() {
         {/* =======================
             FEATURED SECTION
             ======================= */}
-        <div className="hidden grid lg:grid-cols-2 gap-10 mb-16">
+        <div className="grid lg:grid-cols-2 gap-10 mb-16">
           {/* FEATURED TEXT (ENHANCED) */}
           <div className="flex flex-col justify-center">
              {/* HEADER */}
         <div className="max-w-2xl mb-7">
-          <h2 className="text-2xl md:text-3xl font-light text-gray-900">
-            Areas of Impact
+          <p className="text-sm upperase tracking-wide font-semibold text-pink-900 mb-2">
+            Our Programs
+          </p>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            Areas of 
+            <span className="text-pink-900"> Impact</span>
           </h2>
 
-          <p className="mt-4 text-gray-600 leading-relaxed">
+          <p className="mt-4 text-gray-800 leading-relaxed">
             We work across vulnerable communities with long-term programs designed
             to restore dignity, opportunity, and stability.
           </p>
@@ -131,28 +135,28 @@ export default function Programs() {
               Why this work matters
             </h3>
 
-            <p className="text-gray-600 leading-relaxed mb-4">
+            <p className="text-gray-800 leading-relaxed mb-4">
               Vulnerability is not just about lack of resources—it is about lack of
               stability, care, and opportunity. Our programs are designed to restore
               all three through consistent, long-term support.
             </p>
 
-            <p className="hidden text-gray-600 leading-relaxed mb-6">
+            <p className="hidden text-gray-800 leading-relaxed mb-6">
               We do not offer short-term relief alone. We build systems that help
               individuals and families regain independence and dignity over time.
             </p>
 
             {/* TWO BUTTONS (NEW) */}
-            <div className="flex gap-3">
+            <div className="hidden flex gap-3">
 
               <Link href="/donate" className="flex-1">
-                <button className="w-full bg-pink-700 text-white px-6 py-1.5 rounded-md hover:bg-pink-800 transition">
+                <button className="w-full bg-pink-700 text-white px-6 py-1.5 rounded-full hover:bg-pink-800 transition">
                   Support This Program
                 </button>
               </Link>
 
               <Link href="/contact" className="flex-1">
-                <button className="w-full border border-pink-700 text-pink-700 px-6 py-1.5 rounded-md hover:bg-pink-50 transition">
+                <button className="w-full border border-pink-700 text-pink-700 px-6 py-1.5 rounded-full hover:bg-pink-50 transition">
                   Get Involved
                 </button>
               </Link>
@@ -240,6 +244,14 @@ export default function Programs() {
         <div className="fixed inset-0 bg-black/70 flex items-center justify-center px-4 z-50">
 
           <div className="bg-white max-w-md w-full rounded-2xl p-6">
+              <div className="relative w-full h-44">
+                <Image
+              src={active.image}
+              alt="true"
+              fill
+              className="object-cover"
+            />
+              </div>
 
             <h3 className="text-xl font-semibold text-gray-900 mb-3">
               {active.title}

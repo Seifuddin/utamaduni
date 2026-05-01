@@ -46,7 +46,8 @@ export default function EventGallery() {
           </p>
 
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-            Moments That Shape Our Impact
+            Moments That 
+            <span className="text-pink-900"> Shape Our Impact</span>
           </h2>
 
           <p className="mt-5 text-gray-600 leading-relaxed">
