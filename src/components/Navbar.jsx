@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from "next/image";
 import { usePathname } from 'next/navigation';
@@ -20,7 +20,17 @@ const resources = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navLinks = [
     { href: '/', label: 'Home' },
@@ -28,148 +38,165 @@ export default function Navbar() {
     { href: '/programz', label: 'Programs' },
     { href: '/gallery', label: 'Gallery' },
     { href: '/blog', label: 'Blog' },
-    //{ label: 'Gallery', dropdown: gallery },
-    { href: '/contact', label: 'Contacts' },
+    { href: '/contact', label: 'Contact' },
   ];
 
   const linkClasses = (href) =>
-    `block font-medium transition-colors ${
+    `relative text-sm font-medium transition-colors duration-200 ${
       pathname === href
-        ? 'text-blue-700 underline underline-offset-4'
-        : 'text-gray-700 hover:text-blue-700'
+        ? 'text-blue-600'
+        : 'text-slate-600 hover:text-blue-600'
     }`;
 
+  const activeIndicator = (href) =>
+    pathname === href ? 'opacity-100' : 'opacity-0';
+
   return (
-    <nav className="bg-white py-1 shadow-md sticky top-0 z-50">
-      <div className="max-w-7xl px-6 mx-auto flex justify-between items-center py-3">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative w-10 h-10">
-            <Image
-              src="/images/logo.jpg"
-              alt="Utamaduni Logo"
-              fill
-              className="rounded-md object-contain"
-            />
-          </div>
-          <span className="hidden mdflex text-lg md:text-xl font-bold tracking-wide text-blue-900 font-serif group-hover:text-pink-800 transition">
-            Utamaduni
-          </span>
-        </Link>
-        {/* Desktop menu */}
-        <ul className="hidden md:flex space-x-6 items-center">
-          {navLinks.map((item, i) =>
-            item.dropdown ? (
-              <li
-                key={i}
-                className="relative group"
-                onMouseEnter={() => setOpenDropdown(item.label)}
-                onMouseLeave={() => setOpenDropdown(null)}
-              >
-                <button className="flex items-center gap-1 text-gray-700 hover:text-blue-700 font-medium">
-                  {item.label} <ChevronDown size={16} />
-                </button>
-                {openDropdown === item.label && (
-                  <ul className="absolute left-0 mt-2 bg-white shadow-lg rounded-md w-48 py-2 z-50">
-                    {item.dropdown.map((subItem) => (
-                      <li key={subItem.href}>
-                        <Link
-                          href={subItem.href}
-                          className={linkClasses(subItem.href) + ' px-4 py-2 text-sm hover:bg-blue-50'}
-                        >
-                          {subItem.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            ) : (
+    <nav
+      className={`
+        fixed top-0 left-0 right-0 z-50 transition-all duration-300
+        ${scrolled 
+          ? 'bg-white/95 backdrop-blur-md shadow-lg' 
+          : 'bg-white shadow-sm'
+        }
+      `}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="flex justify-between items-center h-16">
+
+          {/* LOGO */}
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="relative w-9 h-9 flex-shrink-0">
+              <Image
+                src="/images/logo.jpg"
+                alt="Utamaduni Logo"
+                fill
+                className="rounded-lg object-cover"
+              />
+            </div>
+            <div className="flex flex-col leading-tight">
+              <span className="text-lg font-bold tracking-tight text-slate-800 group-hover:text-blue-600 transition-colors">
+                Utamaduni
+              </span>
+              <span className="text-[10px] uppercase tracking-[0.2em] text-slate-400">
+                Organization
+              </span>
+            </div>
+          </Link>
+
+          {/* DESKTOP NAV */}
+          <ul className="hidden md:flex items-center gap-1">
+            {navLinks.map((item, i) => (
               <li key={i}>
-                <Link href={item.href} className={linkClasses(item.href)}>
+                <Link
+                  href={item.href}
+                  className={`
+                    ${linkClasses(item.href)} 
+                    px-4 py-2 rounded-lg hover:bg-slate-50 transition-all duration-200
+                    flex items-center gap-1
+                  `}
+                >
                   {item.label}
+                  <span className={`
+                    absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-0.5 bg-blue-600 rounded-full transition-all duration-300
+                    ${activeIndicator(item.href)}
+                  `} />
                 </Link>
               </li>
-            )
-          )}
-        </ul>
+            ))}
+          </ul>
 
-        {/* Mobile menu button */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-blue-700"
-          aria-label="Toggle Menu"
-        >
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+          {/* DESKTOP CTA */}
+          <div className="hidden md:flex items-center gap-3">
+            <Link
+              href="/donate"
+              className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-all duration-200 shadow-sm hover:shadow-md"
+            >
+              Donate
+            </Link>
+          </div>
+
+          {/* MOBILE HAMBURGER */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors"
+            aria-label="Toggle Menu"
+          >
+            {isOpen ? <X size={24} className="text-slate-700" /> : <Menu size={24} className="text-slate-700" />}
+          </button>
+        </div>
       </div>
 
-      {/* Mobile menu overlay */}
+      {/* MOBILE OVERLAY */}
       <div
-        className={`fixed inset-0 bgblack bg-opacity-40 transition-opacity duration-300 ${
-          isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-        }`}
+        className={`
+          fixed inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-300 md:hidden
+          ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}
+        `}
         onClick={() => setIsOpen(false)}
       />
 
-      {/* Mobile slide-in panel */}
+      {/* MOBILE PANEL */}
       <div
-        className={`fixed top-0 right-0 h-auto w-full bg-white shadow-lg transform transition-transform duration-300 ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}
+        className={`
+          fixed top-0 right-0 h-full w-80 max-w-[80vw] bg-white shadow-2xl transform transition-transform duration-300 ease-out md:hidden
+          ${isOpen ? 'translate-x-0' : 'translate-x-full'}
+        `}
       >
-        <div className="flex justify-between items-center px-6 py-4 border-b">
-          <h2 className="text-lg font-bold text-blue-700">Menu</h2>
-          <button onClick={() => setIsOpen(false)} aria-label="Close Menu">
-            <X size={24} className="text-gray-700" />
+        <div className="flex items-center justify-between px-6 py-4 border-b border-slate-100">
+          <div className="flex items-center gap-2">
+            <div className="relative w-8 h-8">
+              <Image
+                src="/images/logo.jpg"
+                alt="Logo"
+                fill
+                className="rounded-lg object-cover"
+              />
+            </div>
+            <span className="font-bold text-slate-800">Utamaduni</span>
+          </div>
+          <button
+            onClick={() => setIsOpen(false)}
+            className="p-2 rounded-lg hover:bg-slate-100 transition-colors"
+            aria-label="Close Menu"
+          >
+            <X size={22} className="text-slate-600" />
           </button>
         </div>
 
-        <div className="px-6 py-6 space-y-4">
-          {navLinks.map((item, i) =>
-            item.dropdown ? (
-              <div key={i} className="border-b pb-2">
-                <button
-                  className="flex justify-between items-center w-full text-left text-gray-700 font-medium"
-                  onClick={() =>
-                    setOpenDropdown(openDropdown === item.label ? null : item.label)
-                  }
-                >
-                  {item.label}
-                  <ChevronDown
-                    size={18}
-                    className={`transform transition-transform ${
-                      openDropdown === item.label ? 'rotate-180' : ''
-                    }`}
-                  />
-                </button>
-                {openDropdown === item.label && (
-                  <ul className="mt-2 pl-3 space-y-2">
-                    {item.dropdown.map((subItem) => (
-                      <li key={subItem.href}>
-                        <Link
-                          href={subItem.href}
-                          className="block text-gray-600 hover:text-blue-700"
-                          onClick={() => setIsOpen(false)}
-                        >
-                          {subItem.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            ) : (
-              <Link
-                key={i}
-                href={item.href}
-                className="block text-gray-700 text-lg font-semibold hover:text-blue-700"
-                onClick={() => setIsOpen(false)}
-              >
-                {item.label}
-              </Link>
-            )
-          )}
+        <div className="px-6 py-6 space-y-1 overflow-y-auto h-[calc(100%-72px)]">
+          {navLinks.map((item, i) => (
+            <Link
+              key={i}
+              href={item.href}
+              className={`
+                block px-4 py-3 rounded-lg text-base font-medium transition-colors
+                ${pathname === item.href
+                  ? 'bg-blue-50 text-blue-600'
+                  : 'text-slate-700 hover:bg-slate-50 hover:text-blue-600'
+                }
+              `}
+              onClick={() => setIsOpen(false)}
+            >
+              {item.label}
+            </Link>
+          ))}
+
+          <div className="pt-4 mt-4 border-t border-slate-100">
+            <Link
+              href="/donate"
+              className="block w-full text-center px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              Donate Now
+            </Link>
+          </div>
+
+          <div className="pt-4 mt-4 border-t border-slate-100">
+            <p className="text-xs text-slate-400 text-center">
+              © {new Date().getFullYear()} Utamaduni Organization
+            </p>
+          </div>
         </div>
       </div>
     </nav>

@@ -193,7 +193,7 @@ export default function SponsorProgram() {
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
                       viewport={{ once: true }}
-                      className="group p-2 rounded -xl bg-white/50 hover:bg-white transition-all duration-300 hover:shadow-lg hover:shadow-pink-200/20 border border-gray-100 hover:border-pink-100"
+                      className="group p-2 rounded -xl bg-amber-50 hover:bg-white transition-all duration-300 hover:shadow-lg hover:shadow-pink-200/20 border border-gray-200 hover:border-pink-100"
                     >
                       <div className="flex items-center gap-2 mb-1">
                         <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${feature.color} flex items-center justify-center shadow-lg shadow-${feature.color.split(' ')[1]}/30 group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
