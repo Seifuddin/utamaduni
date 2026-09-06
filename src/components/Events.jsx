@@ -1,7 +1,8 @@
 "use client";
 
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useState } from "react";
-import { Calendar, MapPin, ArrowRight, Users, Clock } from "lucide-react";
+import { Calendar, MapPin, ArrowRight, Users, Clock, Sparkles } from "lucide-react";
 
 /* =======================
    DATA
@@ -48,7 +49,7 @@ const events = [
     title: "Women's Empowerment Workshop",
     date: "June 2025",
     location: "Kisumu, Kenya",
-    img: "/images/women-workshop.jpg",
+    img: "/images/culturalpreservation.jpg",
     description:
       "Skills training and entrepreneurship support for women in rural communities.",
     participants: 65,
@@ -69,28 +70,40 @@ export default function EventGallery() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
         {/* HEADER */}
-        <div className="mb-12">
-          <div className="flex items-center gap-3 mb-2">
-            <span className="w-8 h-0.5 bg-gradient-to-r from-blue-600 to-pink-600"></span>
-            <p className="text-xs uppercase tracking-[0.25em] font-semibold text-slate-500">
-              Field Stories
-            </p>
-          </div>
-          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between">
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">
-              Moments That <br className="sm:hidden" />
-              <span className="bg-gradient-to-r from-blue-600 to-pink-600 bg-clip-text text-transparent">
-                Shape Our Impact
-              </span>
-            </h2>
-            <p className="text-slate-600 text-sm max-w-sm mt-2 sm:mt-0">
-              Lived experiences of connection, healing, and transformation across communities we serve.
-            </p>
-          </div>
-        </div>
+                        <motion.div
+                          initial={{ opacity: 0, y: -30 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.7 }}
+                          viewport={{ once: true }}
+                          className="text-center mb-10 md:mb-12"
+                        >
+                          <motion.div
+                            initial={{ scale: 0 }}
+                            whileInView={{ scale: 1 }}
+                            transition={{ duration: 0.5, type: "spring" }}
+                            viewport={{ once: true }}
+                            className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-1.5 rounded-full shadow-lg shadow-pink-200/50 mb-4 border border-white/50"
+                          >
+                            <Sparkles className="w-3.5 h-3.5 text-pink-500" />
+                            <span className="text-xs font-medium text-pink-700 tracking-wider">Field Stories</span>
+                          </motion.div>
+                
+                          <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold text-gray-900 mb-3 leading-tight">
+                            Moments That
+                            <span className="ml-2 text-transparent bg-clip-text bg-gradient-to-r from-pink-600 via-rose-500 to-pink-700">
+                              Shape Our Impact
+                            </span>
+                          </h2>
+                
+                          <div className="w-16 h-0.5 bg-gradient-to-r from-pink-400 to-rose-500 mx-auto rounded-full mb-4" />
+                
+                          <p className="text-gray-600 max-w-2xl mx-auto text-base m-base leading-relaxed">
+                            Lived experiences of connection, healing, and transformation across communities we serve.
+                          </p>
+                        </motion.div>
 
         {/* HERO FEATURED */}
-        <div className="relative rounded-2xl overflow-hidden mb-8 h-[340px] sm:h-[400px] group">
+        <div className="relative rounded -2xl overflow-hidden mb-8 h-[340px] sm:h-[400px] group">
           <img
             src={activeEvent.img}
             alt={activeEvent.title}
@@ -140,7 +153,7 @@ export default function EventGallery() {
               key={event.id}
               onClick={() => setActiveId(event.id)}
               className={`
-                group cursor-pointer rounded-xl overflow-hidden transition-all duration-300
+                group cursor-pointer rounded -xl overflow-hidden transition-all duration-300
                 ${activeId === event.id
                   ? "ring-2 ring-offset-2 ring-blue-500 shadow-lg scale-[1.02]"
                   : "hover:shadow-lg hover:scale-[1.01]"
@@ -156,29 +169,29 @@ export default function EventGallery() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent" />
 
                 <div className="absolute top-2 right-2">
-                  <span className="bg-white/90 backdrop-blur-sm text-slate-700 text-[10px] font-medium px-2 py-0.5 rounded-full">
+                  <span className="bg-white/90 backdrop-blur-sm text-slate-700 text-[12px] font-medium px-2 py-1 rounded-full">
                     {event.category}
                   </span>
                 </div>
 
                 <div className="absolute bottom-2 left-3 right-3">
-                  <p className="text-white/80 text-[10px] flex items-center gap-1.5">
+                  <p className="text-white/80 text-[12px] flex items-center gap-1.5">
                     <Calendar size={11} /> {event.date}
                   </p>
                 </div>
               </div>
 
               <div className="p-3 bg-white">
-                <h4 className="font-semibold text-slate-800 text-sm leading-tight line-clamp-1">
+                <h4 className="font-semibold text-slate-800 textbase leading-tight line-clamp-1">
                   {event.title}
                 </h4>
-                <p className="text-slate-500 text-xs mt-1 line-clamp-2">
+                <p className="text-slate-500 text-md mt-1 line-clamp-2">
                   {event.description}
                 </p>
 
-                <div className="flex items-center justify-between mt-2 pt-2 border-t border-slate-100">
-                  <div className="flex items-center gap-1.5 text-[10px] text-slate-400">
-                    <Clock size={12} />
+                <div className="flex items-center justify-between mt-2 pt-2 border-t border-slate-200">
+                  <div className="flex items-center gap-1.5 text-[12px] text-slate-400">
+                    <Clock size={14} />
                     <span>{event.duration}</span>
                   </div>
                   <button
@@ -186,9 +199,9 @@ export default function EventGallery() {
                       e.stopPropagation();
                       setActiveId(event.id);
                     }}
-                    className="text-xs font-medium text-blue-600 hover:text-pink-600 transition flex items-center gap-1"
+                    className="text-sm font-medium text-blue-600 hover:text-pink-600 transition flex items-center gap-1"
                   >
-                    View <ArrowRight size={12} />
+                    View <ArrowRight size={14} />
                   </button>
                 </div>
               </div>
@@ -210,7 +223,7 @@ export default function EventGallery() {
         </div>
 
         {/* STATS BAR */}
-        <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 bg-white rounded-xl border border-slate-200/60 p-5">
+        <div className="hidden mt-10grid grid-cols-2sm:grid-cols-4 gap-4 bg-white rounded-xl border border-slate-200/60 p-5">
           <div className="text-center">
             <p className="text-2xl font-bold text-slate-800">12+</p>
             <p className="text-[11px] text-slate-500 uppercase tracking-wider">Events Hosted</p>

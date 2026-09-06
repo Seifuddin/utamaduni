@@ -18,12 +18,12 @@ export default function CTA() {
       <div className="relative max-w-2xl mx-auto text-center">
 
         {/* Label */}
-        <p className="text-[10px] tracking-[0.25em] uppercase text-white/40 mb-4">
+        <p className="text-[12px] tracking-[0.25em] uppercase text-white/40 mb-4">
           One Action • Real Impact
         </p>
 
         {/* Heading */}
-        <h2 className="text-2xl md:text-3xl font-semibold leading-snug">
+        <h2 className="text-3xl md:text-4xl font-semibold leading-snug">
           Change starts with a single decision.
         </h2>
 
@@ -38,8 +38,8 @@ export default function CTA() {
           <a
             href="/donate"
             className="
-              px-7 py-2.5 rounded -full
-              bg-pink-600 text-black text-sm font-medium
+              px-10 py-2.5 rounded -full
+              bg-blue-600 text-white text-base font-medium
               hover:bg-pink-500 hover:text-white
               transition
             "
@@ -50,8 +50,8 @@ export default function CTA() {
           <a
             href="/contact"
             className="
-              px-7 py-2.5 rounded -full
-              border border-white/20 text-white/70 text-sm
+              px-10 py-2.5 rounded -full
+              border border-white/20 text-white/70 text-base
               hover:border-white hover:text-white
               transition
             "

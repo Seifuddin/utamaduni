@@ -193,20 +193,20 @@ export default function Programs() {
               </div>
 
               <div className="p-4">
-                <h4 className="font-semibold text-gray-900 text-sm leading-tight">
+                <h4 className="font-semibold text-gray-900 text-base leading-tight">
                   {p.title}
                 </h4>
-                <p className="text-gray-600 text-xs leading-relaxed mt-1 line-clamp-2">
+                <p className="text-gray-600 text-sm leading-relaxed mt-1 line-clamp-2">
                   {p.description}
                 </p>
 
                 <div className="flex items-center gap-2 mt-3 pt-3 border-t border-blue-50">
-                  <button className="flex-1 flex items-center justify-center gap-1.5 text-xs font-medium text-white bg-blue-950 to-pink-600 hover:opacity-90 py-2 rounded -lg transition shadow-sm">
+                  <button className="flex-1 flex items-center justify-center gap-1.5 text-sm font-medium text-white bg-blue-950 to-pink-600 hover:opacity-90 py-2 rounded -lg transition shadow-sm">
                     <Heart size={14} /> Donate
                   </button>
                   <button
                     onClick={() => setActive(p)}
-                    className="flex-1 flex border border-gray-200 items-center justify-center gap-1.5 text-xs font-medium text-blue-700 bg-blue-50 /80 hover:bg-blue-100 py-2 rounded -lg transition"
+                    className="flex-1 flex border border-gray-200 items-center justify-center gap-1.5 text-sm font-medium text-blue-700 bg-amber-50 /80 hover:bg-blue-100 py-2 rounded -lg transition"
                   >
                     <Eye size={14} /> View
                   </button>
