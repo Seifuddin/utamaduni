@@ -140,9 +140,9 @@ export default function SponsorProgram() {
                         viewport={{ once: true }}
                         className="text-center bg-blue-50 backdrop-blur-md rounded -xl p-2 border border-gray-200"
                       >
-                        <Icon className="w-4 h-4 text-pink-300 mx-auto mb-0.5" />
-                        <p className="text-white font-bold text-base">{stat.value}</p>
-                        <p className="text-white/70 text-[10px]">{stat.label}</p>
+                        <Icon className="w-4 h-4 text-pink-500 mx-auto mb-0.5" />
+                        <p className="text-blue-900 font-bold text-base">{stat.value}</p>
+                        <p className="text-gray-700 text-[10px]">{stat.label}</p>
                       </motion.div>
                     );
                   })}

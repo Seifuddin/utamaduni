@@ -139,7 +139,7 @@ export default function Hero() {
         </div>
         
         {/* Premium Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-pink-900/70 via-purple-900/50 to-blue-900/70" />
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/70 via-purple-900/40 to-gray-900/20" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30" />
         

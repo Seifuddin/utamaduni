@@ -25,7 +25,7 @@ const items = [
     label: "Without shelter", 
     value: "Millions",
     description: "Lack safe places to call home",
-    color: "from-blue-500 to-pink-500",
+    color: "from-blue-500 to-blue-500",
   },
   { 
     icon: Heart, 
@@ -66,7 +66,7 @@ export default function DidYouKnowHybrid() {
       />
 
       {/* Multi-layered Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-purple-900/70 to-pink-900/80" />
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-blue-900/30 to-blue-900/40" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-transparent to-pink-500/10" />
 
@@ -98,7 +98,7 @@ export default function DidYouKnowHybrid() {
             whileInView={{ scale: 1 }}
             transition={{ duration: 0.5, type: "spring" }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-1.5 rounded-full border border-white/20 mb-3"
+            className="inline-flex items-center gap-2 bg-white/10 backdrop-blur -sm px-4 py-1.5 rounded-full border border-white/20 mb-3"
           >
             <Sparkles className="w-3.5 h-3.5 text-pink-300" />
             <span className="text-[10px] font-medium text-white/80 tracking-wider">DID YOU KNOW?</span>
@@ -106,7 +106,7 @@ export default function DidYouKnowHybrid() {
 
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight">
             Every Child Deserves
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-blue-400 to-pink-400">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-400 to-blue-400">
               Safety & Hope
             </span>
           </h2>
@@ -126,14 +126,14 @@ export default function DidYouKnowHybrid() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, type: "spring" }}
             viewport={{ once: true }}
-            className="lg:col-span-2 rounded -2xl p-5 md:p-6 bg-gradient-to-br from-blue-600/30 via-purple-600/20 to-pink-600/30 backdrop-blur-xl border border-white/20 relative overflow-hidden group"
+            className="lg:col-span-2 rounded -2xl p-5 md:p-6 bg-gradient-to-br from-blue-600/10 via-blue-600/10 to-blue-600/10 backdrop-blur-sm border border-white/20 relative overflow-hidden group"
           >
             {/* Glow inside card */}
-            <div className="absolute -top-20 -right-20 w-48 h-48 bg-pink-500/20 rounded-full blur-3xl" />
+            <div className="absolute -top-20 -right-20 w-48 h-48 bg-blue-700/20 rounded-full blur-3xl" />
             <div className="absolute -bottom-20 -left-20 w-48 h-48 bg-blue-500/20 rounded-full blur-3xl" />
 
             <div className="relative z-10">
-              <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-pink-500 to-blue-500 flex items-center justify-center shadow-lg shadow-pink-500/30 mb-3">
+              <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-blue-700 to-blue-500 flex items-center justify-center shadow-lg shadow-pink-500/30 mb-3">
                 <Heart className="w-5 h-5 text-white" />
               </div>
 
@@ -148,7 +148,7 @@ export default function DidYouKnowHybrid() {
               <div className="mt-4 flex flex-wrap gap-2.5">
                 <Link
                   href="/donate"
-                  className="group px-5 py-2 bg-gradient-to-r from-pink-500 to-blue-500 text-white font-medium rounded -full shadow-lg shadow-pink-500/30 hover:shadow-pink-500/50 transition-all duration-300 flex items-center gap-2 text-xs"
+                  className="group px-5 py-2 bg-gradient-to-r from-blue-500 to-blue-500 text-white font-medium rounded -full shadow-lg shadow-pink-500/30 hover:shadow-pink-500/50 transition-all duration-300 flex items-center gap-2 text-xs"
                 >
                   Donate Now
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
