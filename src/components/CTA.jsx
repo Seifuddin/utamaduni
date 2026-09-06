@@ -33,13 +33,13 @@ export default function CTA() {
         </p>
 
         {/* Buttons */}
-        <div className="mt-7 flex flex-col sm:flex-row gap-3 justify-center">
+        <div className="mt-7 flex flex-colsm: flex-row gap-3 justify-center">
 
           <a
             href="/donate"
             className="
-              px-7 py-2.5 rounded-full
-              bg-white text-black text-sm font-medium
+              px-7 py-2.5 rounded -full
+              bg-pink-600 text-black text-sm font-medium
               hover:bg-pink-500 hover:text-white
               transition
             "
@@ -50,7 +50,7 @@ export default function CTA() {
           <a
             href="/contact"
             className="
-              px-7 py-2.5 rounded-full
+              px-7 py-2.5 rounded -full
               border border-white/20 text-white/70 text-sm
               hover:border-white hover:text-white
               transition
