@@ -1,6 +1,7 @@
 "use client";
+import { motion, useScroll, useTransform } from "framer-motion";
 
-import { Play, Youtube, Calendar, Clock } from "lucide-react";
+import { Play, Youtube, Calendar, Clock, Sparkles } from "lucide-react";
 
 export default function VideoHighlights() {
   const videos = [
@@ -30,27 +31,38 @@ export default function VideoHighlights() {
   return (
     <section className="py-16 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-
         {/* HEADER */}
-        <div className="mb-12">
-          <div className="flex items-center gap-3 mb-2">
-            <span className="w-8 h-0.5 bg-gradient-to-r from-blue-600 to-pink-600"></span>
-            <p className="text-xs uppercase tracking-[0.25em] font-semibold text-slate-500">
-              Watch Our Stories
-            </p>
-          </div>
-          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">
-              Video <br className="sm:hidden" />
-              <span className="bg-gradient-to-r from-blue-600 to-pink-600 bg-clip-text text-transparent">
-                Highlights
-              </span>
-            </h2>
-            <p className="text-slate-600 text-sm max-w-sm mt-2 sm:mt-0">
-              A collection of our memorable moments, community events, and activities captured on video.
-            </p>
-          </div>
-        </div>
+                        <motion.div
+                          initial={{ opacity: 0, y: -30 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.7 }}
+                          viewport={{ once: true }}
+                          className="text-center mb-10 md:mb-12"
+                        >
+                          <motion.div
+                            initial={{ scale: 0 }}
+                            whileInView={{ scale: 1 }}
+                            transition={{ duration: 0.5, type: "spring" }}
+                            viewport={{ once: true }}
+                            className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-1.5 rounded-full shadow-lg shadow-pink-200/50 mb-4 border border-white/50"
+                          >
+                            <Sparkles className="w-3.5 h-3.5 text-pink-500" />
+                            <span className="text-xs font-medium text-pink-700 tracking-wider">Watch Our Stories</span>
+                          </motion.div>
+                
+                          <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold text-gray-900 mb-3 leading-tight">
+                            Video
+                            <span className="ml-2 text-transparent bg-clip-text bg-gradient-to-r from-pink-600 via-rose-500 to-pink-700">
+                              Highlights
+                            </span>
+                          </h2>
+                
+                          <div className="w-16 h-0.5 bg-gradient-to-r from-pink-400 to-rose-500 mx-auto rounded-full mb-4" />
+                
+                          <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-base leading-relaxed">
+                            A collection of our memorable moments, community events, and activities captured on video.
+                          </p>
+                        </motion.div>
 
         {/* VIDEO GRID */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">

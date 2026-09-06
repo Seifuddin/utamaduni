@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, HelpCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
@@ -40,46 +40,82 @@ export default function FAQ() {
   };
 
   return (
-    <section className="py-16 bg-amber-50">
-      <div className="max-w-4xl mx-auto px-6">
-        {/* Section Heading */}
+    <section className="py-16 bg-slate-50">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+
+        {/* HEADER - Center Aligned */}
         <div className="text-center mb-12">
-          <p className="text-sm uppercase tracking-wide font-semibold text-pink-700 mb-2">
-            questions and answers
-          </p>
-          <h2 className="text-2xl md:text-3xl fontserif font-bold text-[#050b1a] mb-4">
-            Frequently Asked
-            <span className="text-pink-900"> Questions</span> 
+          <div className="flex items-center justify-center gap-3 mb-2">
+            <span className="w-8 h-0.5 bg-gradient-to-r from-blue-600 to-pink-600"></span>
+            <p className="text-xs uppercase tracking-[0.25em] font-semibold text-slate-500">
+              Questions & Answers
+            </p>
+            <span className="w-8 h-0.5 bg-gradient-to-l from-blue-600 to-pink-600"></span>
+          </div>
+
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3">
+            Frequently Asked{" "}
+            <span className="bg-gradient-to-r from-blue-600 to-pink-600 bg-clip-text text-transparent">
+              Questions
+            </span>
           </h2>
-           <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: "5rem" }}
-                      transition={{ duration: 0.5 }}
-                      className="h-1 bg-pink-700 rounded-full mx-auto mb-6"
-                    ></motion.div>
-          <p className="mt-2 text-gray-600 max-w-2xl mx-auto font-medium text-center md:text-lg mb-6">
-            Have questions? We’ve got answers. Learn more about how we work and how you can get involved.
+
+          <motion.div
+            initial={{ width: 0 }}
+            whileInView={{ width: "4rem" }}
+            transition={{ duration: 0.5 }}
+            className="h-1 bg-gradient-to-r from-blue-600 to-pink-600 rounded-full mx-auto mb-4"
+          />
+
+          <p className="text-slate-600 max-w-2xl mx-auto text-sm">
+            Have questions? We've got answers. Learn more about how we work and how you can get involved.
           </p>
         </div>
 
-        {/* FAQ List */}
-        <div className="space-y-4">
+        {/* FAQ LIST */}
+        <div className="space-y-3">
           {faqs.map((faq, index) => (
-            <div
+            <motion.div
               key={index}
-              className="border-b border-pink-200 rounded overflow-hidden"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: index * 0.05 }}
+              viewport={{ once: true }}
+              className={`
+                rounded-xl border transition-all duration-300 overflow-hidden
+                ${openIndex === index
+                  ? "border-blue-200 bg-white shadow-md"
+                  : "border-slate-200/60 bg-white hover:border-slate-300 hover:shadow-sm"
+                }
+              `}
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full flex justify-between items-center px-3 py-4 text-left hover:bg-amber-100 transition"
+                className="w-full flex justify-between items-center gap-4 px-5 py-4 text-left transition-colors"
               >
-                <span className="text-gray-900 fontserif fontmedium font-semibold text-base md: text-lg">
-                  {faq.question}
-                </span>
+                <div className="flex items-start gap-3">
+                  <HelpCircle 
+                    size={18} 
+                    className={`mt-0.5 flex-shrink-0 transition-colors ${
+                      openIndex === index ? "text-blue-600" : "text-slate-400"
+                    }`}
+                  />
+                  <span className={`
+                    text-sm font-medium transition-colors
+                    ${openIndex === index ? "text-slate-900" : "text-slate-700"}
+                  `}>
+                    {faq.question}
+                  </span>
+                </div>
                 <ChevronDown
-                  className={`w-5 h-5 text-blue-800 transform transition-transform duration-300 ${
-                    openIndex === index ? "rotate-180" : ""
-                  }`}
+                  size={18}
+                  className={`
+                    flex-shrink-0 transition-all duration-300
+                    ${openIndex === index 
+                      ? "rotate-180 text-blue-600" 
+                      : "text-slate-400"
+                    }
+                  `}
                 />
               </button>
 
@@ -89,16 +125,37 @@ export default function FAQ() {
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="px-3 pb-4 text-gray-600 text-base md:font-medium leading-relaxed"
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
                   >
-                    {faq.answer}
+                    <div className="px-5 pb-4 pt-1">
+                      <div className="w-8 h-0.5 bg-gradient-to-r from-blue-600 to-pink-600 rounded-full mb-3"></div>
+                      <p className="text-slate-600 text-sm leading-relaxed">
+                        {faq.answer}
+                      </p>
+                    </div>
                   </motion.div>
                 )}
               </AnimatePresence>
-            </div>
+            </motion.div>
           ))}
         </div>
+
+        {/* BOTTOM CTA */}
+        <div className="mt-10 text-center">
+          <p className="text-slate-500 text-sm mb-3">
+            Still have questions?
+          </p>
+          <a
+            href="/contact"
+            className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-pink-600 transition group"
+          >
+            <span className="border-b border-blue-200 group-hover:border-pink-300 pb-0.5">
+              Contact Us
+            </span>
+            <span className="group-hover:translate-x-1 transition">→</span>
+          </a>
+        </div>
+
       </div>
     </section>
   );
