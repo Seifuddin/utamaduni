@@ -92,7 +92,7 @@ export default function SponsorProgram() {
             <span className="text-xs font-medium text-pink-700 tracking-wider">CHILD SPONSORSHIP</span>
           </motion.div>
 
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 leading-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold text-gray-900 mb-3 leading-tight">
             Sponsor a Child Today,
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-pink-600 via-rose-500 to-pink-700">
               Transform a Future
@@ -138,7 +138,7 @@ export default function SponsorProgram() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
                         viewport={{ once: true }}
-                        className="text-center bg-white/10 backdrop-blur-md rounded-xl p-2 border border-white/20"
+                        className="text-center bg-blue-50 backdrop-blur-md rounded -xl p-2 border border-gray-200"
                       >
                         <Icon className="w-4 h-4 text-pink-300 mx-auto mb-0.5" />
                         <p className="text-white font-bold text-base">{stat.value}</p>
