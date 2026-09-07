@@ -153,7 +153,7 @@ export default function EventGallery() {
               key={event.id}
               onClick={() => setActiveId(event.id)}
               className={`
-                group cursor-pointer rounded -xl overflow-hidden transition-all duration-300
+                group cursor-pointer rounded bg-amber-50 border border-gray-200 overflow-hidden transition-all duration-300
                 ${activeId === event.id
                   ? "ring-2 ring-offset-2 ring-blue-500 shadow-lg scale-[1.02]"
                   : "hover:shadow-lg hover:scale-[1.01]"

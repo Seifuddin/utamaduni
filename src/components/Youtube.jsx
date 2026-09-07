@@ -69,7 +69,7 @@ export default function VideoHighlights() {
           {videos.map(({ id, title, description, date, duration }) => (
             <div
               key={id}
-              className="group bg-white rounded-xl overflow-hidden border border-slate-200/60 hover:border-blue-200 hover:shadow-lg transition-all duration-300"
+              className="group bg-white rounded -xl overflow-hidden bg-amber-50 border border-gray-200 hover:border-blue-200 hover:shadow-lg transition-all duration-300"
             >
               {/* Video Thumbnail with Play Button */}
               <div className="relative aspect-video bg-slate-900 overflow-hidden">

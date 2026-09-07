@@ -131,7 +131,7 @@ export default function Programs() {
                 </motion.div>
 
         {/* FEATURED */}
-        <div className="grid lg:grid-cols-2 gap-6 mb-10">
+        <div className="hidden gridlg:grid-cols-2 gap-6 mb-10">
           <div className="flex flex-col justify-center order-2 lg:order-1">
             <h3 className="text-lg font-semibold text-gray-900">Why this work matters</h3>
             <p className="text-gray-700 leading-relaxed mt-1 max-w-lg">
@@ -178,7 +178,7 @@ export default function Programs() {
           {others.map((p, i) => (
             <div
               key={i}
-              className="group bg-white rounded -xl border border-blue-100/60 overflow-hidden shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300"
+              className="group bg-white rounded -xl bg-amber-50 border border-gray-200 overflow-hidden shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300"
             >
               <div className="relative h-36 overflow-hidden">
                 <Image

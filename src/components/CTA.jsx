@@ -28,7 +28,7 @@ export default function CTA() {
         </h2>
 
         {/* Subtext */}
-        <p className="mt-4 text-white/60 text-sm leading-relaxed">
+        <p className="mt-4 text-white/60 text-base leading-relaxed">
           Your support helps provide food, shelter, and care to children in need.
         </p>
 
@@ -38,7 +38,7 @@ export default function CTA() {
           <a
             href="/donate"
             className="
-              px-10 py-2.5 rounded -full
+              px-10 py-2 rounded -full
               bg-blue-600 text-white text-base font-medium
               hover:bg-pink-500 hover:text-white
               transition
@@ -50,7 +50,7 @@ export default function CTA() {
           <a
             href="/contact"
             className="
-              px-10 py-2.5 rounded -full
+              px-10 py-2 rounded -full
               border border-white/20 text-white/70 text-base
               hover:border-white hover:text-white
               transition

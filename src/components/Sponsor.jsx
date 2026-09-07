@@ -116,7 +116,7 @@ export default function SponsorProgram() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="relative w-full h-[280px] md:h-[350px] rounded-2xl overflow-hidden shadow-xl shadow-pink-300/20">
+            <div className="relative w-full h-[310px] md:h-[350px] rounded -2xl overflow-hidden shadow-xl shadow-pink-300/20">
               <Image
                 src="/images/childsupport.webp"
                 alt="Child Sponsorship"
@@ -177,7 +177,7 @@ export default function SponsorProgram() {
             transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
             viewport={{ once: true }}
           >
-            <div className="bg-white/60 backdrop-blur-xl rounded-2xl p-2 md:p-4 shadow-xl shadow-pink-200/20 border border-white/50">
+            <div className="bg-white/60 backdrop-blur-xl rounded-2xl p-2md:p-4 shadow-xl shadow-pink-200/20 border border-white/50">
               <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-6">
                 Through sponsorship, you directly impact a child's future by ensuring access to education, healthcare, and daily care.
               </p>

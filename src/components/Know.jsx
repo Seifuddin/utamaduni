@@ -66,7 +66,7 @@ export default function DidYouKnowHybrid() {
       />
 
       {/* Multi-layered Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-blue-900/30 to-blue-900/40" />
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900/40 via-pink-900/30 to-gray-900/40" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-transparent to-pink-500/10" />
 
@@ -104,14 +104,14 @@ export default function DidYouKnowHybrid() {
             <span className="text-[10px] font-medium text-white/80 tracking-wider">DID YOU KNOW?</span>
           </motion.div>
 
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold text-white leading-tight">
             Every Child Deserves
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-400 to-blue-400">
               Safety & Hope
             </span>
           </h2>
 
-          <p className="mt-2 text-white/70 max-w-2xl mx-auto text-xs md:text-sm leading-relaxed">
+          <p className="mt-2 text-white/70 max-w-2xl mx-auto text-base mdtext-sm leading-relaxed">
             Millions still live without food, shelter, or protection. These numbers reflect real lives waiting for change.
           </p>
 
@@ -126,14 +126,14 @@ export default function DidYouKnowHybrid() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, type: "spring" }}
             viewport={{ once: true }}
-            className="lg:col-span-2 rounded -2xl p-5 md:p-6 bg-gradient-to-br from-blue-600/10 via-blue-600/10 to-blue-600/10 backdrop-blur-sm border border-white/20 relative overflow-hidden group"
+            className="lg:col-span-2 rounded -2xl p-5 md:p-6 bg-gradient-to-brfrom-blue-600/10 via-blue-600/10 to-blue-600/10 backdrop-blur-sm border border-white/20 relative overflow-hidden group"
           >
             {/* Glow inside card */}
             <div className="absolute -top-20 -right-20 w-48 h-48 bg-blue-700/20 rounded-full blur-3xl" />
             <div className="absolute -bottom-20 -left-20 w-48 h-48 bg-blue-500/20 rounded-full blur-3xl" />
 
             <div className="relative z-10">
-              <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-blue-700 to-blue-500 flex items-center justify-center shadow-lg shadow-pink-500/30 mb-3">
+              <div className="w-11 h-11 rounded -2xl bg-gradient-to-br from-blue-700 to-blue-500 flex items-center justify-center shadow-lg shadow-pink-500/30 mb-3">
                 <Heart className="w-5 h-5 text-white" />
               </div>
 
@@ -141,7 +141,7 @@ export default function DidYouKnowHybrid() {
                 Your Action Matters
               </h3>
 
-              <p className="mt-2 text-white/70 text-xs leading-relaxed max-w-sm">
+              <p className="mt-2 text-white/70 text-sm leading-relaxed max-w-sm">
                 Even a small donation can provide safety, food, and hope to a child in need.
               </p>
 
@@ -177,7 +177,7 @@ export default function DidYouKnowHybrid() {
                   viewport={{ once: true }}
                   className="group rounded -xl p-4 bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-[1.02]"
                 >
-                  <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${item.color} flex items-center justify-center mb-2 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`w-8 h-8 rounded -lg bg-gradient-to-br ${item.color} flex items-center justify-center mb-2 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                     <Icon className="w-4 h-4 text-white" />
                   </div>
 
